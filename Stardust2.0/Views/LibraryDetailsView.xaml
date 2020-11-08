@@ -12,7 +12,15 @@
                                d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
                         <Grid DockPanel.Dock="{Settings DetailsListPosition}"
                               Width="{Settings DetailsListWitdh}">
-                            <ExtendedListBox x:Name="PART_ListGames"
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="{DynamicResource LOCAllGames}"
+                                       FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}"
+                                       Foreground="{DynamicResource TextBrushDarker}"
+                                       Margin="15,0,0,15" Style="{StaticResource BaseTextBlockStyle}"/>
+                            <ExtendedListBox Grid.Row="1" x:Name="PART_ListGames"
                                          SelectionMode="Extended"
                                          BorderBrush="{DynamicResource PanelSeparatorBrush}"
                                          ItemContainerStyle="{DynamicResource DetailsViewItemStyle}"
