@@ -4,12 +4,17 @@
     <Style x:Key="BottomButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
         <Setter Property="Margin" Value="5" />
         <Setter Property="Padding" Value="15,8,15,8" />
-        <Setter Property="MinWidth" Value="70" />
+        <Setter Property="MinWidth" Value="100" />
+        <Setter Property="MinHeight" Value="35" />
         <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontSize" Value="{DynamicResource FontSizeLarge}" />
+        <Setter Property="Background" Value="{DynamicResource PurpleButtonBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" />
-                <Setter Property="Background" Value="{DynamicResource GlyphBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+                <Setter Property="Background" Value="{DynamicResource PurpleButtonBrushHighlight}" />
                 <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" />
             </Trigger>
         </Style.Triggers>
