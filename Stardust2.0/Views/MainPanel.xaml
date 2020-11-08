@@ -8,9 +8,9 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type MainPanel}">
-                    <Border Height="50" BorderBrush="{DynamicResource PanelSeparatorBrush}"
-                            d:DesignWidth="1280"
-                            d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
+                    <Border Height="90" BorderBrush="{DynamicResource PanelSeparatorBrush}"
+                            d:DesignWidth="1280" Background="Transparent"
+                            d:DataContext="{x:Static DesignMainViewModel.DesignIntance}" Padding="0,6,0,31">
                         <Border.Style>
                             <Style TargetType="Border" >
                                 <Setter Property="BorderThickness" Value="0,0,0,1" />
@@ -29,78 +29,143 @@
                             </Style>
                         </Border.Style>
                         <DockPanel Margin="0,3,110,3">
-                            <Border x:Name="PART_ElemMainMenu" Background="Transparent"
-                                    DockPanel.Dock="Left" Margin="5,0,0,0" Cursor="Hand"
-                                    WindowChrome.IsHitTestVisibleInChrome="True">
-                                <Image Source="{ThemeFile 'Images/applogo.png'}"
-                                       Height="40" RenderOptions.BitmapScalingMode="Fant"
-                                       Margin="10,0,5,0"/>
-                            </Border>
+                            <StackPanel DockPanel.Dock="Left" Width="{Settings DetailsListWitdh}" Orientation="Horizontal" Background="Transparent">
+                                <Border HorizontalAlignment="Left" x:Name="PART_ElemMainMenu"
+                                    Cursor="Hand"
+                                    WindowChrome.IsHitTestVisibleInChrome="True" Margin="25,0,0,0">
+                                    <Button Margin="5,0,5,0" Background="Transparent"
+                                            Padding="0" BorderThickness="0" FontSize="14">
+                                        <TextBlock Text="⚙️" FontFamily="{StaticResource FontIcoFont}"
+                                           VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            <TextBlock.Style>
+                                                <Style TargetType="TextBlock">
+                                                    <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
+                                                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </Button>
+                                </Border>
 
-                            <SearchBox x:Name="PART_TextMainSearch"
+                                <StackPanel Orientation="Horizontal" 
+                                        HorizontalAlignment="Stretch" Margin="5,6,0,6">
+                                    <Grid MaxWidth="600" >
+                                        <ProgressBar Name="PART_ProgressGlobal" />
+                                        <TextBlock Name="PART_TextProgressText"
+                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                               Style="{DynamicResource BaseTextBlockStyle}" Margin="5,0,5,0"/>
+                                    </Grid>
+
+                                    <Button Name="PART_ButtonProgressCancel"
+                                        Content="{DynamicResource LOCCancelLabel}"
+                                        WindowChrome.IsHitTestVisibleInChrome="True"
+                                        Margin="5,0,0,0" />
+                                </StackPanel>
+                            </StackPanel>
+
+
+
+                            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
+                                <CheckBox x:Name="PART_ToggleFilter"
+                                      WindowChrome.IsHitTestVisibleInChrome="True"
+                                      DockPanel.Dock="Left" Margin="10,6,0,6" MinWidth="35" Cursor="Hand">
+                                    <CheckBox.Style>
+                                        <Style TargetType="CheckBox">
+                                            <Setter Property="Background" Value="Transparent" />
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate>
+                                                        <Border Background="{DynamicResource TitleButtonsBorderBackground}" 
+                                                            CornerRadius="{DynamicResource ControlCornerRadius}">
+                                                            <StackPanel Orientation="Horizontal" Margin="6,0,6,0">
+                                                                <TextBlock Name="IconFilter" Text="&#xef29;"
+                                                                       FontFamily="{DynamicResource FontIcoFont}" FontSize="20"
+                                                                       VerticalAlignment="Center" HorizontalAlignment="Center">
+                                                                    <TextBlock.Style>
+                                                                        <Style TargetType="TextBlock">
+                                                                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                                                                            <Style.Triggers>
+                                                                                <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
+                                                                                    <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}"/>
+                                                                                </DataTrigger>
+                                                                            </Style.Triggers>
+                                                                        </Style>
+                                                                    </TextBlock.Style>
+                                                                </TextBlock>
+                                                                <TextBlock Text="{DynamicResource LOCFilterActiveLabel}"
+                                                                       FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}"
+                                                                       Style="{DynamicResource BaseTextBlockStyle}"
+                                                                       Margin="3,0,5,0" VerticalAlignment="Center"
+                                                                       Name="TextFilter" Foreground="{DynamicResource GlyphBrush}"/>
+                                                            </StackPanel>
+                                                        </Border>
+                                                        <ControlTemplate.Triggers>
+                                                            <Trigger Property="Tag" Value="{StaticResource True}">
+                                                                <Setter Property="Visibility" Value="Visible" TargetName="TextFilter" />
+                                                                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" TargetName="IconFilter" />
+                                                            </Trigger>
+                                                            <Trigger Property="Tag" Value="{StaticResource False}">
+                                                                <Setter Property="Visibility" Value="Collapsed" TargetName="TextFilter" />
+                                                            </Trigger>
+                                                        </ControlTemplate.Triggers>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </CheckBox.Style>
+                                </CheckBox>
+
+                                <SearchBox x:Name="PART_TextMainSearch"
                                         Margin="5,6,0,6" DockPanel.Dock="Left"
                                         WindowChrome.IsHitTestVisibleInChrome="True"
-                                        Width="{Settings DetailsListWitdh}" />                      
+                                        Width="120"/>
 
-                            <Border x:Name="PART_ElemViewMenu" Background="Transparent"
+                            <Border x:Name="PART_ElemViewMenu"
+                                    Background="{DynamicResource TitleButtonsBorderBackground}" CornerRadius="{DynamicResource ControlCornerRadius}"
                                     DockPanel.Dock="Left" Margin="10,6,0,6" Width="35"
-                                    WindowChrome.IsHitTestVisibleInChrome="True"
-                                    Style="{DynamicResource HighlightBorder}">
+                                    WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand">
                                 <TextBlock Text="⋯" FontSize="26" 
-                                           Foreground="{DynamicResource GlyphBrush}"
-                                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                           VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
+                                                    <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
                             </Border>
-
-                            <CheckBox x:Name="PART_ToggleFilter"
-                                      WindowChrome.IsHitTestVisibleInChrome="True"
-                                      DockPanel.Dock="Left" Margin="10,6,0,6" MinWidth="35">
-                                <CheckBox.Style>
-                                    <Style TargetType="CheckBox">
-                                        <Setter Property="Background" Value="Transparent" />
-                                        <Setter Property="Template">
-                                            <Setter.Value>
-                                                <ControlTemplate>
-                                                    <Border Style="{DynamicResource HighlightBorder}"
-                                                            Background="{TemplateBinding Background}">
-                                                        <StackPanel Orientation="Horizontal" Margin="6,0,6,0">
-                                                            <TextBlock Name="IconFilter" Text="&#xef29;"
-                                                                       FontFamily="{DynamicResource FontIcoFont}" FontSize="20"
-                                                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                                       Foreground="{DynamicResource HighlightGlyphBrush}"/>
-                                                            <TextBlock Text="{DynamicResource LOCFilterActiveLabel}"
-                                                                       Style="{DynamicResource BaseTextBlockStyle}"
-                                                                       Margin="3,0,0,0" VerticalAlignment="Center"
-                                                                       Name="TextFilter" Foreground="{DynamicResource GlyphBrush}"/>
-                                                        </StackPanel>
-                                                    </Border>
-                                                    <ControlTemplate.Triggers>
-                                                        <Trigger Property="Tag" Value="{StaticResource True}">
-                                                            <Setter Property="Visibility" Value="Visible" TargetName="TextFilter" />
-                                                            <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" TargetName="IconFilter" />
-                                                        </Trigger>
-                                                        <Trigger Property="Tag" Value="{StaticResource False}">
-                                                            <Setter Property="Visibility" Value="Collapsed" TargetName="TextFilter" />
-                                                        </Trigger>
-                                                    </ControlTemplate.Triggers>
-                                                </ControlTemplate>
-                                            </Setter.Value>
-                                        </Setter>
-                                    </Style>
-                                </CheckBox.Style>
-                            </CheckBox>
                             
-                            <Border Background="Transparent"
+                            <Border Background="{DynamicResource TitleButtonsBorderBackground}" CornerRadius="{DynamicResource ControlCornerRadius}"
                                     WindowChrome.IsHitTestVisibleInChrome="True" 
-                                    Padding="0" BorderThickness="1" Margin="10,6,0,6" 
-                                    DockPanel.Dock="Left" Style="{DynamicResource HighlightBorder}">
+                                    Padding="0" BorderThickness="1" Margin="10,6,0,6" MinWidth="35"
+                                    DockPanel.Dock="Left"
+                                    Cursor="Hand">
                                 <Button Name="PART_ButtonSteamFriends"
                                     Margin="5,0,5,0"
                                     Background="Transparent"
-                                    Foreground="{DynamicResource GlyphBrush}"
                                     Padding="0" BorderThickness="0"
                                     ToolTip="{DynamicResource LOCSteamFriendsTooltip}">
                                     <TextBlock Text="&#xecf9;" FontFamily="{StaticResource FontIcoFont}" FontSize="24"
-                                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                           VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
+                                                        <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
                                 </Button>
                             </Border>
 
@@ -109,15 +174,26 @@
                                       DockPanel.Dock="Left" Margin="10,6,0,6">
                                 <CheckBox.Style>
                                     <Style TargetType="ToggleButton">
-                                        <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                                        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
                                         <Setter Property="Template">
                                             <Setter.Value>
                                                 <ControlTemplate>
-                                                    <Border Background="Transparent">
+                                                        <Border Background="Transparent" Cursor="Hand">
                                                         <Grid>
-                                                            <TextBlock Text="&#xeea3;" FontFamily="{DynamicResource FontIcoFont}" FontSize="24"
-                                                                       Foreground="{TemplateBinding Foreground}"
-                                                                       HorizontalAlignment="Center"/>
+                                                                <TextBlock Text="&#xeea3;" FontFamily="{DynamicResource FontIcoFont}" FontSize="24"
+                                                                    HorizontalAlignment="Center">
+                                                                    <TextBlock.Style>
+                                                                    <Style TargetType="TextBlock">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                                                                        <Style.Triggers>
+                                                                            <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
+                                                                                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}"/>
+                                                                            </DataTrigger>
+                                                                        </Style.Triggers>
+                                                                    </Style>
+                                                                </TextBlock.Style>
+
+                                                            </TextBlock>
                                                             <Border CornerRadius="3" Width="15" Height="15"
                                                                     Margin="20,0,0,0"
                                                                     HorizontalAlignment="Right"
@@ -143,21 +219,8 @@
                                     </Style>
                                 </CheckBox.Style>
                             </CheckBox>
-
-                            <StackPanel Orientation="Horizontal" DockPanel.Dock="Left"
-                                        HorizontalAlignment="Center" Margin="0,5,0,5">
-                                <Grid MaxWidth="600" MinWidth="300">
-                                    <ProgressBar Name="PART_ProgressGlobal" />
-                                    <TextBlock Name="PART_TextProgressText"
-                                               VerticalAlignment="Center" HorizontalAlignment="Center"
-                                               Style="{DynamicResource BaseTextBlockStyle}" Margin="5,0,5,0" />
-                                </Grid>
-
-                                <Button Name="PART_ButtonProgressCancel"
-                                        Content="{DynamicResource LOCCancelLabel}"
-                                        WindowChrome.IsHitTestVisibleInChrome="True"
-                                        Margin="5,0,0,0" />
-                            </StackPanel>                    
+                                
+                            </StackPanel>
                         </DockPanel>
                     </Border>
                 </ControlTemplate>
