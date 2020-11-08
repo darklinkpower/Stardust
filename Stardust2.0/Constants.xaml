@@ -59,6 +59,7 @@
     <SolidColorBrush x:Key="NormalBorderBrushControlsHover" Color="#acabad" />
     <SolidColorBrush x:Key="NormalBorderBrushControlsSelected" Color="{DynamicResource GlyphColor}" />
 
+    <SolidColorBrush x:Key="NormalBorderBrushControlsHoverTransparency" Color="#59acabad" />
     
     <SolidColorBrush x:Key="PurpleButtonBrush" Color="{DynamicResource GlyphColor}" />
     <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="#c077d6" />

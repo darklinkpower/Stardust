@@ -77,7 +77,7 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="Selector.IsSelected" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" />
             </Trigger>
         </Style.Triggers>
     </Style>
