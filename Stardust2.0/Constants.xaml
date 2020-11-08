@@ -33,7 +33,7 @@
     <Color x:Key="PopupBorderColor">#302e32</Color>
     <Color x:Key="BackgroundToneColor">#262c38</Color>
     <Color x:Key="GridItemBackgroundColor">#2f3543</Color>
-    <Color x:Key="PanelSeparatorColor">#474f5c</Color>
+    <Color x:Key="PanelSeparatorColor">#373538</Color>
 
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#2f3543" />
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
@@ -61,6 +61,9 @@
     <SolidColorBrush x:Key="ToggleButtonNotCheckedBrush" Color="#2e2c2f" />
     <SolidColorBrush x:Key="ToggleButtonNotCheckedBorderBrush" Color="#6f6d70" />
     <SolidColorBrush x:Key="ToggleButtonNotCheckedHighlightBorderBrush" Color="#acabad" />
+
+    <SolidColorBrush x:Key="StandardWindowBackgroundBrush" Color="#302e32" />
+    
     
     <SolidColorBrush x:Key="PositiveRatingBrush" Color="#78ffa0" />
     <SolidColorBrush x:Key="NegativeRatingBrush" Color="#c85429" />
