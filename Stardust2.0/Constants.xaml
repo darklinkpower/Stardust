@@ -12,7 +12,7 @@
     <Thickness x:Key="ControlBorderThickness">1</Thickness>
     <sys:Double x:Key="EllipseBorderThickness">1</sys:Double>
     <CornerRadius x:Key="ControlCornerRadius">5</CornerRadius>
-    <CornerRadius x:Key="ControlCornerRadiusViewPlayButtons">20</CornerRadius>
+    <CornerRadius x:Key="ControlCornerRadiusViewPlayButtons">5</CornerRadius>
     <CornerRadius x:Key="ControlCornerRadiusSmall">0</CornerRadius>
     <CornerRadius x:Key="MainMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TrayMenuCornerRadius">5</CornerRadius>
@@ -65,6 +65,7 @@
 
     <SolidColorBrush x:Key="PurpleButtonBrush" Color="{DynamicResource GlyphColor}" />
     <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="#c077d6" />
+    <SolidColorBrush x:Key="PurpleButtonBrushSelected" Color="#cc90dd" />
 
     <SolidColorBrush x:Key="ToggleButtonNotCheckedBrush" Color="#2e2c2f" />
     <SolidColorBrush x:Key="ToggleButtonNotCheckedBorderBrush" Color="#6f6d70" />
