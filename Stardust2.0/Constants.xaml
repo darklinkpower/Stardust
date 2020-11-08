@@ -62,6 +62,9 @@
     <SolidColorBrush x:Key="ToggleButtonNotCheckedBorderBrush" Color="#6f6d70" />
     <SolidColorBrush x:Key="ToggleButtonNotCheckedHighlightBorderBrush" Color="#acabad" />
 
+    <SolidColorBrush x:Key="ThumbFillBrush" Color="#6f7275" />
+    <SolidColorBrush x:Key="ThumbFillBrushHover" Color="#8f9495" />
+    
     <SolidColorBrush x:Key="StandardWindowBackgroundBrush" Color="#302e32" />
     
     
