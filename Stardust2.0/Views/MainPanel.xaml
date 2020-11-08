@@ -10,7 +10,7 @@
                 <ControlTemplate TargetType="{x:Type MainPanel}">
                     <Border Height="90" BorderBrush="{DynamicResource PanelSeparatorBrush}"
                             d:DesignWidth="1280" Background="Transparent"
-                            d:DataContext="{x:Static DesignMainViewModel.DesignIntance}" Padding="0,6,0,31">
+                            d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
                         <Border.Style>
                             <Style TargetType="Border" >
                                 <Setter Property="BorderThickness" Value="0,0,0,1" />
@@ -28,8 +28,20 @@
                                 </Style.Triggers>
                             </Style>
                         </Border.Style>
-                        <DockPanel Margin="0,3,110,3">
-                            <StackPanel DockPanel.Dock="Left" Width="{Settings DetailsListWitdh}" Orientation="Horizontal" Background="Transparent">
+                        <Grid Margin="0,0,110,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="{Settings DetailsListWitdh}"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="9"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="34"/>
+                            </Grid.RowDefinitions>
+
+                            <Rectangle Grid.Column="0" Grid.Row="0" Fill="{DynamicResource DetailsViewGameListBackground}"/>
+                            <Rectangle Grid.Column="0" Grid.Row="2" Fill="{DynamicResource DetailsViewGameListBackground}"/>
+                                <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" Background="{DynamicResource DetailsViewGameListBackground}">
                                 <Border HorizontalAlignment="Left" x:Name="PART_ElemMainMenu"
                                     Cursor="Hand"
                                     WindowChrome.IsHitTestVisibleInChrome="True" Margin="25,0,0,0">
@@ -52,7 +64,7 @@
                                 </Border>
 
                                 <StackPanel Orientation="Horizontal" 
-                                        HorizontalAlignment="Stretch" Margin="5,6,0,6">
+                                        HorizontalAlignment="Stretch" Margin="10,6,10,6">
                                     <Grid MaxWidth="600" >
                                         <ProgressBar Name="PART_ProgressGlobal" />
                                         <TextBlock Name="PART_TextProgressText"
@@ -69,7 +81,7 @@
 
 
 
-                            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
+                            <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
                                 <CheckBox x:Name="PART_ToggleFilter"
                                       WindowChrome.IsHitTestVisibleInChrome="True"
                                       DockPanel.Dock="Left" Margin="10,6,0,6" MinWidth="35" Cursor="Hand">
@@ -221,7 +233,8 @@
                             </CheckBox>
                                 
                             </StackPanel>
-                        </DockPanel>
+
+                        </Grid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
