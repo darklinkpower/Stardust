@@ -28,9 +28,9 @@
     <Color x:Key="HoverColor">#324f53</Color>
     <Color x:Key="GlyphColor">#b75ecf</Color>
     <Color x:Key="GlyphColorSecondary">#2f3543</Color><!---->
-    <Color x:Key="HighlightGlyphColor">#324f53</Color>
-    <Color x:Key="PopupBackgroundColor">#2f3543</Color>
-    <Color x:Key="PopupBorderColor">#302e32</Color>
+    <Color x:Key="HighlightGlyphColor">#373538</Color>
+    <Color x:Key="PopupBackgroundColor">#302e32</Color>
+    <Color x:Key="PopupBorderColor">#373538</Color>
     <Color x:Key="BackgroundToneColor">#262c38</Color>
     <Color x:Key="GridItemBackgroundColor">#2f3543</Color>
     <Color x:Key="PanelSeparatorColor">#373538</Color>
@@ -58,6 +58,7 @@
     <SolidColorBrush x:Key="NormalBorderBrushControls" Color="#6f6d70" />
     <SolidColorBrush x:Key="NormalBorderBrushControlsHover" Color="#acabad" />
     <SolidColorBrush x:Key="NormalBorderBrushControlsSelected" Color="{DynamicResource GlyphColor}" />
+
     
     <SolidColorBrush x:Key="PurpleButtonBrush" Color="{DynamicResource GlyphColor}" />
     <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="#c077d6" />
