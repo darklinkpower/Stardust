@@ -8,13 +8,13 @@
         <Setter Property="CaretBrush" Value="{DynamicResource TextBrush}" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
         <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrushControls}"/>
         <Setter Property="BorderThickness" Value="{DynamicResource ControlBorderThickness}" />
         <Setter Property="Padding" Value="3" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
-                    <Border x:Name="Border" BorderThickness="{TemplateBinding BorderThickness}"
+                    <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
                             Background="{TemplateBinding Background}" CornerRadius="{DynamicResource ControlCornerRadius}"
                             Style="{DynamicResource HighlightBorder}">
                         <ScrollViewer x:Name="PART_ContentHost"
@@ -22,8 +22,11 @@
                                       HorizontalScrollBarVisibility="{TemplateBinding HorizontalScrollBarVisibility}"/>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrushControlsHover}" TargetName="Border" />
+                        </Trigger>
                         <Trigger Property="IsFocused" Value="True">
-                            <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" TargetName="Border" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrushControlsSelected}" TargetName="Border" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
