@@ -55,6 +55,10 @@
     <SolidColorBrush x:Key="MainPanelBackgroundBrush" Color="{DynamicResource MainColor}" />
 
 
+    <SolidColorBrush x:Key="NormalBorderBrushControls" Color="#6f6d70" />
+    <SolidColorBrush x:Key="NormalBorderBrushControlsHover" Color="#acabad" />
+    <SolidColorBrush x:Key="NormalBorderBrushControlsSelected" Color="{DynamicResource GlyphColor}" />
+    
     <SolidColorBrush x:Key="PurpleButtonBrush" Color="{DynamicResource GlyphColor}" />
     <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="#c077d6" />
 
