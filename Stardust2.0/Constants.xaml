@@ -26,7 +26,7 @@
     <Color x:Key="MainColor">#262c38</Color>
     <Color x:Key="MainColorDark">#2f3543</Color>
     <Color x:Key="HoverColor">#324f53</Color>
-    <Color x:Key="GlyphColor">#4fe3c0</Color>
+    <Color x:Key="GlyphColor">#b75ecf</Color>
     <Color x:Key="GlyphColorSecondary">#2f3543</Color><!---->
     <Color x:Key="HighlightGlyphColor">#324f53</Color>
     <Color x:Key="PopupBackgroundColor">#2f3543</Color>
@@ -55,7 +55,7 @@
     <SolidColorBrush x:Key="MainPanelBackgroundBrush" Color="{DynamicResource MainColor}" />
 
 
-    <SolidColorBrush x:Key="PurpleButtonBrush" Color="#b75ecf" />
+    <SolidColorBrush x:Key="PurpleButtonBrush" Color="{DynamicResource GlyphColor}" />
     <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="#c077d6" />
 
     <SolidColorBrush x:Key="ToggleButtonNotCheckedBrush" Color="#2e2c2f" />
@@ -64,7 +64,13 @@
 
     <SolidColorBrush x:Key="ThumbFillBrush" Color="#6f7275" />
     <SolidColorBrush x:Key="ThumbFillBrushHover" Color="#8f9495" />
-    
+
+
+    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="#6f6d70" />
+    <SolidColorBrush x:Key="TextBoxBorderBrushHover" Color="#acabad" />
+    <SolidColorBrush x:Key="TextBoxBorderBrushSelected" Color="{DynamicResource GlyphColor}" />
+
+
     <SolidColorBrush x:Key="StandardWindowBackgroundBrush" Color="#302e32" />
     
     
