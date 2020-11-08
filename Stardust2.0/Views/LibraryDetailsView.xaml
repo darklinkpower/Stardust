@@ -11,7 +11,7 @@
                     <DockPanel d:DesignWidth="1280" d:DesignHeight="960"
                                d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
                         <Grid DockPanel.Dock="{Settings DetailsListPosition}"
-                              Width="{Settings DetailsListWitdh}">
+                              Width="{Settings DetailsListWitdh}" Background="{DynamicResource DetailsViewGameListBackground}">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="*"/>
