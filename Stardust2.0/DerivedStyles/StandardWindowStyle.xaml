@@ -29,11 +29,11 @@
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 Background="{TemplateBinding Background}">
                             <Grid>
-                                <ContentPresenter Margin="0,25,0,0"/>
+                                <ContentPresenter Margin="0,50,0,0"/>
                                 <DockPanel DockPanel.Dock="Top" LastChildFill="False">
-                                    <DockPanel DockPanel.Dock="Top" LastChildFill="False">
-                                        <TextBlock Text="{TemplateBinding Title}" DockPanel.Dock="Left" Margin="10,3,0,0" VerticalAlignment="Center"
-                                                   Opacity="0.75" Style="{DynamicResource BaseTextBlockStyle}" x:Name="PART_TextTitle" />
+                                    <DockPanel DockPanel.Dock="Top" LastChildFill="False" Background="{DynamicResource StandardWindowTitleBackgroundBrush}">
+                                        <TextBlock Text="{TemplateBinding Title}" FontWeight="Bold" DockPanel.Dock="Left" Margin="10,15,0,15" VerticalAlignment="Center"
+                                                   HorizontalAlignment="Right" FontSize="{DynamicResource FontSizeLarge}" Opacity="0.75" Style="{DynamicResource BaseTextBlockStyle}" x:Name="PART_TextTitle" />
                                         <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Margin="0,3,5,0">
                                             <Button Style="{DynamicResource WindowBarButton}" Content="0" x:Name="PART_ButtonMinimize"/>
                                             <Button Style="{DynamicResource WindowBarButton}" Content="1" x:Name="PART_ButtonMaximize" />
