@@ -11,7 +11,7 @@
     <Thickness x:Key="PopupBorderThickness">1</Thickness>
     <Thickness x:Key="ControlBorderThickness">1</Thickness>
     <sys:Double x:Key="EllipseBorderThickness">1</sys:Double>
-    <CornerRadius x:Key="ControlCornerRadius">12</CornerRadius>
+    <CornerRadius x:Key="ControlCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="ControlCornerRadiusViewPlayButtons">20</CornerRadius>
     <CornerRadius x:Key="ControlCornerRadiusSmall">0</CornerRadius>
     <CornerRadius x:Key="MainMenuCornerRadius">5</CornerRadius>
@@ -54,6 +54,14 @@
     <SolidColorBrush x:Key="SecondaryBrush" Color="{DynamicResource GlyphColorSecondary}" />
     <SolidColorBrush x:Key="MainPanelBackgroundBrush" Color="{DynamicResource MainColor}" />
 
+
+    <SolidColorBrush x:Key="PurpleButtonBrush" Color="#b75ecf" />
+    <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="#c077d6" />
+
+    <SolidColorBrush x:Key="ToggleButtonNotCheckedBrush" Color="#2e2c2f" />
+    <SolidColorBrush x:Key="ToggleButtonNotCheckedBorderBrush" Color="#6f6d70" />
+    <SolidColorBrush x:Key="ToggleButtonNotCheckedHighlightBorderBrush" Color="#acabad" />
+    
     <SolidColorBrush x:Key="PositiveRatingBrush" Color="#78ffa0" />
     <SolidColorBrush x:Key="NegativeRatingBrush" Color="#c85429" />
     <SolidColorBrush x:Key="MixedRatingBrush" Color="#fffca1" />
