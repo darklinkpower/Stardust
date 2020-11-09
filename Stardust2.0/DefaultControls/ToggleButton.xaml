@@ -59,15 +59,4 @@
             </MultiTrigger>
         </Style.Triggers>
     </Style>
-
-    <Style x:Key="VectorIcon" TargetType="{x:Type Path}">
-        <Setter Property="Fill" Value="Blue"/>
-        <Setter Property="Margin" Value="5"/>
-        <Setter Property="Stretch" Value="Fill"/>
-        <Style.Triggers>
-            <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ToggleButton}}}"  Value="True">
-                <Setter Property="Fill" Value="Blue"/>
-            </DataTrigger>
-        </Style.Triggers>
-    </Style>
 </ResourceDictionary>

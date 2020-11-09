@@ -109,14 +109,14 @@
                                                             h -97.14286 -97.14285 v -81.42857 -81.42857 h -40 -40 v 81.42857 81.42857 H 254.9444 157.80154 Z">
                                                         <Path.Style>
                                                             <Style TargetType="Path" BasedOn="{StaticResource {x:Type Path}}">
-                                                                <Setter Property="Fill" Value="{DynamicResource GlyphBrush}"/>
+                                                                <Setter Property="Fill" Value="{DynamicResource TextBrush}"/>
                                                                 <Setter Property="Stretch" Value="Fill"/>
                                                                 <Style.Triggers>
                                                                     <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ToggleButton}}}"  Value="True">
-                                                                        <Setter Property="Fill" Value="{DynamicResource TextBrushDark}"/>
+                                                                        <Setter Property="Fill" Value="{DynamicResource TextBrush}"/>
                                                                     </DataTrigger>
                                                                     <DataTrigger Binding="{Binding IsChecked, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ToggleButton}}}"  Value="False">
-                                                                        <Setter Property="Fill" Value="{DynamicResource TextBrushDark}"/>
+                                                                        <Setter Property="Fill" Value="{DynamicResource TextBrush}"/>
                                                                     </DataTrigger>
                                                                 </Style.Triggers>
                                                             </Style>
@@ -262,13 +262,15 @@
 
                                         <GridEx Margin="0,5,0,10"
                                                 ColumnCount="2" StarColumns="1"
-                                                RowCount="21" AutoLayoutColumns="2">
+                                                RowCount="21" AutoLayoutColumns="2" Background="{DynamicResource DetailsViewWrapBackgroundsBrush}">
                                             <Grid.Resources>
-                                                <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
+                                                <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}"/>
                                                 <Style TargetType="Label">
                                                     <Setter Property="FontWeight" Value="Bold"/>
                                                     <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                                                    <Setter Property="Margin" Value="0,0,0,0"/>
                                                 </Style>
+
                                             </Grid.Resources>
 
                                             <Label Name="PART_ElemPlayTime" Content="{DynamicResource LOCTimePlayed}" />
@@ -505,7 +507,7 @@
                                                      Margin="-1,5,-1,5" Padding="0"/>
                                         </StackPanel>
 
-                                        <StackPanel Name="PART_ElemDescription">
+                                        <StackPanel Name="PART_ElemDescription" Background="{DynamicResource DetailsViewWrapBackgroundsBrush}">
                                             <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}" Margin="0,15,0,5"
                                                     FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" />
