@@ -1,5 +1,10 @@
 ThemeApiVersion: 1.9.0
 Id: Stardust 2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002
-Name: Stardust 2.0
+Name: Stardust
 Author: darklinkpower
-Version: 1.0
+Version: 0.75
+Links:
+    - Name: Github
+      Url: https://github.com/darklinkpower/Stardust
+    - Name: Playnite Forums thread
+      Url: https://playnite.link/forum/thread-468.html
