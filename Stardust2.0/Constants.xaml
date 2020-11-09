@@ -62,7 +62,8 @@
     <SolidColorBrush x:Key="NormalBorderBrushControlsHoverTransparency" Color="#59acabad" />
 
     <SolidColorBrush x:Key="DetailsViewGameListBackground" Color="#80000000" />
-
+    <SolidColorBrush x:Key="DetailsViewGrouCountBackgroundBrush" Color="#555555" />
+    
     <SolidColorBrush x:Key="PurpleButtonBrush" Color="{DynamicResource GlyphColor}" />
     <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="#c077d6" />
     <SolidColorBrush x:Key="PurpleButtonBrushSelected" Color="#cc90dd" />
