@@ -13,7 +13,7 @@
                             d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
                         <Border.Style>
                             <Style TargetType="Border" >
-                                <Setter Property="BorderThickness" Value="0,0,0,1" />
+                                <Setter Property="BorderThickness" Value="0,0,0,0" />
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
                                         <Setter Property="BorderThickness" Value="0" />
