@@ -21,7 +21,7 @@
     <Color x:Key="BlackColor">#FF000000</Color>
     <Color x:Key="WhiteColor">#FFFFFFFF</Color>
     <Color x:Key="TextColor">#f2f2f2</Color>
-    <Color x:Key="TextColorDarker">#605e61</Color>
+    <Color x:Key="TextColorDarker">#999999</Color>
     <Color x:Key="TextColorDark">#2f3543</Color>
     <Color x:Key="MainColor">#262c38</Color>
     <Color x:Key="MainColorDark">#2f3543</Color>
