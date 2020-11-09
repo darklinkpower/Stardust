@@ -83,10 +83,14 @@
 
 
     <SolidColorBrush x:Key="TitleButtonsBorderBackground" Color="#0a0a0a" />
-    
+
+    <SolidColorBrush x:Key="DetailsViewWrapBackgroundsBrush" Color="Transparent" />
+
     <SolidColorBrush x:Key="StandardWindowTitleBackgroundBrush" Color="#373538" />
     <SolidColorBrush x:Key="StandardWindowBackgroundBrush" Color="#302e32" />
-    
+
+    <SolidColorBrush x:Key="TitleWindowStateHover" Color="#424242" />
+    <SolidColorBrush x:Key="TitleWindowCloseHover" Color="#d22e00" />
     
     <SolidColorBrush x:Key="PositiveRatingBrush" Color="#78ffa0" />
     <SolidColorBrush x:Key="NegativeRatingBrush" Color="#c85429" />
@@ -104,18 +108,30 @@
         <GradientStop Color="#002C3A67" Offset="0.7"/>
     </LinearGradientBrush>
     
-    <RadialGradientBrush x:Key="WindowBackgourndBrush"
+    <!--<RadialGradientBrush x:Key="WindowBackgourndBrush"
                      GradientOrigin="1,0.6" Center="1,0.8" 
                     RadiusX="1.1" RadiusY="1.1">
         <GradientStop Color="#241822" Offset="0" />
         <GradientStop Color="#2e1e27" Offset="0.5" />
         <GradientStop Color="#2c1924" Offset="0.8" />
         <GradientStop Color="#2f211d" Offset="1.1" />
+    </RadialGradientBrush>-->
+
+    <RadialGradientBrush x:Key="WindowBackgourndBrush"
+                     GradientOrigin="1,0.6" Center="1,0.8" 
+                    RadiusX="1.1" RadiusY="1.1">
+        <GradientStop Color="#3f393a" Offset="0.0" />
+        <GradientStop Color="#1b2028" Offset="1.1" />
     </RadialGradientBrush>
     
     
-  
-    <LinearGradientBrush x:Key="CoversButtonsBrush" StartPoint="0.5,0.6" EndPoint="0.5,1">
+    <LinearGradientBrush x:Key="DetailsViewFadeBorder" StartPoint="0.5,0.5" EndPoint="0.5,1">
+        <GradientStop Color="#0DA8A8A8" Offset="0.0" />
+        <GradientStop Color="#0DA8A8A8" Offset="0.3" />
+        <GradientStop Color="#00A8A8A8" Offset="1.0" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="CoversButtonsBrush" StartPoint="0.5,0.5" EndPoint="0.5,1">
         <GradientStop Color="#00000000" Offset="0.0" />
         <GradientStop Color="#D9000000" Offset="1.0" />
     </LinearGradientBrush>
