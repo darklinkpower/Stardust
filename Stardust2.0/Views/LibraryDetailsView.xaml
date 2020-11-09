@@ -10,7 +10,7 @@
                 <ControlTemplate TargetType="{x:Type LibraryDetailsView}">
                     <DockPanel d:DesignWidth="1280" d:DesignHeight="960"
                                d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
-                        <Border BorderBrush="{DynamicResource PanelSeparatorBrush}" DockPanel.Dock="{Settings DetailsListPosition}">
+                        <Border BorderBrush="{DynamicResource PanelSeparatorBrush}" DockPanel.Dock="{Settings DetailsListPosition}" Padding="20,0,0,0">
                             <Border.Style>
                                 <Style TargetType="Border">
                                     <Setter Property="BorderThickness" Value="0,0,1,0"/>
@@ -33,7 +33,7 @@
                                 <TextBlock Grid.Row="0" Text="{DynamicResource LOCAllGames}"
                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}"
                                        Foreground="{DynamicResource TextBrushDarker}"
-                                       Margin="15,0,0,15" Style="{StaticResource BaseTextBlockStyle}"/>
+                                       Margin="7,0,0,15" Style="{StaticResource BaseTextBlockStyle}"/>
                                 <ExtendedListBox Grid.Row="1" x:Name="PART_ListGames"
                                          SelectionMode="Extended"
                                          BorderBrush="Transparent"
