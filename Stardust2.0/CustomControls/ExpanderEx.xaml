@@ -3,5 +3,6 @@
 
     <Style TargetType="{x:Type ExpanderEx}" BasedOn="{StaticResource {x:Type Expander}}">
         <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Cursor" Value="Hand"/>
     </Style>
 </ResourceDictionary>
