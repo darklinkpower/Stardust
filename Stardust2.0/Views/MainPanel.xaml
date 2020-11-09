@@ -86,9 +86,7 @@
                                     <Style x:Key="ButtonBorder" TargetType="Border">
                                         <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
                                         <Setter Property="CornerRadius" Value="{DynamicResource ControlCornerRadius}" />
-                                        <Setter Property="Margin" Value="10,6,0,6" />
-                                        <Setter Property="MinWidth" Value="35" />
-                                        <Setter Property="Padding" Value="5,0,5,0" />
+                                        <Setter Property="Margin" Value="15,6,0,6" />
                                         <Style.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
                                                 <Setter Property="Background" Value="{DynamicResource TitleWindowStateHover}" />
@@ -105,7 +103,7 @@
                                             <Setter Property="Template">
                                                 <Setter.Value>
                                                     <ControlTemplate>
-                                                        <Border Style="{StaticResource ButtonBorder}">
+                                                        <Border Style="{StaticResource ButtonBorder}" MinWidth="35" Padding="5,0,5,0">
                                                             <StackPanel Orientation="Horizontal">
                                                                 <TextBlock Name="IconFilter" Text="&#xef29;"
                                                                        FontFamily="{DynamicResource FontIcoFont}" FontSize="20"
@@ -145,14 +143,15 @@
                                 </CheckBox>
 
                                 <SearchBox x:Name="PART_TextMainSearch"
-                                        Margin="10,6,0,6" DockPanel.Dock="Left"
+                                        Margin="15,6,0,6" DockPanel.Dock="Left"
                                         WindowChrome.IsHitTestVisibleInChrome="True"
                                         Width="120"/>
 
                             <Border x:Name="PART_ElemViewMenu"
                                     Style="{StaticResource ButtonBorder}"
                                     DockPanel.Dock="Left"
-                                    WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand">
+                                    WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand"
+                                    MinWidth="35" Padding="5,0,5,0">
                                 <TextBlock Text="⋯" FontSize="26"
                                            VerticalAlignment="Center" HorizontalAlignment="Center">
                                     <TextBlock.Style>
@@ -173,12 +172,12 @@
                                     DockPanel.Dock="Left"
                                     Cursor="Hand">
                                 <Button Name="PART_ButtonSteamFriends"
-                                    Margin="5,0,5,0"
+                                    Margin="0,0,0,0"
                                     Background="Transparent"
                                     Padding="0" BorderThickness="0"
                                     ToolTip="{DynamicResource LOCSteamFriendsTooltip}">
                                     <TextBlock Text="&#xecf9;" FontFamily="{StaticResource FontIcoFont}" FontSize="24"
-                                           VerticalAlignment="Center" HorizontalAlignment="Center">
+                                           VerticalAlignment="Center" HorizontalAlignment="Center" Margin="7,0,7,0">
                                         <TextBlock.Style>
                                             <Style TargetType="TextBlock">
                                                 <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
@@ -202,7 +201,7 @@
                                         <Setter Property="Template">
                                             <Setter.Value>
                                                 <ControlTemplate>
-                                                        <Border Cursor="Hand" Style="{StaticResource ButtonBorder}">
+                                                        <Border Cursor="Hand" Style="{StaticResource ButtonBorder}" MinWidth="35" Padding="5,0,5,0">
                                                         <Grid>
                                                                 <TextBlock Text="&#xeea3;" FontFamily="{DynamicResource FontIcoFont}" FontSize="24"
                                                                     HorizontalAlignment="Center">
