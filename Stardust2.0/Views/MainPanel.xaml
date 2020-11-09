@@ -88,6 +88,7 @@
                                         <Setter Property="CornerRadius" Value="{DynamicResource ControlCornerRadius}" />
                                         <Setter Property="Margin" Value="10,6,0,6" />
                                         <Setter Property="MinWidth" Value="35" />
+                                        <Setter Property="Padding" Value="5,0,5,0" />
                                         <Style.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
                                                 <Setter Property="Background" Value="{DynamicResource TitleWindowStateHover}" />
