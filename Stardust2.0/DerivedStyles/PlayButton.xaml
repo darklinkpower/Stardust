@@ -85,7 +85,7 @@
     </Style>
 
     <Style x:Key="ContextButtonViews" TargetType="{x:Type Button}">
-        <Setter Property="Background" Value="#0a0a0a" />
+        <Setter Property="Background" Value="#2e2c2f" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
         <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}" />
         <Setter Property="BorderThickness" Value="0" />
@@ -117,14 +117,14 @@
                 <Trigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard TargetProperty="(Background).(SolidColorBrush.Color)">
-                            <ColorAnimation To="#2e2e2e" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
+                            <ColorAnimation To="#FF3F3D40" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.EnterActions>
                 <Trigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard TargetProperty="(Background).(SolidColorBrush.Color)">
-                            <ColorAnimation To="#0a0a0a" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
+                            <ColorAnimation To="#2e2c2f" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.ExitActions>
@@ -133,7 +133,7 @@
     </Style>
 
     <Style x:Key="MoreActionButtonViews" TargetType="{x:Type Button}">
-        <Setter Property="Background" Value="#0a0a0a" />
+        <Setter Property="Background" Value="#2e2c2f" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
         <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}" />
         <Setter Property="BorderThickness" Value="0" />
@@ -165,14 +165,14 @@
                 <Trigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard TargetProperty="(Background).(SolidColorBrush.Color)">
-                            <ColorAnimation To="#2e2e2e" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
+                            <ColorAnimation To="#FF3F3D40" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.EnterActions>
                 <Trigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard TargetProperty="(Background).(SolidColorBrush.Color)">
-                            <ColorAnimation To="#0a0a0a" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
+                            <ColorAnimation To="#2e2c2f" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.ExitActions>
