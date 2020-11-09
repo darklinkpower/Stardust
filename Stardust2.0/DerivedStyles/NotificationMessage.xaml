@@ -15,7 +15,7 @@
                         <TextBlock Text="{Binding Text}"
                                    Style="{DynamicResource BaseTextBlockStyle}"
                                    Margin="6" TextWrapping="Wrap"
-                                   MinHeight="38" Foreground="{DynamicResource TextBrushDark}"/>
+                                   MinHeight="38" Foreground="{DynamicResource TextBrush}"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
