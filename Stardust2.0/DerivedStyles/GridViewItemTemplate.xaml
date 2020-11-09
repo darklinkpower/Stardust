@@ -50,7 +50,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <DataTrigger Binding="{Settings ShowGridItemBackground}" Value="True">
-                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" TargetName="ShowGameName" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" TargetName="ShowGameName" />
                         </DataTrigger>
                         <DataTrigger Binding="{Binding IsInstalled}" Value="True">
                             <Setter Property="Background" Value="{DynamicResource CoversButtonsBrush}" TargetName="BorderMouseOver" />
