@@ -56,10 +56,10 @@
                             <Setter Property="Visibility" Value="Visible" TargetName="CheckIcon" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="{DynamicResource ToggleButtonNotCheckedHighlightBorderBrush}" TargetName="BulletBorder" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrushControlsHover}" TargetName="BulletBorder" />
                         </Trigger>
                         <Trigger Property="IsFocused" Value="True">
-                            <Setter Property="BorderBrush" Value="{DynamicResource ToggleButtonNotCheckedHighlightBorderBrush}" TargetName="BulletBorder" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrushControlsHover}" TargetName="BulletBorder" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

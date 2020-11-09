@@ -18,13 +18,12 @@
                     <BulletDecorator>
                         <BulletDecorator.Bullet>
                             <Border Background="Transparent">
-                                <Grid Width="18" Height="18">
-                                    <Ellipse x:Name="BulletBorder" Width="18" Height="18"
-                                            Fill="{DynamicResource ControlBackgroundBrush}"
-                                            Stroke="{DynamicResource NormalBorderBrush}"
+                                <Grid Width="14" Height="14">
+                                    <Ellipse x:Name="BulletBorder" Width="14" Height="14"
+                                            Stroke="{DynamicResource NormalBorderBrushControls}"
                                             StrokeThickness="{DynamicResource EllipseBorderThickness}" />
                                     <Viewbox x:Name="CheckIcon" Visibility="Collapsed" >
-                                        <TextBlock Text="h" FontFamily="Marlett" Foreground="{DynamicResource GlyphBrush}"
+                                        <TextBlock x:Name="CheckText" Text="h" FontFamily="Marlett" Foreground="{DynamicResource TextBrushDarker}"
                                                     HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                     </Viewbox>
                                 </Grid>
@@ -35,14 +34,17 @@
                         </Border>
                     </BulletDecorator>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Fill" Value="{DynamicResource GlyphBrush}" TargetName="BulletBorder" />
-                        </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Stroke" Value="{DynamicResource GlyphBrush}" TargetName="BulletBorder" />
+                            <Setter Property="Visibility" Value="Visible" TargetName="CheckIcon" />
+                            <Setter Property="Stroke" Value="{DynamicResource NormalBorderBrushControlsHover}" TargetName="BulletBorder" />
                         </Trigger>
                         <Trigger Property="IsFocused" Value="True">
-                            <Setter Property="Stroke" Value="{DynamicResource GlyphBrush}" TargetName="BulletBorder" />
+                            <Setter Property="Stroke" Value="{DynamicResource NormalBorderBrushControlsHover}" TargetName="BulletBorder" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" TargetName="CheckText"/>
+                            <Setter Property="Visibility" Value="Visible" TargetName="CheckIcon" />
+                            <Setter Property="Stroke" Value="{DynamicResource NormalBorderBrushControlsSelectedWhite}" TargetName="BulletBorder" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
