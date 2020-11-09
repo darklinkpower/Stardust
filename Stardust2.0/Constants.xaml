@@ -82,7 +82,7 @@
     <SolidColorBrush x:Key="TextBoxBorderBrushSelected" Color="{DynamicResource GlyphColor}" />
 
 
-    <SolidColorBrush x:Key="TitleButtonsBorderBackground" Color="#0a0a0a" />
+    <SolidColorBrush x:Key="TitleButtonsBorderBackground" Color="#2e2c2f" />
 
     <SolidColorBrush x:Key="DetailsViewWrapBackgroundsBrush" Color="Transparent" />
 
