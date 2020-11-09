@@ -22,12 +22,12 @@
                             <TextBlock Text=">" x:Name="UpArrow"
                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                        Style="{DynamicResource BaseTextBlockStyle}"
-                                       Foreground="{DynamicResource TextBrushDarker}" FontSize="12" Margin="5,0,15,0"
+                                       Foreground="{DynamicResource GlyphBrush}" FontSize="12" Margin="5,0,15,0"
                                        Grid.Column="0" TextAlignment="Center" FontFamily="Consolas" />
                             <TextBlock Text=">" x:Name="DownArrow"
                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                        Style="{DynamicResource BaseTextBlockStyle}"
-                                       Foreground="{DynamicResource TextBrushDarker}" FontSize="12" Margin="5,0,15,0"
+                                       Foreground="{DynamicResource GlyphBrush}" FontSize="12" Margin="5,0,15,0"
                                        Visibility="Collapsed"
                                        Grid.Column="0" TextAlignment="Center" FontFamily="Consolas" RenderTransformOrigin="0.5,0.5">
                                 <TextBlock.RenderTransform>
