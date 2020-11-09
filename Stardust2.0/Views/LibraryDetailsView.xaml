@@ -8,6 +8,21 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type LibraryDetailsView}">
+                    <Border x:Name="WrapBorder">
+                        <Border.Style>
+                            <Style TargetType="Border">
+                                <Setter Property="BorderBrush" Value="{DynamicResource PanelSeparatorBrush}" />
+                                <Setter Property="BorderThickness" Value="0,0,1,0"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Settings DetailsListPosition}" Value="Right">
+                                        <Setter Property="BorderThickness" Value="1,0,0,0" />
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
+                                        <Setter Property="BorderThickness" Value="0" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
                     <DockPanel d:DesignWidth="1280" d:DesignHeight="960"
                                d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
                         <Grid DockPanel.Dock="{Settings DetailsListPosition}"
@@ -22,7 +37,7 @@
                                        Margin="15,0,0,15" Style="{StaticResource BaseTextBlockStyle}"/>
                             <ExtendedListBox Grid.Row="1" x:Name="PART_ListGames"
                                          SelectionMode="Extended"
-                                         BorderBrush="{DynamicResource PanelSeparatorBrush}"
+                                         BorderBrush="Transparent"
                                          ItemContainerStyle="{DynamicResource DetailsViewItemStyle}"
                                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                          ScrollViewer.PanningMode="VerticalOnly"
@@ -31,21 +46,8 @@
                                          VirtualizingPanel.IsVirtualizingWhenGrouping="True"
                                          VirtualizingPanel.VirtualizationMode="Recycling">
                                 <ExtendedListBox.Style>
-                                    <Style TargetType="ExtendedListBox" BasedOn="{StaticResource {x:Type ExtendedListBox}}">
-                                        <Setter Property="BorderThickness" Value="0,0,1,0" />
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Settings DetailsListPosition}" Value="Left">
-                                                <Setter Property="BorderThickness" Value="20,20,0,20" />
-                                            </DataTrigger>
-                                            <DataTrigger Binding="{Settings DetailsListPosition}" Value="Right">
-                                                <Setter Property="BorderThickness" Value="0,20,20,20" />
-                                            </DataTrigger>
-                                            <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
-                                                <Setter Property="BorderThickness" Value="0" />
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </ExtendedListBox.Style>
+                                        <Style TargetType="ExtendedListBox" BasedOn="{StaticResource {x:Type ExtendedListBox}}"/>
+                                    </ExtendedListBox.Style>
                                 <ExtendedListBox.GroupStyle>
                                     <GroupStyle ContainerStyle="{StaticResource DetailsViewGroupStyle}"/>
                                 </ExtendedListBox.GroupStyle>
@@ -72,6 +74,7 @@
                         </Grid>
                         <DetailsViewGameOverview x:Name="PART_ControlGameView" DockPanel.Dock="Left" />
                     </DockPanel>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
