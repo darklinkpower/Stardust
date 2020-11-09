@@ -18,7 +18,7 @@
                                 </DockPanel.ContextMenu>
                                 <TextBlock DockPanel.Dock="Left"
                                            VerticalAlignment="Center" HorizontalAlignment="Left"
-                                           TextAlignment="Center" Margin="0,0,5,0">
+                                           TextAlignment="Center" Margin="0,0,5,0" FontWeight="UltraBold">
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
                                             <Setter Property="Text" Value="{Binding Name, Converter={StaticResource ObjectToStringConverter}}" />
@@ -40,7 +40,7 @@
                                     </Grid.ColumnDefinitions>
                                     <Border Grid.Column="1" CornerRadius="7" Background="{DynamicResource DetailsViewGrouCountBackgroundBrush}"  Width="Auto">
                                         <TextBlock Text="{Binding Items.Count, Mode=OneWay, StringFormat={}{0}}"
-                                               Foreground="{DynamicResource TitleButtonsBorderBackground}"
+                                               Foreground="{DynamicResource TextBrush}"
                                                VerticalAlignment="Center" HorizontalAlignment="Center"
                                                Style="{DynamicResource BaseTextBlockStyle}"
                                                TextAlignment="Center"
