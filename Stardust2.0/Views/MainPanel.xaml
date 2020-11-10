@@ -151,20 +151,43 @@
                                     Style="{StaticResource ButtonBorder}"
                                     DockPanel.Dock="Left"
                                     WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand"
-                                    MinWidth="35" Padding="5,0,5,0">
-                                <TextBlock Text="⋯" FontSize="26"
-                                           VerticalAlignment="Center" HorizontalAlignment="Center">
-                                    <TextBlock.Style>
-                                        <Style TargetType="TextBlock">
-                                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
-                                                    <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}"/>
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </TextBlock.Style>
-                                </TextBlock>
+                                    MinWidth="35" Padding="6">
+                                    <Viewbox Stretch="Uniform">
+                                        <Canvas Width="32.0" Height="32.0">
+                                            <Canvas.Resources>
+                                                    <Style x:Name="GeometryStyle" TargetType="Path">
+                                                        <Setter Property="Stroke" Value="{DynamicResource TextBrush}"/>
+                                                        <Setter Property="StrokeThickness" Value="2"/>
+                                                        <Setter Property="StrokeLineJoin" Value="Miter"/>
+                                                        <Setter Property="StrokeStartLineCap" Value="Flat"/>
+                                                        <Setter Property="StrokeEndLineCap" Value="Flat"/>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
+                                                                <Setter Property="Stroke" Value="{DynamicResource GlyphBrush}"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                    <Style x:Name="GeometryStyleEllipse" TargetType="Ellipse">
+                                                        <Setter Property="Stroke" Value="{DynamicResource TextBrush}"/>
+                                                        <Setter Property="StrokeThickness" Value="1"/>
+                                                        <Setter Property="StrokeLineJoin" Value="Miter"/>
+                                                        <Setter Property="StrokeStartLineCap" Value="Flat"/>
+                                                        <Setter Property="StrokeEndLineCap" Value="Flat"/>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
+                                                                <Setter Property="Stroke" Value="{DynamicResource GlyphBrush}"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Canvas.Resources>
+                                                <Ellipse Canvas.Left="8.4" Canvas.Top="3.3" Width="8.6" Height="8.6"/>
+                                                <Ellipse Canvas.Left="15.4" Canvas.Top="19.7" Width="8.6" Height="8.6"/>
+                                                <Path Data="M 3.0000123 7.571442 H 8.4285781"/>
+                                                <Path Data="M 29.000004 7.571442 H 17.000007 v 0"/>
+                                                <Path Data="M 29.000004 24.000006 24 24"/>
+                                            <Path Data="m 15.428574 24 -12.4285617 6e-6"/>
+                                        </Canvas>
+                                    </Viewbox>
                             </Border>
 
                                 <Border Style="{StaticResource ButtonBorder}"
