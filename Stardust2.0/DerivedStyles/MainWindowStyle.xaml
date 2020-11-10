@@ -27,11 +27,6 @@
                                 <Grid.Background>
                                     <ImageBrush ImageSource="{ThemeFile 'Images/BackgroundGradient.png'}" Stretch="UniformToFill"/>
                                 </Grid.Background>
-                                <Grid.CacheMode>
-                                    <BitmapCache EnableClearType="False" 
-                                                 RenderAtScale="1" 
-                                                 SnapsToDevicePixels="False" />
-                                </Grid.CacheMode>
                                 <ContentPresenter Margin="0,0,0,0"/>
                                 <DockPanel DockPanel.Dock="Top" LastChildFill="False">
                                     <DockPanel DockPanel.Dock="Top" LastChildFill="False">
