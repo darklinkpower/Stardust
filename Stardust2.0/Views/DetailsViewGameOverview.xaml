@@ -266,7 +266,7 @@
                                             <Grid.Resources>
                                                 <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}"/>
                                                 <Style TargetType="Label">
-                                                    <Setter Property="FontWeight" Value="Bold"/>
+                                                    <Setter Property="FontWeight" Value="Normal"/>
                                                     <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
                                                     <Setter Property="Margin" Value="0,0,0,0"/>
                                                 </Style>
