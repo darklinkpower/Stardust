@@ -113,14 +113,14 @@
                                                                             <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
                                                                             <Style.Triggers>
                                                                                 <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
-                                                                                    <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}"/>
+                                                                                    <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
                                                                                 </DataTrigger>
                                                                             </Style.Triggers>
                                                                         </Style>
                                                                     </TextBlock.Style>
                                                                 </TextBlock>
                                                                 <TextBlock Text="{DynamicResource LOCFilterActiveLabel}"
-                                                                       FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}"
+                                                                       FontWeight="Normal" FontSize="{DynamicResource FontSizeLarge}"
                                                                        Style="{DynamicResource BaseTextBlockStyle}"
                                                                        Margin="3,0,5,0" VerticalAlignment="Center"
                                                                        Name="TextFilter" Foreground="{DynamicResource GlyphBrush}"/>
