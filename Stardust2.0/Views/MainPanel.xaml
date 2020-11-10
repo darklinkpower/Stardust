@@ -87,8 +87,23 @@
                                             </Trigger>
                                         </Style.Triggers>
                                     </Style>
-                                    </StackPanel.Resources>
-                                    <CheckBox x:Name="PART_ToggleFilter"
+                                    <Style x:Key="TextBlock" TargetType="TextBlock" >
+                                        <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                                        <Setter Property="FontSize" Value="{DynamicResource FontSize}" />
+                                        <Setter Property="FontFamily" Value="{DynamicResource FontFamily}" />
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
+                                                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}"/>
+                                            </DataTrigger>
+                                            <Trigger Property="IsEnabled" Value="False">
+                                                <Setter Property="Opacity" Value="0.5" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </StackPanel.Resources>
+                                <CheckBox x:Name="PART_ToggleFilter"
                                       WindowChrome.IsHitTestVisibleInChrome="True"
                                       DockPanel.Dock="Left" Cursor="Hand">
                                     <CheckBox.Style>
@@ -100,24 +115,11 @@
                                                         <Border Style="{StaticResource ButtonBorder}" MinWidth="35" Padding="5,0,5,0">
                                                             <StackPanel Orientation="Horizontal">
                                                                 <TextBlock Name="IconFilter" Text="&#xef29;"
-                                                                       FontFamily="{DynamicResource FontIcoFont}" FontSize="20"
-                                                                       VerticalAlignment="Center" HorizontalAlignment="Center">
-                                                                    <TextBlock.Style>
-                                                                        <Style TargetType="TextBlock">
-                                                                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
-                                                                            <Style.Triggers>
-                                                                                <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
-                                                                                    <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
-                                                                                </DataTrigger>
-                                                                            </Style.Triggers>
-                                                                        </Style>
-                                                                    </TextBlock.Style>
-                                                                </TextBlock>
-                                                                <TextBlock Text="{DynamicResource LOCFilterActiveLabel}"
-                                                                       FontWeight="Normal" FontSize="{DynamicResource FontSizeLarge}"
-                                                                       Style="{DynamicResource BaseTextBlockStyle}"
-                                                                       Margin="3,0,5,0" VerticalAlignment="Center"
-                                                                       Name="TextFilter" Foreground="{DynamicResource GlyphBrush}"/>
+                                                                           FontFamily="{DynamicResource FontIcoFont}" FontSize="20"
+                                                                           Style="{StaticResource TextBlock}"/>
+                                                                <TextBlock Text="{DynamicResource LOCFilterActiveLabel}" Style="{StaticResource TextBlock}"
+                                                                           Name="TextFilter" FontSize="{DynamicResource FontSizeLarge}" Margin="5,0,0,0"
+                                                                           Foreground="{DynamicResource GlyphBrush}"/>
                                                             </StackPanel>
                                                         </Border>
                                                         <ControlTemplate.Triggers>
@@ -141,127 +143,101 @@
                                         WindowChrome.IsHitTestVisibleInChrome="True"
                                         Width="120"/>
 
-                            <Border x:Name="PART_ElemViewMenu"
+                                <Border x:Name="PART_ElemViewMenu"
                                     Style="{StaticResource ButtonBorder}"
                                     DockPanel.Dock="Left"
                                     WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand"
-                                    MinWidth="35" Padding="6">
+                                    MinWidth="35" Padding="7">
                                     <Viewbox Stretch="Uniform">
                                         <Canvas Width="32.0" Height="32.0">
                                             <Canvas.Resources>
-                                                    <Style x:Name="GeometryStyle" TargetType="Path">
-                                                        <Setter Property="Stroke" Value="{DynamicResource TextBrush}"/>
-                                                        <Setter Property="StrokeThickness" Value="2"/>
-                                                        <Setter Property="StrokeLineJoin" Value="Miter"/>
-                                                        <Setter Property="StrokeStartLineCap" Value="Flat"/>
-                                                        <Setter Property="StrokeEndLineCap" Value="Flat"/>
-                                                        <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
-                                                                <Setter Property="Stroke" Value="{DynamicResource GlyphBrush}"/>
-                                                            </DataTrigger>
-                                                        </Style.Triggers>
-                                                    </Style>
-                                                    <Style x:Name="GeometryStyleEllipse" TargetType="Ellipse">
-                                                        <Setter Property="Stroke" Value="{DynamicResource TextBrush}"/>
-                                                        <Setter Property="StrokeThickness" Value="1"/>
-                                                        <Setter Property="StrokeLineJoin" Value="Miter"/>
-                                                        <Setter Property="StrokeStartLineCap" Value="Flat"/>
-                                                        <Setter Property="StrokeEndLineCap" Value="Flat"/>
-                                                        <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
-                                                                <Setter Property="Stroke" Value="{DynamicResource GlyphBrush}"/>
-                                                            </DataTrigger>
-                                                        </Style.Triggers>
-                                                    </Style>
-                                                </Canvas.Resources>
-                                                <Ellipse Canvas.Left="8.4" Canvas.Top="3.3" Width="8.6" Height="8.6"/>
-                                                <Ellipse Canvas.Left="15.4" Canvas.Top="19.7" Width="8.6" Height="8.6"/>
-                                                <Path Data="M 3.0000123 7.571442 H 8.4285781"/>
-                                                <Path Data="M 29.000004 7.571442 H 17.000007 v 0"/>
-                                                <Path Data="M 29.000004 24.000006 24 24"/>
+                                                <Style x:Name="GeometryStyle" TargetType="Path">
+                                                    <Setter Property="Stroke" Value="{DynamicResource TextBrush}"/>
+                                                    <Setter Property="StrokeThickness" Value="2"/>
+                                                    <Setter Property="StrokeLineJoin" Value="Miter"/>
+                                                    <Setter Property="StrokeStartLineCap" Value="Flat"/>
+                                                    <Setter Property="StrokeEndLineCap" Value="Flat"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
+                                                            <Setter Property="Stroke" Value="{DynamicResource GlyphBrush}"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                                <Style x:Name="GeometryStyleEllipse" TargetType="Ellipse">
+                                                    <Setter Property="Stroke" Value="{DynamicResource TextBrush}"/>
+                                                    <Setter Property="StrokeThickness" Value="1"/>
+                                                    <Setter Property="StrokeLineJoin" Value="Miter"/>
+                                                    <Setter Property="StrokeStartLineCap" Value="Flat"/>
+                                                    <Setter Property="StrokeEndLineCap" Value="Flat"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
+                                                            <Setter Property="Stroke" Value="{DynamicResource GlyphBrush}"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Canvas.Resources>
+                                            <Ellipse Canvas.Left="8.4" Canvas.Top="3.3" Width="8.6" Height="8.6"/>
+                                            <Ellipse Canvas.Left="15.4" Canvas.Top="19.7" Width="8.6" Height="8.6"/>
+                                            <Path Data="M 3.0000123 7.571442 H 8.4285781"/>
+                                            <Path Data="M 29.000004 7.571442 H 17.000007 v 0"/>
+                                            <Path Data="M 29.000004 24.000006 24 24"/>
                                             <Path Data="m 15.428574 24 -12.4285617 6e-6"/>
                                         </Canvas>
                                     </Viewbox>
-                            </Border>
+                                </Border>
 
                                 <Border Style="{StaticResource ButtonBorder}"
                                     WindowChrome.IsHitTestVisibleInChrome="True" 
                                     DockPanel.Dock="Left"
                                     Cursor="Hand">
-                                <Button Name="PART_ButtonSteamFriends"
+                                    <Button Name="PART_ButtonSteamFriends"
                                     Margin="0,0,0,0"
                                     Background="Transparent"
                                     Padding="0" BorderThickness="0"
                                     ToolTip="{DynamicResource LOCSteamFriendsTooltip}">
-                                    <TextBlock Text="&#xecf9;" FontFamily="{StaticResource FontIcoFont}" FontSize="24"
-                                           VerticalAlignment="Center" HorizontalAlignment="Center" Margin="7,0,7,0">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
-                                                        <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}"/>
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                </Button>
-                            </Border>
+                                        <TextBlock Text="&#xecf9;" FontFamily="{StaticResource FontIcoFont}" FontSize="24"
+                                               Style="{StaticResource TextBlock}" Margin="7,0,7,0"/>
+                                    </Button>
+                                </Border>
 
                                 <CheckBox x:Name="PART_ToggleNotifications"
                                       WindowChrome.IsHitTestVisibleInChrome="True"
                                       DockPanel.Dock="Left">
                                     <CheckBox.Style>
-                                    <Style TargetType="ToggleButton">
-                                        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-                                        <Setter Property="Template">
-                                            <Setter.Value>
-                                                <ControlTemplate>
+                                        <Style TargetType="ToggleButton">
+                                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate>
                                                         <Border Cursor="Hand" Style="{StaticResource ButtonBorder}" MinWidth="35" Padding="5,0,5,0">
-                                                        <Grid>
-                                                                <TextBlock Text="&#xeea3;" FontFamily="{DynamicResource FontIcoFont}" FontSize="24"
-                                                                    HorizontalAlignment="Center">
-                                                                    <TextBlock.Style>
-                                                                    <Style TargetType="TextBlock">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
-                                                                        <Style.Triggers>
-                                                                            <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
-                                                                                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}"/>
-                                                                            </DataTrigger>
-                                                                        </Style.Triggers>
-                                                                    </Style>
-                                                                </TextBlock.Style>
-
-                                                            </TextBlock>
-                                                            <Border CornerRadius="3" Width="15" Height="15"
+                                                            <Grid>
+                                                                <TextBlock Style="{StaticResource TextBlock}" Text="&#xeea3;" FontFamily="{DynamicResource FontIcoFont}" FontSize="24"/>
+                                                                <Border CornerRadius="3" Width="15" Height="15"
                                                                     Margin="20,0,0,0"
                                                                     HorizontalAlignment="Right"
                                                                     VerticalAlignment="Bottom"
                                                                     Background="#C85429">
-                                                                <TextBlock Text="{Api Notifications.Count}" FontSize="12"                                                               
+                                                                    <TextBlock Text="{Api Notifications.Count}" FontSize="12"                                                               
                                                                            Foreground="{DynamicResource TextBrush}"
                                                                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                                            </Border>
-                                                        </Grid>
-                                                    </Border>
-                                                </ControlTemplate>
-                                            </Setter.Value>
-                                        </Setter>
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Api Notifications.Count}" Value="0">
-                                                <Setter Property="Visibility" Value="Collapsed"/>
-                                            </DataTrigger>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </CheckBox.Style>
-                            </CheckBox>
-                                
+                                                                </Border>
+                                                            </Grid>
+                                                        </Border>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Api Notifications.Count}" Value="0">
+                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                </DataTrigger>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </CheckBox.Style>
+                                </CheckBox>
                             </StackPanel>
-
                         </Grid>
                     </Border>
                 </ControlTemplate>
