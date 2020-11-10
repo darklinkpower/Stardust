@@ -18,19 +18,13 @@
                                     <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
                                         <Setter Property="BorderThickness" Value="0" />
                                     </DataTrigger>
-                                    <MultiDataTrigger>
-                                        <MultiDataTrigger.Conditions>
-                                            <Condition Binding="{Settings ShowPanelSeparators}" Value="True"/>
-                                            <Condition Binding="{Settings ShowBackgroundImageOnWindow}" Value="True"/>
-                                        </MultiDataTrigger.Conditions>
-                                        <Setter Property="Background" Value="{DynamicResource MainPanelBackgroundBrush}"  />
-                                    </MultiDataTrigger>
                                 </Style.Triggers>
                             </Style>
                         </Border.Style>
-                        <Grid Margin="0,0,110,0">
+                        <Grid Margin="0,0,0,0">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="{Settings DetailsListWitdh}"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
@@ -81,7 +75,7 @@
 
 
 
-                            <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
                                 <StackPanel.Resources>
                                     <Style x:Key="ButtonBorder" TargetType="Border">
                                         <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
