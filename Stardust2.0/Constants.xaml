@@ -25,7 +25,7 @@
     <Color x:Key="TextColorDark">#2f3543</Color>
     <Color x:Key="MainColor">#262c38</Color>
     <Color x:Key="MainColorDark">#2f3543</Color>
-    <Color x:Key="HoverColor">#324f53</Color>
+    <Color x:Key="HoverColor">#373538</Color>
     <Color x:Key="GlyphColor">#b75ecf</Color>
     <Color x:Key="GlyphColorSecondary">#2f3543</Color><!---->
     <Color x:Key="HighlightGlyphColor">#373538</Color>
