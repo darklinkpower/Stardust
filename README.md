@@ -14,7 +14,7 @@ Playnite forum thread: https://playnite.link/forum/thread-468.html
 - Different aesthetic of other available themes available by default in Playnite and created by the community.
 
 ## Instalation 
-1. Download the latest packaged `pthm` theme file from the [Releases page.](https://github.com/darklinkpower/Harmony/releases)
+1. Download the latest packaged `pthm` theme file from the [Releases page.](https://github.com/darklinkpower/Stardust/releases)
 2. Open it to automatically install on Playnite or drag and drop it to the main Playnite window to start installation.
 
 ## Functionalities and features
