@@ -35,10 +35,10 @@
 
                             <Rectangle Grid.Column="0" Grid.Row="0" Fill="{DynamicResource DetailsViewGameListBackground}"/>
                             <Rectangle Grid.Column="0" Grid.Row="2" Fill="{DynamicResource DetailsViewGameListBackground}"/>
-                                <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" Background="{DynamicResource DetailsViewGameListBackground}">
+                            <DockPanel Grid.Column="0" Grid.Row="1" Background="{DynamicResource DetailsViewGameListBackground}">
                                 <Border HorizontalAlignment="Left" x:Name="PART_ElemMainMenu"
-                                    Cursor="Hand"
-                                    WindowChrome.IsHitTestVisibleInChrome="True" Margin="25,0,0,0">
+                                    Cursor="Hand" DockPanel.Dock="Left"
+                                    WindowChrome.IsHitTestVisibleInChrome="True" Margin="25,0,25,0">
                                     <Button Margin="5,0,5,0" Background="Transparent"
                                             Padding="0" BorderThickness="0" FontSize="14">
                                         <TextBlock Text="⚙️" FontFamily="{StaticResource FontIcoFont}"
@@ -57,9 +57,9 @@
                                     </Button>
                                 </Border>
 
-                                <StackPanel Orientation="Horizontal" 
-                                        HorizontalAlignment="Stretch" Margin="10,6,10,6">
-                                    <Grid MaxWidth="600" >
+                                <StackPanel Orientation="Horizontal" DockPanel.Dock="Right"
+                                        HorizontalAlignment="Center" Margin="10,6,10,6">
+                                    <Grid MaxWidth="400" MinWidth="250">
                                         <ProgressBar Name="PART_ProgressGlobal" />
                                         <TextBlock Name="PART_TextProgressText"
                                                VerticalAlignment="Center" HorizontalAlignment="Center"
@@ -71,7 +71,7 @@
                                         WindowChrome.IsHitTestVisibleInChrome="True"
                                         Margin="5,0,0,0" />
                                 </StackPanel>
-                            </StackPanel>
+                            </DockPanel>
 
 
 
