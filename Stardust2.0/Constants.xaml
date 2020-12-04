@@ -21,6 +21,7 @@
     <CornerRadius x:Key="GridViewCoverGridBackgroundDisabledCornerRadius">5,5,0,0</CornerRadius>
     <CornerRadius x:Key="GridViewShowGameNameCornerRadius">0,0,5,5</CornerRadius>
     <CornerRadius x:Key="GridViewSelectionBorderCornerRadius">7</CornerRadius>
+    <CornerRadius x:Key="DetailsViewCoverCornerRadius">5</CornerRadius>
     
     <Color x:Key="BlackColor">#FF000000</Color>
     <Color x:Key="WhiteColor">#FFFFFFFF</Color>
