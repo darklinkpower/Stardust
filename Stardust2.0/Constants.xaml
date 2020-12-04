@@ -39,6 +39,33 @@
     <Color x:Key="GridItemBackgroundColor">Transparent</Color>
     <Color x:Key="PanelSeparatorColor">#373538</Color>
 
+    <Color x:Key="NormalBorderControlsColor">#6f6d70</Color>
+    <Color x:Key="NormalBorderControlsHoverColor">#acabad</Color>
+    <Color x:Key="NormalBorderControlsHoverTransparencyColor">#59acabad</Color>
+    <Color x:Key="DetailsViewGrouCountBackgroundColor">#555555</Color>
+
+    <Color x:Key="PurpleButtonBrushColor">#b75ecf</Color>
+    <Color x:Key="PurpleButtonBrushHighlightColor">#c077d6</Color>
+    <Color x:Key="PurpleButtonBrushSelectedColor">#cc90dd</Color>
+
+    <Color x:Key="ToggleButtonNotCheckedColor">#2e2c2f</Color>
+    <Color x:Key="ToggleButtonNotCheckedBorderColor">#6f6d70</Color>
+    <Color x:Key="ToggleButtonNotCheckedHighlightBorderColor">#acabad</Color>
+
+    <Color x:Key="ThumbFillColor">#6f7275</Color>
+    <Color x:Key="ThumbFillHoverColor">#8f9495</Color>
+
+    <Color x:Key="TextBoxBorderColor">#6f6d70</Color>
+    <Color x:Key="TextBoxBorderHoverColor">#acabad</Color>
+
+    <Color x:Key="TitleButtonsBorderBackgroundColor">#2e2c2f</Color>
+
+    <Color x:Key="StandardWindowTitleBackgroundColor">#373538</Color>
+    <Color x:Key="StandardWindowBackgroundColor">#302e32</Color>
+
+    <Color x:Key="TitleWindowStateHoverColor">#424242</Color>
+    <Color x:Key="TitleWindowCloseHoverColor">#d22e00</Color>
+    
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#2e2c2f" />
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
     <SolidColorBrush x:Key="TextBrushDarker" Color="{DynamicResource TextColorDarker}" />
@@ -59,42 +86,41 @@
     <SolidColorBrush x:Key="MainPanelBackgroundBrush" Color="{DynamicResource MainColor}" />
 
 
-    <SolidColorBrush x:Key="NormalBorderBrushControls" Color="#6f6d70" />
-    <SolidColorBrush x:Key="NormalBorderBrushControlsHover" Color="#acabad" />
+    <SolidColorBrush x:Key="NormalBorderBrushControls" Color="{DynamicResource NormalBorderControlsColor}" />
+    <SolidColorBrush x:Key="NormalBorderBrushControlsHover" Color="{DynamicResource NormalBorderControlsHoverColor}" />
     <SolidColorBrush x:Key="NormalBorderBrushControlsSelected" Color="{DynamicResource GlyphColor}" />
     <SolidColorBrush x:Key="NormalBorderBrushControlsSelectedWhite" Color="{DynamicResource TextColor}" />
 
-    <SolidColorBrush x:Key="NormalBorderBrushControlsHoverTransparency" Color="#59acabad" />
+    <SolidColorBrush x:Key="NormalBorderBrushControlsHoverTransparency" Color="{DynamicResource NormalBorderControlsHoverTransparencyColor}" />
 
     <SolidColorBrush x:Key="DetailsViewGameListBackground" Color="Transparent" />
-    <SolidColorBrush x:Key="DetailsViewGrouCountBackgroundBrush" Color="#555555" />
-    
-    <SolidColorBrush x:Key="PurpleButtonBrush" Color="{DynamicResource GlyphColor}" />
-    <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="#c077d6" />
-    <SolidColorBrush x:Key="PurpleButtonBrushSelected" Color="#cc90dd" />
+    <SolidColorBrush x:Key="DetailsViewGrouCountBackgroundBrush" Color="{DynamicResource DetailsViewGrouCountBackgroundColor}" />
 
-    <SolidColorBrush x:Key="ToggleButtonNotCheckedBrush" Color="#2e2c2f" />
-    <SolidColorBrush x:Key="ToggleButtonNotCheckedBorderBrush" Color="#6f6d70" />
-    <SolidColorBrush x:Key="ToggleButtonNotCheckedHighlightBorderBrush" Color="#acabad" />
+    <SolidColorBrush x:Key="PurpleButtonBrush" Color="{DynamicResource PurpleButtonBrushColor}" />
+    <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="{DynamicResource PurpleButtonBrushHighlightColor}" />
+    <SolidColorBrush x:Key="PurpleButtonBrushSelected" Color="{DynamicResource PurpleButtonBrushSelectedColor}" />
 
-    <SolidColorBrush x:Key="ThumbFillBrush" Color="#6f7275" />
-    <SolidColorBrush x:Key="ThumbFillBrushHover" Color="#8f9495" />
+    <SolidColorBrush x:Key="ToggleButtonNotCheckedBrush" Color="{DynamicResource ToggleButtonNotCheckedColor}" />
+    <SolidColorBrush x:Key="ToggleButtonNotCheckedBorderBrush" Color="{DynamicResource ToggleButtonNotCheckedBorderColor}" />
+    <SolidColorBrush x:Key="ToggleButtonNotCheckedHighlightBorderBrush" Color="{DynamicResource ToggleButtonNotCheckedHighlightBorderColor}" />
+
+    <SolidColorBrush x:Key="ThumbFillBrush" Color="{DynamicResource ThumbFillColor}" />
+    <SolidColorBrush x:Key="ThumbFillBrushHover" Color="{DynamicResource ThumbFillHoverColor}" />
 
 
-    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="#6f6d70" />
-    <SolidColorBrush x:Key="TextBoxBorderBrushHover" Color="#acabad" />
+    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="{DynamicResource TextBoxBorderColor}" />
+    <SolidColorBrush x:Key="TextBoxBorderBrushHover" Color="{DynamicResource TextBoxBorderHoverColor}" />
     <SolidColorBrush x:Key="TextBoxBorderBrushSelected" Color="{DynamicResource GlyphColor}" />
 
-
-    <SolidColorBrush x:Key="TitleButtonsBorderBackground" Color="#2e2c2f" />
+    <SolidColorBrush x:Key="TitleButtonsBorderBackground" Color="{DynamicResource TitleButtonsBorderBackgroundColor}" />
 
     <SolidColorBrush x:Key="DetailsViewWrapBackgroundsBrush" Color="Transparent" />
 
-    <SolidColorBrush x:Key="StandardWindowTitleBackgroundBrush" Color="#373538" />
-    <SolidColorBrush x:Key="StandardWindowBackgroundBrush" Color="#302e32" />
+    <SolidColorBrush x:Key="StandardWindowTitleBackgroundBrush" Color="{DynamicResource StandardWindowTitleBackgroundColor}" />
+    <SolidColorBrush x:Key="StandardWindowBackgroundBrush" Color="{DynamicResource StandardWindowBackgroundColor}" />
 
-    <SolidColorBrush x:Key="TitleWindowStateHover" Color="#424242" />
-    <SolidColorBrush x:Key="TitleWindowCloseHover" Color="#d22e00" />
+    <SolidColorBrush x:Key="TitleWindowStateHover" Color="{DynamicResource TitleWindowStateHoverColor}" />
+    <SolidColorBrush x:Key="TitleWindowCloseHover" Color="{DynamicResource TitleWindowCloseHoverColor}" />
     
     <SolidColorBrush x:Key="PositiveRatingBrush" Color="#78ffa0" />
     <SolidColorBrush x:Key="NegativeRatingBrush" Color="#c85429" />
