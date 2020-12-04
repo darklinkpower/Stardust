@@ -17,7 +17,11 @@
     <CornerRadius x:Key="MainMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TrayMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TooltipCornerRadius">5</CornerRadius>
-
+    <CornerRadius x:Key="GridViewCoverCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="GridViewCoverGridBackgroundDisabledCornerRadius">5,5,0,0</CornerRadius>
+    <CornerRadius x:Key="GridViewShowGameNameCornerRadius">0,0,5,5</CornerRadius>
+    <CornerRadius x:Key="GridViewSelectionBorderCornerRadius">7</CornerRadius>
+    
     <Color x:Key="BlackColor">#FF000000</Color>
     <Color x:Key="WhiteColor">#FFFFFFFF</Color>
     <Color x:Key="TextColor">#f2f2f2</Color>
@@ -32,7 +36,7 @@
     <Color x:Key="PopupBackgroundColor">#302e32</Color>
     <Color x:Key="PopupBorderColor">#373538</Color>
     <Color x:Key="BackgroundToneColor">#262c38</Color>
-    <Color x:Key="GridItemBackgroundColor">#2e2c2f</Color>
+    <Color x:Key="GridItemBackgroundColor">Transparent</Color>
     <Color x:Key="PanelSeparatorColor">#373538</Color>
 
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#2e2c2f" />
