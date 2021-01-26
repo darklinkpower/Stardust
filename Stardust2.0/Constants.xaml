@@ -2,6 +2,13 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
+    <sys:Double x:Key="DetailsViewLogoMaxHeight">150</sys:Double>
+    <sys:Double x:Key="DetailsViewLogoMaxWidth">400</sys:Double>
+    <Visibility x:Key="DetailsViewLogoVisibility">Visible</Visibility>
+    <sys:Double x:Key="GridViewLogoMaxHeight">80</sys:Double>
+    <sys:Double x:Key="GridViewLogoMaxWidth">400</sys:Double>
+    <Visibility x:Key="GridViewLogoVisibility">Visible</Visibility>
+    
     <sys:Double x:Key="FontSizeSmall">12</sys:Double>
     <sys:Double x:Key="FontSize">14</sys:Double>
     <sys:Double x:Key="FontSizeLarge">15</sys:Double>
@@ -107,7 +114,6 @@
 
     <SolidColorBrush x:Key="ThumbFillBrush" Color="{DynamicResource ThumbFillColor}" />
     <SolidColorBrush x:Key="ThumbFillBrushHover" Color="{DynamicResource ThumbFillHoverColor}" />
-
 
     <SolidColorBrush x:Key="TextBoxBorderBrush" Color="{DynamicResource TextBoxBorderColor}" />
     <SolidColorBrush x:Key="TextBoxBorderBrushHover" Color="{DynamicResource TextBoxBorderHoverColor}" />

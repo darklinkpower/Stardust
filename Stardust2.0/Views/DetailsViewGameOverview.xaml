@@ -26,6 +26,23 @@
                                     </RadialGradientBrush>
                                 </FadeImage.ImageOpacityMask>
                             </FadeImage>
+                            
+                            <TextBlock Name="FullPathLogo" Foreground="White" Visibility="Collapsed">
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0}{1}{2}">
+                                        <Binding Source="..\..\..\..\ExtraMetaData\"/>
+                                        <Binding Path="Game.Id"/>
+                                        <Binding Source="\Logo.png"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                            <Image Grid.ZIndex="1" MaxWidth="{DynamicResource DetailsViewLogoMaxWidth}" MaxHeight="{DynamicResource DetailsViewLogoMaxHeight}" 
+                                   Visibility="{DynamicResource DetailsViewLogoVisibility}" Margin="40" Stretch="Uniform" RenderOptions.BitmapScalingMode="Fant" 
+                                   Source="{Binding ElementName=FullPathLogo, Path=Text}" HorizontalAlignment="Center" VerticalAlignment="Top">
+                                <Image.Effect>
+                                    <DropShadowEffect ShadowDepth="0" Direction="0" BlurRadius="8" Opacity="1"/>
+                                </Image.Effect>
+                            </Image>
 
                             <Grid HorizontalAlignment="Stretch" Margin="20,0,20,0">
                                 <Grid.RowDefinitions>

@@ -2,9 +2,16 @@ ThemeApiVersion: 1.9.0
 Id: Stardust 2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002
 Name: Stardust
 Author: darklinkpower
-Version: 1.08
+Version: 1.1
 Links:
     - Name: GitHub
       Url: https://github.com/darklinkpower/Stardust
     - Name: Playnite Forums thread
       Url: https://playnite.link/forum/thread-468.html
+Constants:
+    - DetailsViewLogoMaxHeight: Maximum height of logos in Details View
+    - DetailsViewLogoMaxWidth: Maximum width of logos in Details View
+    - DetailsViewLogoVisibility: Visibility of logos in Details View
+    - GridViewLogoMaxHeight: Maximum height of logos in Grid View
+    - GridViewLogoMaxWidth: Maximum width of logos in Grid View
+    - GridViewLogoVisibility: Visibility of logos in Grid View

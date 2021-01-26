@@ -55,6 +55,21 @@
                                         </Style.Triggers>
                                     </Style>
                                 </DockPanel.Style>
+                                
+                                <DockPanel DockPanel.Dock="Top">
+                                    <TextBlock Name="FullPathLogo" Foreground="White" Visibility="Collapsed">
+                                        <TextBlock.Text>
+                                            <MultiBinding StringFormat="{}{0}{1}{2}">
+                                                <Binding Source="..\..\..\..\ExtraMetaData\"/>
+                                                <Binding Path="Game.Id"/>
+                                                <Binding Source="\Logo.png"/>
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                    <Image Grid.ZIndex="1" MaxWidth="{DynamicResource GridViewLogoMaxWidth}" MaxHeight="{DynamicResource GridViewLogoMaxHeight}" 
+                                   Visibility="{DynamicResource GridViewLogoVisibility}" Margin="20,5,20,5" Stretch="Uniform" RenderOptions.BitmapScalingMode="Fant" 
+                                   Source="{Binding ElementName=FullPathLogo, Path=Text}" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                </DockPanel>
 
                                 <DockPanel DockPanel.Dock="Top">
                                     <Image Name="PART_ImageIcon" DockPanel.Dock="Left" MaxHeight="32" MaxWidth="32"
