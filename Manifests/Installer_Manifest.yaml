@@ -1,0 +1,17 @@
+AddonId: Stardust 2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002
+Packages:
+  - Version: 1.08
+    RequiredApiVersion: 1.9.0
+    ReleaseDate: 2020-12-04
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/1.08/Stardust_1_08.pthm
+    Changelog:
+      - General Make GameMenu fontweight normal
+      - Main panel - Adjust progressbar width size
+      - Notification panel - Change color of notification message on hover
+      - Details view - Swap SuccessStory Locked and Unlocked sections
+      - Details view - Change Notes background to transparent
+      - Details view - Add small dropshadow effect to cover
+      - Details view - Use rounded corners for cover
+      - Grid view - Change Notes background to transparent
+      - Grid view - Use rounded corners for covers
+
