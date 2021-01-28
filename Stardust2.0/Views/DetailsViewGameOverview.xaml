@@ -4,7 +4,7 @@
                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
                     mc:Ignorable="d">
 
-    <Style TargetType="{x:Type DetailsViewGameOverview}">        
+    <Style TargetType="{x:Type DetailsViewGameOverview}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type DetailsViewGameOverview}">
@@ -26,22 +26,37 @@
                                     </RadialGradientBrush>
                                 </FadeImage.ImageOpacityMask>
                             </FadeImage>
-                            
-                            <TextBlock Name="FullPathLogo" Foreground="White" Visibility="Collapsed">
-                                <TextBlock.Text>
-                                    <MultiBinding StringFormat="{}{0}{1}{2}">
-                                        <Binding Source="..\..\..\..\ExtraMetaData\"/>
-                                        <Binding Path="Game.Id"/>
-                                        <Binding Source="\Logo.png"/>
-                                    </MultiBinding>
-                                </TextBlock.Text>
+
+                            <TextBlock Name="LogoPath" Tag="{DynamicResource ExtraMetadataPath}" Visibility="Collapsed">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="Text">
+                                            <Setter.Value>
+                                                <MultiBinding StringFormat="{}{0}{1}{2}{3}">
+                                                    <Binding RelativeSource="{RelativeSource Self}" Path="Tag" />
+                                                    <Binding Source="\ExtraMetadata\games\"/>
+                                                    <Binding Path="Game.Id"/>
+                                                    <Binding Source="\logo.png" />
+                                                </MultiBinding>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </TextBlock.Style>
                             </TextBlock>
-                            <Image Grid.ZIndex="1" MaxWidth="{DynamicResource DetailsViewLogoMaxWidth}" MaxHeight="{DynamicResource DetailsViewLogoMaxHeight}" 
-                                   Visibility="{DynamicResource DetailsViewLogoVisibility}" Margin="40" Stretch="Uniform" RenderOptions.BitmapScalingMode="Fant" 
-                                   Source="{Binding ElementName=FullPathLogo, Path=Text}" HorizontalAlignment="Center" VerticalAlignment="Top">
-                                <Image.Effect>
-                                    <DropShadowEffect ShadowDepth="0" Direction="0" BlurRadius="8" Opacity="1"/>
-                                </Image.Effect>
+                            <Image Name="LogoImage" Grid.ZIndex="1" MaxWidth="{DynamicResource DetailsViewLogoMaxWidth}" MaxHeight="{DynamicResource DetailsViewLogoMaxHeight}" 
+                               Visibility="{DynamicResource DetailsViewLogoVisibility}" Margin="40" Stretch="Uniform" RenderOptions.BitmapScalingMode="Fant" 
+                               HorizontalAlignment="Center" VerticalAlignment="Top"
+                               StretchDirection="DownOnly" Tag="{DynamicResource UseAbsoluteExtraMetadataPath}">
+                                <Image.Style>
+                                    <Style TargetType="Image">
+                                        <Setter Property="Source" Value="{Binding ElementName=LogoPath, Path=Text}"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                <Setter Property="Source" Value="{Binding ElementName=LogoPath, Path=Text, Converter={StaticResource ImageStringToImageConverter}}"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
                             </Image>
 
                             <Grid HorizontalAlignment="Stretch" Margin="20,0,20,0">
