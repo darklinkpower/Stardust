@@ -14,4 +14,10 @@ Packages:
       - Details view - Use rounded corners for cover
       - Grid view - Change Notes background to transparent
       - Grid view - Use rounded corners for covers
-
+  - Version: 1.11
+    RequiredApiVersion: 1.9.0
+    ReleaseDate: 2020-01-27
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/1.11/Stardust_1_11.pthm
+    Changelog:
+      - Theme Modifier Extension support
+      - Extra Metadata support using companion extension. Unofficial logo support available.
