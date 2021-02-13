@@ -97,7 +97,10 @@
                             <Setter Property="Visibility" Value="Hidden" TargetName="Expander" />
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="FontWeight" Value="UltraBold" />
+                            <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True" SourceName="SelectionBorder">
+                            <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
