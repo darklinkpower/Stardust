@@ -23,6 +23,7 @@ Playnite forum thread: https://playnite.link/forum/thread-468.html
   - [HowLongToBeat](https://github.com/Lacro59/playnite-howlongtobeat-plugin)
   - [SuccessStory](https://github.com/Lacro59/playnite-successstory-plugin)
   - [GameActivity.](https://github.com/Lacro59/playnite-gameactivity-plugin)
+  - [ScreenshotVisualizer.](https://github.com/Lacro59/playnite-screenshotsvisualizer-plugin)
   
   
 ## Screenshots
