@@ -26,12 +26,12 @@
                                           Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" />
                     </Border>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsChecked" Value="True">
+                        <Trigger Property="IsChecked" Value="False">
                             <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
                             <Setter Property="Background" Value="{DynamicResource ToggleButtonNotCheckedBrush}" TargetName="Border"/>
                             <Setter Property="BorderBrush" Value="{DynamicResource ToggleButtonNotCheckedBorderBrush}" TargetName="Border" />
                         </Trigger>
-                        <Trigger Property="IsChecked" Value="False">
+                        <Trigger Property="IsChecked" Value="True">
                             <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
                         </Trigger>
                         <MultiTrigger>

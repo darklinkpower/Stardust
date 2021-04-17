@@ -100,14 +100,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TabItem}">
-                    <Grid x:Name="TabGrid">
+                    <Grid x:Name="TabGrid" Cursor="Hand">
                         <Border x:Name="SelectedBorder" Visibility="Collapsed" Margin="1,0,1,-1"
                                 SnapsToDevicePixels="True"
                                 BorderThickness="0,0,0,1" BorderBrush="{DynamicResource TextBrush}"/>
-                        <TextBlock x:Name="TextContent" Padding="5" Style="{DynamicResource BaseTextBlockStyle}"
+                        <TextBlock x:Name="TextContent" Padding="5" Opacity="0.6" FontWeight="{TemplateBinding FontWeight}" FontSize="{TemplateBinding FontSize}" Style="{DynamicResource BaseTextBlockStyle}"
                                    Foreground="{TemplateBinding Foreground}">
                             <ContentPresenter x:Name="ContentSite" RecognizesAccessKey="True" ContentSource="Header"
-                                              HorizontalAlignment="Center" Margin="8" VerticalAlignment="Center" Cursor="Hand"/>
+                                              HorizontalAlignment="Center" Margin="8" VerticalAlignment="Center"/>
                         </TextBlock>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -153,7 +153,7 @@
                             </Setter>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="Transparent" TargetName="SelectedBorder" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource TextBrush}" TargetName="SelectedBorder" />
                             <Setter Property="Visibility" Value="Visible" TargetName="SelectedBorder" />
                             <Setter Property="Opacity" Value="1" TargetName="TextContent"/>
                         </Trigger>

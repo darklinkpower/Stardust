@@ -3,6 +3,7 @@
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
     <sys:Boolean x:Key="UseAbsoluteExtraMetadataPath">false</sys:Boolean>
+    <Visibility x:Key="VisibilityDetailIcons">Visible</Visibility>
     <sys:String x:Key="ExtraMetadataPath">..\..\..\..</sys:String>
     <sys:Double x:Key="DetailsViewLogoMaxHeight">150</sys:Double>
     <sys:Double x:Key="DetailsViewLogoMaxWidth">400</sys:Double>
