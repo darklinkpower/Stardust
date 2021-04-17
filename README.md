@@ -27,11 +27,13 @@ Playnite forum thread: https://playnite.link/forum/thread-468.html
   
   
 ## Screenshots
-![Screenshot](https://i.imgur.com/TXzOFDN.jpg)
+![Screenshot](https://github.com/simeonradivoev/Stardust/wiki/Screenshots/Playnite.DesktopApp_xO4BGGLurG.png)
 
-![Screenshot](https://i.imgur.com/fBpO2JP.jpg)
+![Screenshot](https://github.com/simeonradivoev/Stardust/wiki/Screenshots/Playnite.DesktopApp_7ZMmrzmEV4.png)
 
-![Screenshot](https://i.imgur.com/7kfX8ST.jpeg)
+![Screenshot](https://github.com/simeonradivoev/Stardust/wiki/Screenshots/Playnite.DesktopApp_mLNeelQjLC.png)
+
+![Screenshot](https://github.com/simeonradivoev/Stardust/wiki/Screenshots/Playnite.DesktopApp_ayDTVbkfdW.jpg)
 
 ![Screenshot](https://i.imgur.com/slYXcQ6.jpeg)
 
