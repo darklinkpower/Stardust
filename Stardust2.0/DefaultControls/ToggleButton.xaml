@@ -103,7 +103,7 @@
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
                         </Trigger>
-                        <DataTrigger Binding="{Binding ElementName=VideoTrailer,Path=Source}" Value="">
+                        <DataTrigger Binding="{Binding ElementName=VideoTrailer,Path=Source}" Value="HideButtons">
                             <Setter Property="Visibility" Value="Collapsed"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
@@ -146,7 +146,7 @@
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
                         </Trigger>
-                        <DataTrigger Binding="{Binding ElementName=VideoTrailer,Path=Source}" Value="">
+                        <DataTrigger Binding="{Binding ElementName=VideoPlaybackToggleButton,Path=IsChecked}" Value="False">
                             <Setter Property="Visibility" Value="Collapsed"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
@@ -191,7 +191,7 @@
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
                         </Trigger>
-                        <DataTrigger Binding="{Binding ElementName=VideoTrailer,Path=Source}" Value="">
+                        <DataTrigger Binding="{Binding ElementName=VideoTrailer,Path=Source}" Value="HideButtons">
                             <Setter Property="Visibility" Value="Collapsed"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
@@ -233,7 +233,7 @@
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
                         </Trigger>
-                        <DataTrigger Binding="{Binding ElementName=VideoTrailer,Path=Source}" Value="">
+                        <DataTrigger Binding="{Binding ElementName=VideoPlaybackToggleButton,Path=IsChecked}" Value="False">
                             <Setter Property="Visibility" Value="Collapsed"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
@@ -276,7 +276,7 @@
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
                         </Trigger>
-                        <DataTrigger Binding="{Binding ElementName=VideoTrailer,Path=Source}" Value="">
+                        <DataTrigger Binding="{Binding ElementName=VideoTrailer,Path=Source}" Value="HideButtons">
                             <Setter Property="Visibility" Value="Collapsed"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
@@ -319,7 +319,7 @@
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
                         </Trigger>
-                        <DataTrigger Binding="{Binding ElementName=VideoTrailer,Path=Source}" Value="">
+                        <DataTrigger Binding="{Binding ElementName=VideoTrailer,Path=Source}" Value="HideButtons">
                             <Setter Property="Visibility" Value="Collapsed"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
