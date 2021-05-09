@@ -4,7 +4,7 @@
 
     <sys:Boolean x:Key="UseAbsoluteExtraMetadataPath">true</sys:Boolean>
     <sys:String x:Key="ExtraMetadataPath">C:\Games\Playnite</sys:String>
-    <sys:Boolean x:Key="DetailsViewIsVideoStandardSizeDefault">False</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewIsVideoStandardSizeDefault">True</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewIsVideoPlayedByDefault">False</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewIsVideoTrailerDefault">True</sys:Boolean>
     <sys:Double x:Key="DetailsViewLogoHeight">100</sys:Double>

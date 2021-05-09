@@ -12,7 +12,7 @@
                                   VerticalScrollBarVisibility="Auto"
                                   Style="{DynamicResource DetailsScrollViewer}"
                                   d:DesignWidth="1280"
-                                  d:DesignHeight="1280"
+                                  d:DesignHeight="1455"
                                   d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameDetailsIntance}">
                         <Grid>
                             <TextBlock Name="VideoSelection" Foreground="White" Visibility="Collapsed">
@@ -30,7 +30,7 @@
                                     </Style>
                                 </TextBlock.Style>
                             </TextBlock>
-                            <TextBlock Name="VideoTrailerPath" Foreground="White" Tag="{DynamicResource ExtraMetadataPath}" Visibility="Visible">
+                            <TextBlock Name="VideoTrailerPath" Foreground="White" Tag="{DynamicResource ExtraMetadataPath}" Visibility="Collapsed">
                                 <TextBlock.Style>
                                     <Style TargetType="TextBlock">
                                         <Setter Property="Text">
@@ -79,6 +79,7 @@
                                     <RowDefinition Height="Auto" MaxHeight="575"/>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <Grid MaxWidth="1024" Grid.Row="1">
                                     <Grid.ColumnDefinitions>
@@ -86,6 +87,102 @@
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
+                                    <Grid Panel.ZIndex="1" Grid.ColumnSpan="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="300" />
+                                            <ColumnDefinition Width="15" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="15" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Image Name="LogoImage" Stretch="Uniform" RenderOptions.BitmapScalingMode="Fant" StretchDirection="DownOnly" Tag="{DynamicResource UseAbsoluteExtraMetadataPath}">
+                                            <Image.Effect>
+                                                <DropShadowEffect Direction="0" Color="#FF000000" ShadowDepth="0" BlurRadius="40" />
+                                            </Image.Effect>
+                                            <Image.Style>
+                                                <Style TargetType="Image">
+                                                    <Setter Property="VerticalAlignment" Value="Top"/>
+                                                    <Setter Property="Grid.Row" Value="0" />
+                                                    <Setter Property="Grid.RowSpan" Value="1" />
+                                                    <Setter Property="Grid.Column" Value="0" />
+                                                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                                                    <Setter Property="Source" Value="{Binding ElementName=LogoPath, Path=Text}" />
+                                                    <Setter Property="Height" Value="{DynamicResource DetailsViewLogoHeight}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding ElementName=LogoPlacementToggleButton, Path=IsChecked}" Value="False">
+                                                            <Setter Property="VerticalAlignment" Value="Top"/>
+                                                            <Setter Property="Grid.Row" Value="0" />
+                                                            <Setter Property="Grid.RowSpan" Value="2" />
+                                                            <Setter Property="Grid.Column" Value="2" />
+                                                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding ElementName=LogoVisibilityToggleButton, Path=IsChecked}" Value="False">
+                                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                            <Setter Property="Source" Value="{Binding ElementName=LogoPath, Path=Text, Converter={StaticResource ImageStringToImageConverter}}" />
+                                                            <Setter Property="Opacity" Value="1" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding ElementName=VideoResizeToggleButton,Path=IsChecked}" Value="{x:Null}">
+                                                            <DataTrigger.EnterActions>
+                                                                <BeginStoryboard>
+                                                                    <Storyboard>
+                                                                        <ThicknessAnimation Storyboard.TargetProperty="Margin" To="15,15,0,15" Duration="0:0:0.2"/>
+                                                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.3" Duration="0:0:0.2" />
+                                                                    </Storyboard>
+                                                                </BeginStoryboard>
+                                                            </DataTrigger.EnterActions>
+                                                            <DataTrigger.ExitActions>
+                                                                <BeginStoryboard>
+                                                                    <Storyboard>
+                                                                        <ThicknessAnimation Storyboard.TargetProperty="Margin" To="0,0,0,15" Duration="0:0:0.2" />
+                                                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.2" />
+                                                                    </Storyboard>
+                                                                </BeginStoryboard>
+                                                            </DataTrigger.ExitActions>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Image.Style>
+                                        </Image>
+                                        <Grid Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                                            <Grid.Style>
+                                                <Style TargetType="Grid">
+                                                    <Setter Property="Opacity" Value="1" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding ElementName=VideoResizeToggleButton,Path=IsChecked}" Value="{x:Null}">
+                                                            <DataTrigger.EnterActions>
+                                                                <BeginStoryboard>
+                                                                    <Storyboard>
+                                                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0" />
+                                                                    </Storyboard>
+                                                                </BeginStoryboard>
+                                                            </DataTrigger.EnterActions>
+                                                            <DataTrigger.ExitActions>
+                                                                <BeginStoryboard>
+                                                                    <Storyboard>
+                                                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:1" />
+                                                                    </Storyboard>
+                                                                </BeginStoryboard>
+                                                            </DataTrigger.ExitActions>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Grid.Style>
+                                            <Grid.Effect>
+                                                <DropShadowEffect ShadowDepth="0" Direction="0" BlurRadius="8" Opacity="0.4" />
+                                            </Grid.Effect>
+                                            <Border Name="Mask" Background="White" CornerRadius="{DynamicResource DetailsViewCoverCornerRadius}" />
+                                            <Image Name="PART_ImageCover" Height="{Settings GameDetailsCoverHeight}" StretchDirection="Both" Stretch="Uniform" RenderOptions.BitmapScalingMode="Fant" />
+                                            <Grid.OpacityMask>
+                                                <VisualBrush Visual="{Binding ElementName=Mask}" />
+                                            </Grid.OpacityMask>
+                                        </Grid>
+                                    </Grid>
                                     <Grid x:Name="VideoGridContainer" HorizontalAlignment="Right">
                                         <Grid.Style>
                                             <Style TargetType="Grid">
@@ -152,117 +249,7 @@
                                         <ToggleButton FontSize="40" x:Name="VideoAudioToggleButton" Style="{DynamicResource VideoAudioToggleButton}" Margin="0,5,5,0" VerticalAlignment="Center" HorizontalAlignment="Right" IsChecked="True" />
                                         <ToggleButton FontSize="40" x:Name="VideoPlaybackToggleButton" Style="{DynamicResource VideoPlaybackToggleButton}" Margin="0,5,5,0" VerticalAlignment="Center" HorizontalAlignment="Right" IsChecked="{DynamicResource DetailsViewIsVideoPlayedByDefault}"/>
                                         <ToggleButton FontSize="40" x:Name="VideoFileToggleButton" Style="{DynamicResource VideoFileToggleButton}" Margin="0,5,5,0" VerticalAlignment="Center" HorizontalAlignment="Right" IsChecked="{DynamicResource DetailsViewIsVideoTrailerDefault}"/>
-                                        <ToggleButton FontSize="40" x:Name="LogoVisibilityToggleButton" Style="{DynamicResource LogoVisibilityToggleButton}" Margin="0,0,5,0" VerticalAlignment="Center" HorizontalAlignment="Right" IsChecked="{DynamicResource DetailsViewIsLogoVisible}"/>
-                                        <ToggleButton FontSize="35" x:Name="LogoPlacementToggleButton" Style="{DynamicResource LogoPlacementToggleButton}" Margin="0,0,8,0" VerticalAlignment="Center" HorizontalAlignment="Right" IsChecked="{DynamicResource DetailsViewIsLogoOnLeft}"/>
                                     </StackPanel>
-                                    <Grid Grid.ColumnSpan="2">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="300" />
-                                            <ColumnDefinition Width="*" />
-                                        </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
-                                        <Image Name="LogoImage" Stretch="Uniform" RenderOptions.BitmapScalingMode="Fant" VerticalAlignment="Top" StretchDirection="DownOnly" Tag="{DynamicResource UseAbsoluteExtraMetadataPath}">
-                                            <Image.Style>
-                                                <Style TargetType="Image">
-                                                    <Setter Property="Grid.Row" Value="0" />
-                                                    <Setter Property="Grid.Column" Value="0" />
-                                                    <Setter Property="HorizontalAlignment" Value="Left"/>
-                                                    <Setter Property="Source" Value="{Binding ElementName=LogoPath, Path=Text}" />
-                                                    <Setter Property="Height" Value="{DynamicResource DetailsViewLogoHeight}" />
-                                                    <Setter Property="Visibility" Value="Visible" />
-                                                    <Setter Property="Margin" Value="0,0,0,15" />
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding ElementName=LogoPlacementToggleButton, Path=IsChecked}" Value="False">
-                                                            <Setter Property="Grid.Row" Value="1" />
-                                                            <Setter Property="Grid.Column" Value="1" />
-                                                            <Setter Property="HorizontalAlignment" Value="Center"/>
-                                                            <Setter Property="Margin" Value="5,0,5,0" />
-                                                        </DataTrigger>
-                                                        <DataTrigger Binding="{Binding ElementName=LogoVisibilityToggleButton, Path=IsChecked}" Value="False">
-                                                            <DataTrigger.EnterActions>
-                                                                <BeginStoryboard>
-                                                                    <Storyboard>
-                                                                        <DoubleAnimation Storyboard.TargetProperty="Height" To="0" Duration="0:0:0.1" />
-                                                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility">
-                                                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Hidden}"/>
-                                                                        </ObjectAnimationUsingKeyFrames>
-                                                                    </Storyboard>
-                                                                </BeginStoryboard>
-                                                            </DataTrigger.EnterActions>
-                                                            <DataTrigger.ExitActions>
-                                                                <BeginStoryboard>
-                                                                    <Storyboard>
-                                                                        <DoubleAnimation Storyboard.TargetProperty="Height" To="100" Duration="0:0:0.1" />
-                                                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility">
-                                                                            <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Visible}"/>
-                                                                        </ObjectAnimationUsingKeyFrames>
-                                                                    </Storyboard>
-                                                                </BeginStoryboard>
-                                                            </DataTrigger.ExitActions>
-                                                        </DataTrigger>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
-                                                            <Setter Property="Source" Value="{Binding ElementName=LogoPath, Path=Text, Converter={StaticResource ImageStringToImageConverter}}" />
-                                                            <Setter Property="Opacity" Value="1" />
-                                                        </DataTrigger>
-                                                        <DataTrigger Binding="{Binding ElementName=VideoResizeToggleButton,Path=IsChecked}" Value="{x:Null}">
-                                                            <DataTrigger.EnterActions>
-                                                                <BeginStoryboard>
-                                                                    <Storyboard>
-                                                                        <ThicknessAnimation Storyboard.TargetProperty="Margin" To="15,15,0,15" Duration="0:0:0.2" />
-                                                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.3" Duration="0:0:0.2" />
-                                                                    </Storyboard>
-                                                                </BeginStoryboard>
-                                                            </DataTrigger.EnterActions>
-                                                            <DataTrigger.ExitActions>
-                                                                <BeginStoryboard>
-                                                                    <Storyboard>
-                                                                        <ThicknessAnimation Storyboard.TargetProperty="Margin" To="0,0,0,15" Duration="0:0:0.2" />
-                                                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.2" />
-                                                                    </Storyboard>
-                                                                </BeginStoryboard>
-                                                            </DataTrigger.ExitActions>
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </Image.Style>
-                                        </Image>
-                                        <Grid Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-                                            <Grid.Style>
-                                                <Style TargetType="Grid">
-                                                    <Setter Property="Opacity" Value="1" />
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding ElementName=VideoResizeToggleButton,Path=IsChecked}" Value="{x:Null}">
-                                                            <DataTrigger.EnterActions>
-                                                                <BeginStoryboard>
-                                                                    <Storyboard>
-                                                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0" />
-                                                                    </Storyboard>
-                                                                </BeginStoryboard>
-                                                            </DataTrigger.EnterActions>
-                                                            <DataTrigger.ExitActions>
-                                                                <BeginStoryboard>
-                                                                    <Storyboard>
-                                                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:1" />
-                                                                    </Storyboard>
-                                                                </BeginStoryboard>
-                                                            </DataTrigger.ExitActions>
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </Grid.Style>
-                                            <Grid.Effect>
-                                                <DropShadowEffect ShadowDepth="0" Direction="0" BlurRadius="8" Opacity="0.4" />
-                                            </Grid.Effect>
-                                            <Border Name="Mask" Background="White" CornerRadius="{DynamicResource DetailsViewCoverCornerRadius}" />
-                                            <Image Name="PART_ImageCover" Height="{Settings GameDetailsCoverHeight}" StretchDirection="Both" Stretch="Uniform" RenderOptions.BitmapScalingMode="Fant" />
-                                            <Grid.OpacityMask>
-                                                <VisualBrush Visual="{Binding ElementName=Mask}" />
-                                            </Grid.OpacityMask>
-                                        </Grid>
-                                    </Grid>
                                 </Grid>
                                 <DockPanel Margin="0,20,0,15" MaxWidth="1024" Grid.Row="2" Background="Transparent">
                                     <StackPanel VerticalAlignment="Bottom" DockPanel.Dock="Left">
@@ -274,20 +261,70 @@
                                                 </TextBlock.Effect>
                                             </TextBlock>
                                         </DockPanel>
-                                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,15,0,0" Width="300">
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*" />
-                                                <ColumnDefinition Width="Auto" />
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-                                            <Button Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonPlayAction" Height="40" Style="{DynamicResource PlayButtonViews}" />
-                                            <Button Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonContextAction" Height="40" Style="{DynamicResource ContextButtonViews}" />
-                                            <Button Grid.Column="1" Name="PART_ButtonMoreActions" Content="" FontFamily="{DynamicResource FontIcoFont}" Width="40" Margin="10,0,0,0" Style="{DynamicResource MoreActionButtonViews}" Padding="0" />
-                                            <Button Grid.Column="2" x:Name="PART_ButtonEditGame" Margin="10,0,0,0" Height="40" Width="40" Focusable="False" Content="" FontFamily="{DynamicResource FontIcoFont}" Style="{DynamicResource MoreActionButtonViews}" />
-                                        </Grid>
+                                        <DockPanel Margin="0,15,0,0">
+                                            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="300">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+                                                <Button Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonPlayAction" Height="40" Style="{DynamicResource PlayButtonViews}" />
+                                                <Button Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonContextAction" Height="40" Style="{DynamicResource ContextButtonViews}" />
+                                                <Button Grid.Column="1" Name="PART_ButtonMoreActions" Content="&#xEAC8;" FontFamily="{DynamicResource FontIcoFont}" Width="40" Margin="10,0,0,0" Style="{DynamicResource MoreActionButtonViews}" Padding="0" />
+                                                <Button Grid.Column="2" x:Name="PART_ButtonEditGame" Content="&#xEDED;" Margin="10,0,0,0" Height="40" Width="40" Focusable="False" FontFamily="{DynamicResource FontIcoFont}" Style="{DynamicResource MoreActionButtonViews}" />
+                                            </Grid>
+                                            <ToggleButton MaxHeight="40" FontSize="40" x:Name="LogoVisibilityToggleButton" Style="{DynamicResource LogoVisibilityToggleButton}" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" IsChecked="{DynamicResource DetailsViewIsLogoVisible}"/>
+                                            <ToggleButton MaxHeight="40" FontSize="35" x:Name="LogoPlacementToggleButton" Style="{DynamicResource LogoPlacementToggleButton}" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" IsChecked="{DynamicResource DetailsViewIsLogoOnLeft}"/>
+                                        </DockPanel>
+
                                     </StackPanel>
                                 </DockPanel>
-                                <DockPanel MaxWidth="1024" Grid.Row="3">
+                                <Grid MaxWidth="1024" Grid.Row="3" Height="90">
+                                    <Grid.Resources>
+                                        <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
+                                        <Style TargetType="Label">
+                                            <Setter Property="FontWeight" Value="Bold" />
+                                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+                                            <Setter Property="Margin" Value="-5,0,0,0" />
+                                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                                            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                                        </Style>
+                                    </Grid.Resources>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" MinWidth="160"/>
+                                        <ColumnDefinition Width="Auto" MinWidth="160"/>
+                                        <ColumnDefinition Width="Auto" MinWidth="160"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <DockPanel Grid.Column="0">
+                                        <Viewbox Stretch="Uniform" Height="50">
+                                            <TextBlock Text="&#xEC45;" FontFamily="{StaticResource FontIcoFont}"/>
+                                        </Viewbox>
+                                        <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
+                                            <Label Name="PART_ElemLastPlayed" Content="{DynamicResource LOCLastPlayed}"/>
+                                            <TextBlock Name="PART_TextLastActivity"/>
+                                        </StackPanel>
+                                    </DockPanel>
+                                    <DockPanel Grid.Column="1" Margin="20,0,0,0">
+                                        <Viewbox Stretch="Uniform" Height="50">
+                                            <TextBlock Text="&#xEEDC;" FontFamily="{StaticResource FontIcoFont}"/>
+                                        </Viewbox>
+                                        <StackPanel Height="50" Margin="10,0,0,0" VerticalAlignment="Center">
+                                            <Label Name="PART_ElemPlayTime" Content="{DynamicResource LOCTimePlayed}"/>
+                                            <TextBlock Name="PART_TextPlayTime"/>
+                                        </StackPanel>
+                                    </DockPanel>
+                                    <DockPanel Grid.Column="2" Margin="20,0,0,0">
+                                        <Viewbox Stretch="Uniform" Height="50">
+                                            <TextBlock Text="&#xEED6;" FontFamily="{StaticResource FontIcoFont}"/>
+                                        </Viewbox>
+                                        <StackPanel Height="50" Margin="10,0,0,0" VerticalAlignment="Center">
+                                            <Label Name="PART_ElemCompletionStatus" Content="{DynamicResource LOCCompletionStatus}" />
+                                            <TextBlock Name="PART_TextCompletionStatus"/>
+                                        </StackPanel>
+                                    </DockPanel>
+                                </Grid>
+                                <DockPanel MaxWidth="1024" Grid.Row="4">
                                     <StackPanel DockPanel.Dock="Left" Width="300" Margin="2,0,0,0">
                                         <StackPanel.Resources>
                                             <Style TargetType="ItemsControl">
@@ -311,12 +348,6 @@
                                                     <Setter Property="Margin" Value="0,0,0,0" />
                                                 </Style>
                                             </Grid.Resources>
-                                            <Label Name="PART_ElemPlayTime" Content="{DynamicResource LOCTimePlayed}" />
-                                            <TextBlock Name="PART_TextPlayTime" VerticalAlignment="Center" />
-                                            <Label Name="PART_ElemLastPlayed" Content="{DynamicResource LOCLastPlayed}" />
-                                            <TextBlock Name="PART_TextLastActivity" VerticalAlignment="Center" />
-                                            <Label Name="PART_ElemCompletionStatus" Content="{DynamicResource LOCCompletionStatus}" />
-                                            <TextBlock Name="PART_TextCompletionStatus" VerticalAlignment="Center" />
                                             <Label Name="PART_ElemLibrary" Content="{DynamicResource LOCGameProviderTitle}" />
                                             <Button Name="PART_ButtonLibrary" VerticalAlignment="Center" />
                                             <Label Name="PART_ElemPlatform" Content="{DynamicResource LOCPlatformTitle}" />
