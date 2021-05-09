@@ -352,20 +352,16 @@
                                             <Button Name="PART_ButtonLibrary" VerticalAlignment="Center" />
                                             <Label Name="PART_ElemPlatform" Content="{DynamicResource LOCPlatformTitle}" />
                                             <Button Name="PART_ButtonPlatform" VerticalAlignment="Center" />
+                                            <Label Name="PART_ElemCategories" Content="{DynamicResource LOCGameCategoriesTitle}" />
+                                            <ItemsControl Name="PART_ItemsCategories" />
                                             <Label Name="PART_ElemGenres" Content="{DynamicResource LOCGenreLabel}" />
                                             <ItemsControl Name="PART_ItemsGenres" />
+                                            <Label Name="PART_ElemReleaseDate" Content="{DynamicResource LOCGameReleaseDateTitle}" />
+                                            <Button Name="PART_ButtonReleaseDate" VerticalAlignment="Center" />
                                             <Label Name="PART_ElemDevelopers" Content="{DynamicResource LOCDeveloperLabel}" />
                                             <ItemsControl Name="PART_ItemsDevelopers" />
                                             <Label Name="PART_ElemPublishers" Content="{DynamicResource LOCPublisherLabel}" />
                                             <ItemsControl Name="PART_ItemsPublishers" />
-                                            <Label Name="PART_ElemReleaseDate" Content="{DynamicResource LOCGameReleaseDateTitle}" />
-                                            <Button Name="PART_ButtonReleaseDate" VerticalAlignment="Center" />
-                                            <Label Name="PART_ElemCategories" Content="{DynamicResource LOCGameCategoriesTitle}" />
-                                            <ItemsControl Name="PART_ItemsCategories" />
-                                            <Label Name="PART_ElemFeatures" Content="{DynamicResource LOCFeaturesLabel}" />
-                                            <ItemsControl Name="PART_ItemsFeatures" />
-                                            <Label Name="PART_ElemTags" Content="{DynamicResource LOCTagsLabel}" />
-                                            <ItemsControl Name="PART_ItemsTags" />
                                             <Label Name="PART_ElemAgeRating" Content="{DynamicResource LOCAgeRatingLabel}" />
                                             <Button Name="PART_ButtonAgeRating" VerticalAlignment="Center" />
                                             <Label Name="PART_ElemSeries" Content="{DynamicResource LOCSeriesLabel}" />
@@ -382,6 +378,10 @@
                                             <TextBlock Name="PART_TextCriticScore" VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
                                             <Label Name="PART_ElemUserScore" Content="{DynamicResource LOCUserScore}" />
                                             <TextBlock Name="PART_TextUserScore" VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
+                                            <Label Name="PART_ElemFeatures" Content="{DynamicResource LOCFeaturesLabel}" />
+                                            <ItemsControl Name="PART_ItemsFeatures" />
+                                            <Label Name="PART_ElemTags" Content="{DynamicResource LOCTagsLabel}" />
+                                            <ItemsControl Name="PART_ItemsTags" />
                                             <Label Name="PART_ElemLinks" Content="{DynamicResource LOCLinksLabel}" />
                                             <ItemsControl Name="PART_ItemsLinks" />
                                         </GridEx>
