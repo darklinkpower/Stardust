@@ -8,6 +8,7 @@
 
     <Style TargetType="{x:Type TabControl}" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="SelectedIndex" Value="0"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TabControl}">
@@ -87,6 +88,9 @@
                             <Setter Property="CornerRadius" TargetName="ContentPanel" Value="2,0,0,2"/>
                             <Setter Property="CornerRadius" TargetName="HeaderBorder" Value="0,2,2,0"/>
                         </Trigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Visibility}" Value="Collapsed">
+                            <Setter Property="SelectedIndex" Value="0"/>
+                        </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
