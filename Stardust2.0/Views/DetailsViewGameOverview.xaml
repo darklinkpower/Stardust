@@ -211,7 +211,7 @@
                                         <Viewbox>
                                             <Border Width="854" Height="480" Background="Transparent"/>
                                         </Viewbox>
-                                        <!--MediaElement causes exception on the Blend design preview
+                                        <!--MediaElement causes exception on the Blend design preview-->
                                         <MediaElement x:Name="VideoTrailer" MediaElementBehaviors.Repeat="True" 
                                                         Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top">
                                             <MediaElement.Style>
@@ -240,10 +240,13 @@
                                                                 </BeginStoryboard>
                                                             </DataTrigger.ExitActions>
                                                         </DataTrigger>
+                                                        <DataTrigger Binding="{Binding ElementName=PART_ControlGameView, Path=IsVisible}" Value="False">
+                                                            <Setter Property="MediaElement.Source" Value="" />
+                                                        </DataTrigger>
                                                     </Style.Triggers>
                                                 </Style>
                                             </MediaElement.Style>
-                                        </MediaElement>-->
+                                        </MediaElement>
                                     </Grid>
                                     <StackPanel Grid.Column="2" Grid.Row="0">
                                         <ToggleButton FontSize="40" x:Name="VideoResizeToggleButton" Style="{DynamicResource VideoResizeToggleButton}" Margin="0,0,5,0" VerticalAlignment="Center" HorizontalAlignment="Right" IsThreeState="True" IsChecked="{DynamicResource DetailsViewIsVideoStandardSizeDefault}"/>
@@ -294,10 +297,11 @@
                                         <ColumnDefinition Width="Auto" MinWidth="160"/>
                                         <ColumnDefinition Width="Auto" MinWidth="160"/>
                                         <ColumnDefinition Width="Auto" MinWidth="160"/>
+                                        <ColumnDefinition Width="Auto" MinWidth="160"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     <DockPanel Grid.Column="0">
-                                        <Viewbox Stretch="Uniform" Height="50">
+                                        <Viewbox Stretch="Uniform" Height="40">
                                             <TextBlock Text="&#xEC45;" FontFamily="{StaticResource FontIcoFont}"/>
                                         </Viewbox>
                                         <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
@@ -306,7 +310,7 @@
                                         </StackPanel>
                                     </DockPanel>
                                     <DockPanel Grid.Column="1" Margin="20,0,0,0">
-                                        <Viewbox Stretch="Uniform" Height="50">
+                                        <Viewbox Stretch="Uniform" Height="40">
                                             <TextBlock Text="&#xEEDC;" FontFamily="{StaticResource FontIcoFont}"/>
                                         </Viewbox>
                                         <StackPanel Height="50" Margin="10,0,0,0" VerticalAlignment="Center">
@@ -315,12 +319,37 @@
                                         </StackPanel>
                                     </DockPanel>
                                     <DockPanel Grid.Column="2" Margin="20,0,0,0">
-                                        <Viewbox Stretch="Uniform" Height="50">
+                                        <Viewbox Stretch="Uniform" Height="40">
                                             <TextBlock Text="&#xEED6;" FontFamily="{StaticResource FontIcoFont}"/>
                                         </Viewbox>
                                         <StackPanel Height="50" Margin="10,0,0,0" VerticalAlignment="Center">
                                             <Label Name="PART_ElemCompletionStatus" Content="{DynamicResource LOCCompletionStatus}" />
                                             <TextBlock Name="PART_TextCompletionStatus"/>
+                                        </StackPanel>
+                                    </DockPanel>
+                                    <DockPanel Grid.Column="3" Tag="{DynamicResource Htlb_HasData}" Margin="20,0,0,0">
+                                        <DockPanel.Style>
+                                            <Style TargetType="DockPanel">
+                                                <Setter Property="Control.Visibility" Value="Visible"/>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
+                                                        <Setter Property="Control.Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
+                                                        <Setter Property="Control.Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </DockPanel.Style>
+                                        <Viewbox Stretch="Uniform" Height="25">
+                                            <Path Stretch="Fill" Fill="{DynamicResource TextBrush}" Data="m 157.80154 541.46802 v -400 h 97.14286 97.14286 
+                                                    v 238.57143 238.57143 h 40 40 V 380.03945 141.46802 h 97.14285 97.14286 v 400 400 
+                                                    h -97.14286 -97.14285 v -81.42857 -81.42857 h -40 -40 v 81.42857 81.42857 H 254.9444 157.80154 Z"/>
+                                        </Viewbox>
+                                        <StackPanel Height="50" Margin="10,0,0,0" VerticalAlignment="Center">
+                                            <Label Content="HowLongToBeat" />
+                                            <StackPanel Grid.Column="1" Name="PART_hltbProgressBar"
+                                                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
                                         </StackPanel>
                                     </DockPanel>
                                 </Grid>
