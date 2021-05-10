@@ -79,7 +79,7 @@
                             <Grid HorizontalAlignment="Stretch" Margin="20,0,20,0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="{Settings CalculatedGameDetailsIndentation}" />
-                                    <RowDefinition Height="Auto" MaxHeight="575"/>
+                                    <RowDefinition Height="Auto" MaxHeight="{DynamicResource DetailsViewMaxHeightMediaSection}"/>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="*" />

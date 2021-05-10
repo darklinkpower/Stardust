@@ -9,12 +9,12 @@ Links:
     - Name: Playnite Forums thread
       Url: https://playnite.link/forum/thread-468.html
 Constants:
+    - DetailsViewMaxHeightMediaSection(400,575): Details View - Max height of media section
     - DetailsViewIsVideoPlayedByDefault: Details View - Video is played automatically
     - DetailsViewIsVideoStandardSizeDefault: Details View - Default video size is medium
     - DetailsViewIsVideoTrailerDefault: Details View - Default video is Trailer
     - DetailsViewIsLogoVisible: Details View - Logo is displayed
     - DetailsViewIsLogoOnLeft: Details View - Logo is placed on the left
-    - DetailsViewLogoHeight(100,400): Details View - Height of logos
+    - DetailsViewLogoHeight(100,250): Details View - Height of logos
     - GridViewIsLogoVisible: Grid View - Logo is displayed
-    - GridViewLogoHeight(50,250): Grid View - Height of logos
-    
+    - GridViewLogoHeight(100,200): Grid View - Height of logos
