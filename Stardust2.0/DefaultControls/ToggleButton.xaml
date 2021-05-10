@@ -68,7 +68,7 @@
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="Cursor" Value="Hand"/>
-        <Setter Property="Opacity" Value="0.1"/>
+        <Setter Property="Opacity" Value="0.3"/>
         <Setter Property="FontFamily" Value="{DynamicResource FontIcoFont}"/>
         <Setter Property="Visibility" Value="Visible"/>
         <Setter Property="Template">
@@ -98,7 +98,7 @@
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.1" Duration="0:0:0.2"/>
+                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.3" Duration="0:0:0.2"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
@@ -141,7 +141,7 @@
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.1" Duration="0:0:0.2"/>
+                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.3" Duration="0:0:0.2"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
@@ -186,7 +186,7 @@
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.1" Duration="0:0:0.2"/>
+                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.3" Duration="0:0:0.2"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
@@ -228,7 +228,7 @@
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.1" Duration="0:0:0.2"/>
+                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.3" Duration="0:0:0.2"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
@@ -271,7 +271,7 @@
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.1" Duration="0:0:0.3"/>
+                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.3" Duration="0:0:0.3"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
@@ -314,7 +314,7 @@
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.1" Duration="0:0:0.3"/>
+                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.3" Duration="0:0:0.3"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
