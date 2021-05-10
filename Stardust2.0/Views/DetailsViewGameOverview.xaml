@@ -418,7 +418,7 @@
                                             </StackPanel>
                                         </DockPanel>
 
-                                        <DockPanel Tag="{DynamicResource Hltb_HasData}" Margin="20,0,0,0" Visibility="Visible">
+                                        <DockPanel Tag="{DynamicResource Hltb_HasData}" Margin="20,0,0,0">
                                             <DockPanel.Style>
                                                 <Style TargetType="DockPanel">
                                                     <Setter Property="Control.Visibility" Value="Visible"/>
