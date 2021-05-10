@@ -359,30 +359,90 @@
                                             <TextBlock Name="PART_TextCompletionStatus"/>
                                         </StackPanel>
                                     </DockPanel>
-                                    <DockPanel Grid.Column="3" Tag="{DynamicResource Htlb_HasData}" Margin="20,0,0,0">
-                                        <DockPanel.Style>
-                                            <Style TargetType="DockPanel">
-                                                <Setter Property="Control.Visibility" Value="Visible"/>
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
-                                                        <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
-                                                        <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </DockPanel.Style>
-                                        <Viewbox Stretch="Uniform" Height="25">
-                                            <Path Stretch="Fill" Fill="{DynamicResource TextBrush}" Data="m 157.80154 541.46802 v -400 h 97.14286 97.14286 
+                                    <DockPanel Grid.Column="3">
+                                        <DockPanel  Tag="{DynamicResource Sc_HasData}" Margin="20,0,0,0">
+                                            <DockPanel.Style>
+                                                <Style TargetType="DockPanel">
+                                                    <Setter Property="Control.Visibility" Value="Visible"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
+                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
+                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </DockPanel.Style>
+                                            <Viewbox Stretch="Uniform" Height="30">
+                                                <TextBlock Text="&#xEDD7;" FontFamily="{StaticResource FontIcoFont}"/>
+                                            </Viewbox>
+
+                                            <StackPanel Height="50" Margin="10,0,0,0" VerticalAlignment="Center">
+                                                <Label Content="{DynamicResource LOCSuccessStoryAchievements}" />
+                                                <DockPanel>
+                                                    <DockPanel MinWidth="40">
+                                                        <TextBlock Text="{DynamicResource Sc_UnlockedString}"/>
+                                                        <TextBlock Text="/"/>
+                                                        <TextBlock Text="{DynamicResource Sc_TotalString}"/>
+                                                    </DockPanel>
+                                                    <ProgressBar x:Name="progressBar" FontSize="10" Visibility="{Binding Visibility, ElementName=label, Mode=OneWay}" Margin="5,0,0,0"
+                                                    Maximum="{DynamicResource Sc_TotalDouble}" Value="{DynamicResource Sc_UnlockedDouble}" HorizontalAlignment="Left"
+                                                    Background="{DynamicResource TextBrush}" Foreground="{DynamicResource GlyphBrush}" Width="60" Height="10"  Style="{DynamicResource RoundedProgressBar}">
+                                                        <ProgressBar.Resources>
+                                                            <Style x:Key="RoundedProgressBar" TargetType="ProgressBar">
+                                                                <Setter Property="Background" Value="{DynamicResource NormalBrushDark}"/>
+                                                                <Setter Property="BorderThickness" Value="{DynamicResource ControlBorderThickness}"/>
+                                                                <Setter Property="Template">
+                                                                    <Setter.Value>
+                                                                        <ControlTemplate TargetType="{x:Type ProgressBar}">
+                                                                            <Border BorderThickness="{TemplateBinding BorderThickness}"
+								                                                CornerRadius="{DynamicResource ControlCornerRadius}">
+                                                                                <Grid SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                                                                                    <Rectangle Fill="{TemplateBinding Background}" RadiusY="4" RadiusX="4"/>
+                                                                                    <Rectangle x:Name="PART_Track" Margin="0" RadiusY="4" RadiusX="4"/>
+                                                                                    <Decorator x:Name="PART_Indicator" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                                                                                        <Grid>
+                                                                                            <Rectangle Fill="{TemplateBinding Foreground}" RadiusY="4" RadiusX="4"/>
+                                                                                        </Grid>
+                                                                                    </Decorator>
+                                                                                </Grid>
+                                                                            </Border>
+                                                                        </ControlTemplate>
+                                                                    </Setter.Value>
+                                                                </Setter>
+                                                            </Style>
+                                                        </ProgressBar.Resources>
+                                                    </ProgressBar>
+                                                </DockPanel>
+                                            </StackPanel>
+                                        </DockPanel>
+
+                                        <DockPanel Tag="{DynamicResource Hltb_HasData}" Margin="20,0,0,0" Visibility="Visible">
+                                            <DockPanel.Style>
+                                                <Style TargetType="DockPanel">
+                                                    <Setter Property="Control.Visibility" Value="Visible"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
+                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
+                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </DockPanel.Style>
+                                            <Viewbox Stretch="Uniform" Height="30">
+                                                <Path Stretch="Fill" Fill="{DynamicResource TextBrush}" Data="m 157.80154 541.46802 v -400 h 97.14286 97.14286 
                                                     v 238.57143 238.57143 h 40 40 V 380.03945 141.46802 h 97.14285 97.14286 v 400 400 
                                                     h -97.14286 -97.14285 v -81.42857 -81.42857 h -40 -40 v 81.42857 81.42857 H 254.9444 157.80154 Z"/>
-                                        </Viewbox>
-                                        <StackPanel Height="50" Margin="10,0,0,0" VerticalAlignment="Center">
-                                            <Label Content="HowLongToBeat" />
-                                            <StackPanel Grid.Column="1" Name="PART_hltbProgressBar"
-                                                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-                                        </StackPanel>
+                                            </Viewbox>
+                                            <StackPanel Height="50" Margin="10,0,0,0" VerticalAlignment="Center">
+                                                <Label Content="HowLongToBeat" />
+                                                <StackPanel Name="PART_hltbProgressBar" Width="300" Height="18" />
+                                            </StackPanel>
+                                        </DockPanel>
+                                        
                                     </DockPanel>
                                 </Grid>
                                 <DockPanel MaxWidth="1024" Grid.Row="4">
