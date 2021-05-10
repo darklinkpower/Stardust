@@ -14,6 +14,7 @@
     <Visibility x:Key="DetailsViewDetailsIconsVisibility">Collapsed</Visibility>
     <sys:Double x:Key="GridViewLogoHeight">100</sys:Double>
     <sys:Boolean x:Key="GridViewIsLogoVisible">True</sys:Boolean>
+    <Visibility x:Key="GridViewDetailsIconsVisibility">Collapsed</Visibility>
     
     <sys:Double x:Key="FontSizeSmall">12</sys:Double>
     <sys:Double x:Key="FontSize">14</sys:Double>
