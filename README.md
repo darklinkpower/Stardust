@@ -1,4 +1,4 @@
-# Stardust
+# Stardust  ![DownloadCount](https://img.shields.io/github/downloads/darklinkpower/Stardust/total.svg)
 Theme inspired by GOG Galaxy 2.0 for [Playnite](https://github.com/JosefNemec/Playnite) Desktop Mode.
 
 You can download the Lato font [from here](https://www.1001freefonts.com/es/d/5722/lato.zip) if you want to use the same font used in GOG Galaxy 2.0.
