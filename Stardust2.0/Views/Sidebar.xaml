@@ -37,11 +37,11 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Right">
-                            <Setter Property="Margin" Value="2,45,2,40" TargetName="PART_ElemMainMenu" />
+                            <Setter Property="Margin" Value="8,45,2,40" TargetName="PART_ElemMainMenu" />
                             <Setter Property="BorderThickness" Value="1,0,0,0" TargetName="BorderContentHolder" />
                         </DataTrigger>
                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Top">
-                            <Setter Property="Margin" Value="2,0,40,0" TargetName="PART_ElemMainMenu" />
+                            <Setter Property="Margin" Value="8,0,40,0" TargetName="PART_ElemMainMenu" />
                             <Setter Property="BorderThickness" Value="0,0,0,1" TargetName="BorderContentHolder" />
                             <Setter Property="DockPanel.Dock" Value="Left" TargetName="PART_ElemMainMenu" />
                             <Setter Property="DockPanel.Dock" Value="Left" TargetName="PART_ListSideBarItems" />
@@ -54,7 +54,7 @@
                             </Setter>
                         </DataTrigger>
                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
-                            <Setter Property="Margin" Value="3,0,40,0" TargetName="PART_ElemMainMenu" />
+                            <Setter Property="Margin" Value="8,0,40,0" TargetName="PART_ElemMainMenu" />
                             <Setter Property="BorderThickness" Value="0,1,0,0" TargetName="BorderContentHolder" />
                             <Setter Property="DockPanel.Dock" Value="Left" TargetName="PART_ElemMainMenu" />
                             <Setter Property="DockPanel.Dock" Value="Left" TargetName="PART_ListSideBarItems" />
