@@ -36,25 +36,12 @@
                             <Rectangle Grid.Column="0" Grid.Row="0" Fill="{DynamicResource DetailsViewGameListBackground}"/>
                             <Rectangle Grid.Column="0" Grid.Row="2" Fill="{DynamicResource DetailsViewGameListBackground}"/>
                             <DockPanel Grid.Column="0" Grid.Row="1" Background="{DynamicResource DetailsViewGameListBackground}">
-                                <Border HorizontalAlignment="Left" x:Name="PART_ElemMainMenu"
-                                    Cursor="Hand" DockPanel.Dock="Left"
-                                    WindowChrome.IsHitTestVisibleInChrome="True" Margin="25,0,25,0">
-                                    <Button Margin="5,0,5,0" Background="Transparent"
-                                            Padding="0" BorderThickness="0" FontSize="14">
-                                        <TextBlock Text="⚙️" FontFamily="{StaticResource FontIcoFont}"
-                                           VerticalAlignment="Center" HorizontalAlignment="Center">
-                                            <TextBlock.Style>
-                                                <Style TargetType="TextBlock">
-                                                    <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}"/>
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}}}"  Value="True">
-                                                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </TextBlock.Style>
-                                        </TextBlock>
-                                    </Button>
+                                <Border x:Name="PART_ElemMainMenu" Background="Transparent"
+                                    DockPanel.Dock="Left" Margin="5,0,0,0" Cursor="Hand"
+                                    WindowChrome.IsHitTestVisibleInChrome="True">
+                                    <Image Source="{ThemeFile 'Images/applogo.png'}"
+                                       Height="30" RenderOptions.BitmapScalingMode="Fant"
+                                       Margin="22,0,5,0"/>
                                 </Border>
 
                                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Right"
