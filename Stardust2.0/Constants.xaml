@@ -142,6 +142,10 @@
 
     <SolidColorBrush x:Key="WarningBrush" Color="#c85429" />
 
+    <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="#171814" />
+    <SolidColorBrush x:Key="SidebarItemForegroundBrush" Color="#6800d1" />
+    <SolidColorBrush x:Key="SidebarMarginBrush" Color="Transparent" />
+    
     <LinearGradientBrush x:Key="ExpanderBackgroundBrush" StartPoint="-0.1,0.5" EndPoint="1.2,1" >
         <GradientStop Color="{DynamicResource GlyphColor}" Offset="0"/>
         <GradientStop Color="#002C3A67" Offset="0.7"/>
@@ -151,44 +155,6 @@
         <GradientStop Color="#1d1412" Offset="0"/>
         <GradientStop Color="#002C3A67" Offset="0.7"/>
     </LinearGradientBrush>
-
-    <!--BACKUP
-    <RadialGradientBrush x:Key="WindowBackgourndBrush"
-                     GradientOrigin="1.1,0.6" Center="1.1,0.8" 
-                    RadiusX="1.1" RadiusY="2.2">
-        <GradientStop Color="#241822" Offset="-0.5" />
-        <GradientStop Color="#2B2128" Offset="-0.1" />
-        <GradientStop Color="#32292E" Offset="0.2" />
-        <GradientStop Color="#393134" Offset="0.35" />
-        <GradientStop Color="#3C3537" Offset="0.42" />
-        <GradientStop Color="#3f393a" Offset="0.5" />
-        <GradientStop Color="#363336" Offset="0.58" />
-        <GradientStop Color="#2D2D31" Offset="0.65" />
-        <GradientStop Color="#292A2F" Offset="0.69" />
-        <GradientStop Color="#24272D" Offset="0.72" />
-        <GradientStop Color="#1b2028" Offset="0.8" />
-        <GradientStop Color="#252123" Offset="0.95" />
-        <GradientStop Color="#2f211d" Offset="1.1" />
-    </RadialGradientBrush>-->
-
-    <!--BACKUP
-        <RadialGradientBrush x:Key="WindowBackgourndBrush"
-                     GradientOrigin="1,0.6" Center="1,0.8" 
-                    RadiusX="1.1" RadiusY="2">
-        <GradientStop Color="#241822" Offset="-0.1" />
-        <GradientStop Color="#3f393a" Offset="0.5" />
-        <GradientStop Color="#1b2028" Offset="0.8" />
-        <GradientStop Color="#2f211d" Offset="1.1" />
-    </RadialGradientBrush>
-    -->
-    
-    
-    <!--<RadialGradientBrush x:Key="WindowBackgourndBrush"
-                     GradientOrigin="1,0.6" Center="1,0.8" 
-                    RadiusX="1.1" RadiusY="1.1">
-        <GradientStop Color="#3f393a" Offset="0.0" />
-        <GradientStop Color="#1b2028" Offset="1.1" />
-    </RadialGradientBrush> -->
 
     <LinearGradientBrush x:Key="WindowBackgourndBrush" StartPoint="0.5,0.5" EndPoint="0.5,1">
         <GradientStop Color="#1f1f1f" Offset="0.0" />
