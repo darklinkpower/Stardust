@@ -33,8 +33,6 @@
                                 <RowDefinition Height="34"/>
                             </Grid.RowDefinitions>
 
-                            <Rectangle Grid.Column="0" Grid.Row="0" Fill="{DynamicResource DetailsViewGameListBackground}"/>
-                            <Rectangle Grid.Column="0" Grid.Row="2" Fill="{DynamicResource DetailsViewGameListBackground}"/>
                             <DockPanel Grid.Column="0" Grid.Row="1" Background="{DynamicResource DetailsViewGameListBackground}">
                                 <Border x:Name="PART_ElemMainMenu" Background="Transparent"
                                     DockPanel.Dock="Left" Margin="5,0,0,0" Cursor="Hand"
@@ -59,8 +57,6 @@
                                         Margin="5,0,0,0" />
                                 </StackPanel>
                             </DockPanel>
-
-
 
                             <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
                                 <StackPanel.Resources>
@@ -165,9 +161,7 @@
                                             </Canvas.Resources>
                                             <Ellipse Canvas.Left="8.4" Canvas.Top="3.3" Width="8.6" Height="8.6"/>
                                             <Ellipse Canvas.Left="15.4" Canvas.Top="19.7" Width="8.6" Height="8.6"/>
-                                            <Path Data="M 3.0000123 7.571442 H 8.4285781"/>
-                                            <Path Data="M 29.000004 7.571442 H 17.000007 v 0"/>
-                                            <Path Data="M 29.000004 24.000006 24 24"/>
+                                            <Path Data="M 3.0000123 7.571442 H 8.4285781 M 29.000004 7.571442 H 17.000007 v 0 M 29.000004 24.000006 24 24"/>
                                             <Path Data="m 15.428574 24 -12.4285617 6e-6"/>
                                         </Canvas>
                                     </Viewbox>
