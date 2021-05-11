@@ -23,6 +23,7 @@ Playnite forum thread: https://playnite.link/forum/thread-468.html
 - Achievements: via custom integration of the [SuccessStory](https://github.com/Lacro59/playnite-successstory-plugin) extension.
 - HowLongToBeat data: via custom integration of the [HowLongToBeat](https://github.com/Lacro59/playnite-howlongtobeat-plugin) extension.
 - Game statistics: via custom integration of the [GameActivity](https://github.com/Lacro59/playnite-gameactivity-plugin) extension.
+- Screenshots: via custom integration of the [ScreenshotsVisualizer](https://github.com/Lacro59/playnite-screenshotsvisualizer-plugin) extension.
 - Logos: download of logos for use in the theme via [Extra Metadata Tools](https://playnite.link/forum/thread-575.html) extension.
 - Videos: download of trailer and microtrailer videos for use in the theme via [Extra Metadata Tools Video](https://playnite.link/forum/thread-575.html) extension.
   
