@@ -4,10 +4,10 @@
 
     <sys:Boolean x:Key="UseAbsoluteExtraMetadataPath">false</sys:Boolean>
     <sys:String x:Key="ExtraMetadataPath">..\..\..\..</sys:String>
-    <sys:Boolean x:Key="DetailsViewIsVideoStandardSizeDefault">True</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewIsVideoPlayedByDefault">False</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewIsVideoTrailerDefault">True</sys:Boolean>
-    <sys:Double x:Key="DetailsViewMaxHeightMediaSection">575</sys:Double>
+    <sys:Boolean x:Key="DetailsViewIsLogoCoverFaded">False</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewLogoAreMediaControlsDisplayed">True</sys:Boolean>
     <sys:Double x:Key="DetailsViewLogoHeight">100</sys:Double>
     <sys:Boolean x:Key="DetailsViewIsLogoVisible">True</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewIsLogoOnLeft">True</sys:Boolean>
