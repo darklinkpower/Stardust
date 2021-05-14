@@ -434,7 +434,7 @@
                                             </Viewbox>
                                             <StackPanel Height="50" Margin="10,0,0,0" VerticalAlignment="Center">
                                                 <Label Content="HowLongToBeat" />
-                                                <StackPanel Name="PART_hltbProgressBar" Width="310" Height="25" />
+                                                <StackPanel Name="PART_hltbProgressBar" MaxWidth="310" Height="25" HorizontalAlignment="Left"/>
                                             </StackPanel>
                                         </DockPanel>
                                     </DockPanel>
