@@ -327,7 +327,7 @@
                                             <Setter Property="HorizontalContentAlignment" Value="Left"/>
                                         </Style>
                                     </DockPanel.Resources>
-                                    <DockPanel MinWidth="160" Visibility="{Binding Visibility, ElementName=PART_ElemLastPlayed, Mode=OneWay}" Margin="0,0,20,0">
+                                    <DockPanel MinWidth="140" Visibility="{Binding Visibility, ElementName=PART_ElemLastPlayed, Mode=OneWay}" Margin="0,0,20,0">
                                         <Viewbox Stretch="Uniform" Height="40">
                                             <TextBlock Text="&#xEC45;" FontFamily="{StaticResource FontIcoFont}"/>
                                         </Viewbox>
@@ -336,7 +336,7 @@
                                             <TextBlock Name="PART_TextLastActivity"/>
                                         </StackPanel>
                                     </DockPanel>
-                                    <DockPanel MinWidth="160" Visibility="{Binding Visibility, ElementName=PART_ElemPlayTime, Mode=OneWay}" Margin="0,0,20,0">
+                                    <DockPanel MinWidth="140" Visibility="{Binding Visibility, ElementName=PART_ElemPlayTime, Mode=OneWay}" Margin="0,0,20,0">
                                         <Viewbox Stretch="Uniform" Height="40">
                                             <TextBlock Text="&#xEEDC;" FontFamily="{StaticResource FontIcoFont}"/>
                                         </Viewbox>
@@ -345,7 +345,7 @@
                                             <TextBlock Name="PART_TextPlayTime"/>
                                         </StackPanel>
                                     </DockPanel>
-                                    <DockPanel MinWidth="160" Visibility="{Binding Visibility, ElementName=PART_ElemCompletionStatus, Mode=OneWay}" Margin="0,0,20,0">
+                                    <DockPanel MinWidth="140" Visibility="{Binding Visibility, ElementName=PART_ElemCompletionStatus, Mode=OneWay}" Margin="0,0,20,0">
                                         <Viewbox Stretch="Uniform" Height="40">
                                             <TextBlock Text="&#xEED6;" FontFamily="{StaticResource FontIcoFont}"/>
                                         </Viewbox>
@@ -434,7 +434,7 @@
                                             </Viewbox>
                                             <StackPanel Height="50" Margin="10,0,0,0" VerticalAlignment="Center">
                                                 <Label Content="HowLongToBeat" />
-                                                <StackPanel Name="PART_hltbProgressBar" MaxWidth="310" Height="25" HorizontalAlignment="Left"/>
+                                                <StackPanel Name="PART_hltbProgressBar" Width="310" Height="25" HorizontalAlignment="Left"/>
                                             </StackPanel>
                                         </DockPanel>
                                     </DockPanel>
