@@ -2,8 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:Boolean x:Key="UseAbsoluteExtraMetadataPath">false</sys:Boolean>
-    <sys:String x:Key="ExtraMetadataPath">..\..\..\..</sys:String>
+    <!--Theme settings region start-->
     <sys:Boolean x:Key="DetailsViewIsVideoPlayedByDefault">False</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewIsVideoTrailerDefault">True</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewIsLogoCoverFaded">False</sys:Boolean>
@@ -15,6 +14,12 @@
     <sys:Double x:Key="GridViewLogoHeight">100</sys:Double>
     <sys:Boolean x:Key="GridViewIsLogoVisible">True</sys:Boolean>
     <Visibility x:Key="GridViewDetailsIconsVisibility">Collapsed</Visibility>
+    <!--region end-->
+    
+    <!--Extra Metadata Path values start-->
+    <sys:Boolean x:Key="UseAbsoluteExtraMetadataPath">false</sys:Boolean>
+    <sys:String x:Key="ExtraMetadataPath">..\..\..\..</sys:String>
+    <!--region end-->
     
     <sys:Double x:Key="FontSizeSmall">12</sys:Double>
     <sys:Double x:Key="FontSize">14</sys:Double>
@@ -80,8 +85,9 @@
 
     <Color x:Key="TitleWindowStateHoverColor">#424242</Color>
     <Color x:Key="TitleWindowCloseHoverColor">#d22e00</Color>
+    <Color x:Key="ControlsBackgroundColor">#2e2c2f</Color>
     
-    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#2e2c2f" />
+    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="{DynamicResource ControlsBackgroundColor}" />
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
     <SolidColorBrush x:Key="TextBrushDarker" Color="{DynamicResource TextColorDarker}" />
     <SolidColorBrush x:Key="TextBrushDark" Color="{DynamicResource TextColorDark}" />
@@ -142,8 +148,8 @@
 
     <SolidColorBrush x:Key="WarningBrush" Color="#c85429" />
 
-    <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="#171814" />
-    <SolidColorBrush x:Key="SidebarItemForegroundBrush" Color="#6800d1" />
+    <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="{DynamicResource ControlsBackgroundColor}" />
+    <SolidColorBrush x:Key="SidebarItemForegroundBrush" Color="{DynamicResource GlyphColor}" />
     <SolidColorBrush x:Key="SidebarMarginBrush" Color="Transparent" />
     
     <LinearGradientBrush x:Key="ExpanderBackgroundBrush" StartPoint="-0.1,0.5" EndPoint="1.2,1" >
