@@ -781,11 +781,11 @@
                                                                     <Image Stretch="UniformToFill">
                                                                         <Image.Style>
                                                                             <Style TargetType="{x:Type Image}">
-                                                                                <Setter Property="Source" Value="{Binding ImageUnlocked}"/>
+                                                                                <Setter Property="Source" Value="{Binding ImageUnlocked, Converter={StaticResource ImageStringToImageConverter}}" />
                                                                                 <Style.Triggers>
                                                                                     <!-- Achievement is Locked -->
                                                                                     <DataTrigger Binding="{Binding DateUnlocked}" Value="{x:Static sys:DateTime.MinValue}">
-                                                                                        <Setter Property="Source" Value="{Binding ImageLocked}" />
+                                                                                        <Setter Property="Source" Value="{Binding ImageLocked, Converter={StaticResource ImageStringToImageConverter}}" />
                                                                                     </DataTrigger>
                                                                                 </Style.Triggers>
                                                                             </Style>
@@ -813,7 +813,7 @@
                                                                                 <ToolTip Content="{Binding Name}"></ToolTip>
                                                                             </TextBlock.ToolTip>
                                                                         </TextBlock>
-                                                                        <TextBlock Grid.Column="1" TextAlignment="Right" Text="{Binding DateUnlocked, StringFormat={}{0:MM/dd/yyyy}}"  Foreground="{DynamicResource TextBrush}" >
+                                                                        <TextBlock Grid.Column="1" TextAlignment="Right" Text="{Binding DateUnlocked, StringFormat={}{0:dd/MM/yyyy}}"  Foreground="{DynamicResource TextBrush}" >
                                                                             <TextBlock.Style>
                                                                                 <Style>
                                                                                     <Style.Triggers>
