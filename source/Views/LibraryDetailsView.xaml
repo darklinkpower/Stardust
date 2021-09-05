@@ -35,15 +35,10 @@
                                        Foreground="{DynamicResource TextBrushDarker}"
                                        Margin="7,0,0,15" Style="{StaticResource BaseTextBlockStyle}"/>
                                 <ExtendedListBox Grid.Row="1" x:Name="PART_ListGames"
-                                         SelectionMode="Extended"
                                          BorderBrush="Transparent"
                                          ItemContainerStyle="{DynamicResource DetailsViewItemStyle}"
                                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                                         ScrollViewer.PanningMode="VerticalOnly"
-                                         VirtualizingPanel.CacheLengthUnit="Item"
-                                         VirtualizingPanel.CacheLength="5"
-                                         VirtualizingPanel.IsVirtualizingWhenGrouping="True"
-                                         VirtualizingPanel.VirtualizationMode="Recycling">
+                                         ScrollViewer.PanningMode="VerticalOnly">
                                     <ExtendedListBox.Style>
                                         <Style TargetType="ExtendedListBox" BasedOn="{StaticResource {x:Type ExtendedListBox}}"/>
                                     </ExtendedListBox.Style>
