@@ -1,0 +1,180 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!--Theme settings region start-->
+    <sys:Boolean x:Key="DetailsViewIsVideoPlayedByDefault">False</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewIsVideoTrailerDefault">True</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewIsLogoCoverFaded">False</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewLogoAreMediaControlsDisplayed">False</sys:Boolean>
+    <sys:Double x:Key="DetailsViewLogoHeight">100</sys:Double>
+    <sys:Boolean x:Key="DetailsViewIsLogoVisible">True</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewIsLogoOnLeft">True</sys:Boolean>
+    <Visibility x:Key="DetailsViewDetailsIconsVisibility">Collapsed</Visibility>
+    <sys:Double x:Key="GridViewLogoHeight">100</sys:Double>
+    <sys:Boolean x:Key="GridViewIsLogoVisible">True</sys:Boolean>
+    <Visibility x:Key="GridViewDetailsIconsVisibility">Collapsed</Visibility>
+    <!--region end-->
+    
+    <!--Extra Metadata Path values start-->
+    <sys:Boolean x:Key="UseAbsoluteExtraMetadataPath">false</sys:Boolean>
+    <sys:String x:Key="ExtraMetadataPath">..\..\..\..</sys:String>
+    <!--region end-->
+    
+    <sys:Double x:Key="FontSizeSmall">12</sys:Double>
+    <sys:Double x:Key="FontSize">14</sys:Double>
+    <sys:Double x:Key="FontSizeLarge">15</sys:Double>
+    <sys:Double x:Key="FontSizeLarger">20</sys:Double>
+    <sys:Double x:Key="FontSizeLargest">29</sys:Double>
+    <FontFamily x:Key="FontFamily">Trebuchet MS</FontFamily>
+    <Thickness x:Key="PopupBorderThickness">1</Thickness>
+    <Thickness x:Key="ControlBorderThickness">1</Thickness>
+    <sys:Double x:Key="EllipseBorderThickness">1</sys:Double>
+    <CornerRadius x:Key="ControlCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="ControlCornerRadiusViewPlayButtons">5</CornerRadius>
+    <CornerRadius x:Key="ControlCornerRadiusSmall">0</CornerRadius>
+    <CornerRadius x:Key="MainMenuCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="TrayMenuCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="TooltipCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="GridViewCoverCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="GridViewCoverGridBackgroundDisabledCornerRadius">5,5,0,0</CornerRadius>
+    <CornerRadius x:Key="GridViewShowGameNameCornerRadius">0,0,5,5</CornerRadius>
+    <CornerRadius x:Key="GridViewSelectionBorderCornerRadius">7</CornerRadius>
+    <CornerRadius x:Key="DetailsViewCoverCornerRadius">5</CornerRadius>
+    
+    <Color x:Key="BlackColor">#FF000000</Color>
+    <Color x:Key="WhiteColor">#FFFFFFFF</Color>
+    <Color x:Key="TextColor">#f2f2f2</Color>
+    <Color x:Key="TextColorDarker">#999999</Color>
+    <Color x:Key="TextColorDark">#2f3543</Color>
+    <Color x:Key="MainColor">#262c38</Color>
+    <Color x:Key="MainColorDark">#2f3543</Color>
+    <Color x:Key="HoverColor">#373538</Color>
+    <Color x:Key="GlyphColor">#b75ecf</Color>
+    <Color x:Key="GlyphColorSecondary">#2f3543</Color><!---->
+    <Color x:Key="HighlightGlyphColor">#373538</Color>
+    <Color x:Key="PopupBackgroundColor">#302e32</Color>
+    <Color x:Key="PopupBorderColor">#373538</Color>
+    <Color x:Key="BackgroundToneColor">#262c38</Color>
+    <Color x:Key="GridItemBackgroundColor">Transparent</Color>
+    <Color x:Key="PanelSeparatorColor">#373538</Color>
+
+    <Color x:Key="NormalBorderControlsColor">#6f6d70</Color>
+    <Color x:Key="NormalBorderControlsHoverColor">#acabad</Color>
+    <Color x:Key="NormalBorderControlsHoverTransparencyColor">#59acabad</Color>
+    <Color x:Key="DetailsViewGrouCountBackgroundColor">#555555</Color>
+
+    <Color x:Key="PurpleButtonBrushColor">#b75ecf</Color>
+    <Color x:Key="PurpleButtonBrushHighlightColor">#c077d6</Color>
+    <Color x:Key="PurpleButtonBrushSelectedColor">#cc90dd</Color>
+
+    <Color x:Key="ToggleButtonNotCheckedColor">#2e2c2f</Color>
+    <Color x:Key="ToggleButtonNotCheckedBorderColor">#6f6d70</Color>
+    <Color x:Key="ToggleButtonNotCheckedHighlightBorderColor">#acabad</Color>
+
+    <Color x:Key="ThumbFillColor">#6f7275</Color>
+    <Color x:Key="ThumbFillHoverColor">#8f9495</Color>
+
+    <Color x:Key="TextBoxBorderColor">#6f6d70</Color>
+    <Color x:Key="TextBoxBorderHoverColor">#acabad</Color>
+
+    <Color x:Key="TitleButtonsBorderBackgroundColor">#2e2c2f</Color>
+
+    <Color x:Key="StandardWindowTitleBackgroundColor">#373538</Color>
+    <Color x:Key="StandardWindowBackgroundColor">#302e32</Color>
+
+    <Color x:Key="TitleWindowStateHoverColor">#424242</Color>
+    <Color x:Key="TitleWindowCloseHoverColor">#d22e00</Color>
+    <Color x:Key="ControlsBackgroundColor">#2e2c2f</Color>
+    
+    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="{DynamicResource ControlsBackgroundColor}" />
+    <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
+    <SolidColorBrush x:Key="TextBrushDarker" Color="{DynamicResource TextColorDarker}" />
+    <SolidColorBrush x:Key="TextBrushDark" Color="{DynamicResource TextColorDark}" />
+    <SolidColorBrush x:Key="NormalBrush" Color="{DynamicResource HoverColor}" />
+    <SolidColorBrush x:Key="NormalBrushDark" Color="{DynamicResource MainColorDark}" />
+    <SolidColorBrush x:Key="NormalBorderBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="HoverBrush" Color="{DynamicResource HighlightGlyphColor}" />
+    <SolidColorBrush x:Key="GlyphBrush" Color="{DynamicResource GlyphColor}" />
+    <SolidColorBrush x:Key="HighlightGlyphBrush" Color="{DynamicResource HighlightGlyphColor}" />
+    <SolidColorBrush x:Key="PopupBorderBrush" Color="{DynamicResource PopupBorderColor}" />
+    <SolidColorBrush x:Key="TooltipBackgroundBrush" Color="{DynamicResource PopupBackgroundColor}" />
+    <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#2e2c2f" />
+    <SolidColorBrush x:Key="GridItemBackgroundBrush" Color="{DynamicResource GridItemBackgroundColor}" />
+    <SolidColorBrush x:Key="PanelSeparatorBrush" Color="{DynamicResource PanelSeparatorColor}" />
+    <SolidColorBrush x:Key="PopupBackgroundBrush" Color="{DynamicResource PopupBackgroundColor}" />
+    <SolidColorBrush x:Key="SecondaryBrush" Color="{DynamicResource GlyphColorSecondary}" />
+    <SolidColorBrush x:Key="MainPanelBackgroundBrush" Color="{DynamicResource MainColor}" />
+
+
+    <SolidColorBrush x:Key="NormalBorderBrushControls" Color="{DynamicResource NormalBorderControlsColor}" />
+    <SolidColorBrush x:Key="NormalBorderBrushControlsHover" Color="{DynamicResource NormalBorderControlsHoverColor}" />
+    <SolidColorBrush x:Key="NormalBorderBrushControlsSelected" Color="{DynamicResource GlyphColor}" />
+    <SolidColorBrush x:Key="NormalBorderBrushControlsSelectedWhite" Color="{DynamicResource TextColor}" />
+
+    <SolidColorBrush x:Key="NormalBorderBrushControlsHoverTransparency" Color="{DynamicResource NormalBorderControlsHoverTransparencyColor}" />
+
+    <SolidColorBrush x:Key="DetailsViewGameListBackground" Color="Transparent" />
+    <SolidColorBrush x:Key="DetailsViewGrouCountBackgroundBrush" Color="{DynamicResource DetailsViewGrouCountBackgroundColor}" />
+
+    <SolidColorBrush x:Key="PurpleButtonBrush" Color="{DynamicResource PurpleButtonBrushColor}" />
+    <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="{DynamicResource PurpleButtonBrushHighlightColor}" />
+    <SolidColorBrush x:Key="PurpleButtonBrushSelected" Color="{DynamicResource PurpleButtonBrushSelectedColor}" />
+
+    <SolidColorBrush x:Key="ToggleButtonNotCheckedBrush" Color="{DynamicResource ToggleButtonNotCheckedColor}" />
+    <SolidColorBrush x:Key="ToggleButtonNotCheckedBorderBrush" Color="{DynamicResource ToggleButtonNotCheckedBorderColor}" />
+    <SolidColorBrush x:Key="ToggleButtonNotCheckedHighlightBorderBrush" Color="{DynamicResource ToggleButtonNotCheckedHighlightBorderColor}" />
+
+    <SolidColorBrush x:Key="ThumbFillBrush" Color="{DynamicResource ThumbFillColor}" />
+    <SolidColorBrush x:Key="ThumbFillBrushHover" Color="{DynamicResource ThumbFillHoverColor}" />
+
+    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="{DynamicResource TextBoxBorderColor}" />
+    <SolidColorBrush x:Key="TextBoxBorderBrushHover" Color="{DynamicResource TextBoxBorderHoverColor}" />
+    <SolidColorBrush x:Key="TextBoxBorderBrushSelected" Color="{DynamicResource GlyphColor}" />
+
+    <SolidColorBrush x:Key="TitleButtonsBorderBackground" Color="{DynamicResource TitleButtonsBorderBackgroundColor}" />
+
+    <SolidColorBrush x:Key="DetailsViewWrapBackgroundsBrush" Color="Transparent" />
+
+    <SolidColorBrush x:Key="StandardWindowTitleBackgroundBrush" Color="{DynamicResource StandardWindowTitleBackgroundColor}" />
+    <SolidColorBrush x:Key="StandardWindowBackgroundBrush" Color="{DynamicResource StandardWindowBackgroundColor}" />
+
+    <SolidColorBrush x:Key="TitleWindowStateHover" Color="{DynamicResource TitleWindowStateHoverColor}" />
+    <SolidColorBrush x:Key="TitleWindowCloseHover" Color="{DynamicResource TitleWindowCloseHoverColor}" />
+    
+    <SolidColorBrush x:Key="PositiveRatingBrush" Color="#78ffa0" />
+    <SolidColorBrush x:Key="NegativeRatingBrush" Color="#c85429" />
+    <SolidColorBrush x:Key="MixedRatingBrush" Color="#fffca1" />
+
+    <SolidColorBrush x:Key="WarningBrush" Color="#c85429" />
+
+    <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="{DynamicResource ControlsBackgroundColor}" />
+    <SolidColorBrush x:Key="SidebarItemForegroundBrush" Color="{DynamicResource GlyphColor}" />
+    <SolidColorBrush x:Key="SidebarMarginBrush" Color="Transparent" />
+    
+    <LinearGradientBrush x:Key="ExpanderBackgroundBrush" StartPoint="-0.1,0.5" EndPoint="1.2,1" >
+        <GradientStop Color="{DynamicResource GlyphColor}" Offset="0"/>
+        <GradientStop Color="#002C3A67" Offset="0.7"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ExpanderExBackgroundBrush" StartPoint="-0.1,0.5" EndPoint="1.2,1" >
+        <GradientStop Color="#1d1412" Offset="0"/>
+        <GradientStop Color="#002C3A67" Offset="0.7"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="WindowBackgourndBrush" StartPoint="0.5,0.5" EndPoint="0.5,1">
+        <GradientStop Color="#1f1f1f" Offset="0.0" />
+        <GradientStop Color="#393939" Offset="1.0" />
+    </LinearGradientBrush>
+    
+    <LinearGradientBrush x:Key="DetailsViewFadeBorder" StartPoint="0.5,0.5" EndPoint="0.5,1">
+        <GradientStop Color="#0DA8A8A8" Offset="0.0" />
+        <GradientStop Color="#0DA8A8A8" Offset="0.3" />
+        <GradientStop Color="#00A8A8A8" Offset="1.0" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="CoversButtonsBrush" StartPoint="0.5,0.5" EndPoint="0.5,1">
+        <GradientStop Color="#00000000" Offset="0.0" />
+        <GradientStop Color="#D9000000" Offset="1.0" />
+    </LinearGradientBrush>
+</ResourceDictionary>
