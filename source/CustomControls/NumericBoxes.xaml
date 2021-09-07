@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <ControlTemplate x:Key="NumericBoxTemplate" TargetType="{x:Type TextBox}">
-        <Border x:Name="Border" Padding="3"
+        <Border x:Name="Border" Padding="3" BorderBrush="{DynamicResource TextBoxBorderBrush}"
                 Background="{TemplateBinding Background}"
                 Style="{DynamicResource HighlightBorder}">
             <ScrollViewer x:Name="PART_ContentHost"
@@ -10,8 +10,11 @@
                           HorizontalScrollBarVisibility="{TemplateBinding HorizontalScrollBarVisibility}"/>
         </Border>
         <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrushHover}" TargetName="Border"/>
+            </Trigger>
             <Trigger Property="IsFocused" Value="True">
-                <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" TargetName="Border" />
+                <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrushSelected}" TargetName="Border" />
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>

@@ -21,7 +21,7 @@
     </DataTemplate>
 
     <DataTemplate x:Key="TopPanelSortSettingsTemplate">
-        <TextBlock Text="&#xefee;" FontFamily="{DynamicResource FontIcoFont}" FontSize="20"
+        <TextBlock Text="&#xE17D;" FontFamily="Segoe UI Symbol" FontSize="16"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </DataTemplate>
 
@@ -83,17 +83,18 @@
     <Style x:Key="TopPanelFilterToggle" TargetType="CheckBox">
         <Setter Property="MinWidth" Value="35" />
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-        <Setter Property="Background" Value="#990a0e1e" />
+        <Setter Property="Background" Value="{DynamicResource TopPanelFilterToggleBackgroundBrush}" />
         <Setter Property="Focusable" Value="False" />
         <Setter Property="Margin" Value="10,6,0,6" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
                     <Border Background="{TemplateBinding Background}" BorderThickness="0"
                             CornerRadius="3">
                         <StackPanel Orientation="Horizontal" Margin="6,0,6,0">
-                            <TextBlock Text="&#xef29;"
+                            <TextBlock Text="&#xef29;" Name="IconFilter"
                                        FontFamily="{DynamicResource FontIcoFont}" FontSize="20"
                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                        Foreground="{TemplateBinding Foreground}"/>
@@ -106,7 +107,8 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="Tag" Value="{StaticResource True}">
                             <Setter Property="Visibility" Value="Visible" TargetName="TextFilter" />
-                            <Setter Property="Background" Value="{DynamicResource NormalBrush}" />
+                            <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" TargetName="TextFilter" />
+                            <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" TargetName="IconFilter" />
                         </Trigger>
                         <Trigger Property="Tag" Value="{StaticResource False}">
                             <Setter Property="Visibility" Value="Collapsed" TargetName="TextFilter" />
@@ -117,7 +119,7 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                <Setter Property="Background" Value="{DynamicResource TopPanelItemHoverBackgroundBrush}" />
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -162,7 +164,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TopPanel}">
-                    <Border Height="50" BorderBrush="{DynamicResource PanelSeparatorBrush}"
+                    <Border Height="90"  Padding="0,6,0,31" BorderBrush="{DynamicResource PanelSeparatorBrush}"
                             Background="{TemplateBinding Background}"
                             d:DesignWidth="1280"
                             d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
@@ -176,50 +178,55 @@
                                 </Style.Triggers>
                             </Style>
                         </Border.Style>
-                        <DockPanel Margin="0,3,110,3">
-                            <Border x:Name="PART_ElemMainMenu" Background="Transparent"
-                                    DockPanel.Dock="Left" Margin="5,0,0,0" Cursor="Hand"
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <DockPanel Grid.Column="0">
+                                <Border x:Name="PART_ElemMainMenu" Background="Transparent" Padding="5,2,5,8"
+                                    DockPanel.Dock="Left" Width="40" Height="40" Margin="6,2,1,2" Cursor="Hand"
                                     WindowChrome.IsHitTestVisibleInChrome="True">
-                                <Image Source="{ThemeFile 'Images/applogo.png'}"
-                                       Height="40" RenderOptions.BitmapScalingMode="Fant"
-                                       Margin="10,0,5,0"/>
-                            </Border>
-
-                            <SearchBox x:Name="PART_TextMainSearch"
-                                        Margin="5,6,0,6" DockPanel.Dock="Left"
-                                        WindowChrome.IsHitTestVisibleInChrome="True"
-                                        Width="300" />
-                            
-                            <StackPanel x:Name="PART_PanelMainItems" Orientation="Horizontal"
-                                        VerticalAlignment="Stretch" Margin="0,6,0,6"/>
-
-                            <CheckBox x:Name="PART_ToggleFilter" ToolTip="{DynamicResource LOCFilters}"
-                                      Style="{DynamicResource TopPanelFilterToggle}"
-                                      DockPanel.Dock="Left" />
-
-                            <CheckBox x:Name="PART_ToggleNotifications"
-                                      Style="{DynamicResource TopPanelNotificationsToggle}"
-                                      DockPanel.Dock="Left" />
-
-                            <StackPanel x:Name="PART_PanelMainPluginItems" Orientation="Horizontal"
-                                        VerticalAlignment="Stretch" Margin="15,6,15,6"
-                                        DockPanel.Dock="{Settings PluginTopPanelAlignment}"/>
-
-                            <StackPanel Orientation="Horizontal" DockPanel.Dock="Left"
+                                    <Image Source="{ThemeFile 'Images/applogo.png'}"
+                                       RenderOptions.BitmapScalingMode="Fant"/>
+                                </Border>
+                                <DockPanel LastChildFill="True" DockPanel.Dock="Left"
                                         HorizontalAlignment="Center" Margin="0,5,0,5">
-                                <Grid MaxWidth="600" MinWidth="300">
-                                    <ProgressBar Name="PART_ProgressGlobal" />
-                                    <TextBlock Name="PART_TextProgressText"
-                                               VerticalAlignment="Center" HorizontalAlignment="Center"
-                                               Style="{DynamicResource BaseTextBlockStyle}" Margin="5,0,5,0" />
-                                </Grid>
-
-                                <Button Name="PART_ButtonProgressCancel"
+                                    <Button Name="PART_ButtonProgressCancel" DockPanel.Dock="Right"
                                         Content="{DynamicResource LOCCancelLabel}"
                                         WindowChrome.IsHitTestVisibleInChrome="True"
                                         Margin="5,0,0,0" />
-                            </StackPanel>                    
-                        </DockPanel>
+                                    <Grid>
+                                        <ProgressBar Name="PART_ProgressGlobal" />
+                                        <TextBlock Name="PART_TextProgressText"
+                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                               Style="{DynamicResource BaseTextBlockStyle}" Margin="5,0,5,0" />
+                                    </Grid>
+                                </DockPanel>
+                            </DockPanel>
+                            <DockPanel Grid.Column="1" Margin="0,3,0,3">
+                                <StackPanel x:Name="PART_PanelMainItems" Orientation="Horizontal"
+                                        VerticalAlignment="Stretch" Margin="0,6,0,6"/>
+
+                                <SearchBox x:Name="PART_TextMainSearch"
+                                        Margin="5,6,0,6" DockPanel.Dock="Left"
+                                        WindowChrome.IsHitTestVisibleInChrome="True"
+                                        Width="120" Background="Transparent"/>
+                                
+                                <CheckBox x:Name="PART_ToggleFilter" ToolTip="{DynamicResource LOCFilters}"
+                                      Style="{DynamicResource TopPanelFilterToggle}"
+                                      DockPanel.Dock="Left" />
+
+                                <CheckBox x:Name="PART_ToggleNotifications"
+                                      Style="{DynamicResource TopPanelNotificationsToggle}"
+                                      DockPanel.Dock="Left" />
+
+                                <StackPanel x:Name="PART_PanelMainPluginItems" Orientation="Horizontal"
+                                        VerticalAlignment="Stretch" Margin="15,6,15,6"
+                                        DockPanel.Dock="{Settings PluginTopPanelAlignment}"/>
+                            </DockPanel>
+                        </Grid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

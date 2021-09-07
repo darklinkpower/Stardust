@@ -21,6 +21,7 @@
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
                                             <Setter Property="Text" Value="{Binding Name, Converter={StaticResource ObjectToStringConverter}}" />
+                                            <Setter Property="FontWeight" Value="Bold" />
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Binding Name, Converter={StaticResource ObjectToStringConverter}}" Value="{x:Null}">
                                                     <Setter Property="Text" Value="{DynamicResource LOCNone}" />
@@ -32,11 +33,20 @@
                                         </Style>
                                     </TextBlock.Style>
                                 </TextBlock>
-                                <TextBlock Text="{Binding Items.Count, Mode=OneWay, StringFormat=({0})}"
-                                           VerticalAlignment="Center" HorizontalAlignment="Left"
-                                           Style="{DynamicResource BaseTextBlockStyle}"
-                                           DockPanel.Dock="Left" TextAlignment="Center"
-                                           Visibility="{Settings ShowGroupCount}"/>
+                                <Grid DockPanel.Dock="Left" Margin="0,0,10,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Column="0" CornerRadius="7" Background="{DynamicResource DetailsViewGrouCountBackgroundBrush}"  Width="Auto">
+                                        <TextBlock Text="{Binding Items.Count, Mode=OneWay, StringFormat={}{0}}"
+                                               Foreground="{DynamicResource TextBrush}"
+                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                               Style="{DynamicResource BaseTextBlockStyle}"
+                                               TextAlignment="Center"
+                                               Visibility="{Settings ShowGroupCount}"
+                                               Margin="7,0,7,0"/>
+                                    </Border>
+                                </Grid>
                             </DockPanel>
                         </ExpanderEx.Header>
                         <ItemsPresenter />
