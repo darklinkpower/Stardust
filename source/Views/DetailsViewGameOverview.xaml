@@ -15,7 +15,7 @@
                                   d:DesignWidth="1280"
                                   d:DesignHeight="1550"
                                   d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameDetailsIntance}">
-                        <Grid>
+                        <Grid Margin="0,0,0,20">
                             <!--#region TextBlock property sources-->
                             <TextBlock Name="VideoSelection" Foreground="White" Visibility="Collapsed">
                                 <TextBlock.Style>
@@ -285,10 +285,13 @@
                                                 <Button Grid.Column="1" Name="PART_ButtonMoreActions" Content="&#xEAC8;" FontFamily="{DynamicResource FontIcoFont}" Width="40" Margin="10,0,0,0" Style="{DynamicResource MoreActionButtonViews}" Padding="0" />
                                                 <Button Grid.Column="2" x:Name="PART_ButtonEditGame" Content="&#xEDED;" Margin="10,0,0,0" Height="40" Width="40" Focusable="False" FontFamily="{DynamicResource FontIcoFont}" Style="{DynamicResource MoreActionButtonViews}" />
                                             </Grid>
+                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Margin="10,0,0,0" Height="40" MaxWidth="150" DockPanel.Dock="Left"
+                                                            Foreground="Red" Background="Red" Visibility="{PluginStatus Plugin=playnite-screenshotsvisualizer-plugin, Status=Installed}"/>
+                                            <ContentControl x:Name="HowLongToBeat_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"
+                                                            Visibility="{PluginStatus Plugin=playnite-howlongtobeat-plugin, Status=Installed}" />
                                             <ToggleButton FontSize="40" x:Name="MediaControlsDisplayToggleButton" 
                                                     Style="{DynamicResource MediaControlsDisplayToggleButton}" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" 
                                                     IsChecked="{DynamicResource DetailsViewLogoAreMediaControlsDisplayed}"/>
-
                                             <DockPanel>
                                                 <DockPanel.Style>
                                                     <Style TargetType="DockPanel">
@@ -413,20 +416,7 @@
                                             </StackPanel>
                                         </DockPanel>
 
-                                        <DockPanel Tag="{DynamicResource Htlb_HasData}" Margin="20,0,0,0">
-                                            <DockPanel.Style>
-                                                <Style TargetType="DockPanel">
-                                                    <Setter Property="Control.Visibility" Value="Visible"/>
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
-                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                        </DataTrigger>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
-                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </DockPanel.Style>
+                                        <DockPanel Tag="{DynamicResource Htlb_HasData}" Margin="20,0,0,0" Visibility="{PluginStatus Plugin=playnite-howlongtobeat-plugin, Status=Installed}" >
                                             <Viewbox Stretch="Uniform" Height="30">
                                                 <Path Stretch="Fill" Fill="{DynamicResource TextBrush}" Data="m 157.80154 541.46802 v -400 h 97.14286 97.14286 
                                                     v 238.57143 238.57143 h 40 40 V 380.03945 141.46802 h 97.14285 97.14286 v 400 400 
@@ -434,7 +424,7 @@
                                             </Viewbox>
                                             <StackPanel Height="50" Margin="10,0,0,0" VerticalAlignment="Center">
                                                 <Label Content="HowLongToBeat" />
-                                                <StackPanel Name="PART_hltbProgressBar" Width="310" Height="25" HorizontalAlignment="Left"/>
+                                                <ContentControl x:Name="HowLongToBeat_PluginProgressBar" Margin="5,5,0,0" VerticalAlignment="Center" Width="310" HorizontalAlignment="Left"/>
                                             </StackPanel>
                                         </DockPanel>
                                     </DockPanel>
@@ -707,21 +697,13 @@
                                             </StackPanel>
                                         </TabItem>
                                         <!--#region ScreenshotsVisualizer-->
-                                        <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCSsvTitle}" Tag="{DynamicResource Ssv_HasData}">
-                                            <TabItem.Style>
-                                                <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
-                                                    <Setter Property="Control.Visibility" Value="Visible" />
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
-                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                        </DataTrigger>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
-                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </TabItem.Style>
-                                            <StackPanel Margin="0,16,0,0" Name="PART_SsvSinglePicture"/>
+                                        <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCSsvTitle}"
+                                                 Visibility="{PluginStatus Plugin=playnite-screenshotsvisualizer-plugin, Status=Installed}" >
+                                            <StackPanel Orientation="Vertical" Background="{TemplateBinding Background}">
+                                                <ContentControl x:Name="ScreenshotsVisualizer_PluginSinglePicture" Margin="0,10,20,0" />
+                                                <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshots" Margin="0,10,20,0" />
+                                                <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,20,0" Height="400"/>
+                                            </StackPanel>
                                         </TabItem>
                                         <!--#endregion -->
                                         <!--#region SuccessStory-->
@@ -837,36 +819,11 @@
                                         </TabItem>
                                         <!--#endregion-->
                                         <!--#region GameActivity-->
-                                        <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCGameActivityTitle}" Tag="{DynamicResource Ga_HasData}">
-                                            <TabItem.Style>
-                                                <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
-                                                    <Setter Property="Control.Visibility" Value="Visible" />
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
-                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                        </DataTrigger>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
-                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </TabItem.Style>
-                                            <StackPanel Tag="{DynamicResource Ga_HasData}" Orientation="Vertical" Background="{TemplateBinding Background}">
-                                                <StackPanel.Style>
-                                                    <Style>
-                                                        <Setter Property="Control.Visibility" Value="Visible" />
-                                                        <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
-                                                                <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                            </DataTrigger>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
-                                                                <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                            </DataTrigger>
-                                                        </Style.Triggers>
-                                                    </Style>
-                                                </StackPanel.Style>
-                                                <StackPanel Name="PART_GameActivity_Graphic" HorizontalAlignment="Stretch" Margin="0,20,0,0"/>
-                                                <StackPanel Name="PART_GameActivity_GraphicLog" HorizontalAlignment="Stretch" Margin="0,40,0,0"/>
+                                        <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCGameActivityTitle}"
+                                                 Visibility="{PluginStatus Plugin=playnite-gameactivity-plugin, Status=Installed}" >
+                                            <StackPanel Orientation="Vertical" Background="{TemplateBinding Background}">
+                                                <ContentControl x:Name="GameActivity_PluginButton" />
+                                                <ContentControl x:Name="GameActivity_PluginChartTime" Margin="0,5,0,0" />
                                             </StackPanel>
                                         </TabItem>
                                         <!--#endregion-->

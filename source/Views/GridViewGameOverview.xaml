@@ -576,7 +576,7 @@
                                         <!--#region GameActivity-->
                                         <StackPanel DockPanel.Dock="Top" Visibility="{PluginStatus Plugin=playnite-gameactivity-plugin, Status=Installed}"
                                                     Margin="5,15,5,0">
-                                            <TextBlock Text="GameActivity"
+                                            <TextBlock Text="{DynamicResource LOCGameActivityTitle}"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
                                             <ContentControl x:Name="GameActivity_PluginButton" />
