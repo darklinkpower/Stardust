@@ -2,7 +2,7 @@ AddonId: Stardust 2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002
 Packages:
   - Version: 2.0
     RequiredApiVersion: 2.0.0
-    ReleaseDate: 2020-09-07
+    ReleaseDate: 2021-09-07
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.0-beta.1/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_0.pthm
     Changelog:
       - Playnite 9 support
