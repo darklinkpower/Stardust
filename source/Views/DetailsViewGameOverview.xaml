@@ -382,16 +382,13 @@
                                         </StackPanel>
                                     </DockPanel>
                                     <DockPanel>
-                                        <DockPanel Tag="{DynamicResource Sc_HasData}" Margin="0,0,20,0">
+                                        <DockPanel Tag="{PluginSettings Plugin=SuccessStory, Path=HasData}" Margin="0,0,20,0">
                                             <DockPanel.Style>
-                                                <Style TargetType="DockPanel">
-                                                    <Setter Property="Control.Visibility" Value="Visible"/>
+                                                <Style TargetType="{x:Type DockPanel}">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
                                                     <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
-                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                        </DataTrigger>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
-                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                            <Setter Property="Visibility" Value="Visible" />
                                                         </DataTrigger>
                                                     </Style.Triggers>
                                                 </Style>
@@ -404,13 +401,13 @@
                                                 <Label Content="{DynamicResource LOCSuccessStoryAchievements}" />
                                                 <DockPanel>
                                                     <DockPanel MinWidth="40">
-                                                        <TextBlock Text="{DynamicResource Sc_UnlockedString}"/>
+                                                        <TextBlock Text="{PluginSettings Plugin=SuccessStory, Path=Unlocked}"/>
                                                         <TextBlock Text="/"/>
-                                                        <TextBlock Text="{DynamicResource Sc_TotalString}"/>
+                                                        <TextBlock Text="{PluginSettings Plugin=SuccessStory, Path=Total}"/>
                                                     </DockPanel>
                                                     <ProgressBar x:Name="progressBar" FontSize="10" Visibility="{Binding Visibility, ElementName=label, Mode=OneWay}" Margin="5,0,0,0"
-                                                            Maximum="{DynamicResource Sc_TotalDouble}" Value="{DynamicResource Sc_UnlockedDouble}" HorizontalAlignment="Left"
-                                                            Background="{DynamicResource TextBrush}" Foreground="{DynamicResource GlyphBrush}" Width="60" Height="10"  Style="{DynamicResource RoundedProgressBar}">
+                                                            Maximum="{PluginSettings Plugin=SuccessStory, Path=Total}" Value="{PluginSettings Plugin=SuccessStory, Path=Unlocked}" HorizontalAlignment="Left"
+                                                            Background="{DynamicResource TextBrush}" Foreground="{DynamicResource GlyphBrush}" Width="60" Height="10" Style="{DynamicResource RoundedProgressBar}">
                                                         <ProgressBar.Resources>
                                                             <Style x:Key="RoundedProgressBar" TargetType="ProgressBar">
                                                                 <Setter Property="Background" Value="{DynamicResource NormalBrushDark}"/>
