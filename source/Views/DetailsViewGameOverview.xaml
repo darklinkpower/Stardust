@@ -326,6 +326,8 @@
                                                     </Style>
                                                 </ContentControl.Style>
                                             </ContentControl>
+                                            <ContentControl x:Name="SystemChecker_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"/>
+                                            <ContentControl x:Name="CheckLocalizations_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"/>
                                             <ToggleButton FontSize="40" x:Name="MediaControlsDisplayToggleButton" 
                                                     Style="{DynamicResource MediaControlsDisplayToggleButton}" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" 
                                                     IsChecked="{DynamicResource DetailsViewLogoAreMediaControlsDisplayed}"/>
