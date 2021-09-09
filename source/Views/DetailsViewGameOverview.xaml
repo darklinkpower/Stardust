@@ -680,6 +680,19 @@
                                             </StackPanel>
                                         </TabItem>
                                         <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCNotesLabel}">
+                                            <TabItem.Style>
+                                                <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
+                                                    <Setter Property="Control.Visibility" Value="Visible" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Game.Notes}" Value="{x:Null}">
+                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Game.Notes}" Value="">
+                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TabItem.Style>
                                             <StackPanel Margin="0,16,0,0" Name="PART_ElemNotes">
                                                 <TextBox Name="PART_TextNotes" IsReadOnly="True"
                                                      BorderThickness="0"
