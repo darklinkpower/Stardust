@@ -30,7 +30,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Menu">
-                    <StackPanel Orientation="Horizontal" IsItemsHost="True" Background="AliceBlue"/>
+                    <StackPanel Orientation="Horizontal" IsItemsHost="True" />
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
