@@ -151,7 +151,7 @@
                                     </EventTrigger>
                                 </MediaElement.Triggers>
                             </MediaElement>
-                            
+
                             <Grid HorizontalAlignment="Stretch" Margin="20,0,20,0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="{Settings CalculatedGameDetailsIndentation}" />
@@ -287,7 +287,7 @@
                                             </Grid>
                                             <ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Margin="10,0,0,0"
                                                             Height="40" MaxWidth="150" DockPanel.Dock="Left"
-                                                            Tag="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData}"> >
+                                                            Tag="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData}">
                                                 <ContentControl.Style>
                                                     <Style TargetType="ContentControl">
                                                         <Setter Property="Visibility" Value="Collapsed" />
@@ -666,7 +666,7 @@
                                         </GridEx>
                                         <!--#regionend-->
                                     </StackPanel>
-                                    <TabControl Margin="10,-4,0,0">
+                                    <TabControl Margin="10,-4,0,0" Style="{StaticResource TabControlDetailsView}">
                                         <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCGameDescriptionTitle}">
                                             <StackPanel Margin="0,16,0,0" Name="PART_ElemDescription" Background="{DynamicResource DetailsViewWrapBackgroundsBrush}">
                                                 <HtmlTextView Name="PART_HtmlDescription"
@@ -724,7 +724,7 @@
                                             </StackPanel>
                                         </TabItem>
                                         <!--#endregion-->
-                                        
+
                                         <!--#region ScreenshotsVisualizer-->
                                         <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCSsvTitle}"
                                                  Tag="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData}">
