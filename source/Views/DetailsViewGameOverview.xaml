@@ -700,24 +700,7 @@
                                                      Margin="-1,5,-1,5" Padding="0" Background="Transparent" FontWeight="Normal"/>
                                             </StackPanel>
                                         </TabItem>
-                                        <!--#region ScreenshotsVisualizer-->
-                                        <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCSsvTitle}"
-                                                 Tag="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData}">
-                                            <TabItem.Style>
-                                                <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
-                                                    <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
-                                                            <Setter Property="Control.Visibility" Value="Visible" />
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </TabItem.Style>
-                                            <StackPanel Orientation="Vertical" Background="{TemplateBinding Background}" Margin="0,15,0,0">
-                                                <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,20,0" Height="500" Background="Red"/>
-                                            </StackPanel>
-                                        </TabItem>
-                                        <!--#endregion -->
+
                                         <!--#region SuccessStory-->
                                         <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCSuccessStoryAchievements}"
                                                  Tag="{PluginSettings Plugin=SuccessStory, Path=HasData}">
@@ -741,6 +724,26 @@
                                             </StackPanel>
                                         </TabItem>
                                         <!--#endregion-->
+                                        
+                                        <!--#region ScreenshotsVisualizer-->
+                                        <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCSsvTitle}"
+                                                 Tag="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData}">
+                                            <TabItem.Style>
+                                                <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
+                                                    <Setter Property="Control.Visibility" Value="Collapsed" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                            <Setter Property="Control.Visibility" Value="Visible" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TabItem.Style>
+                                            <StackPanel Orientation="Vertical" Background="{TemplateBinding Background}" Margin="0,15,0,0">
+                                                <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,20,0" Height="500" Background="Red"/>
+                                            </StackPanel>
+                                        </TabItem>
+                                        <!--#endregion -->
+
                                         <!--#region GameActivity-->
                                         <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCGameActivityTitle}"
                                                  Tag="{PluginSettings Plugin=GameActivity, Path=HasData}" >
