@@ -378,7 +378,7 @@
                                         </Viewbox>
                                         <StackPanel Height="50" Margin="10,0,0,0" VerticalAlignment="Center">
                                             <Label Name="PART_ElemCompletionStatus" Content="{DynamicResource LOCCompletionStatus}" />
-                                            <Button Name="PART_ButtonCompletionStatus"/>
+                                            <Button Name="PART_ButtonCompletionStatus" Style="{StaticResource PropertyItemButton}"/>
                                         </StackPanel>
                                     </DockPanel>
                                     <DockPanel>
