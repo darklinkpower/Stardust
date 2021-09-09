@@ -10,7 +10,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type SearchBox}">
                     <Grid>
-                        <TextBox x:Name="PART_TextInpuText" Background="{DynamicResource TopPanelSearchBoxBackgroundBrush}" BorderThickness="0"
+                        <TextBox x:Name="PART_TextInpuText" Background="{DynamicResource TopPanelSearchBoxBackgroundBrush}" BorderThickness="{DynamicResource ControlBorderThickness}"
                                  VerticalContentAlignment="Center" Padding="5,0,25,0"/>
                         <ContentControl x:Name="PART_SeachIcon"
                                         ContentTemplate="{DynamicResource SearchTextIconTemplate}"

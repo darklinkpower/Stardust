@@ -206,6 +206,10 @@
                                 </DockPanel>
                             </DockPanel>
                             <DockPanel Grid.Column="1" Margin="0,3,0,3">
+                                <CheckBox x:Name="PART_ToggleNotifications"
+                                      Style="{DynamicResource TopPanelNotificationsToggle}"
+                                      DockPanel.Dock="Right" />
+                                
                                 <StackPanel x:Name="PART_PanelMainPluginItems" Orientation="Horizontal"
                                         VerticalAlignment="Stretch" Margin="15,6,15,6"
                                         DockPanel.Dock="{Settings PluginTopPanelAlignment}"/>
@@ -221,9 +225,6 @@
                                       Style="{DynamicResource TopPanelFilterToggle}"
                                       DockPanel.Dock="Left" />
 
-                                <CheckBox x:Name="PART_ToggleNotifications"
-                                      Style="{DynamicResource TopPanelNotificationsToggle}"
-                                      DockPanel.Dock="Left" />
                             </DockPanel>
                         </Grid>
                     </Border>
