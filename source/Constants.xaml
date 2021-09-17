@@ -61,7 +61,8 @@
     <Color x:Key="BackgroundToneColor">#262c38</Color>
     <Color x:Key="GridItemBackgroundColor">Transparent</Color>
     <Color x:Key="PanelSeparatorColor">#373538</Color>
-
+    <Color x:Key="WindowPanelSeparatorColor">Transparent</Color>
+    
     <Color x:Key="NormalBorderControlsColor">#6f6d70</Color>
     <Color x:Key="NormalBorderControlsHoverColor">#acabad</Color>
     <Color x:Key="NormalBorderControlsHoverTransparencyColor">#4c919191</Color>
@@ -115,6 +116,7 @@
     <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#2e2c2f" />
     <SolidColorBrush x:Key="GridItemBackgroundBrush" Color="{DynamicResource GridItemBackgroundColor}" />
     <SolidColorBrush x:Key="PanelSeparatorBrush" Color="{DynamicResource PanelSeparatorColor}" />
+    <SolidColorBrush x:Key="WindowPanelSeparatorBrush" Color="{DynamicResource WindowPanelSeparatorColor}" />
     <SolidColorBrush x:Key="PopupBackgroundBrush" Color="{DynamicResource PopupBackgroundColor}" />
     <SolidColorBrush x:Key="SecondaryBrush" Color="{DynamicResource GlyphColorSecondary}" />
     <SolidColorBrush x:Key="MainPanelBackgroundBrush" Color="{DynamicResource MainColor}" />
