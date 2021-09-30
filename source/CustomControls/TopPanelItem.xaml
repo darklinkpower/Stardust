@@ -27,6 +27,10 @@
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="{DynamicResource TopPanelItemHoverBackgroundBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+            </Trigger>
+            <Trigger Property="IsToggled" Value="True">
+                <Setter Property="Background" Value="{DynamicResource TopPanelItemHoverBackgroundBrush}" />
             </Trigger>
             <MultiTrigger>
                 <MultiTrigger.Conditions>
