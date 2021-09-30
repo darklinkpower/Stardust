@@ -75,7 +75,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <None Include="thememodifier.yaml" />
     <None Include="theme.yaml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -284,6 +283,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="CustomControls\PathSelectionBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="DerivedStyles\TextBlockGameScore.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -321,6 +324,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="DerivedStyles\DetailsViewItemStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DerivedStyles\ListViewGroupStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Content>
