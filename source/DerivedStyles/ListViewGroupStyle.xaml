@@ -1,0 +1,57 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="ListViewGroupStyle" TargetType="{x:Type GroupItem}">
+        <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type GroupItem}">
+                    <ExpanderEx BorderThickness="0" SaveGameGroupId="{Binding Name, Mode=OneWay}"
+                                IsExpanded="True">
+                        <ExpanderEx.Header>                            
+                            <DockPanel Background="Transparent">
+                                <DockPanel.ContextMenu>
+                                    <GameGroupMenu />
+                                </DockPanel.ContextMenu>
+                                <TextBlock DockPanel.Dock="Left"
+                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                           TextAlignment="Center" Margin="0,0,5,0">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
+                                            <Setter Property="Text" Value="{Binding Name, Converter={StaticResource ObjectToStringConverter}}" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Name, Converter={StaticResource ObjectToStringConverter}}" Value="{x:Null}">
+                                                    <Setter Property="Text" Value="{DynamicResource LOCNone}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Name, Converter={StaticResource ObjectToStringConverter}}" Value="">
+                                                    <Setter Property="Text" Value="{DynamicResource LOCNone}" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                                <Grid DockPanel.Dock="Left" Margin="5,0,10,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Column="0" CornerRadius="7" Background="{DynamicResource DetailsViewGrouCountBackgroundBrush}"  Width="Auto">
+                                        <TextBlock Text="{Binding Items.Count, Mode=OneWay, StringFormat={}{0}}"
+                                               Foreground="{DynamicResource TextBrush}"
+                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                               Style="{DynamicResource BaseTextBlockStyle}"
+                                               TextAlignment="Center"
+                                               Visibility="{Settings ShowGroupCount}"
+                                               Margin="7,0,7,0"/>
+                                    </Border>
+                                </Grid>
+                            </DockPanel>
+                        </ExpanderEx.Header>
+                        <ItemsPresenter />
+                    </ExpanderEx>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
