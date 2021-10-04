@@ -536,7 +536,7 @@
                                                 </Style>
                                             </TabItem.Style>
                                             <StackPanel Orientation="Vertical" Background="{TemplateBinding Background}" Margin="0,15,0,0">
-                                                <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,20,0" Height="500" Background="Red"/>
+                                                <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,20,0" Height="500"/>
                                             </StackPanel>
                                         </TabItem>
                                         <!--#endregion -->
