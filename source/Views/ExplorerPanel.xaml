@@ -31,59 +31,6 @@
                                  DockPanel.Dock="Top" Margin="5,0,5,8"                                      
                                  BorderThickness="0" Background="Transparent"
                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                                <ListBox.Resources>
-                                    <Style TargetType="{x:Type ListBoxItem}">
-                                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                                        <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />
-                                        <Setter Property="Height" Value="26" />
-                                        <Setter Property="Template">
-                                            <Setter.Value>
-                                                <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                                                    <Grid MinHeight="{TemplateBinding Height}">
-                                                        <Border x:Name="SelectedRectangle" IsHitTestVisible="False" Visibility="Visible" VerticalAlignment="Center"
-                                                            BorderThickness="2,0,0,0" BorderBrush="{DynamicResource GlyphBrush}" Height="{TemplateBinding Height}" >
-                                                            <Border.LayoutTransform>
-                                                                <ScaleTransform x:Name="SelectedRectangleScale" ScaleY="0"/>
-                                                            </Border.LayoutTransform>
-                                                        </Border>
-             
-                                                        <DockPanel Margin="0,4,0,4" VerticalAlignment="Center">
-                                                            <TextBlock x:Name="ItemIcon" Text="&#xF005;" FontSize="16"
-                                                                       Foreground="{TemplateBinding Foreground}" FontFamily="{DynamicResource FontIcoFont}"
-                                                                       VerticalAlignment="Center" Margin="15,0,0,0"/>
-                                                            <ContentPresenter HorizontalAlignment="Stretch" TextBlock.Foreground="{TemplateBinding Foreground}"  VerticalAlignment="Center" Margin="13,0,0,0" />
-                                                        </DockPanel>
-                                                    </Grid>
-                                                    <ControlTemplate.Triggers>
-                                                        <Trigger Property="IsMouseOver" Value="True">
-                                                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-                                                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" TargetName="ItemIcon"/>
-                                                        </Trigger>
-                                                        <Trigger Property="IsSelected" Value="True">
-                                                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-                                                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" TargetName="ItemIcon"/>
-                                                            <Setter Property="Visibility" Value="Visible" TargetName="SelectedRectangle" />
-                                                            <Trigger.EnterActions>
-                                                                <BeginStoryboard>
-                                                                    <Storyboard>
-                                                                        <DoubleAnimation Storyboard.TargetName="SelectedRectangleScale" Storyboard.TargetProperty="(ScaleTransform.ScaleY)" Duration="0:0:0.40" To="1"/>
-                                                                    </Storyboard>
-                                                                </BeginStoryboard>
-                                                            </Trigger.EnterActions>
-                                                            <Trigger.ExitActions>
-                                                                <BeginStoryboard>
-                                                                    <Storyboard>
-                                                                        <DoubleAnimation Storyboard.TargetName="SelectedRectangleScale" Storyboard.TargetProperty="(ScaleTransform.ScaleY)" Duration="0:0:0.25" To="0"/>
-                                                                    </Storyboard>
-                                                                </BeginStoryboard>
-                                                            </Trigger.ExitActions>
-                                                        </Trigger>
-                                                    </ControlTemplate.Triggers>
-                                                </ControlTemplate>
-                                            </Setter.Value>
-                                        </Setter>
-                                    </Style>
-                                </ListBox.Resources>
                             </ListBox>
                         </DockPanel>
                     </Border>
