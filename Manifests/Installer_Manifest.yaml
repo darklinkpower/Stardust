@@ -43,3 +43,12 @@ Packages:
       - 'Details View: Fix all text inside tabs having bold font weight'
       - 'Grid View: Add Review Viewer extension support'
       - 'List View: Group count styling'
+  - Version: 2.4
+    RequiredApiVersion: 2.0.0
+    ReleaseDate: 2021-10-06
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.4/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_4.pthm
+    Changelog:
+      - 'Grid View: Increase opacity of Duplicated Hider extension icons'
+      - 'Explorer Panel: Remove custom control template'
+      - 'Top Panel: Use hand cursor for notification button and messages'
+      - 'Minor fixes and improvements'
