@@ -52,3 +52,11 @@ Packages:
       - 'Explorer Panel: Remove custom control template'
       - 'Top Panel: Use hand cursor for notification button and messages'
       - 'Minor fixes and improvements'
+  - Version: 2.5
+    RequiredApiVersion: 2.0.0
+    ReleaseDate: 2021-10-24
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.5/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_5.pthm
+    Changelog:
+      - 'DetailsView: Fix text in horizontal details being cut when font is too large'
+      - 'Details View: Add ThemeModifier variable to configure if Extra Metadata Loader logos can be used in the view'
+      - 'Grid View: Add ThemeModifier variable to configure if Extra Metadata Loader logos can be used in the view'
