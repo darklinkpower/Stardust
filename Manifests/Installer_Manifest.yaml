@@ -76,3 +76,9 @@ Packages:
       - 'Update to Playnite themes API 2.1.0'
       - 'Details View: Support for Background image extension BackgroundImage control'
       - 'Sidebar: Use hand cursor for sidebar items'
+  - Version: 2.8
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2021-11-27
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.7/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_8.pthm
+    Changelog:
+      - 'Style filter ComboBox'

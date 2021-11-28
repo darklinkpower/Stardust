@@ -8,6 +8,7 @@
                 CornerRadius="{DynamicResource ControlCornerRadius}"
                 Style="{DynamicResource HighlightBorder}"
                 Background="{TemplateBinding Background}"
+                Cursor="Hand"
                 x:Name="Root">
             <Grid>
                 <DockPanel>
@@ -81,7 +82,9 @@
         <Border BorderThickness="{DynamicResource ControlBorderThickness}"
                 CornerRadius="{DynamicResource ControlCornerRadius}"
                 Style="{DynamicResource HighlightBorder}"
+                BorderBrush="{DynamicResource TextBoxBorderBrush}"
                 Background="{TemplateBinding Background}"
+                Cursor="Hand"
                 x:Name="Root">
             <Grid>
                 <DockPanel>
@@ -154,6 +157,14 @@
                 </Popup>
             </Grid>
         </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrushHover}" TargetName="Root"/>
+            </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrushSelected}" TargetName="Root" />
+            </Trigger>
+        </ControlTemplate.Triggers>
     </ControlTemplate>
     
     <Style x:Key="ComboBoxListItemStyle" TargetType="{x:Type CheckBox}" BasedOn="{StaticResource {x:Type CheckBox}}">
