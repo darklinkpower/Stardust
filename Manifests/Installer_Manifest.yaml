@@ -90,3 +90,10 @@ Packages:
       - 'Details View: Fix background image not showing when BackgroundChanger extension is enabled but control is disabled in settings'
       - 'Grid View: Add support for ExtraMetadataLoader video player control'
       - 'Grid View: Add support for NewsViewer extension control'
+  - Version: 2.10
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2021-12-12
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.10/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_10.pthm
+    Changelog:
+      - 'General: Adjustments to ThemeModifier variable names'
+      - 'Details View: Add support for ExtraMetadataLoader extension alternative video player'
