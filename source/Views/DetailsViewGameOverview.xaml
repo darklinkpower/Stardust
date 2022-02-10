@@ -138,11 +138,7 @@
                                             </Image>
                                             <TextBlock FontFamily="{DynamicResource FontFamily}" Text="{Binding Game.DisplayName}" 
                                                        DockPanel.Dock="Left" FontSize="{DynamicResource FontSizeLargest}" Margin="0,0,10,0" 
-                                                       TextWrapping="Wrap" VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
-                                                <TextBlock.Effect>
-                                                    <DropShadowEffect ShadowDepth="2" RenderingBias="Quality" />
-                                                </TextBlock.Effect>
-                                            </TextBlock>
+                                                       TextWrapping="Wrap" VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}" />
                                         </DockPanel>
                                         <DockPanel Margin="0,15,0,0" LastChildFill="False">
                                             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="300">
@@ -223,28 +219,28 @@
                                     </DockPanel.Resources>
                                     <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemLastPlayed, Mode=OneWay}" Margin="0,0,0,0">
                                         <Viewbox Stretch="Uniform" Height="35">
-                                            <TextBlock Text="&#xEC45;" FontFamily="{StaticResource FontIcoFont}"/>
+                                            <TextBlock Text="&#xEC45;" FontFamily="{StaticResource FontIcoFont}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" />
                                         </Viewbox>
                                         <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
-                                            <Label Name="PART_ElemLastPlayed" Content="{DynamicResource LOCLastPlayed}"/>
+                                            <Label Name="PART_ElemLastPlayed" Content="{DynamicResource LOCLastPlayed}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"/>
                                             <TextBlock Name="PART_TextLastActivity"/>
                                         </StackPanel>
                                     </DockPanel>
                                     <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemPlayTime, Mode=OneWay}" Margin="15,0,0,0">
                                         <Viewbox Stretch="Uniform" Height="35">
-                                            <TextBlock Text="&#xEEDC;" FontFamily="{StaticResource FontIcoFont}"/>
+                                            <TextBlock Text="&#xEEDC;" FontFamily="{StaticResource FontIcoFont}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" />
                                         </Viewbox>
                                         <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
-                                            <Label Name="PART_ElemPlayTime" Content="{DynamicResource LOCTimePlayed}"/>
+                                            <Label Name="PART_ElemPlayTime" Content="{DynamicResource LOCTimePlayed}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}" />
                                             <TextBlock Name="PART_TextPlayTime"/>
                                         </StackPanel>
                                     </DockPanel>
                                     <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemCompletionStatus, Mode=OneWay}" Margin="15,0,0,0">
                                         <Viewbox Stretch="Uniform" Height="40">
-                                            <TextBlock Text="&#xEED6;" FontFamily="{StaticResource FontIcoFont}"/>
+                                            <TextBlock Text="&#xEED6;" FontFamily="{StaticResource FontIcoFont}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" />
                                         </Viewbox>
                                         <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
-                                            <Label Name="PART_ElemCompletionStatus" Content="{DynamicResource LOCCompletionStatus}" />
+                                            <Label Name="PART_ElemCompletionStatus" Content="{DynamicResource LOCCompletionStatus}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}" />
                                             <Button Name="PART_ButtonCompletionStatus" Style="{StaticResource PropertyItemButton}" Margin="0" />
                                         </StackPanel>
                                     </DockPanel>
@@ -260,11 +256,11 @@
                                             </Style>
                                         </DockPanel.Style>
                                         <Viewbox Stretch="Uniform" Height="30">
-                                            <TextBlock Text="&#xEDD7;" FontFamily="{StaticResource FontIcoFont}"/>
+                                            <TextBlock Text="&#xEDD7;" FontFamily="{StaticResource FontIcoFont}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" />
                                         </Viewbox>
 
                                         <StackPanel Margin="15,0,0,0" VerticalAlignment="Center">
-                                            <Label Content="{DynamicResource LOCSuccessStoryAchievements}" />
+                                            <Label Content="{DynamicResource LOCSuccessStoryAchievements}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}" />
                                             <DockPanel>
                                                 <DockPanel MinWidth="40">
                                                     <TextBlock Text="{PluginSettings Plugin=SuccessStory, Path=Unlocked, FallbackValue='-'}"/>
@@ -273,7 +269,7 @@
                                                 </DockPanel>
                                                 <ProgressBar x:Name="progressBar" FontSize="10" Margin="5,0,0,0"
                                                             Maximum="{PluginSettings Plugin=SuccessStory, Path=Total, FallbackValue=0}" Value="{PluginSettings Plugin=SuccessStory, Path=Unlocked, FallbackValue=0}" HorizontalAlignment="Left"
-                                                            Background="{DynamicResource TextBrush}" Foreground="{DynamicResource GlyphBrush}" Width="60" Height="10" Style="{DynamicResource RoundedProgressBar}">
+                                                            Background="{DynamicResource TextBrush}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" Width="60" Height="10" Style="{DynamicResource RoundedProgressBar}">
                                                     <ProgressBar.Resources>
                                                         <Style x:Key="RoundedProgressBar" TargetType="ProgressBar">
                                                             <Setter Property="Background" Value="{DynamicResource NormalBrushDark}"/>
@@ -315,12 +311,12 @@
                                             </Style>
                                         </DockPanel.Style>
                                         <Viewbox Stretch="Uniform" Height="30">
-                                            <Path Stretch="Fill" Fill="{DynamicResource TextBrush}" Data="m 157.80154 541.46802 v -400 h 97.14286 97.14286 
+                                            <Path Stretch="Fill" Fill="{DynamicResource DetailsIconsBackgroundBrush}" Data="m 157.80154 541.46802 v -400 h 97.14286 97.14286 
                                                     v 238.57143 238.57143 h 40 40 V 380.03945 141.46802 h 97.14285 97.14286 v 400 400 
                                                     h -97.14286 -97.14285 v -81.42857 -81.42857 h -40 -40 v 81.42857 81.42857 H 254.9444 157.80154 Z"/>
                                         </Viewbox>
                                         <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
-                                            <Label Content="HowLongToBeat" />
+                                            <Label Content="HowLongToBeat" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}" />
                                             <ContentControl x:Name="HowLongToBeat_PluginProgressBar" Margin="0,0,0,0" VerticalAlignment="Center" Width="310" HorizontalAlignment="Left"/>
                                         </StackPanel>
                                     </DockPanel>
@@ -339,8 +335,8 @@
                                             <Style TargetType="Button" BasedOn="{StaticResource PropertyItemButton}" />
                                         </StackPanel.Resources>
                                         <!--#region Game Details-->
-                                        <TextBlock Text="{DynamicResource LOCGameDetails}" Margin="0,15,0,5" FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
-                                        <Separator Background="{DynamicResource HighlightGlyphBrush}" />
+                                        <TextBlock Text="{DynamicResource LOCGameDetails}" Margin="0,15,0,5" FontWeight="Bold" FontSize="{DynamicResource FontSizeLarger}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}" />
+                                        <Separator Background="{DynamicResource DetailsViewSeparatorBrush}" />
                                         <GridEx Margin="0,5,0,10" ColumnCount="2" StarColumns="1" RowCount="21" AutoLayoutColumns="2" Background="{DynamicResource DetailsViewWrapBackgroundsBrush}">
                                             <Grid.Resources>
                                                 <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
@@ -355,7 +351,7 @@
                                             </Grid.Resources>
                                             <Label Name="PART_ElemLibrary" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xEF65;" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="&#xEF65;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons2BackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCGameProviderTitle}" />
@@ -364,7 +360,7 @@
                                             <Button Name="PART_ButtonLibrary" VerticalAlignment="Center" />
                                             <Label Name="PART_ElemSource" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xEF65;" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="&#xEF65;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons2BackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCSourceLabel}" />
@@ -373,7 +369,7 @@
                                             <Button Name="PART_ButtonSource" VerticalAlignment="Center" />
                                             <Label Name="PART_ElemPlatform" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xEEEE;" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="&#xEEEE;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons2BackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCGamePlatformTitle}" />
@@ -382,7 +378,7 @@
                                             <ItemsControl Name="PART_ItemsPlatforms" />
                                             <Label Name="PART_ElemCategories" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xEF74;" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="&#xEF74;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons2BackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCGameCategoriesTitle}" />
@@ -391,7 +387,7 @@
                                             <ItemsControl Name="PART_ItemsCategories" />
                                             <Label Name="PART_ElemGenres" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xEF74;" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="&#xEF74;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons2BackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCGenreLabel}" />
@@ -400,7 +396,7 @@
                                             <ItemsControl Name="PART_ItemsGenres" />
                                             <Label Name="PART_ElemReleaseDate" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons3BackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCGameReleaseDateTitle}" />
@@ -409,7 +405,7 @@
                                             <Button Name="PART_ButtonReleaseDate" VerticalAlignment="Center" />
                                             <Label Name="PART_ElemDevelopers" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xEEF3;" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="&#xEEF3;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons3BackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCDeveloperLabel}" />
@@ -418,7 +414,7 @@
                                             <ItemsControl Name="PART_ItemsDevelopers" />
                                             <Label Name="PART_ElemPublishers" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xEEF3;" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="&#xEEF3;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons3BackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCPublisherLabel}" />
@@ -427,7 +423,7 @@
                                             <ItemsControl Name="PART_ItemsPublishers" />
                                             <Label Name="PART_ElemAgeRating" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons3BackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCAgeRatingLabel}" />
@@ -436,8 +432,8 @@
                                             <ItemsControl Name="PART_ItemsAgeRatings" />
                                             <Label Name="PART_ElemSeries" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xEEEF;" Style="{StaticResource Icon}" 
-                                                               FontFamily="{StaticResource FontIcoFont}" 
+                                                    <TextBlock Text="&#xEEEF;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}"
+                                                               FontFamily="{StaticResource FontIcoFont}"
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCSeriesLabel}" />
                                                 </StackPanel>
@@ -445,7 +441,7 @@
                                             <ItemsControl Name="PART_ItemsSeries" />
                                             <Label Name="PART_ElemRegion" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xF02C;" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="&#xF02C;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCRegionLabel}" />
@@ -454,7 +450,7 @@
                                             <ItemsControl Name="PART_ItemsRegions" />
                                             <Label Name="PART_ElemVersion" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xEFD1;" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="&#xEFD1;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCVersionLabel}" />
@@ -463,7 +459,7 @@
                                             <Button Name="PART_ButtonVersion" VerticalAlignment="Center" />
                                             <Label Name="PART_ElemCommunityScore" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xF000;" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="&#xF000;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCCommunityScore}" />
@@ -472,7 +468,7 @@
                                             <TextBlock Name="PART_TextCommunityScore" VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
                                             <Label Name="PART_ElemCriticScore" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xF000;" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="&#xF000;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCCriticScore}" />
@@ -481,7 +477,7 @@
                                             <TextBlock Name="PART_TextCriticScore" VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
                                             <Label Name="PART_ElemUserScore" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xF000;" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="&#xF000;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCUserScore}" />
@@ -490,7 +486,7 @@
                                             <TextBlock Name="PART_TextUserScore" VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
                                             <Label Name="PART_ElemFeatures" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xEF74;" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="&#xEF74;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCFeaturesLabel}" />
@@ -499,7 +495,7 @@
                                             <ItemsControl Name="PART_ItemsFeatures" />
                                             <Label Name="PART_ElemTags" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xEC85;" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="&#xEC85;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCTagsLabel}" />
@@ -508,7 +504,7 @@
                                             <ItemsControl Name="PART_ItemsTags" />
                                             <Label Name="PART_ElemLinks" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xEF71;" Style="{StaticResource Icon}" 
+                                                    <TextBlock Text="&#xEF71;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCLinksLabel}" />
@@ -521,8 +517,8 @@
                                     <TabControl Margin="10,-4,0,0" Style="{StaticResource TabControlDetailsView}">
                                         <TabItem>
                                             <TabItem.Header>
-                                                <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}"
-                                                           FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
+                                                           FontSize="{DynamicResource FontSizeLarger}" FontWeight="Bold"/>
                                             </TabItem.Header>
                                             <StackPanel Margin="0,16,0,0" Name="PART_ElemDescription" Background="{DynamicResource DetailsViewWrapBackgroundsBrush}">
                                                 <HtmlTextView Name="PART_HtmlDescription"
@@ -538,8 +534,8 @@
 
                                         <TabItem>
                                             <TabItem.Header>
-                                                <TextBlock Text="{DynamicResource LOCNotesLabel}"
-                                                           FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                <TextBlock Text="{DynamicResource LOCNotesLabel}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
+                                                           FontSize="{DynamicResource FontSizeLarger}" FontWeight="Bold"/>
                                             </TabItem.Header>
                                             <TabItem.Style>
                                                 <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -564,8 +560,8 @@
 
                                         <TabItem>
                                             <TabItem.Header>
-                                                <TextBlock Text="{DynamicResource LOCExtra_Metadata_Loader_VideoLabel}"
-                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                <TextBlock Text="{DynamicResource LOCExtra_Metadata_Loader_VideoLabel}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
+                                                               FontSize="{DynamicResource FontSizeLarger}" FontWeight="Bold"/>
                                             </TabItem.Header>
                                             <TabItem.Style>
                                                 <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -591,8 +587,8 @@
                                         <!--#region SuccessStory-->
                                         <TabItem>
                                             <TabItem.Header>
-                                                <TextBlock Text="{DynamicResource LOCSuccessStoryAchievements}"
-                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                <TextBlock Text="{DynamicResource LOCSuccessStoryAchievements}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
+                                                               FontSize="{DynamicResource FontSizeLarger}" FontWeight="Bold"/>
                                             </TabItem.Header>
                                             <TabItem.Style>
                                                 <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -618,8 +614,8 @@
                                         <!--#region ScreenshotsVisualizer-->
                                         <TabItem>
                                             <TabItem.Header>
-                                                <TextBlock Text="{DynamicResource LOCSsvTitle}"
-                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                <TextBlock Text="{DynamicResource LOCSsvTitle}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
+                                                           FontSize="{DynamicResource FontSizeLarger}" FontWeight="Bold"/>
                                             </TabItem.Header>
                                             <TabItem.Style>
                                                 <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -640,8 +636,8 @@
                                         <!--#region GameActivity-->
                                         <TabItem>
                                             <TabItem.Header>
-                                                <TextBlock Text="{DynamicResource LOCGameActivityTitle}"
-                                                           FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                <TextBlock Text="{DynamicResource LOCGameActivityTitle}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
+                                                           FontSize="{DynamicResource FontSizeLarger}" FontWeight="Bold"/>
                                             </TabItem.Header>
                                             <TabItem.Style>
                                                 <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -661,8 +657,8 @@
                                         <!--#region ReviewViewer-->
                                         <TabItem Visibility="{PluginStatus Plugin=Review_Viewer_ca24e37a-76d9-49bf-89ab-d3cba4a54bd1, Status=Installed}" >
                                             <TabItem.Header>
-                                                <TextBlock Text="{DynamicResource LOCReview_Viewer_ReviewsLabel}"
-                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                <TextBlock Text="{DynamicResource LOCReview_Viewer_ReviewsLabel}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
+                                                               FontSize="{DynamicResource FontSizeLarger}" FontWeight="Bold"/>
                                             </TabItem.Header>
                                             <StackPanel Orientation="Vertical" Margin="0,15,0,0">
                                                 <ContentControl x:Name="ReviewViewer_ReviewsControl" Margin="0,5,0,5" FontWeight="Normal"/>
@@ -673,7 +669,8 @@
                                         <TabItem>
                                             <TabItem.Header>
                                                 <TextBlock Text="{DynamicResource LOC_NewsViewer_NewsViewerControl_NewsLabel}"
-                                                           FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                           Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
+                                                           FontSize="{DynamicResource FontSizeLarger}" FontWeight="Bold"/>
                                             </TabItem.Header>
                                             <TabItem.Style>
                                                 <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">

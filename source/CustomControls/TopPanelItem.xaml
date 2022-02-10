@@ -30,7 +30,7 @@
                 <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
             </Trigger>
             <Trigger Property="IsToggled" Value="True">
-                <Setter Property="Background" Value="{DynamicResource TopPanelItemHoverBackgroundBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource DetailsIconsBackgroundBrush}" />
             </Trigger>
             <MultiTrigger>
                 <MultiTrigger.Conditions>

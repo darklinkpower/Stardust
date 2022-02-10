@@ -11,9 +11,7 @@
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
                     <Grid>
                         <Border x:Name="SelectedRectangle" IsHitTestVisible="False" Visibility="Collapsed"
-                                                        BorderThickness="4,0,0,0" BorderBrush="{DynamicResource GlyphBrush}"/>
-                        <Border x:Name="HoverRectangle" IsHitTestVisible="False" Visibility="Collapsed"
-                                                        BorderThickness="5,0,0,0" BorderBrush="{DynamicResource HoverBrush}"/>
+                                BorderThickness="4,0,0,0" BorderBrush="{DynamicResource GlyphBrush}"/>
                         <Border x:Name="ItemBackground" Padding="{TemplateBinding Padding}" Background="Transparent">
                             <ContentPresenter />
                         </Border>
@@ -25,13 +23,23 @@
                         <DataTrigger Binding="{Binding IsInstalled}" Value="False">
                             <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />
                         </DataTrigger>
+                        <DataTrigger Binding="{Binding IsLaunching}" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource LibraryDetailsViewIsLaunchingForegroundBrush}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsInstalling}" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource LibraryDetailsViewIsLaunchingForegroundBrush}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsUninstalling}" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource LibraryDetailsViewIsLaunchingForegroundBrush}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsRunning}" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource LibraryDetailsViewIsRunningForegroundBrush}" />
+                        </DataTrigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-                            <Setter Property="Background" Value="{DynamicResource NormalBorderBrushControlsHoverTransparency}" TargetName="ItemBackground" />
+                            <Setter Property="Background" Value="{DynamicResource DetailsViewLibraryHoverBackgroundBrush}" TargetName="ItemBackground" />
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-                            <Setter Property="Background" Value="{DynamicResource NormalBorderBrushControlsHoverTransparency}" TargetName="ItemBackground" />
+                            <Setter Property="Background" Value="{DynamicResource DetailsViewLibrarySelectedBackgroundBrush}" TargetName="ItemBackground" />
                             <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" TargetName="SelectedRectangle" />
                             <Setter Property="Visibility" Value="Visible" TargetName="SelectedRectangle" />
                         </Trigger>

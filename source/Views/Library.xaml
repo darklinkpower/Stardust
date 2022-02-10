@@ -5,7 +5,6 @@
                     mc:Ignorable="d">
 
     <Style TargetType="{x:Type Library}">
-        <Setter Property="Background" Value="Yellow" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Library}">
@@ -22,7 +21,7 @@
                         <FadeImage x:Name="PART_ImageBackground"
                                    Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Top" />
-
+                        <Border Background="{DynamicResource PanelsDarkenBrush}" Grid.RowSpan="2"/>
                         <TopPanel DockPanel.Dock="Top" Grid.Row="0" />
                         
                         <DockPanel Grid.Row="1">
