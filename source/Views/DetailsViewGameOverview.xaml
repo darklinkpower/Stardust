@@ -40,16 +40,18 @@
                                         </Style.Triggers>
                                     </Style>
                                 </WrapPanel.Style>
-                                <FadeImage x:Name="PART_ImageBackground" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top">
-                                    <FadeImage.ImageOpacityMask>
-                                        <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
-                                            <RadialGradientBrush.GradientStops>
-                                                <GradientStop Color="Black" Offset="0.3" />
-                                                <GradientStop Color="Transparent" Offset="1" />
-                                            </RadialGradientBrush.GradientStops>
-                                        </RadialGradientBrush>
-                                    </FadeImage.ImageOpacityMask>
-                                </FadeImage>
+                                <Grid>
+                                    <FadeImage x:Name="PART_ImageBackground" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                    <Border Background="#1A000000" />
+                                </Grid>
+                                <WrapPanel.OpacityMask>
+                                    <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
+                                        <RadialGradientBrush.GradientStops>
+                                            <GradientStop Color="Black" Offset="0.3" />
+                                            <GradientStop Color="Transparent" Offset="1" />
+                                        </RadialGradientBrush.GradientStops>
+                                    </RadialGradientBrush>
+                                </WrapPanel.OpacityMask>
                             </WrapPanel>
                             
                             <!-- BackgroundChanger plugin background -->
@@ -116,6 +118,9 @@
                                         <Image Name="PART_ImageCover" Height="{Settings GameDetailsCoverHeight}" 
                                                StretchDirection="Both" Stretch="Uniform" 
                                                RenderOptions.BitmapScalingMode="Fant" />
+                                        <Grid.Effect>
+                                            <DropShadowEffect BlurRadius="15" ShadowDepth="0" Color="#0d0d0d" Opacity="0.20" />
+                                        </Grid.Effect>
                                         <Grid.OpacityMask>
                                             <VisualBrush Visual="{Binding ElementName=Mask}" />
                                         </Grid.OpacityMask>
@@ -126,7 +131,11 @@
                                     <StackPanel VerticalAlignment="Bottom" DockPanel.Dock="Left">
                                         <DockPanel>
                                             <Image Name="PART_ImageIcon" MaxHeight="48" MaxWidth="48" DockPanel.Dock="Left" 
-                                                   Margin="0,0,10,0" VerticalAlignment="Center" RenderOptions.BitmapScalingMode="Fant" />
+                                                   Margin="0,0,10,0" VerticalAlignment="Center" RenderOptions.BitmapScalingMode="Fant">
+                                                <Image.Effect>
+                                                    <DropShadowEffect BlurRadius="15" ShadowDepth="0" Color="#0d0d0d" Opacity="0.20"/>
+                                                </Image.Effect>
+                                            </Image>
                                             <TextBlock FontFamily="{DynamicResource FontFamily}" Text="{Binding Game.DisplayName}" 
                                                        DockPanel.Dock="Left" FontSize="{DynamicResource FontSizeLargest}" Margin="0,0,10,0" 
                                                        TextWrapping="Wrap" VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
