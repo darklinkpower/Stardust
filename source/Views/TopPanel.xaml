@@ -173,13 +173,10 @@
                         <Border.Style>
                             <Style TargetType="Border">
                                 <Setter Property="BorderThickness" Value="0,0,0,1" />
-                                <Setter Property="Background" Value="Transparent" />
+                                <Setter Property="Background" Value="{DynamicResource TopPanelFadeBackgroundBrush}" />
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
                                         <Setter Property="BorderThickness" Value="0" />
-                                    </DataTrigger>
-                                    <DataTrigger Binding="{Settings ShowBackgroundImageOnWindow}" Value="True">
-                                        <Setter Property="Background" Value="{DynamicResource TopPanelFadeBackgroundBrush}" />
                                     </DataTrigger>
                                 </Style.Triggers>
                             </Style>
@@ -225,7 +222,7 @@
                                 <SearchBox x:Name="PART_TextMainSearch"
                                         Margin="5,6,0,6" DockPanel.Dock="Left"
                                         WindowChrome.IsHitTestVisibleInChrome="True"
-                                        Width="120" Background="Transparent"/>
+                                        Width="120" Background="{DynamicResource TopPanelSearchBoxBackgroundBrush}"/>
                                 
                                 <CheckBox x:Name="PART_ToggleFilter" ToolTip="{DynamicResource LOCFilters}"
                                       Style="{DynamicResource TopPanelFilterToggle}"

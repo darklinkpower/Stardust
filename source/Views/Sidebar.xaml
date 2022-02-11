@@ -8,7 +8,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Sidebar}">
-                    <Border Background="{DynamicResource SidebarBackgroundBrush}" BorderThickness="0,0,1,0" BorderBrush="{DynamicResource SidebarMarginBrush}"
+                    <Border Background="{DynamicResource SidebarBackgroundBrush}" BorderThickness="0,0,0,0" BorderBrush="{DynamicResource SidebarMarginBrush}"
                             x:Name="BorderContentHolder" Margin="{TemplateBinding Padding}">
                         <DockPanel x:Name="DockContentHolder" MinWidth="52">
                             <Border x:Name="PART_ElemMainMenu" Background="Transparent"
@@ -29,11 +29,9 @@
                     <ControlTemplate.Triggers>
                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Right">
                             <Setter Property="Margin" Value="8,45,2,40" TargetName="PART_ElemMainMenu" />
-                            <Setter Property="BorderThickness" Value="1,0,0,0" TargetName="BorderContentHolder" />
                         </DataTrigger>
                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Top">
                             <Setter Property="Margin" Value="8,0,40,0" TargetName="PART_ElemMainMenu" />
-                            <Setter Property="BorderThickness" Value="0,0,0,1" TargetName="BorderContentHolder" />
                             <Setter Property="DockPanel.Dock" Value="Left" TargetName="PART_ElemMainMenu" />
                             <Setter Property="DockPanel.Dock" Value="Left" TargetName="ScrollSidebarItems" />
                             <Setter Property="Margin" Value="0,0,100,0" TargetName="ScrollSidebarItems" />
@@ -41,7 +39,6 @@
                         </DataTrigger>
                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
                             <Setter Property="Margin" Value="8,0,40,0" TargetName="PART_ElemMainMenu" />
-                            <Setter Property="BorderThickness" Value="0,1,0,0" TargetName="BorderContentHolder" />
                             <Setter Property="DockPanel.Dock" Value="Left" TargetName="PART_ElemMainMenu" />
                             <Setter Property="DockPanel.Dock" Value="Left" TargetName="ScrollSidebarItems" />
                             <Setter Property="Orientation" Value="Horizontal" TargetName="PART_PanelSideBarItems" />

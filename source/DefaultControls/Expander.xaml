@@ -26,7 +26,7 @@
                                             <RotateTransform/>
                                         </Setter.Value>
                                     </Setter>
-                                    <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}"/>
+                                    <Setter Property="Foreground" Value="#cb16db"/>
                                     <Style.Triggers>
                                         <DataTrigger Binding="{Binding IsChecked, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ToggleButton}}}"  Value="True">
                                             <DataTrigger.EnterActions>

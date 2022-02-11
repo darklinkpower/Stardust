@@ -223,6 +223,8 @@
 
     <SolidColorBrush x:Key="LibraryDetailsViewIsRunningForegroundBrush" Color="#00d492" />
     <SolidColorBrush x:Key="LibraryDetailsViewIsLaunchingForegroundBrush" Color="#f0a300" />
+
+    <SolidColorBrush x:Key="GridViewSeparatorBrush" Color="#4Dc2c2c2" />
     
     <LinearGradientBrush x:Key="DetailsViewLibraryHoverBackgroundBrush" StartPoint="0.0,0.5" EndPoint="1.0,0.5">
         <GradientStop Color="#409a00c4" Offset="0.4" />

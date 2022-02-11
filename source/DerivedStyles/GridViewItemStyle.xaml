@@ -72,7 +72,7 @@
                             </Trigger.ExitActions>
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" TargetName="SelectionBorder"/>
+                            <Setter Property="BorderBrush" Value="#cb16db" TargetName="SelectionBorder"/>
                             <Setter Property="Canvas.ZIndex" Value="90" />
                         </Trigger>
                         <DataTrigger Binding="{Settings ShowGridItemBackground}" Value="False">

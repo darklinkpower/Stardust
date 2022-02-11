@@ -29,7 +29,7 @@
                                 </Border>
                                 <Border Background="#AA000000" x:Name="BorderMouseOver" Visibility="Collapsed" />
                                 <DockPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5">
-                                    <TextBlock Text="&#xF000;" Foreground="{DynamicResource GlyphBrush}"
+                                    <TextBlock Text="&#xF000;" Foreground="{DynamicResource DetailsIconsBackgroundBrush}"
                                                    Opacity="0.75" FontSize="16"
                                                    Margin="3,0,0,0"
                                                    VerticalAlignment="Center"
@@ -85,7 +85,7 @@
                     <ControlTemplate.Triggers>
                         <DataTrigger Binding="{Settings ShowGridItemBackground}" Value="True">
                             <Setter Property="Foreground" Value="{DynamicResource TextBrush}" TargetName="ShowGameName" />
-                            <Setter Property="Background" Value="{DynamicResource GlyphBrush}" TargetName="ShowGameNameBorder" />
+                            <Setter Property="Background" Value="#cb16db" TargetName="ShowGameNameBorder" />
                         </DataTrigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>

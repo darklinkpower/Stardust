@@ -25,6 +25,7 @@
     <Style x:Key="FilterPanelFilterSearchBox" TargetType="SearchBox" BasedOn="{StaticResource {x:Type SearchBox}}">
         <Setter Property="Margin" Value="8,0,6,0" />
         <Setter Property="ShowImage" Value="False" />
+        <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
     </Style>
     
     <Style x:Key="FilterPanelFilterSelectionBox" TargetType="FilterSelectionBox" BasedOn="{StaticResource {x:Type FilterSelectionBox}}">
@@ -42,6 +43,7 @@
     <Style x:Key="FilterPresetButtonAction" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
         <Setter Property="FontFamily" Value="{StaticResource FontIcoFont}" />
         <Setter Property="Padding" Value="5" />
+        <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="DockPanel.Dock" Value="Right" />

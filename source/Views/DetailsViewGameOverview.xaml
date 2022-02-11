@@ -16,7 +16,6 @@
                                   d:DesignHeight="1550"
                                   d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameDetailsIntance}">
                         <Grid Margin="0,0,0,20">
-
                             <!-- Background Image -->
                             <WrapPanel>
                                 <WrapPanel.Style>
@@ -138,7 +137,11 @@
                                             </Image>
                                             <TextBlock FontFamily="{DynamicResource FontFamily}" Text="{Binding Game.DisplayName}" 
                                                        DockPanel.Dock="Left" FontSize="{DynamicResource FontSizeLargest}" Margin="0,0,10,0" 
-                                                       TextWrapping="Wrap" VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}" />
+                                                       TextWrapping="Wrap" VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
+                                                <TextBlock.Effect>
+                                                    <DropShadowEffect ShadowDepth="1" RenderingBias="Quality" />
+                                                </TextBlock.Effect>
+                                            </TextBlock>
                                         </DockPanel>
                                         <DockPanel Margin="0,15,0,0" LastChildFill="False">
                                             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="300">
