@@ -111,3 +111,27 @@ Packages:
       - 'Details View: Increase opacity of icons of uninstalled games'
       - 'Details View: Show favorites icon in game list for games marked as favorite. Can be enabled or disabled via ThemeModifier extension'
       - 'Grid View: Show favorites icon in game covers for games marked as favorite. Can be enabled or disabled via ThemeModifier extension'
+  - Version: 2.13
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-02-11
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.13/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_13.pthm
+    Changelog:
+      - 'General: Changed theme icon'
+      - 'General: Modified background image used in library views'
+      - 'General: Decreased saturation of background in library views'
+      - 'Top Panel: Changed background color of buttons'
+      - 'Sidebar: Changed color of items'
+      - 'Details View: Apply slight shadow effect to game cover'
+      - 'Details View: Decrease saturation of game background image in game details'
+      - 'Details View: Changed colors of icons in view'
+      - 'Details View: General changes to text colors'
+      - 'Details View: Icons next to game properties are enabled by default. Can be enabled or disabled with ThemeModifier extension'
+      - 'Details View: Changed selection and hover background color in library items'
+      - 'Details View: Change game text color when status changed (Launching, Running, etc)'
+      - 'Details View: Style changes to group view header in library list'
+      - 'Grid View: Display game playtime under game cover. Can be enabled or disabled with ThemeModifier extension'
+      - 'Grid View: Always center ExtraMetadataLoader extension logo vertically'
+      - 'Grid View: Icons next to game properties are enabled by default. Can be enabled or disabled with ThemeModifier extension'
+      - 'Grid View: Adjustments to spacing between sections in details overview'
+      - 'Grid View: Style changes to group view header in library list'
+      - 'Misc changes'
