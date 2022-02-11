@@ -272,7 +272,7 @@
                                                 </DockPanel>
                                                 <ProgressBar x:Name="progressBar" FontSize="10" Margin="5,0,0,0"
                                                             Maximum="{PluginSettings Plugin=SuccessStory, Path=Total, FallbackValue=0}" Value="{PluginSettings Plugin=SuccessStory, Path=Unlocked, FallbackValue=0}" HorizontalAlignment="Left"
-                                                            Background="{DynamicResource TextBrush}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" Width="60" Height="10" Style="{DynamicResource RoundedProgressBar}">
+                                                            Background="#99ffffff" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" Width="60" Height="10" Style="{DynamicResource RoundedProgressBar}">
                                                     <ProgressBar.Resources>
                                                         <Style x:Key="RoundedProgressBar" TargetType="ProgressBar">
                                                             <Setter Property="Background" Value="{DynamicResource NormalBrushDark}"/>
