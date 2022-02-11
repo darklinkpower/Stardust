@@ -17,7 +17,9 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-
+                        <Grid.Background>
+                            <ImageBrush ImageSource="{ThemeFile 'Images/BackgroundGradient.png'}" Stretch="UniformToFill"/>
+                        </Grid.Background>
                         <FadeImage x:Name="PART_ImageBackground"
                                    Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Top" />

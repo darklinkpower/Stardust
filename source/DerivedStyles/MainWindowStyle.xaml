@@ -24,9 +24,6 @@
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 Background="{TemplateBinding Background}">
                             <Grid>
-                                <Grid.Background>
-                                    <ImageBrush ImageSource="{ThemeFile 'Images/BackgroundGradient.png'}" Stretch="UniformToFill"/>
-                                </Grid.Background>
                                 <ContentPresenter Margin="0,0,0,0"/>
                                 <DockPanel DockPanel.Dock="Top" LastChildFill="False">
                                     <DockPanel DockPanel.Dock="Top" LastChildFill="False">

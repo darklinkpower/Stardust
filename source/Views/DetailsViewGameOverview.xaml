@@ -69,8 +69,19 @@
                                         </Style.Triggers>
                                     </Style>
                                 </WrapPanel.Style>
-                                <ContentControl x:Name="BackgroundChanger_PluginBackgroundImage"
-                                                HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                <Grid>
+                                    <ContentControl x:Name="BackgroundChanger_PluginBackgroundImage"
+                                                    HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                    <Border Background="#1A000000" />
+                                </Grid>
+                                <WrapPanel.OpacityMask>
+                                    <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
+                                        <RadialGradientBrush.GradientStops>
+                                            <GradientStop Color="Black" Offset="0.3" />
+                                            <GradientStop Color="Transparent" Offset="1" />
+                                        </RadialGradientBrush.GradientStops>
+                                    </RadialGradientBrush>
+                                </WrapPanel.OpacityMask>
                             </WrapPanel>
 
                             <!-- ExtraMetadataLoader alternative video player -->
@@ -96,7 +107,10 @@
                                         </RadialGradientBrush.GradientStops>
                                     </RadialGradientBrush>
                                 </WrapPanel.OpacityMask>
-                                <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControlAlternative" />
+                                <Grid>
+                                    <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControlAlternative" />
+                                    <Border Background="#1A000000" />
+                                </Grid>
                             </WrapPanel>
                             
                             <Grid HorizontalAlignment="Stretch" Margin="20,0,20,0">
@@ -608,7 +622,7 @@
                                                 <ContentControl x:Name="SuccessStory_PluginCompactUnlocked" Margin="0,10,20,0" />
                                                 <ContentControl x:Name="SuccessStory_PluginCompactLocked" Margin="0,10,20,0" />
                                                 <ContentControl x:Name="SuccessStory_PluginUserStats" Margin="0,10,20,0" />
-                                                <ContentControl x:Name="SuccessStory_PluginList" Margin="0,10,20,0" MinHeight="300" />
+                                                <ContentControl x:Name="SuccessStory_PluginList" Margin="0,10,20,0" MinHeight="550" />
                                                 <ContentControl x:Name="SuccessStory_PluginChart" Margin="0,10,20,0" />
                                             </StackPanel>
                                         </TabItem>
@@ -631,7 +645,7 @@
                                                 </Style>
                                             </TabItem.Style>
                                             <StackPanel Orientation="Vertical" Background="{TemplateBinding Background}" Margin="0,15,0,0">
-                                                <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,20,0" Height="500"/>
+                                                <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,20,0" Height="550"/>
                                             </StackPanel>
                                         </TabItem>
                                         <!--#endregion -->

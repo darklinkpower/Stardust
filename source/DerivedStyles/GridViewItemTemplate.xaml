@@ -14,7 +14,7 @@
                         <StackPanel Name="PART_PanelHost"
                                     d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameIntance}">
                             <Grid Width="{Settings GridItemWidth}"
-                              Height="{Settings GridItemHeight}">
+                                  Height="{Settings GridItemHeight}">
                                 <Border Name="Mask" Background="{DynamicResource ControlBackgroundBrush}" CornerRadius="{DynamicResource GridViewCoverCornerRadius}" BorderThickness="1"/>
                                 <Image Name="PART_ImageCover"
                                    RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
@@ -70,22 +70,39 @@
                                     <VisualBrush Visual="{Binding ElementName=Mask}"/>
                                 </Grid.OpacityMask>
                             </Grid>
-                            <Border x:Name="ShowGameNameBorder" CornerRadius="{DynamicResource GridViewShowGameNameCornerRadius}" Background="Transparent">
+                            <Border x:Name="ShowGameNameBorder"
+                                    CornerRadius="{DynamicResource GridViewShowGameNameCornerRadius}"
+                                    Background="Transparent">
                                 <TextBlock x:Name="ShowGameName" Text="{Binding DisplayName}"
-                                       Foreground="{DynamicResource TextBrush}"
-                                       Style="{DynamicResource BaseTextBlockStyle}"                                                                   
-                                       TextAlignment="Center" TextTrimming="CharacterEllipsis"
-                                       VerticalAlignment="Center"
-                                       Padding="2,5,2,5" Grid.Row="1" Grid.Column="0"
-                                       Width="{Settings GridItemWidth}" 
-                                       Visibility="{Settings ShowNamesUnderCovers}" />
+                                           Style="{StaticResource BaseTextBlockStyle}"                                                   
+                                           TextAlignment="Left" TextTrimming="CharacterEllipsis"
+                                           FontWeight="SemiBold"
+                                           VerticalAlignment="Center"
+                                           Width="{Settings GridItemWidth}"
+                                           Padding="2,8,2,3"
+                                           Visibility="{Settings ShowNamesUnderCovers}" />
                             </Border>
+                            <DockPanel Width="{Settings GridItemWidth}" Visibility="{DynamicResource GridViewCoverSubtitleVisibility}">
+                                <TextBlock Text="&#xEEDC;" FontSize="{DynamicResource FontSizeSmall}"
+                                           FontFamily="{StaticResource FontIcoFont}"
+                                           TextAlignment="Left" VerticalAlignment="Center"
+                                           Padding="2,4,2,5" Margin="0,0,0,-2"
+                                           Foreground="{DynamicResource GridViewCoverSubtitleBrush}" />
+                                <TextBlock Text="{Binding Playtime, Mode=OneWay, Converter={StaticResource PlayTimeToStringConverter}}"
+                                       Foreground="{DynamicResource GridViewCoverSubtitleBrush}"
+                                       FontSize="{DynamicResource FontSizeSmall}"
+                                       Style="{DynamicResource BaseTextBlockStyle}"                                                                   
+                                       TextAlignment="Left" TextTrimming="CharacterEllipsis"
+                                       VerticalAlignment="Center"
+                                       Padding="3,4,2,2" />
+                            </DockPanel>
                         </StackPanel>
                     </Border>
                     <ControlTemplate.Triggers>
                         <DataTrigger Binding="{Settings ShowGridItemBackground}" Value="True">
-                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" TargetName="ShowGameName" />
-                            <Setter Property="Background" Value="#cb16db" TargetName="ShowGameNameBorder" />
+                            <Setter Property="Padding" Value="2,5,2,5" TargetName="ShowGameName" />
+                            <Setter Property="TextAlignment" Value="Center" TargetName="ShowGameName" />
+                            <Setter Property="Background" Value="{DynamicResource GridViewCoverSelectionBrush}" TargetName="ShowGameNameBorder" />
                         </DataTrigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>

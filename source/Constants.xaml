@@ -5,6 +5,7 @@
     <!--Theme settings region start-->
     <Visibility x:Key="DetailsViewDetailsIconsVisibility">Visible</Visibility>
     <Visibility x:Key="GridViewDetailsIconsVisibility">Visible</Visibility>
+    <Visibility x:Key="GridViewCoverSubtitleVisibility">Visible</Visibility>
     <sys:Boolean x:Key="DetailsViewAllowUseOfLogos">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewAllowUseOfLogos">true</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewLibraryGameShowFavorite">true</sys:Boolean>
@@ -171,11 +172,8 @@
         <GradientStop Color="#002C3A67" Offset="0.7"/>
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="WindowBackgourndBrush" StartPoint="0.5,0.5" EndPoint="0.5,1">
-        <GradientStop Color="#1f1f1f" Offset="0.0" />
-        <GradientStop Color="#393939" Offset="1.0" />
-    </LinearGradientBrush>
-
+    <SolidColorBrush x:Key="WindowBackgourndBrush" Color="#302e32" />
+    
     <LinearGradientBrush x:Key="DetailsViewFadeBorder" StartPoint="0.5,0.5" EndPoint="0.5,1">
         <GradientStop Color="#0DA8A8A8" Offset="0.0" />
         <GradientStop Color="#0DA8A8A8" Offset="0.3" />
@@ -202,12 +200,12 @@
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="SidebarItemForegroundBrush" StartPoint="0.5,1.0" EndPoint="0.5,0.0">
-        <GradientStop Color="#9a00c4" Offset="0.4" />
+        <GradientStop Color="#9a00c4" Offset="0.3" />
         <GradientStop Color="#cb16db" Offset="0.95" />
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="DetailsIconsBackgroundBrush" StartPoint="0.5,1.0" EndPoint="0.5,0.0">
-        <GradientStop Color="#9a00c4" Offset="0.4" />
+        <GradientStop Color="#9a00c4" Offset="0.3" />
         <GradientStop Color="#cb16db" Offset="0.95" />
     </LinearGradientBrush>
 
@@ -224,6 +222,8 @@
     <SolidColorBrush x:Key="LibraryDetailsViewIsRunningForegroundBrush" Color="#00d492" />
     <SolidColorBrush x:Key="LibraryDetailsViewIsLaunchingForegroundBrush" Color="#f0a300" />
 
+    <SolidColorBrush x:Key="GridViewCoverSelectionBrush" Color="{DynamicResource GlyphColor}" />
+    <SolidColorBrush x:Key="GridViewCoverSubtitleBrush" Color="#b7b7b7" />
     <SolidColorBrush x:Key="GridViewSeparatorBrush" Color="#4Dc2c2c2" />
     
     <LinearGradientBrush x:Key="DetailsViewLibraryHoverBackgroundBrush" StartPoint="0.0,0.5" EndPoint="1.0,0.5">
@@ -232,7 +232,7 @@
     </LinearGradientBrush>
     
     <LinearGradientBrush x:Key="DetailsViewLibrarySelectedBackgroundBrush" StartPoint="0.0,0.5" EndPoint="1.0,0.5">
-        <GradientStop Color="#999a00c4" Offset="0.4" />
+        <GradientStop Color="#66cb16db" Offset="0.4" />
         <GradientStop Color="#00cb16db" Offset="0.95" />
     </LinearGradientBrush>
     
