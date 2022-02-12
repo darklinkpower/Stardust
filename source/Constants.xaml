@@ -191,6 +191,7 @@
     </LinearGradientBrush>
 
     <SolidColorBrush x:Key="PanelsDarkenBrush" Color="#AD1a1a1a" />
+    <SolidColorBrush x:Key="DetailsViewImageDarkenBrush" Color="#21000000" />
     <SolidColorBrush x:Key="DetailsViewPanelsBackgroundBrush" Color="#3374777d" />
     <SolidColorBrush x:Key="DetailsViewDetailsLabelForegroundBrush" Color="#ccc2c2c2" />
     <SolidColorBrush x:Key="DetailsViewSeparatorBrush" Color="#4Dc2c2c2" />
