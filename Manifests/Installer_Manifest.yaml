@@ -135,3 +135,9 @@ Packages:
       - 'Grid View: Adjustments to spacing between sections in details overview'
       - 'Grid View: Style changes to group view header in library list'
       - 'Misc changes'
+  - Version: 2.14
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-02-11
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.14/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_14.pthm
+    Changelog:
+      - 'Details View: Decreased font size in Tabs Headers and Details label'
