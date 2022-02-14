@@ -426,17 +426,9 @@
 
 
                                         <!--#region SuccessStory-->
-                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,0">
-                                            <StackPanel.Style>
-                                                <Style TargetType="{x:Type StackPanel}">
-                                                    <Setter Property="Visibility" Value="Collapsed" />
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=False}" Value="True">
-                                                            <Setter Property="Visibility" Value="Visible" />
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </StackPanel.Style>
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,0"
+                                                    Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData,
+                                                    FallbackValue=False, Converter={StaticResource BooleanToVisibilityConverter}}">
                                             <TextBlock Text="{DynamicResource LOCSuccessStoryAchievements}" Style="{DynamicResource BaseTextBlockStyle}"
                                                        Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
                                                        FontWeight="Bold" />
@@ -467,17 +459,9 @@
                                         <!--#endregion -->
                                         
                                         <!--#region ScreenshotsVisualizer-->
-                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,0">
-                                            <StackPanel.Style>
-                                                <Style TargetType="{x:Type StackPanel}">
-                                                    <Setter Property="Visibility" Value="Collapsed" />
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData,FallbackValue=False}" Value="True">
-                                                            <Setter Property="Visibility" Value="Visible" />
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </StackPanel.Style>
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,0"
+                                                    Visibility="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData,
+                                                    FallbackValue=False, Converter={StaticResource BooleanToVisibilityConverter}}">
                                             <TextBlock Text="{DynamicResource LOCSsvTitle}"
                                                        Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
                                                        FontWeight="Bold" Style="{DynamicResource BaseTextBlockStyle}" />
@@ -488,17 +472,9 @@
                                         </StackPanel>
                                         <!--#endregion -->
                                         <!--#region GameActivity-->
-                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,0">
-                                            <StackPanel.Style>
-                                                <Style TargetType="{x:Type StackPanel}">
-                                                    <Setter Property="Visibility" Value="Collapsed" />
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{PluginSettings Plugin=GameActivity, Path=HasData, FallbackValue=False}" Value="True">
-                                                            <Setter Property="Visibility" Value="Visible" />
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </StackPanel.Style>
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,0"
+                                                    Visibility="{PluginSettings Plugin=GameActivity, Path=HasData,
+                                                    FallbackValue=False, Converter={StaticResource BooleanToVisibilityConverter}}">
                                             <TextBlock Text="{DynamicResource LOCGameActivityTitle}"
                                                        Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
                                                        FontWeight="Bold" Style="{DynamicResource BaseTextBlockStyle}" />
@@ -519,17 +495,9 @@
                                         <!--#endregion -->
 
                                         <!--#region NewsViewer-->
-                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,15">
-                                            <StackPanel.Style>
-                                                <Style TargetType="StackPanel">
-                                                    <Setter Property="Visibility" Value="Collapsed" />
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{PluginSettings Plugin=NewsViewer, Path=ReviewsAvailable, FallbackValue=False}" Value="True">
-                                                            <Setter Property="Visibility" Value="Visible" />
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </StackPanel.Style>
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,15"
+                                                    Visibility="{PluginSettings Plugin=NewsViewer, Path=ReviewsAvailable,
+                                                    FallbackValue=False, Converter={StaticResource BooleanToVisibilityConverter}}">
                                             <TextBlock Text="{DynamicResource LOC_NewsViewer_NewsViewerControl_NewsLabel}"
                                                        Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
                                                        FontWeight="Bold"
