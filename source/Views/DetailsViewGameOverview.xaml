@@ -601,9 +601,18 @@
                                             </StackPanel>
                                         </TabItem>
 
-                                        <!--#region SuccessStory-->
-                                        <TabItem Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData,
-                                                 FallbackValue=False, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                        <!--region SuccessStory-->
+                                        <TabItem>
+                                            <TabItem.Style>
+                                                <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=False}" Value="True">
+                                                            <Setter Property="Visibility" Value="Visible" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TabItem.Style>
                                             <TabItem.Header>
                                                 <TextBlock Text="{DynamicResource LOCSuccessStoryAchievements}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
                                                            FontWeight="Bold"/>
@@ -617,11 +626,20 @@
                                                 <ContentControl x:Name="SuccessStory_PluginChart" Margin="0,10,20,0" />
                                             </StackPanel>
                                         </TabItem>
-                                        <!--#endregion-->
+                                        <!--endregion-->
 
-                                        <!--#region ScreenshotsVisualizer-->
-                                        <TabItem Visibility="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData,
-                                                 FallbackValue=False, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                        <!--region ScreenshotsVisualizer-->
+                                        <TabItem>
+                                            <TabItem.Style>
+                                                <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData, FallbackValue=False}" Value="True">
+                                                            <Setter Property="Visibility" Value="Visible" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TabItem.Style>
                                             <TabItem.Header>
                                                 <TextBlock Text="{DynamicResource LOCSsvTitle}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
                                                            FontWeight="Bold"/>
@@ -630,11 +648,20 @@
                                                 <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,20,0" Height="550"/>
                                             </StackPanel>
                                         </TabItem>
-                                        <!--#endregion -->
+                                        <!--endregion-->
 
-                                        <!--#region GameActivity-->
-                                        <TabItem Visibility="{PluginSettings Plugin=GameActivity, Path=HasData,
-                                                 FallbackValue=False, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                        <!--region GameActivity-->
+                                        <TabItem>
+                                            <TabItem.Style>
+                                                <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{PluginSettings Plugin=GameActivity, Path=HasData, FallbackValue=False}" Value="True">
+                                                            <Setter Property="Visibility" Value="Visible" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TabItem.Style>
                                             <TabItem.Header>
                                                 <TextBlock Text="{DynamicResource LOCGameActivityTitle}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
                                                            FontWeight="Bold"/>
@@ -643,8 +670,8 @@
                                                 <ContentControl x:Name="GameActivity_PluginChartTime" Margin="0,10,0,0" />
                                             </StackPanel>
                                         </TabItem>
-                                        <!--#endregion-->
-                                        <!--#region ReviewViewer-->
+                                        <!--endregion-->
+                                        <!--region ReviewViewer-->
                                         <TabItem Visibility="{PluginStatus Plugin=Review_Viewer_ca24e37a-76d9-49bf-89ab-d3cba4a54bd1, Status=Installed}" >
                                             <TabItem.Header>
                                                 <TextBlock Text="{DynamicResource LOCReview_Viewer_ReviewsLabel}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
@@ -654,10 +681,19 @@
                                                 <ContentControl x:Name="ReviewViewer_ReviewsControl" Margin="0,5,0,5" FontWeight="Normal"/>
                                             </StackPanel>
                                         </TabItem>
-                                        <!--#endregion-->
-                                        <!--#region NewsViewer-->
-                                        <TabItem Visibility="{PluginSettings Plugin=NewsViewer, Path=ReviewsAvailable,
-                                                 FallbackValue=False, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                        <!--endregion-->
+                                        <!--region NewsViewer-->
+                                        <TabItem>
+                                            <TabItem.Style>
+                                                <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{PluginSettings Plugin=NewsViewer, Path=ReviewsAvailable, FallbackValue=False}" Value="True">
+                                                            <Setter Property="Visibility" Value="Visible" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TabItem.Style>
                                             <TabItem.Header>
                                                 <TextBlock Text="{DynamicResource LOC_NewsViewer_NewsViewerControl_NewsLabel}"
                                                            Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
@@ -677,5 +713,5 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
 </ResourceDictionary>
