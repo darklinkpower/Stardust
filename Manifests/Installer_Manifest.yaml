@@ -141,3 +141,12 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.14/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_14.pthm
     Changelog:
       - 'Details View: Decreased font size in Tabs Headers and Details label'
+  - Version: 2.15
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-02-14
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.15/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_15.pthm
+    Changelog:
+      - 'General: Changed icon'
+      - 'TopPanel: Added ThemeModifier option to modify distance to view'
+      - 'Library: Added ThemeModified option to adjust background image darken layer'
+      - 'Sidebar: Increase default opacity of items'
