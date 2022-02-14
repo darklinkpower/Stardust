@@ -240,7 +240,7 @@
                                         </Viewbox>
                                         <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
                                             <Label Name="PART_ElemLastPlayed" Content="{DynamicResource LOCLastPlayed}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"/>
-                                            <TextBlock Name="PART_TextLastActivity"/>
+                                            <TextBlock Name="PART_TextLastActivity" MinWidth="85"/>
                                         </StackPanel>
                                     </DockPanel>
                                     <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemPlayTime, Mode=OneWay}" Margin="15,0,0,0">
