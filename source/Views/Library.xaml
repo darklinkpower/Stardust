@@ -23,9 +23,21 @@
                         <FadeImage x:Name="PART_ImageBackground"
                                    Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Top" />
-                        <Border Grid.RowSpan="2" Background="{DynamicResource PanelsDarkenBrush}"
-                                Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Tag, Converter={StaticResource BooleanToVisibilityConverter}}"
-                                Tag="{DynamicResource LibraryApplyDarkenLayer}" />
+
+                        <Border Grid.RowSpan="2" Background="{DynamicResource PanelsDarkenBrush}" IsHitTestVisible="False"
+                                Opacity="{DynamicResource LibraryDarkenLayerOpacity}" />
+
+                        <Border Grid.RowSpan="2" Background="{StaticResource DarkNoiseBrush}" Opacity="{DynamicResource LibraryDarkenLayerOpacity}" IsHitTestVisible="False">
+                            <Border.OpacityMask>
+                                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                    <LinearGradientBrush.GradientStops>
+                                        <GradientStop Color="#F2FFFFFF" Offset="0.2"/>
+                                        <GradientStop Color="#5FFFFFFF" Offset="0.8"/>
+                                    </LinearGradientBrush.GradientStops>
+                                </LinearGradientBrush>
+                            </Border.OpacityMask>
+                        </Border>
+                        
                         <TopPanel DockPanel.Dock="Top" Grid.Row="0" />
                         
                         <DockPanel Grid.Row="1">

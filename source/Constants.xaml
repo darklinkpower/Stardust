@@ -3,7 +3,7 @@
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
     <!--Theme settings region start-->
-    <sys:Boolean x:Key="LibraryApplyDarkenLayer">true</sys:Boolean>
+    <sys:Double x:Key="LibraryDarkenLayerOpacity">1.0</sys:Double>
     <Visibility x:Key="DetailsViewDetailsIconsVisibility">Visible</Visibility>
     <Visibility x:Key="GridViewDetailsIconsVisibility">Visible</Visibility>
     <Visibility x:Key="GridViewCoverSubtitleVisibility">Visible</Visibility>
@@ -192,7 +192,7 @@
         <GradientStop Color="#00b0b0b0" Offset="0.95" />
     </LinearGradientBrush>
 
-    <SolidColorBrush x:Key="PanelsDarkenBrush" Color="#AD1a1a1a" />
+    <SolidColorBrush x:Key="PanelsDarkenBrush" Color="#261a1a1a" />
     <SolidColorBrush x:Key="DetailsViewImageDarkenBrush" Color="#21000000" />
     <SolidColorBrush x:Key="DetailsViewPanelsBackgroundBrush" Color="#3374777d" />
     <SolidColorBrush x:Key="DetailsViewDetailsLabelForegroundBrush" Color="#ccc2c2c2" />
@@ -238,5 +238,10 @@
         <GradientStop Color="#66cb16db" Offset="0.4" />
         <GradientStop Color="#00cb16db" Offset="0.95" />
     </LinearGradientBrush>
-    
+
+    <!-- Noise Brush obtained from https://github.com/felixkmh/StartPage-for-Playnite/-->
+    <ImageBrush x:Key="DarkNoiseBrush" ImageSource="{ThemeFile 'Images/dark_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
+                    Opacity="1"/>
+    <ImageBrush x:Key="WhiteNoiseBrush" ImageSource="{ThemeFile 'Images/dark_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
+                    Opacity="0.5"/>
 </ResourceDictionary>

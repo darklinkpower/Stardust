@@ -1,6 +1,6 @@
 Constants:
     - "Library"
-    - LibraryApplyDarkenLayer: 'Darken window background image'
+    - LibraryDarkenLayerOpacity(0.0,1.0): 'Darken amount of window background image'
     - "Details View"
     - DetailsViewDetailsIconsVisibility: 'Visibility of icons in details'
     - DetailsViewAllowUseOfLogos: 'Allow use of Extra Metadata Loader logos'
