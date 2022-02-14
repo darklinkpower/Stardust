@@ -1,4 +1,6 @@
 Constants:
+    - "Library"
+    - LibraryApplyDarkenLayer: 'Darken window background image'
     - "Details View"
     - DetailsViewDetailsIconsVisibility: 'Visibility of icons in details'
     - DetailsViewAllowUseOfLogos: 'Allow use of Extra Metadata Loader logos'
@@ -9,4 +11,4 @@ Constants:
     - GridViewLibraryGameShowFavorite: 'Show favorites icon on game covers'
     - GridViewCoverSubtitleVisibility: 'Visibility of time played under game covers'
     - "Top Panel"
-    - TopPanelBottomDistance(6,31): 'Distance from top panel to Library view'
+    - TopPanelBottomDistance(6,31): 'Distance from top panel to view'

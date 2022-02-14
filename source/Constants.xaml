@@ -3,6 +3,7 @@
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
     <!--Theme settings region start-->
+    <sys:Boolean x:Key="LibraryApplyDarkenLayer">true</sys:Boolean>
     <Visibility x:Key="DetailsViewDetailsIconsVisibility">Visible</Visibility>
     <Visibility x:Key="GridViewDetailsIconsVisibility">Visible</Visibility>
     <Visibility x:Key="GridViewCoverSubtitleVisibility">Visible</Visibility>

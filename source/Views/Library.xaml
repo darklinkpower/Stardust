@@ -23,7 +23,9 @@
                         <FadeImage x:Name="PART_ImageBackground"
                                    Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Top" />
-                        <Border Background="{DynamicResource PanelsDarkenBrush}" Grid.RowSpan="2"/>
+                        <Border Grid.RowSpan="2" Background="{DynamicResource PanelsDarkenBrush}"
+                                Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Tag, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                Tag="{DynamicResource LibraryApplyDarkenLayer}" />
                         <TopPanel DockPanel.Dock="Top" Grid.Row="0" />
                         
                         <DockPanel Grid.Row="1">
