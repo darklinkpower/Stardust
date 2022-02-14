@@ -167,70 +167,72 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TopPanel}">
-                    <Border Height="90"  Padding="0,6,0,31" BorderBrush="{DynamicResource PanelSeparatorBrush}"
+                    <StackPanel Background="{DynamicResource TopPanelFadeBackgroundBrush}">
+                        <Border Height="59" Padding="0,6,0,0" BorderBrush="{DynamicResource PanelSeparatorBrush}"
                             d:DesignWidth="1280"
                             d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
-                        <Border.Style>
-                            <Style TargetType="Border">
-                                <Setter Property="BorderThickness" Value="0,0,0,1" />
-                                <Setter Property="Background" Value="{DynamicResource TopPanelFadeBackgroundBrush}" />
-                                <Style.Triggers>
-                                    <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
-                                        <Setter Property="BorderThickness" Value="0" />
-                                    </DataTrigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Border.Style>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <DockPanel Grid.Column="0">
-                                <Border x:Name="PART_ElemMainMenu" Background="Transparent" Padding="5,2,5,8"
-                                    DockPanel.Dock="Left" Width="40" Height="40" Margin="6,2,1,2" Cursor="Hand"
-                                    WindowChrome.IsHitTestVisibleInChrome="True">
-                                    <Image Source="{ThemeFile 'Images/applogo.png'}"
-                                       RenderOptions.BitmapScalingMode="Fant"/>
-                                </Border>
-                                <DockPanel LastChildFill="True" DockPanel.Dock="Left"
-                                        HorizontalAlignment="Center" Margin="0,5,0,5">
-                                    <Button Name="PART_ButtonProgressCancel" DockPanel.Dock="Right"
-                                        Content="{DynamicResource LOCCancelLabel}"
-                                        WindowChrome.IsHitTestVisibleInChrome="True"
-                                        Margin="5,0,0,0" />
-                                    <Grid>
-                                        <ProgressBar Name="PART_ProgressGlobal" />
-                                        <TextBlock Name="PART_TextProgressText"
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <DockPanel Grid.Column="0">
+                                    <Border x:Name="PART_ElemMainMenu" Background="Transparent" Padding="5,2,5,8"
+                                            DockPanel.Dock="Left" Width="40" Height="40" Margin="6,2,1,2" Cursor="Hand"
+                                            WindowChrome.IsHitTestVisibleInChrome="True">
+                                        <Image Source="{ThemeFile 'Images/applogo.png'}"
+                                               RenderOptions.BitmapScalingMode="Fant"/>
+                                    </Border>
+                                    <DockPanel LastChildFill="True" DockPanel.Dock="Left"
+                                               HorizontalAlignment="Center" Margin="0,5,0,5">
+                                        <Button Name="PART_ButtonProgressCancel" DockPanel.Dock="Right"
+                                                Content="{DynamicResource LOCCancelLabel}"
+                                                WindowChrome.IsHitTestVisibleInChrome="True"
+                                                Margin="5,0,0,0" />
+                                        <Grid>
+                                            <ProgressBar Name="PART_ProgressGlobal" />
+                                            <TextBlock Name="PART_TextProgressText"
                                                VerticalAlignment="Center" HorizontalAlignment="Center"
                                                Style="{DynamicResource BaseTextBlockStyle}" Margin="5,0,5,0" />
-                                    </Grid>
+                                        </Grid>
+                                    </DockPanel>
                                 </DockPanel>
-                            </DockPanel>
-                            <DockPanel Grid.Column="1" Margin="0,3,0,3">
-                                <CheckBox x:Name="PART_ToggleNotifications"
-                                      Style="{DynamicResource TopPanelNotificationsToggle}"
-                                      DockPanel.Dock="Right" />
-                                
-                                <StackPanel x:Name="PART_PanelMainPluginItems" Orientation="Horizontal"
-                                        VerticalAlignment="Stretch" Margin="15,6,15,6"
-                                        DockPanel.Dock="{Settings PluginTopPanelAlignment}"/>
-                                <StackPanel x:Name="PART_PanelMainItems" Orientation="Horizontal"
-                                        VerticalAlignment="Stretch" Margin="0,6,0,6"/>
+                                <DockPanel Grid.Column="1" Margin="0,3,0,3">
+                                    <CheckBox x:Name="PART_ToggleNotifications"
+                                              Style="{DynamicResource TopPanelNotificationsToggle}"
+                                              DockPanel.Dock="Right" />
 
-                                <SearchBox x:Name="PART_TextMainSearch"
-                                        Margin="5,6,0,6" DockPanel.Dock="Left"
-                                        WindowChrome.IsHitTestVisibleInChrome="True"
-                                        Width="120" Background="{DynamicResource TopPanelSearchBoxBackgroundBrush}"/>
-                                
-                                <CheckBox x:Name="PART_ToggleFilter" ToolTip="{DynamicResource LOCFilters}"
-                                      Style="{DynamicResource TopPanelFilterToggle}"
-                                      DockPanel.Dock="Left" />
+                                    <StackPanel x:Name="PART_PanelMainPluginItems" Orientation="Horizontal"
+                                                VerticalAlignment="Stretch" Margin="15,6,15,6"
+                                                DockPanel.Dock="{Settings PluginTopPanelAlignment}"/>
+                                    <StackPanel x:Name="PART_PanelMainItems" Orientation="Horizontal"
+                                                VerticalAlignment="Stretch" Margin="0,6,0,6"/>
 
-                            </DockPanel>
-                        </Grid>
-                    </Border>
+                                    <SearchBox x:Name="PART_TextMainSearch"
+                                               Margin="5,6,0,6" DockPanel.Dock="Left"
+                                               WindowChrome.IsHitTestVisibleInChrome="True"
+                                               Width="120" Background="{DynamicResource TopPanelSearchBoxBackgroundBrush}"/>
+
+                                    <CheckBox x:Name="PART_ToggleFilter" ToolTip="{DynamicResource LOCFilters}"
+                                              Style="{DynamicResource TopPanelFilterToggle}"
+                                              DockPanel.Dock="Left" />
+                                </DockPanel>
+                            </Grid>
+                        </Border>
+                        <Border Height="{DynamicResource TopPanelBottomDistance}">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="BorderThickness" Value="0,0,0,1" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
+                                            <Setter Property="BorderThickness" Value="0" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                        </Border>
+                    </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

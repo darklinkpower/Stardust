@@ -8,3 +8,5 @@ Constants:
     - GridViewAllowUseOfLogos: 'Allow use of Extra Metadata Loader logos'
     - GridViewLibraryGameShowFavorite: 'Show favorites icon on game covers'
     - GridViewCoverSubtitleVisibility: 'Visibility of time played under game covers'
+    - "Top Panel"
+    - TopPanelBottomDistance(6,31): 'Distance from top panel to Library view'
