@@ -170,7 +170,7 @@
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="ExpanderExBackgroundBrush" StartPoint="-0.1,0.5" EndPoint="1.2,1" >
-        <GradientStop Color="#1d1412" Offset="0"/>
+        <GradientStop Color="#F21d1412" Offset="0"/>
         <GradientStop Color="#002C3A67" Offset="0.7"/>
     </LinearGradientBrush>
 
