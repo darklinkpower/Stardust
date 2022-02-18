@@ -41,7 +41,7 @@
                                 </WrapPanel.Style>
                                 <Grid>
                                     <FadeImage x:Name="PART_ImageBackground" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                                    <Border Background="{DynamicResource DetailsViewImageDarkenBrush}" />
+                                    <Border Background="{DynamicResource DetailsViewImageDarkenBrush}" IsHitTestVisible="False" />
                                 </Grid>
                                 <WrapPanel.OpacityMask>
                                     <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
@@ -72,7 +72,7 @@
                                 <Grid>
                                     <ContentControl x:Name="BackgroundChanger_PluginBackgroundImage"
                                                     HorizontalAlignment="Center" VerticalAlignment="Top" />
-                                    <Border Background="{DynamicResource DetailsViewImageDarkenBrush}" />
+                                    <Border Background="{DynamicResource DetailsViewImageDarkenBrush}" IsHitTestVisible="False" />
                                 </Grid>
                                 <WrapPanel.OpacityMask>
                                     <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
@@ -109,7 +109,7 @@
                                 </WrapPanel.OpacityMask>
                                 <Grid>
                                     <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControlAlternative" />
-                                    <Border Background="{DynamicResource DetailsViewImageDarkenBrush}" />
+                                    <Border Background="{DynamicResource DetailsViewImageDarkenBrush}" IsHitTestVisible="False" />
                                 </Grid>
                             </WrapPanel>
 
