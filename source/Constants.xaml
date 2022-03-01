@@ -85,10 +85,10 @@
     <Color x:Key="TitleWindowCloseHoverColor">#d22e00</Color>
     <Color x:Key="ControlsBackgroundColor">#2e2c2f</Color>
 
-    <Color x:Key="TopPanelItemBackgroundColor">#B3000000</Color>
-    <Color x:Key="TopPanelItemHoverBackgroundColor">#B3000000</Color>
-    <Color x:Key="TopPanelSearchBoxBackgroundColor">#B3000000</Color>
-    <Color x:Key="TopPanelFilterToggleBackgroundColor">#B3000000</Color>
+    <Color x:Key="TopPanelItemBackgroundColor">#d9000000</Color>
+    <Color x:Key="TopPanelItemHoverBackgroundColor">#d9000000</Color>
+    <Color x:Key="TopPanelSearchBoxBackgroundColor">#d9000000</Color>
+    <Color x:Key="TopPanelFilterToggleBackgroundColor">#d9000000</Color>
 
     <SolidColorBrush x:Key="TopPanelItemBackgroundBrush" Color="{DynamicResource TopPanelItemBackgroundColor}" />
     <SolidColorBrush x:Key="TopPanelItemHoverBackgroundBrush" Color="{DynamicResource TopPanelItemHoverBackgroundColor}" />
