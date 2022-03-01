@@ -151,6 +151,7 @@
                                             </Image>
                                             <TextBlock FontFamily="{DynamicResource FontFamily}" Text="{Binding Game.DisplayName}" 
                                                        DockPanel.Dock="Left" FontSize="{DynamicResource FontSizeLargest}" Margin="0,0,10,0" 
+                                                       Visibility="{DynamicResource DetailsViewGameNameVisibility}"
                                                        TextWrapping="Wrap" VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
                                                 <TextBlock.Effect>
                                                     <DropShadowEffect ShadowDepth="1" RenderingBias="Quality" />

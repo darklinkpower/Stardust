@@ -5,6 +5,7 @@
     <!--Theme settings region start-->
     <sys:Double x:Key="LibraryDarkenLayerOpacity">1.0</sys:Double>
     <sys:Double x:Key="DetailsViewDetailsMaxWidth">1024</sys:Double>
+    <Visibility x:Key="DetailsViewGameNameVisibility">Visible</Visibility>
     <Visibility x:Key="DetailsViewDetailsIconsVisibility">Visible</Visibility>
     <Visibility x:Key="GridViewDetailsIconsVisibility">Visible</Visibility>
     <Visibility x:Key="GridViewCoverSubtitleVisibility">Visible</Visibility>
