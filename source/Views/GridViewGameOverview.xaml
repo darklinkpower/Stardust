@@ -411,7 +411,13 @@
                                                        FontWeight="Bold"
                                                        Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource GridViewSeparatorBrush}" Margin="0,5,0,5" />
-                                            <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControl" />
+                                            <Grid Margin="0,15,0,0">
+                                                <!--Rectangle used to expand the panel while the video loads-->
+                                                <Viewbox Stretch="Uniform" Visibility="{Binding ElementName=VideoFeed, Path=Visibility}">
+                                                    <Rectangle Width="16" Height="9" Fill="Transparent" IsHitTestVisible="False" />
+                                                </Viewbox>
+                                                <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControl" />
+                                            </Grid>
                                         </StackPanel>
                                         <!--#endregion -->
                                         
