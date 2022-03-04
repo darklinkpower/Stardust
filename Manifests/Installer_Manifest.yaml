@@ -165,3 +165,10 @@ Packages:
       - 'DetailsView: Added ThemeModifier extension option to adjust the maximum width of game details'
       - 'DetailsView: Added ThemeModifier extension option to adjust visibility of game name'
       - 'TopPanel: Decreased transparency of buttons elements in top panel'
+  - Version: 2.18
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-03
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.18/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_18.pthm
+    Changelog:
+      - 'DetailsView: Removed ThemeModifier extension option to adjust game name visibility and added ThemeModifier extension option to display game name if logo is visible or not.'
+      - 'GridView: Added ThemeModifier extension option to display game name if logo is visible or not'
