@@ -181,3 +181,9 @@ Packages:
       - 'GridView: Fix Hltb data grid text color (No log)'
       - 'GridView: Prevent video section from changing height while ExtraMetadataLoader extension video is loading'
       - 'GridView: Show HowLongToBeat extension data grid with game data. Can be enabled or disabled with ThemeModifier extension.'
+  - Version: 2.20
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-21
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.20/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_20.pthm
+    Changelog:
+      - 'Grid View: Added ThemeModifier option to enable cover highlight animation (Same as Helium Theme). Disabled by default.'
