@@ -187,3 +187,9 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.20/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_20.pthm
     Changelog:
       - 'Grid View: Added ThemeModifier option to enable cover highlight animation (Same as Helium Theme). Disabled by default.'
+  - Version: 2.21
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-22
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.21/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_21.pthm
+    Changelog:
+      - 'Grid View: Fix highlight animation applying to game name area when using horizontal aspect ratios'
