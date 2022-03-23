@@ -193,3 +193,10 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.21/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_21.pthm
     Changelog:
       - 'Grid View: Fix highlight animation applying to game name area when using horizontal aspect ratios'
+  - Version: 2.22
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-23
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.22/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_22.pthm
+    Changelog:
+      - 'Details View: Fix description tab header still displaying in cases when it should not'
+      - 'Grid View: Fix description section header still displaying in cases when it should not'
