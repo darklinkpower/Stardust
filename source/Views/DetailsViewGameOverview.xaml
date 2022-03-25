@@ -128,9 +128,41 @@
                                                     Tag="{DynamicResource DetailsViewAllowUseOfLogos}" />
                                     <Grid HorizontalAlignment="Left" VerticalAlignment="Bottom">
                                         <Border Name="Mask" Background="White" CornerRadius="{DynamicResource DetailsViewCoverCornerRadius}" />
-                                        <Image Name="PART_ImageCover" Height="{Settings GameDetailsCoverHeight}" 
+
+                                        <Border>
+                                            <Border.Style>
+                                                <Style TargetType="Border">
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding ElementName=BackgroundChanger_PluginCoverImage, Path=Visibility}" Value="Visible">
+                                                            <Setter Property="Visibility" Value="Collapsed" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Border.Style>
+                                            <Image Name="PART_ImageCover" Height="{Settings GameDetailsCoverHeight}" 
                                                StretchDirection="Both" Stretch="Uniform" 
                                                RenderOptions.BitmapScalingMode="Fant" />
+                                        </Border>
+
+                                        <ContentControl x:Name="BackgroundChanger_PluginCoverImage"
+                                                        Height="{Settings GameDetailsCoverHeight}">
+                                            <ContentControl.Style>
+                                                <Style TargetType="ContentControl">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                    <Style.Triggers>
+                                                        <MultiDataTrigger>
+                                                            <MultiDataTrigger.Conditions>
+                                                                <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=HasDataCover, FallbackValue=False}" Value="True" />
+                                                                <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=EnableCoverImage, FallbackValue=False}" Value="True" />
+                                                            </MultiDataTrigger.Conditions>
+                                                            <Setter Property="Visibility" Value="Visible" />
+                                                        </MultiDataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </ContentControl.Style>
+                                        </ContentControl>
+                                        
                                         <Grid.Effect>
                                             <DropShadowEffect BlurRadius="15" ShadowDepth="0" Color="#0d0d0d" Opacity="0.20" />
                                         </Grid.Effect>
