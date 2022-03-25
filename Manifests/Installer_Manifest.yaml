@@ -200,3 +200,9 @@ Packages:
     Changelog:
       - 'Details View: Fix description tab header still displaying in cases when it should not'
       - 'Grid View: Fix description section header still displaying in cases when it should not'
+  - Version: 2.23
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-25
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.23/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_23.pthm
+    Changelog:
+      - 'Details View: Add support for cover control of BackgroundChanger extension'
