@@ -28,6 +28,7 @@
                                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </Border>
                                 <Border Background="#AA000000" x:Name="BorderMouseOver" Visibility="Collapsed" />
+                                <Border Background="{DynamicResource CoversButtonsBrush}" x:Name="BorderDarkFade" Visibility="Collapsed" />
                                 <Border Name="ShineBackground" Tag="False" IsHitTestVisible="False"
                                         Style="{DynamicResource AnimatedCoverShineBackground}" />
                                 <TextBlock Name="EnableHighlightAnimation" Visibility="Collapsed"
@@ -122,9 +123,6 @@
                             </MultiDataTrigger.Conditions>
                             <Setter Property="CornerRadius" Value="{DynamicResource GridViewCoverGridBackgroundDisabledCornerRadius}" TargetName="Mask" />
                         </MultiDataTrigger>
-                        <DataTrigger Binding="{Binding IsInstalled}" Value="True">
-                            <Setter Property="Background" Value="{DynamicResource CoversButtonsBrush}" TargetName="BorderMouseOver" />
-                        </DataTrigger>
                         <DataTrigger Binding="{Binding IsInstalled}" Value="False">
                             <Setter Property="Content" Value="&#xef08;" TargetName="PART_ButtonPlay" />
                         </DataTrigger>
@@ -143,7 +141,7 @@
                             <Setter Property="Visibility" Value="Visible" TargetName="TextGameName"/>
                         </MultiDataTrigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Visibility" Value="Visible" TargetName="BorderMouseOver"/>
+                            <Setter Property="Visibility" Value="Visible" TargetName="BorderDarkFade"/>
                             <Setter Property="Visibility" Value="Visible" TargetName="GameControls"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
