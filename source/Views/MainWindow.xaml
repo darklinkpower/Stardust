@@ -35,7 +35,9 @@
                                     </ThicknessAnimationUsingKeyFrames>
                                 </Storyboard>
                             </Grid.Resources>
-                            
+                            <Grid.Background>
+                                <ImageBrush ImageSource="{ThemeFile 'Images/BackgroundGradient.png'}" Stretch="UniformToFill"/>
+                            </Grid.Background>
                             <DockPanel>
                                 <Sidebar x:Name="PART_Sidebar" Panel.ZIndex="999"
                                          DockPanel.Dock="{Settings SidebarPosition}" />                             
