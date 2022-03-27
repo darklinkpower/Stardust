@@ -9,6 +9,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ExplorerPanel}">
                     <Border BorderBrush="{DynamicResource PanelSeparatorBrush}"
+                            Background="#73000000"
                             d:DesignWidth="200"
                             d:DesignHeight="400">
                         <Border.Style>
@@ -24,16 +25,58 @@
                                 </Style.Triggers>
                             </Style>
                         </Border.Style>
-                        <DockPanel Background="{TemplateBinding Background}">
-                            <ComboBox Name="PART_SelectFields"
-                                  DockPanel.Dock="Top" Margin="5,8,5,8" />
-                            <ListBox Name="PART_SelectItems"
-                                 DockPanel.Dock="Top" Margin="5,0,5,8"                                      
-                                 BorderThickness="0" Background="Transparent"
-                                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                            </ListBox>
-                        </DockPanel>
+                        <Grid>
+                            <Border Opacity="0.15"
+                                Background="{StaticResource WhiteNoiseBrush}"
+                                IsHitTestVisible="False" />
+                            <Border Opacity="0.30"
+                                Background="{StaticResource DarkNoiseBrush}"
+                                IsHitTestVisible="False" />
+                            <DockPanel>
+                                <ComboBox Name="PART_SelectFields"
+                                      DockPanel.Dock="Top" Margin="5,20,5,8" />
+                                <ListBox Name="PART_SelectItems"
+                                     ItemContainerStyle="{DynamicResource ExplorerPanelItemStyle}"
+                                     DockPanel.Dock="Top" Margin="0,0,5,8"                                      
+                                     BorderThickness="0" Background="Transparent"
+                                     ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                                </ListBox>
+                            </DockPanel>
+                        </Grid>
                     </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ExplorerPanelItemStyle" TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontSize" Value="{DynamicResource FontSize}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Grid>
+                        <Border x:Name="SelectedRectangle"
+                                IsHitTestVisible="False"
+                                Visibility="Collapsed"
+                                BorderThickness="3,0,0,0"
+                                BorderBrush="{DynamicResource GlyphBrush}"/>
+                        <ContentPresenter TextBlock.FontSize="{TemplateBinding FontSize}"
+                                          VerticalAlignment="Center"
+                                          Margin="13,4,3,4" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+                            <Setter Property="Visibility" Value="Visible" TargetName="SelectedRectangle" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
