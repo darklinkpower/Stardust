@@ -16,22 +16,49 @@
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
+                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <FadeImage x:Name="PART_ImageBackground"
-                                   Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
-                                   HorizontalAlignment="Center" VerticalAlignment="Top" />
 
-                        <Border x:Name="NoiseBorder" Grid.RowSpan="2" Background="{StaticResource DarkNoiseBrush}"
+
+                        <Grid Grid.RowSpan="2" Grid.ColumnSpan="2" >
+                            <Viewbox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Stretch="UniformToFill" Grid.RowSpan="2" >
+                                <FadeImage Source="{Binding ElementName=PART_ImageBackground, Path=Source}"
+                                           ImageDarkeningBrush="#800E0E0E"
+                                           Opacity="1.0"
+                                           HighQualityBlur="False"
+                                           IsBlurEnabled="True" AnimationEnabled="True"
+                                           Height="96" RenderOptions.BitmapScalingMode="LowQuality" BlurAmount="50"
+                                           HorizontalAlignment="Center" VerticalAlignment="Stretch">
+                                </FadeImage>
+                            </Viewbox>
+                        </Grid>
+
+                        <FadeImage x:Name="PART_ImageBackground" ImageDarkeningBrush="#800E0E0E"
+                                   Opacity="0.8"
+                                   Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                   HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <FadeImage.OpacityMask>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                    <LinearGradientBrush.GradientStops>
+                                        <GradientStop Color="#D9FFFFFF" Offset="0.15"/>
+                                        <GradientStop Color="#03FFFFFF" Offset="0.7"/>
+                                    </LinearGradientBrush.GradientStops>
+                                </LinearGradientBrush>
+                            </FadeImage.OpacityMask>
+                        </FadeImage>
+
+                        <Border x:Name="NoiseBorder" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                Background="{StaticResource DarkNoiseBrush}"
                                 Opacity="{DynamicResource LibraryDarkenLayerOpacity}" IsHitTestVisible="False">
                             <Border.Style>
                                 <Style TargetType="Border">
                                     <Setter Property="Visibility" Value="Visible" />
                                     <Setter Property="OpacityMask">
                                         <Setter.Value>
-                                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1.0">
                                                 <LinearGradientBrush.GradientStops>
-                                                    <GradientStop Color="#F2FFFFFF" Offset="0.2"/>
-                                                    <GradientStop Color="#5FFFFFFF" Offset="0.8"/>
+                                                    <GradientStop Color="#33FFFFFF" Offset="0.2"/>
+                                                    <GradientStop Color="#99FFFFFF" Offset="0.8"/>
                                                 </LinearGradientBrush.GradientStops>
                                             </LinearGradientBrush>
                                         </Setter.Value>
@@ -44,24 +71,29 @@
                                 </Style>
                             </Border.Style>
                         </Border>
-                        
-                        <TopPanel DockPanel.Dock="Top" Grid.Row="0" />
-                        
-                        <DockPanel Grid.Row="1">
-                            <FilterPanel x:Name="PART_FilterPanel"
-                                         DockPanel.Dock="{Settings FilterPanelPosition}"
-                                         Width="{Settings FilterPanelWitdh}"
-                                         Visibility="{Settings FilterPanelVisible}"/>
+
+                        <DockPanel Grid.RowSpan="2" Grid.ColumnSpan="2">
 
                             <ExplorerPanel Visibility="{Settings ExplorerPanelVisible}"
                                            DockPanel.Dock="{Settings ExplorerPanelPosition}"
                                            Width="{Settings ExplorerPanelWitdh}"/>
-                            
-                            <Grid DockPanel.Dock="Left">                                
-                                <LibraryDetailsView x:Name="PART_ViewDetails" />
-                                <LibraryGridView x:Name="PART_ViewGrid" />
-                                <LibraryListView x:Name="PART_ViewList" />
-                            </Grid>
+                            <DockPanel>
+                                <TopPanel DockPanel.Dock="Top" />
+                                <DockPanel DockPanel.Dock="Top">
+                                    <FilterPanel x:Name="PART_FilterPanel"
+                                         DockPanel.Dock="{Settings FilterPanelPosition}"
+                                         Width="{Settings FilterPanelWitdh}"
+                                         Visibility="{Settings FilterPanelVisible}"/>
+                                    <Grid DockPanel.Dock="Left">
+                                        <LibraryDetailsView x:Name="PART_ViewDetails" />
+                                        <LibraryGridView x:Name="PART_ViewGrid" />
+                                        <LibraryListView x:Name="PART_ViewList" />
+                                    </Grid>
+                                </DockPanel>
+                        </DockPanel>
+                        
+                        
+
                         </DockPanel>
                     </Grid>
                 </ControlTemplate>
