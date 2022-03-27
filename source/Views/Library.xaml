@@ -20,20 +20,22 @@
 
 
                         <Viewbox Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Stretch="UniformToFill">
-                            <FadeImage ImageDarkeningBrush="#800E0E0E"
+                            <FadeImage Name="BlurGameBackground" ImageDarkeningBrush="#800E0E0E"
                                        HighQualityBlur="False"
-                                       IsBlurEnabled="True" AnimationEnabled="{Settings BackgroundImageAnimation}"
+                                       IsBlurEnabled="True" AnimationEnabled="{DynamicResource LibraryGameBackgroundAnimateTransition}"
                                        Height="96" RenderOptions.BitmapScalingMode="LowQuality" BlurAmount="35"
                                        HorizontalAlignment="Center" VerticalAlignment="Top">
                                 <FadeImage.Style>
                                     <Style TargetType="FadeImage">
                                         <Setter Property="Source" Value="{Binding ElementName=PART_ImageBackground, Path=Source}" />
+                                        <Setter Property="Visibility" Value="Visible" />
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding ElementName=PART_ImageBackground, Path=ActualHeight}" Value="0">
+                                            <!--<DataTrigger Binding="{Binding ElementName=PART_ImageBackground, Path=ActualHeight}" Value="0">
                                                 <Setter Property="Source" Value="{x:Null}" />
-                                            </DataTrigger>
+                                            </DataTrigger>-->
                                             <DataTrigger Binding="{Binding ElementName=LibraryGameBackgroundBlendWithBackground, Path=Tag}" Value="False">
                                                 <Setter Property="Source" Value="{x:Null}" />
+                                                <Setter Property="Visibility" Value="Collapsed" />
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
@@ -55,12 +57,13 @@
                             <FadeImage.Style>
                                 <Style TargetType="FadeImage">
                                     <Setter Property="Opacity" Value="{Binding ElementName=LibraryGameBackgroundBlendValue, Path=Tag}" />
+                                    <Setter Property="Visibility" Value="Visible" />
                                     <Setter Property="OpacityMask">
                                         <Setter.Value>
                                             <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                                                 <LinearGradientBrush.GradientStops>
                                                     <GradientStop Color="#D9FFFFFF" Offset="0.15"/>
-                                                    <GradientStop Color="#03FFFFFF" Offset="0.7"/>
+                                                    <GradientStop Color="#00FFFFFF" Offset="0.7"/>
                                                 </LinearGradientBrush.GradientStops>
                                             </LinearGradientBrush>
                                         </Setter.Value>
@@ -69,6 +72,9 @@
                                         <DataTrigger Binding="{Binding ElementName=LibraryGameBackgroundBlendWithBackground, Path=Tag}" Value="False">
                                             <Setter Property="Opacity" Value="1.0" />
                                             <Setter Property="OpacityMask" Value="#FFFFFFFF" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding ElementName=LibraryGameBackgroundBlendValue, Path=Tag}" Value="0">
+                                            <Setter Property="Visibility" Value="Collapsed" />
                                         </DataTrigger>
                                     </Style.Triggers>
                                 </Style>
@@ -92,9 +98,13 @@
                                         </Setter.Value>
                                     </Setter>
                                     <Style.Triggers>
-                                        <DataTrigger Binding="{Binding ElementName=PART_ImageBackground, Path=ActualHeight}" Value="0">
+                                        <MultiDataTrigger>
+                                            <MultiDataTrigger.Conditions>
+                                                <Condition Binding="{Binding ElementName=PART_ImageBackground, Path=ActualHeight}" Value="0" />
+                                                <Condition Binding="{Binding ElementName=BlurGameBackground, Path=ActualHeight}" Value="0" />
+                                            </MultiDataTrigger.Conditions>
                                             <Setter Property="OpacityMask" Value="#33FFFFFF" />
-                                        </DataTrigger>
+                                        </MultiDataTrigger>
                                     </Style.Triggers>
                                 </Style>
                             </Border.Style>
