@@ -32,24 +32,47 @@
                                             <DataTrigger Binding="{Binding ElementName=PART_ImageBackground, Path=ActualHeight}" Value="0">
                                                 <Setter Property="Source" Value="{x:Null}" />
                                             </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=LibraryGameBackgroundBlendWithBackground, Path=Tag}" Value="False">
+                                                <Setter Property="Source" Value="{x:Null}" />
+                                            </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </FadeImage.Style>
                             </FadeImage>
                         </Viewbox>
 
+                        <TextBlock x:Name="LibraryGameBackgroundBlendValue"
+                                   Tag="{DynamicResource LibraryGameBackgroundBlendValue}"
+                                   Visibility="Collapsed" />
+
+                        <TextBlock x:Name="LibraryGameBackgroundBlendWithBackground"
+                                   Tag="{DynamicResource LibraryGameBackgroundBlendWithBackground}"
+                                   Visibility="Collapsed" />
+                        
                         <FadeImage x:Name="PART_ImageBackground"
-                                   Opacity="0.8"
                                    Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Top">
-                            <FadeImage.OpacityMask>
-                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                    <LinearGradientBrush.GradientStops>
-                                        <GradientStop Color="#D9FFFFFF" Offset="0.15"/>
-                                        <GradientStop Color="#03FFFFFF" Offset="0.7"/>
-                                    </LinearGradientBrush.GradientStops>
-                                </LinearGradientBrush>
-                            </FadeImage.OpacityMask>
+                            <FadeImage.Style>
+                                <Style TargetType="FadeImage">
+                                    <Setter Property="Opacity" Value="{Binding ElementName=LibraryGameBackgroundBlendValue, Path=Tag}" />
+                                    <Setter Property="OpacityMask">
+                                        <Setter.Value>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                <LinearGradientBrush.GradientStops>
+                                                    <GradientStop Color="#D9FFFFFF" Offset="0.15"/>
+                                                    <GradientStop Color="#03FFFFFF" Offset="0.7"/>
+                                                </LinearGradientBrush.GradientStops>
+                                            </LinearGradientBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=LibraryGameBackgroundBlendWithBackground, Path=Tag}" Value="False">
+                                            <Setter Property="Opacity" Value="1.0" />
+                                            <Setter Property="OpacityMask" Value="#FFFFFFFF" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </FadeImage.Style>
                         </FadeImage>
 
                         <Border x:Name="NoiseBorder" Grid.RowSpan="2" Grid.ColumnSpan="2"

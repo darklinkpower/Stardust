@@ -1,6 +1,8 @@
 Constants:
     - "Library"
     - LibraryDarkenLayerOpacity(0.0,1.0): 'Darken amount of window background image'
+    - LibraryGameBackgroundBlendWithBackground: 'Blend Game image background with background'
+    - LibraryGameBackgroundBlendValue(0.3,1.0): 'Game image background blend amount'
     - "Details View"
     - DetailsViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'
     - DetailsViewDetailsMaxWidth(1024,1600): 'Maximum width of details'
