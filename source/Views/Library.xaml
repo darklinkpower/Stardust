@@ -16,24 +16,29 @@
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
-                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
 
-                        <Grid Grid.RowSpan="2" Grid.ColumnSpan="2" >
-                            <Viewbox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Stretch="UniformToFill" Grid.RowSpan="2" >
-                                <FadeImage Source="{Binding ElementName=PART_ImageBackground, Path=Source}"
-                                           ImageDarkeningBrush="#800E0E0E"
-                                           Opacity="1.0"
-                                           HighQualityBlur="False"
-                                           IsBlurEnabled="True" AnimationEnabled="True"
-                                           Height="96" RenderOptions.BitmapScalingMode="LowQuality" BlurAmount="50"
-                                           HorizontalAlignment="Center" VerticalAlignment="Stretch">
-                                </FadeImage>
-                            </Viewbox>
-                        </Grid>
+                        <Viewbox Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Stretch="UniformToFill">
+                            <FadeImage ImageDarkeningBrush="#800E0E0E"
+                                       HighQualityBlur="False"
+                                       IsBlurEnabled="True" AnimationEnabled="{Settings BackgroundImageAnimation}"
+                                       Height="96" RenderOptions.BitmapScalingMode="LowQuality" BlurAmount="35"
+                                       HorizontalAlignment="Center" VerticalAlignment="Top">
+                                <FadeImage.Style>
+                                    <Style TargetType="FadeImage">
+                                        <Setter Property="Source" Value="{Binding ElementName=PART_ImageBackground, Path=Source}" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=PART_ImageBackground, Path=ActualHeight}" Value="0">
+                                                <Setter Property="Source" Value="{x:Null}" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </FadeImage.Style>
+                            </FadeImage>
+                        </Viewbox>
 
-                        <FadeImage x:Name="PART_ImageBackground" ImageDarkeningBrush="#800E0E0E"
+                        <FadeImage x:Name="PART_ImageBackground"
                                    Opacity="0.8"
                                    Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Top">
@@ -57,7 +62,7 @@
                                         <Setter.Value>
                                             <LinearGradientBrush StartPoint="0,0" EndPoint="0,1.0">
                                                 <LinearGradientBrush.GradientStops>
-                                                    <GradientStop Color="#33FFFFFF" Offset="0.2"/>
+                                                    <GradientStop Color="#59FFFFFF" Offset="0.2"/>
                                                     <GradientStop Color="#99FFFFFF" Offset="0.8"/>
                                                 </LinearGradientBrush.GradientStops>
                                             </LinearGradientBrush>
