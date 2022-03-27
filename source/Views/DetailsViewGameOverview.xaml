@@ -183,6 +183,7 @@
                                             </Image>
                                             <TextBlock FontFamily="{DynamicResource FontFamily}" Text="{Binding Game.DisplayName}" 
                                                        DockPanel.Dock="Left" FontSize="{DynamicResource FontSizeLargest}" Margin="0,0,10,0" 
+                                                       FontWeight="SemiBold"
                                                        Tag="{DynamicResource DetailsViewDisplayGameNameIfLogoVisible}"
                                                        TextWrapping="Wrap" VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
                                                 <TextBlock.Style>
@@ -201,7 +202,7 @@
                                                     </Style>
                                                 </TextBlock.Style>
                                                 <TextBlock.Effect>
-                                                    <DropShadowEffect ShadowDepth="1" RenderingBias="Quality" />
+                                                    <DropShadowEffect ShadowDepth="1" RenderingBias="Quality" Color="#80808080" />
                                                 </TextBlock.Effect>
                                             </TextBlock>
                                         </DockPanel>
