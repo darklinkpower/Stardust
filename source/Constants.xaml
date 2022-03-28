@@ -90,7 +90,7 @@
 
     <Color x:Key="TitleWindowStateHoverColor">#424242</Color>
     <Color x:Key="TitleWindowCloseHoverColor">#d22e00</Color>
-    <Color x:Key="ControlsBackgroundColor">#2e2c2f</Color>
+    <Color x:Key="ControlsBackgroundColor">#cc2e2c2e</Color>
 
     <Color x:Key="TopPanelItemBackgroundColor">#d9000000</Color>
     <Color x:Key="TopPanelItemHoverBackgroundColor">#d9000000</Color>
