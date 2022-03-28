@@ -202,7 +202,7 @@
     <SolidColorBrush x:Key="PanelsDarkenBrush" Color="#261a1a1a" />
     <SolidColorBrush x:Key="DetailsViewImageDarkenBrush" Color="#21000000" />
     <SolidColorBrush x:Key="DetailsViewPanelsBackgroundBrush" Color="#3374777d" />
-    <SolidColorBrush x:Key="DetailsViewDetailsLabelForegroundBrush" Color="#80cdcdcd" />
+    <SolidColorBrush x:Key="DetailsViewDetailsLabelForegroundBrush" Color="#73f8f8f8" />
     <SolidColorBrush x:Key="DetailsViewSeparatorBrush" Color="#4Dc2c2c2" />
     <LinearGradientBrush x:Key="DetailsViewFadePanelBackgroundBrush" StartPoint="0.5,0.0" EndPoint="0.5,1">
         <GradientStop Color="#AD414244" Offset="0.4" />
