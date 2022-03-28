@@ -23,7 +23,7 @@
                                     </Grid.ColumnDefinitions>
                                     <Border Grid.Column="1" CornerRadius="7" Background="{DynamicResource DetailsViewGrouCountBackgroundBrush}" Width="Auto">
                                         <TextBlock Text="{Binding Items.Count, Mode=OneWay, StringFormat={}{0}}"
-                                                   Foreground="#D9000000"
+                                                   Foreground="{DynamicResource DetailsViewGroupCountTextBrush}"
                                                    FontSize="12" FontWeight="Bold"
                                                    VerticalAlignment="Center" HorizontalAlignment="Center"
                                                    Style="{DynamicResource BaseTextBlockStyle}"

@@ -132,7 +132,8 @@
 
     <SolidColorBrush x:Key="DetailsViewGameListBackground" Color="Transparent" />
     <SolidColorBrush x:Key="DetailsViewGrouCountBackgroundBrush" Color="{DynamicResource DetailsViewGrouCountBackgroundColor}" />
-
+    <SolidColorBrush x:Key="DetailsViewGroupCountTextBrush" Color="#CC000000" />
+    
     <SolidColorBrush x:Key="PurpleButtonBrush" Color="{DynamicResource PurpleButtonBrushColor}" />
     <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="{DynamicResource PurpleButtonBrushHighlightColor}" />
     <SolidColorBrush x:Key="PurpleButtonBrushSelected" Color="{DynamicResource PurpleButtonBrushSelectedColor}" />
