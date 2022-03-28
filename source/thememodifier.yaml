@@ -1,6 +1,5 @@
 Constants:
     - "Library"
-    - LibraryDarkenLayerOpacity(0.0,1.0): 'Darken amount of window background image'
     - LibraryGameBackgroundBlendWithBackground: 'Blend Game image background with blur background'
     - LibraryGameBackgroundBlendValue(0.0,1.0): 'Background blend with blur background amount'
     - LibraryGameBackgroundAnimateTransition: 'Animate blur background transition'

@@ -3,7 +3,6 @@
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
     <!--Theme settings region start-->
-    <sys:Double x:Key="LibraryDarkenLayerOpacity">1.0</sys:Double>
     <sys:Double x:Key="LibraryGameBackgroundBlendValue">1.0</sys:Double>
     <sys:Boolean x:Key="LibraryGameBackgroundBlendWithBackground">True</sys:Boolean>
     <sys:Boolean x:Key="LibraryGameBackgroundAnimateTransition">False</sys:Boolean>

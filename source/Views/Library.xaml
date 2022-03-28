@@ -20,10 +20,10 @@
 
 
                         <Viewbox Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Stretch="UniformToFill">
-                            <FadeImage Name="BlurGameBackground" ImageDarkeningBrush="#800E0E0E"
+                            <FadeImage Name="BlurGameBackground" ImageDarkeningBrush="#990E0E0E"
                                        HighQualityBlur="False"
                                        IsBlurEnabled="True" AnimationEnabled="{DynamicResource LibraryGameBackgroundAnimateTransition}"
-                                       Height="96" RenderOptions.BitmapScalingMode="LowQuality" BlurAmount="35"
+                                       Height="96" RenderOptions.BitmapScalingMode="LowQuality" BlurAmount="10"
                                        HorizontalAlignment="Center" VerticalAlignment="Top">
                                 <FadeImage.Style>
                                     <Style TargetType="FadeImage">
@@ -50,7 +50,7 @@
                         <TextBlock x:Name="LibraryGameBackgroundBlendWithBackground"
                                    Tag="{DynamicResource LibraryGameBackgroundBlendWithBackground}"
                                    Visibility="Collapsed" />
-                        
+
                         <FadeImage x:Name="PART_ImageBackground"
                                    Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Top">
@@ -60,18 +60,18 @@
                                     <Setter Property="Visibility" Value="Visible" />
                                     <Setter Property="OpacityMask">
                                         <Setter.Value>
-                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                                <LinearGradientBrush.GradientStops>
-                                                    <GradientStop Color="#D9FFFFFF" Offset="0.15"/>
-                                                    <GradientStop Color="#00FFFFFF" Offset="0.7"/>
-                                                </LinearGradientBrush.GradientStops>
-                                            </LinearGradientBrush>
+                                            <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.75">
+                                                <RadialGradientBrush.GradientStops>
+                                                    <GradientStop Color="Black" Offset="0.3" />
+                                                    <GradientStop Color="Transparent" Offset="1" />
+                                                </RadialGradientBrush.GradientStops>
+                                            </RadialGradientBrush>
                                         </Setter.Value>
                                     </Setter>
                                     <Style.Triggers>
                                         <DataTrigger Binding="{Binding ElementName=LibraryGameBackgroundBlendWithBackground, Path=Tag}" Value="False">
                                             <Setter Property="Opacity" Value="1.0" />
-                                            <Setter Property="OpacityMask" Value="#FFFFFFFF" />
+                                            <Setter Property="OpacityMask" Value="Black" />
                                         </DataTrigger>
                                         <DataTrigger Binding="{Binding ElementName=LibraryGameBackgroundBlendValue, Path=Tag}" Value="0">
                                             <Setter Property="Visibility" Value="Collapsed" />
@@ -80,10 +80,9 @@
                                 </Style>
                             </FadeImage.Style>
                         </FadeImage>
-
+                        
                         <Border x:Name="NoiseBorder" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                                Background="{StaticResource DarkNoiseBrush}"
-                                Opacity="{DynamicResource LibraryDarkenLayerOpacity}" IsHitTestVisible="False">
+                                Background="{StaticResource DarkNoiseBrush}" IsHitTestVisible="False">
                             <Border.Style>
                                 <Style TargetType="Border">
                                     <Setter Property="Visibility" Value="Visible" />
@@ -91,8 +90,8 @@
                                         <Setter.Value>
                                             <LinearGradientBrush StartPoint="0,0" EndPoint="0,1.0">
                                                 <LinearGradientBrush.GradientStops>
-                                                    <GradientStop Color="#59FFFFFF" Offset="0.2"/>
-                                                    <GradientStop Color="#99FFFFFF" Offset="0.8"/>
+                                                    <GradientStop Color="#66000000" Offset="0.2"/>
+                                                    <GradientStop Color="#66000000" Offset="0.8"/>
                                                 </LinearGradientBrush.GradientStops>
                                             </LinearGradientBrush>
                                         </Setter.Value>

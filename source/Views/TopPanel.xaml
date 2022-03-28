@@ -167,7 +167,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TopPanel}">
-                    <StackPanel Background="{DynamicResource TopPanelFadeBackgroundBrush}">
+                    <StackPanel>
                         <Border Height="59" Padding="0,6,0,0" BorderBrush="{DynamicResource PanelSeparatorBrush}"
                             d:DesignWidth="1280"
                             d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
