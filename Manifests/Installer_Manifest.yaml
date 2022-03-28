@@ -212,3 +212,23 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.24/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_24.pthm
     Changelog:
       - 'Grid View: Fix covers being darkened on hover when option to darken uninstalled games is disabled'
+  - Version: 2.25
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-28
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.25/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_25.pthm
+    Changelog:
+      - 'Added border to progress bar background'
+      - 'Added border to sliders track'
+      - 'Details View and Grid View: Adjustments to groups text color and group count background'
+      - 'Details View: Made game name use SemiBold font and changed text border color'
+      - 'Expanders: Change to increase opacity on hover'
+      - 'Expanders: Use hand cursor'
+      - 'Explorer Panel: Panel will now use all the library height'
+      - 'Explorer Panel: Style items'
+      - 'General: Added transparency to controls backgrounds'
+      - 'General: Changed gradient background image'
+      - 'General: Fix some checkboxes not being completely square'
+      - 'General: Use gradient background image for all views in Main window'
+      - 'Library: Add blur background effect'
+      - 'Library: Added ThemeModifier extension option to adjust game background image blend parameters'
+      - 'Misc fixes and changes that no one will notice'
