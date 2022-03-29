@@ -103,6 +103,7 @@
     <SolidColorBrush x:Key="TopPanelFilterToggleBackgroundBrush" Color="{DynamicResource TopPanelFilterToggleBackgroundColor}" />
 
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="{DynamicResource ControlsBackgroundColor}" />
+    <SolidColorBrush x:Key="ProgressBarBackgroundBrush" Color="#2e2c2f" />
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
     <SolidColorBrush x:Key="TextBrushDarker" Color="{DynamicResource TextColorDarker}" />
     <SolidColorBrush x:Key="TextBrushDark" Color="{DynamicResource TextColorDark}" />
