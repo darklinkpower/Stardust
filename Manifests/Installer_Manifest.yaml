@@ -232,3 +232,18 @@ Packages:
       - 'Library: Add blur background effect'
       - 'Library: Added ThemeModifier extension option to adjust game background image blend parameters'
       - 'Misc fixes and changes that no one will notice'
+  - Version: 2.26
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-29
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.26/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_26.pthm
+    Changelog:
+      - 'Details View: Details will now use all the window height for content and scrolling'
+      - 'Explorer Panel: Fix dropdown menu overlapping Window buttons when located on the right'
+      - 'Explorer Panel: Small changes to panel background color'
+      - 'ProgressBar: Change bar background color'
+      - 'SearchBox: Removed border'
+      - 'TopPanel: Change filter button icon to not have background and mirrored vertically'
+      - 'TopPanel: Changed icon to delete text in Search Bar'
+      - 'TopPanel: Made filter button text SemiBold'
+      - 'TopPanel: Made SearchBox text font weight semi bold'
+      - 'Misc small changes'
