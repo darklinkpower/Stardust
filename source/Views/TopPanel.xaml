@@ -97,7 +97,7 @@
                     <Border Background="{TemplateBinding Background}" BorderThickness="0"
                             CornerRadius="3">
                         <StackPanel Orientation="Horizontal" Margin="6,0,6,0">
-                            <Viewbox Margin="5,9,5,9">
+                            <Viewbox Margin="3,9,3,9">
                                 <Path Name="IconFilter" RenderTransformOrigin="0.5, 0.5"
                                       Stroke="{TemplateBinding Foreground}" StrokeThickness="2"
                                       Data="F1 M 7.9 10.16 C 8.086666 10.373333 8.179998 10.613333 8.179999 10.879999 L 8.179999 18.82 C 8.179998 18.966665 8.233333 19.09 8.34 19.189999 C 8.446667 19.289999 8.573334 19.343332 8.72 19.349998 C 8.866667 19.356667 9 19.306665 9.12 19.199999 L 11.42 16.58 C 11.58 16.393333 11.679999 16.26 11.719999 16.18 C 11.786666 16.059999 11.82 15.926666 11.82 15.78 L 11.82 10.879999 C 11.82 10.613333 11.913332 10.373333 12.099999 10.16 L 18.539999 3.28 C 18.699999 3.106667 18.773333 2.913334 18.76 2.7 C 18.746666 2.486668 18.663334 2.303333 18.51 2.15 C 18.356667 1.996668 18.166666 1.920001 17.940001 1.92 L 2.08 1.92 C 1.853333 1.920001 1.66 1.996668 1.5 2.15 C 1.34 2.303333 1.253333 2.486668 1.24 2.7 C 1.226667 2.913334 1.3 3.106667 1.46 3.28 Z " VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -108,7 +108,7 @@
                             </Viewbox>
                             <TextBlock Text="{DynamicResource LOCFilterActiveLabel}"
                                        Style="{DynamicResource BaseTextBlockStyle}"
-                                       Margin="3,0,5,0" VerticalAlignment="Center"
+                                       Margin="5,0,5,0" VerticalAlignment="Center"
                                        Name="TextFilter" />
                         </StackPanel>
                     </Border>
