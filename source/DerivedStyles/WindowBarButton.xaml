@@ -56,14 +56,17 @@
                                VerticalAlignment="{TemplateBinding VerticalAlignment}"
                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
                     </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="{DynamicResource TitleWindowStateHover}" TargetName="ControlBorder"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        <Style.Triggers>
+            <DataTrigger Binding="{Settings ViewSettings.GamesViewType}" Value="Details">
+                <Setter Property="Background" Value="{DynamicResource TopPanelItemBackgroundColor}" />
+            </DataTrigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource TitleWindowStateHover}" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <Style x:Key="WindowBarButtonMainWindowMaximize" TargetType="Button">
@@ -92,14 +95,17 @@
                                VerticalAlignment="{TemplateBinding VerticalAlignment}"
                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
                     </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="{DynamicResource TitleWindowStateHover}" TargetName="ControlBorder"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        <Style.Triggers>
+            <DataTrigger Binding="{Settings ViewSettings.GamesViewType}" Value="Details">
+                <Setter Property="Background" Value="{DynamicResource TopPanelItemBackgroundColor}" />
+            </DataTrigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource TitleWindowStateHover}" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <Style x:Key="WindowBarButtonMainWindowClose" TargetType="Button">
@@ -128,13 +134,16 @@
                                VerticalAlignment="{TemplateBinding VerticalAlignment}"
                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
                     </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="{DynamicResource TitleWindowCloseHover}" TargetName="ControlBorder"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        <Style.Triggers>
+            <DataTrigger Binding="{Settings ViewSettings.GamesViewType}" Value="Details">
+                <Setter Property="Background" Value="{DynamicResource TopPanelItemBackgroundColor}" />
+            </DataTrigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource TitleWindowCloseHover}" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
 </ResourceDictionary>
