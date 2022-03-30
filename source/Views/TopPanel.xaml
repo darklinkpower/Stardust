@@ -228,18 +228,6 @@
                                 </DockPanel>
                             </Grid>
                         </Border>
-                        <Border Height="{DynamicResource TopPanelBottomDistance}">
-                            <Border.Style>
-                                <Style TargetType="Border">
-                                    <Setter Property="BorderThickness" Value="0,0,0,1" />
-                                    <Style.Triggers>
-                                        <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
-                                            <Setter Property="BorderThickness" Value="0" />
-                                        </DataTrigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Border.Style>
-                        </Border>
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>

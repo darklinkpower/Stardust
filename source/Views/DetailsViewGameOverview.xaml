@@ -115,7 +115,7 @@
 
                             <Grid HorizontalAlignment="Stretch" Margin="20,0,20,0">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="{Settings CalculatedGameDetailsIndentation}" />
+                                    <RowDefinition Height="{Settings CalculatedGameDetailsIndentation}" MinHeight="{DynamicResource PanelTopPanelSeparatorHeight}" />
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />

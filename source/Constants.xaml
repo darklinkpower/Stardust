@@ -16,11 +16,17 @@
     <sys:Boolean x:Key="GridViewAllowUseOfLogos">true</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewLibraryGameShowFavorite">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewLibraryGameShowFavorite">true</sys:Boolean>
-    <sys:Double x:Key="TopPanelBottomDistance">31</sys:Double>
     <sys:Boolean x:Key="GridViewShowHltbDataGrid">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewEnableCoverShineAnimation">False</sys:Boolean>
     <!--region end-->
 
+    <sys:Double x:Key="PanelTopPanelSeparatorHeight">65</sys:Double>
+    <Thickness x:Key="PanelTopPanelSeparator"
+               Left="0"
+               Top="{StaticResource PanelTopPanelSeparatorHeight}"
+               Right="0"
+               Bottom="0" />
+    
     <sys:Double x:Key="FontSizeSmall">12</sys:Double>
     <sys:Double x:Key="FontSize">14</sys:Double>
     <sys:Double x:Key="FontSizeLarge">15</sys:Double>

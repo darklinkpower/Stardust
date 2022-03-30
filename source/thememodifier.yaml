@@ -17,5 +17,3 @@ Constants:
     - GridViewLibraryGameShowFavorite: 'Show favorites icon on game covers'
     - GridViewEnableCoverShineAnimation: 'Enable cover highlight animation'
     - GridViewCoverSubtitleVisibility: 'Visibility of time played under game covers'
-    - "Top Panel"
-    - TopPanelBottomDistance(6,31): 'Distance from top panel to view'

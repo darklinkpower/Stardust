@@ -114,22 +114,34 @@
                             <ExplorerPanel Visibility="{Settings ExplorerPanelVisible}"
                                            DockPanel.Dock="{Settings ExplorerPanelPosition}"
                                            Width="{Settings ExplorerPanelWitdh}"/>
-                            <DockPanel>
-                                <TopPanel DockPanel.Dock="Top" />
-                                <DockPanel DockPanel.Dock="Top">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Border BorderThickness="0">
                                     <FilterPanel x:Name="PART_FilterPanel"
-                                         DockPanel.Dock="{Settings FilterPanelPosition}"
-                                         Width="{Settings FilterPanelWitdh}"
-                                         Visibility="{Settings FilterPanelVisible}"/>
-                                    <Grid DockPanel.Dock="Left">
-                                        <LibraryDetailsView x:Name="PART_ViewDetails" />
-                                        <LibraryGridView x:Name="PART_ViewGrid" />
-                                        <LibraryListView x:Name="PART_ViewList" />
-                                    </Grid>
-                                </DockPanel>
-                        </DockPanel>
-                        
-                        
+                                                 Margin="{DynamicResource PanelTopPanelSeparator}"
+                                                 Width="{Settings FilterPanelWitdh}"
+                                                 Visibility="{Settings FilterPanelVisible}" />
+                                    <Border.Style>
+                                        <Style TargetType="Border">
+                                            <Setter Property="Grid.Column" Value="0" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Settings FilterPanelPosition}" Value="Right">
+                                                    <Setter Property="Grid.Column" Value="2" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+                                </Border>
+
+                                <LibraryDetailsView x:Name="PART_ViewDetails" Grid.ColumnSpan="1" Grid.Column="1" />
+                                <LibraryGridView x:Name="PART_ViewGrid" Grid.ColumnSpan="1" Grid.Column="1" Margin="{DynamicResource PanelTopPanelSeparator}" />
+                                <LibraryListView x:Name="PART_ViewList" Grid.ColumnSpan="1" Grid.Column="1" Margin="{DynamicResource PanelTopPanelSeparator}" />
+                                <TopPanel Grid.ColumnSpan="3" Grid.Column="0" VerticalAlignment="Top" />
+                            </Grid>
 
                         </DockPanel>
                     </Grid>

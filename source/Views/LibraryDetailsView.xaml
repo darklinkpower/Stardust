@@ -24,7 +24,7 @@
                                     </Style.Triggers>
                                 </Style>
                             </Border.Style>
-                            <Grid Width="{Settings DetailsListWitdh}" Background="{DynamicResource DetailsViewGameListBackground}">
+                            <Grid Margin="{DynamicResource PanelTopPanelSeparator}" Width="{Settings DetailsListWitdh}" Background="{DynamicResource DetailsViewGameListBackground}">
                                 <ExtendedListBox x:Name="PART_ListGames"
                                          BorderBrush="Transparent"
                                          ItemContainerStyle="{DynamicResource DetailsViewItemStyle}"
