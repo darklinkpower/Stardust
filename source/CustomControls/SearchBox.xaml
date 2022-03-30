@@ -5,18 +5,22 @@
     <Style TargetType="{x:Type SearchBox}">
         <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="FontWeight" Value="Normal" />
         <Setter Property="MinHeight" Value="24" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type SearchBox}">
                     <Grid>
                         <TextBox x:Name="PART_TextInpuText" Background="{TemplateBinding Background}" BorderThickness="0"
-                                 VerticalContentAlignment="Center" Padding="5,0,25,0"/>
+                                 FontWeight="{TemplateBinding FontWeight}"
+                                 VerticalContentAlignment="Center" Padding="10,0,25,0"/>
                         <ContentControl x:Name="PART_SeachIcon"
+                                        FontWeight="Normal"
                                         ContentTemplate="{DynamicResource SearchTextIconTemplate}"
                                         VerticalAlignment="Center" HorizontalAlignment="Left" Margin="8,0,0,0"
                                         Foreground="{DynamicResource TextBrushDarker}" />
                         <ContentControl x:Name="PART_ClearTextIcon"
+                                        FontWeight="Normal"
                                         ContentTemplate="{DynamicResource ClearTextIconTemplate}" 
                                         FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0" 
                                         Foreground="{DynamicResource TextBrushDarker}" />

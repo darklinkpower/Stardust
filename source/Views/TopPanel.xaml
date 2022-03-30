@@ -211,6 +211,7 @@
 
                                     <SearchBox x:Name="PART_TextMainSearch"
                                                Margin="5,6,0,6" DockPanel.Dock="Left"
+                                               FontWeight="SemiBold"
                                                WindowChrome.IsHitTestVisibleInChrome="True"
                                                Width="120" Background="{DynamicResource TopPanelSearchBoxBackgroundBrush}"/>
 
