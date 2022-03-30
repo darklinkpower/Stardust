@@ -34,7 +34,7 @@
     <TextBlock x:Key="SidebarStatisticsIcon" Text="&#xe983;" FontFamily="{DynamicResource FontIcoFont}"  FontWeight="ExtraLight"/>
 
     <DataTemplate x:Key="ClearTextIconTemplate">
-        <TextBlock Text="&#xef00;" FontFamily="{DynamicResource FontIcoFont}" />
+        <TextBlock Text="&#xEEE4;" FontFamily="{DynamicResource FontIcoFont}" />
     </DataTemplate>
 
     <DataTemplate x:Key="SearchTextIconTemplate">
