@@ -9,7 +9,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ExplorerPanel}">
                     <Border BorderBrush="{DynamicResource PanelSeparatorBrush}"
-                            Background="#73000000"
+                            Background="{DynamicResource ExplorerPanelBackgroundBrush}"
                             d:DesignWidth="200"
                             d:DesignHeight="400">
                         <Border.Style>

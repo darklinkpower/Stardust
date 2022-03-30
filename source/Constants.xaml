@@ -259,4 +259,10 @@
                     Opacity="1"/>
     <ImageBrush x:Key="WhiteNoiseBrush" ImageSource="{ThemeFile 'Images/dark_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
                     Opacity="0.5"/>
+
+    <LinearGradientBrush x:Key="ExplorerPanelBackgroundBrush" StartPoint="1.0,0.3" EndPoint="0.0,0.6">
+        <GradientStop Color="#73000000" Offset="0.2" />
+        <GradientStop Color="#8C000000" Offset="0.55" />
+        <GradientStop Color="#80000000" Offset="0.95" />
+    </LinearGradientBrush>
 </ResourceDictionary>
