@@ -247,3 +247,10 @@ Packages:
       - 'TopPanel: Made filter button text SemiBold'
       - 'TopPanel: Made SearchBox text font weight semi bold'
       - 'Misc small changes'
+  - Version: 2.27
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-30
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.27/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_27.pthm
+    Changelog:
+      - 'Details View: Fix Extra Metadata Loader alternative video control overlapping with top panel buttons'
+      - 'Details View: Fix logos area height being inconsistent when Covers are disabled'
