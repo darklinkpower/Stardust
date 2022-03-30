@@ -33,8 +33,18 @@
                                 Background="{StaticResource DarkNoiseBrush}"
                                 IsHitTestVisible="False" />
                             <DockPanel>
+                                <DockPanel.Style>
+                                    <Style TargetType="DockPanel">
+                                        <Setter Property="Margin" Value="{DynamicResource PanelTopPanelSeparator}" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Settings ExplorerPanelPosition}" Value="Left">
+                                                <Setter Property="Margin" Value="0,15,0,0" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </DockPanel.Style>
                                 <ComboBox Name="PART_SelectFields"
-                                      DockPanel.Dock="Top" Margin="5,20,5,8" />
+                                      DockPanel.Dock="Top" Margin="5,5,5,8" />
                                 <ListBox Name="PART_SelectItems"
                                      ItemContainerStyle="{DynamicResource ExplorerPanelItemStyle}"
                                      DockPanel.Dock="Top" Margin="0,0,5,8"                                      
