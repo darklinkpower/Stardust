@@ -254,3 +254,9 @@ Packages:
     Changelog:
       - 'Details View: Fix Extra Metadata Loader alternative video control overlapping with top panel buttons'
       - 'Details View: Fix logos area height being inconsistent when Covers are disabled'
+  - Version: 2.28
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-30
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.28/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_28.pthm
+    Changelog:
+      - 'Details View: Fix Extra Metadata Loader extension logo vertical setting not working correctly'
