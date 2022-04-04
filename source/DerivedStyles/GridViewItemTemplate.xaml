@@ -15,7 +15,7 @@
                                     d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameIntance}">
                             <Grid Width="{Settings GridItemWidth}"
                                   Height="{Settings GridItemHeight}">
-                                <Border Name="Mask" Background="{DynamicResource ControlBackgroundBrush}" CornerRadius="{DynamicResource GridViewCoverCornerRadius}" BorderThickness="1"/>
+                                <Border Name="Mask" Background="{DynamicResource GridViewItemMaskBackgroundBrush}" CornerRadius="{DynamicResource GridViewCoverCornerRadius}" BorderThickness="1"/>
                                 <Image Name="PART_ImageCover"
                                    RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
                                    HorizontalAlignment="Center" VerticalAlignment="Center"
