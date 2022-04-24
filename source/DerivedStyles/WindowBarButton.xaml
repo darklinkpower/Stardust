@@ -60,9 +60,6 @@
             </Setter.Value>
         </Setter>
         <Style.Triggers>
-            <DataTrigger Binding="{Settings ViewSettings.GamesViewType}" Value="Details">
-                <Setter Property="Background" Value="{DynamicResource TopPanelItemBackgroundColor}" />
-            </DataTrigger>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="{DynamicResource TitleWindowStateHover}" />
             </Trigger>
@@ -99,9 +96,6 @@
             </Setter.Value>
         </Setter>
         <Style.Triggers>
-            <DataTrigger Binding="{Settings ViewSettings.GamesViewType}" Value="Details">
-                <Setter Property="Background" Value="{DynamicResource TopPanelItemBackgroundColor}" />
-            </DataTrigger>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="{DynamicResource TitleWindowStateHover}" />
             </Trigger>
@@ -138,9 +132,6 @@
             </Setter.Value>
         </Setter>
         <Style.Triggers>
-            <DataTrigger Binding="{Settings ViewSettings.GamesViewType}" Value="Details">
-                <Setter Property="Background" Value="{DynamicResource TopPanelItemBackgroundColor}" />
-            </DataTrigger>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="{DynamicResource TitleWindowCloseHover}" />
             </Trigger>
