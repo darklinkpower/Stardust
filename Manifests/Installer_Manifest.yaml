@@ -266,3 +266,11 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.29/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_29.pthm
     Changelog:
       - 'Grid View: Fix grid view items being transparent if user has changed control background brush to transparent with the ThemeModifier extension, either manually or by installing a colors preset'
+  - Version: 2.30
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-04-27
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.30/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_30.pthm
+    Changelog:
+      - 'Filters Panel: Use hand cursor for filter selection box buttons'
+      - 'General: Fix Tab Item headers not using Hand cursor for all the clickable area'
+      - 'Grid View: Added library banners to covers. Disabled by default. Can be enabled with option in ThemeModifier extension. Includes option to configure the banner opacity.'
