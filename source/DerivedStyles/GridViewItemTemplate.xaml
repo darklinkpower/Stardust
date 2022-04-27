@@ -22,8 +22,8 @@
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
                                 <Border Grid.RowSpan="2" Name="Mask" Background="{DynamicResource GridViewItemMaskBackgroundBrush}" CornerRadius="{DynamicResource GridViewCoverCornerRadius}" />
-                                
-                                <Image Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
+
+                                <Image x:Name="LibraryBanner" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
                                        RenderOptions.BitmapScalingMode="Fant"
                                        Opacity="{DynamicResource GridViewCoverLibraryBannerOpacity}"
                                        Stretch="Uniform" StretchDirection="Both" Tag="{DynamicResource GridViewCoverDisplayLibraryBanner}">
@@ -206,6 +206,28 @@
                                                         <Condition Binding="{Binding PluginId}" Value="77346dd6-b0cc-4F7d-80f0-c1d138ccae58" />
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="Source" Value="{StaticResource OculusLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Image.Style>
+                                </Image>
+                                
+                                <Image Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
+                                           RenderOptions.BitmapScalingMode="Fant"
+                                           Opacity="{DynamicResource GridViewCoverLibraryBannerOpacity}"
+                                           Stretch="Uniform" StretchDirection="Both" Tag="{DynamicResource GridViewCoverDisplayLibraryBanner}">
+                                    <Image.Style>
+                                        <Style TargetType="Image">
+                                            <Setter Property="Source" Value="{x:Null}" />
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                            <Style.Triggers>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding ElementName=LibraryBanner, Path=Visibility}" Value="Collapsed" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource UnknownLibraryBannerBitmap}" />
                                                     <Setter Property="Visibility" Value="Visible" />
                                                 </MultiDataTrigger>
                                             </Style.Triggers>
