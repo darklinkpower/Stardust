@@ -282,3 +282,9 @@ Packages:
       - 'GridView: Added library banners for Groupees and Legacy Games library plugin because Jeshibu was angry at me :('
       - 'GridView: Library banners moved to top of cover images'
       - 'GridView: Show generic library banner for games with a library that does not have a specific banner'
+  - Version: 2.32
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-04-28
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.32/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_32.pthm
+    Changelog:
+      - 'GridView: Fix favorites and DuplicateHider icons placement and hover darkening background being inconsistent if Library Banners are enabled'
