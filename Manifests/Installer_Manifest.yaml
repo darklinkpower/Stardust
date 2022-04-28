@@ -274,3 +274,11 @@ Packages:
       - 'Filters Panel: Use hand cursor for filter selection box buttons'
       - 'General: Fix Tab Item headers not using Hand cursor for all the clickable area'
       - 'Grid View: Added library banners to covers. Disabled by default. Can be enabled with option in ThemeModifier extension. Includes option to configure the banner opacity.'
+  - Version: 2.31
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-04-27
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.31/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_31.pthm
+    Changelog:
+      - 'GridView: Added library banners for Groupees and Legacy Games library plugin because Jeshibu was angry at me :('
+      - 'GridView: Library banners moved to top of cover images'
+      - 'GridView: Show generic library banner for games with a library that does not have a specific banner'
