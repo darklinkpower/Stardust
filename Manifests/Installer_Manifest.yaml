@@ -294,3 +294,9 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.33/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_33.pthm
     Changelog:
       - 'GridView: Implemented banners for game platform. Special thanks to the Playnite community for making these banners'
+  - Version: 2.34
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-04-29
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.34/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_34.pthm
+    Changelog:
+      - 'GridView: Added additional platform banners (By NatParable)'
