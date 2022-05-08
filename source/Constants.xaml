@@ -20,7 +20,7 @@
     <sys:Boolean x:Key="GridViewShowHltbDataGrid">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewEnableCoverShineAnimation">False</sys:Boolean>
     <sys:Boolean x:Key="GridViewCoverDisplayLibraryBanner">False</sys:Boolean>
-    <sys:Boolean x:Key="GridViewEnablePlayingBorderAnimation">True</sys:Boolean>
+    <sys:Boolean x:Key="GridViewEnablePlayingBorderAnimation">False</sys:Boolean>
     <sys:Double x:Key="GridViewCoverLibraryBannerOpacity">1.0</sys:Double>
     <!--region end-->
 
@@ -263,8 +263,8 @@
     <ImageBrush x:Key="DarkNoiseBrush" ImageSource="{ThemeFile 'Images/dark_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
                     Opacity="1" popt:Freeze="True"/>
     <ImageBrush x:Key="WhiteNoiseBrush" ImageSource="{ThemeFile 'Images/white_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
-                    Opacity="0.5" popt:Freeze="True"/>
-
+                    Opacity="1.0" popt:Freeze="True"/>
+    
     <LinearGradientBrush x:Key="ExplorerPanelBackgroundBrush" StartPoint="1.0,0.3" EndPoint="0.0,0.6">
         <GradientStop Color="#73000000" Offset="0.2" />
         <GradientStop Color="#8C000000" Offset="0.55" />
