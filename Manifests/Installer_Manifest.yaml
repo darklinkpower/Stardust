@@ -317,3 +317,11 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.36/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_36.pthm
     Changelog:
       - 'Grid View: Added a highlight animation to covers of games that are running. Enabled by default, can be enabled or disabled with ThemeModifier extension'
+  - Version: 2.37
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-05-08
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.37/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_37.pthm
+    Changelog:
+      - 'Grid View: Added ThemeModifier option to place Description at the bottom (After extensions sections). Disabled by default.'
+      - 'Grid View: Improved performance of cover highlight animations'
+      - 'Grid View: Made glow border of playing games static. Can be enabled with ThemeModifier extension'
