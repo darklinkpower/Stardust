@@ -21,3 +21,4 @@ Constants:
     - GridViewCoverSubtitleVisibility: 'Visibility of time played under game covers'
     - GridViewCoverDisplayLibraryBanner: 'Show game platforms and library banners on covers'
     - GridViewCoverLibraryBannerOpacity(0.5, 1.0): 'Opacity of library banner'
+    - GridViewCoverUseRoundedCorners: 'Use rounded corners for game covers'
