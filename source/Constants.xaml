@@ -67,6 +67,7 @@
     <Color x:Key="HoverColor">#373538</Color>
     <Color x:Key="GlyphColor">#b75ecf</Color>
     <Color x:Key="GlyphColorSecondary">#2f3543</Color>
+    <Color x:Key="DataChangeNotifColor">#ffa500</Color>
     <!---->
     <Color x:Key="HighlightGlyphColor">#373538</Color>
     <Color x:Key="PopupBackgroundColor">#302e32</Color>
@@ -113,7 +114,8 @@
     <SolidColorBrush x:Key="TopPanelItemHoverBackgroundBrush" Color="{DynamicResource TopPanelItemHoverBackgroundColor}" />
     <SolidColorBrush x:Key="TopPanelSearchBoxBackgroundBrush" Color="{DynamicResource TopPanelSearchBoxBackgroundColor}" />
     <SolidColorBrush x:Key="TopPanelFilterToggleBackgroundBrush" Color="{DynamicResource TopPanelFilterToggleBackgroundColor}" />
-
+    <SolidColorBrush x:Key="DataChangeNotifBrush" Color="{DynamicResource DataChangeNotifColor}" />
+    
     <SolidColorBrush x:Key="GridViewItemMaskBackgroundBrush" Color="#2e2c2e" />
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="{DynamicResource ControlsBackgroundColor}" />
     <SolidColorBrush x:Key="ProgressBarBackgroundBrush" Color="#2e2c2f" />
