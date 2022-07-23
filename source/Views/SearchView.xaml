@@ -134,16 +134,19 @@
     </Style>
 
     <Style x:Key="SearchWindowStyle" TargetType="WindowBase" BasedOn="{StaticResource StandardWindowStyle}">
-        <Setter Property="Background" Value="#3c3a3d" />
+        <Setter Property="Background" Value="{DynamicResource SearchWindowBackgroundBrush}" />
         <Setter Property="Width" Value="720" />
         <Setter Property="SizeToContent" Value="Height" />
     </Style>
 
     <ControlTemplate x:Key="SearchWindowFilterNotification" TargetType="ContentControl">
-        <Border Background="{DynamicResource NormalBrushDark}"
+        <Border Background="{DynamicResource SearchWindowBackgroundBrush}"
+                CornerRadius="{DynamicResource ControlCornerRadius}"
                 HorizontalAlignment="Stretch">
-            <TextBlock FontSize="{DynamicResource FontSizeLarge}" VerticalAlignment="Center"
+            <TextBlock VerticalAlignment="Center"
                        Style="{DynamicResource BaseTextBlockStyle}"
+                       FontWeight="SemiBold" FontSize="{DynamicResource FontSizeLarger}"
+                       Foreground="{DynamicResource SearchWindowSearchTextForegroundBrush}"
                        Text="{TemplateBinding Content}" Margin="10,0,0,0" />
         </Border>
     </ControlTemplate>
@@ -154,7 +157,7 @@
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
         <Setter Property="FontSize" Value="{DynamicResource FontSizeLarger}" />
         <Setter Property="FontWeight" Value="SemiBold" />
-        <Setter Property="Foreground" Value="#cac9cb" />
+        <Setter Property="Foreground" Value="{DynamicResource SearchWindowSearchTextForegroundBrush}" />
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
 

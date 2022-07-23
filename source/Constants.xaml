@@ -263,6 +263,9 @@
         <GradientStop Color="#00cb16db" Offset="0.95" />
     </LinearGradientBrush>
 
+    <SolidColorBrush x:Key="SearchWindowBackgroundBrush" Color="#3c3a3d" />
+    <SolidColorBrush x:Key="SearchWindowSearchTextForegroundBrush" Color="#cac9cb" />
+    
     <!-- Noise Brush obtained from https://github.com/felixkmh/StartPage-for-Playnite/-->
     <ImageBrush x:Key="DarkNoiseBrush" ImageSource="{ThemeFile 'Images/dark_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
                     Opacity="1" popt:Freeze="True"/>
