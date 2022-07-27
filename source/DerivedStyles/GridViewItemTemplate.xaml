@@ -120,7 +120,6 @@
                                 <Image x:Name="PlatformBanner" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
                                        RenderOptions.BitmapScalingMode="Fant"
                                        Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                       Opacity="{DynamicResource GridViewCoverLibraryBannerOpacity}"
                                        Stretch="Uniform" StretchDirection="Both">
                                     <Image.Style>
                                         <Style TargetType="Image">
@@ -302,7 +301,6 @@
                                 <Image x:Name="PlatformNameBanner" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
                                        RenderOptions.BitmapScalingMode="Fant"
                                        Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                       Opacity="{DynamicResource GridViewCoverLibraryBannerOpacity}"
                                        Stretch="Uniform" StretchDirection="Both">
                                     <Image.Style>
                                         <Style TargetType="Image">
@@ -346,7 +344,6 @@
                                 <Image x:Name="LibraryBanner" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
                                        RenderOptions.BitmapScalingMode="Fant"
                                        Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                       Opacity="{DynamicResource GridViewCoverLibraryBannerOpacity}"
                                        Stretch="Uniform" StretchDirection="Both">
                                     <Image.Style>
                                         <Style TargetType="Image">
@@ -432,7 +429,6 @@
                                 <Image x:Name="PcPlatformBanner" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
                                        RenderOptions.BitmapScalingMode="Fant"
                                        Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                       Opacity="{DynamicResource GridViewCoverLibraryBannerOpacity}"
                                        Stretch="Uniform" StretchDirection="Both">
                                     <Image.Style>
                                         <Style TargetType="Image">
@@ -456,7 +452,6 @@
                                 <Image x:Name="UnknownBanner" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
                                        RenderOptions.BitmapScalingMode="Fant"
                                        Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                       Opacity="{DynamicResource GridViewCoverLibraryBannerOpacity}"
                                        Stretch="Uniform" StretchDirection="Both">
                                     <Image.Style>
                                         <Style TargetType="Image">
