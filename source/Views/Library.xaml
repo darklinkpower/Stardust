@@ -21,7 +21,7 @@
 
                         <Viewbox Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Stretch="UniformToFill">
                             <FadeImage Name="BlurGameBackground" ImageDarkeningBrush="#990E0E0E"
-                                       HighQualityBlur="False"
+                                       HighQualityBlur="False" SourceUpdateDelay="150"
                                        IsBlurEnabled="True" AnimationEnabled="{DynamicResource LibraryGameBackgroundAnimateTransition}"
                                        Height="96" RenderOptions.BitmapScalingMode="LowQuality" BlurAmount="10"
                                        HorizontalAlignment="Center" VerticalAlignment="Top">
