@@ -219,6 +219,7 @@
                                                     <DropShadowEffect ShadowDepth="1" RenderingBias="Quality" Color="#80808080" />
                                                 </TextBlock.Effect>
                                             </TextBlock>
+
                                         </DockPanel>
                                         <DockPanel Margin="0,15,0,0" LastChildFill="False">
                                             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="300">
@@ -283,6 +284,13 @@
                                             </ContentControl>
                                             <ContentControl x:Name="SystemChecker_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"/>
                                             <ContentControl x:Name="CheckLocalizations_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"/>
+
+                                            <ContentControl x:Name="NewsViewer_PlayersInGameViewerControl"
+                                                    Grid.Column="2" VerticalAlignment="Center">
+                                                <ContentControl.Resources>
+                                                    <Style TargetType="Button" BasedOn="{StaticResource PlayersCountButtonStyle}" />
+                                                </ContentControl.Resources>
+                                            </ContentControl>
                                         </DockPanel>
                                     </StackPanel>
                                 </DockPanel>
