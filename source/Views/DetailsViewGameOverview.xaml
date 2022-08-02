@@ -233,6 +233,7 @@
                                                 <Button Grid.Column="1" Name="PART_ButtonMoreActions" Content="&#xEAC8;" FontFamily="{DynamicResource FontIcoFont}" Width="40" Margin="10,0,0,0" Style="{DynamicResource MoreActionButtonViews}" Padding="0" />
                                                 <Button Grid.Column="2" x:Name="PART_ButtonEditGame" Content="&#xEDED;" Margin="10,0,0,0" Height="40" Width="40" Focusable="False" FontFamily="{DynamicResource FontIcoFont}" Style="{DynamicResource MoreActionButtonViews}" />
                                             </Grid>
+                                            <ContentControl x:Name="PlayState_GameStateSwitchControl" Margin="10,0,0,0" />
                                             <ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Margin="10,0,0,0"
                                                             Height="40" MaxWidth="150" DockPanel.Dock="Left">
                                                 <ContentControl.Style>
