@@ -332,3 +332,19 @@ Packages:
     Changelog:
       - 'Grid View: Added ThemeModifier extension option to use rounded covers'
       - 'Grid View: Removed playing game border and added animation instead (Again...). Can be enabled with ThemeModifier extension'
+  - Version: 2.39
+    RequiredApiVersion: 2.2.0
+    ReleaseDate: 2022-09-06
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.39/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_39.pthm
+    Changelog:
+      - 'Updated to Playnite 10 changes and made relevant modifications'
+      - 'Added GamersGate library plugin banner'
+      - 'DetailsView and GridView: Add support to display current players on Steam via NewsViewer extension control'
+      - 'DetailsView and GridView: Add support to PlayState extension game status switcher button'
+      - 'GridView: Playing game highlight will now darken the game cover'
+      - 'GridView: Removed theme banners implementation and added support to display banners with ThemeExtras extension'
+      - 'Manual update of remaining files for ThemeApi 2.2.0'
+      - 'Reference thememodifier.yaml in project file'
+      - 'Style Playnite SearchBar'
+      - 'TopPanel: Changed foreground color of TopPanel items'
+      - 'Misc changes and fixes'
