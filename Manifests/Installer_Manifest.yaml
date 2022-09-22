@@ -348,3 +348,10 @@ Packages:
       - 'Style Playnite SearchBar'
       - 'TopPanel: Changed foreground color of TopPanel items'
       - 'Misc changes and fixes'
+  - Version: 2.40
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2022-09-22
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.40/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_40.pthm
+    Changelog:
+      - 'GridView: Added shadow effect to covers. Disabled by default. Can be configured with ThemeModifier extension'
+      - 'Update to Playnite 10.1 changes'
