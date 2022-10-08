@@ -452,7 +452,7 @@
                                             <TextBlock Name="PART_TextRecentActivity" VerticalAlignment="Center" />
                                             <Label Name="PART_ElemInstallDirectory" >
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="&#xef43;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons2BackgroundBrush}"
+                                                    <TextBlock Text="&#xEC5B;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons2BackgroundBrush}"
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
                                                     <TextBlock Text="{DynamicResource LOCGameInstallDirTitle}" />
