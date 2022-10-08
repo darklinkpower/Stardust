@@ -355,3 +355,12 @@ Packages:
     Changelog:
       - 'GridView: Added shadow effect to covers. Disabled by default. Can be configured with ThemeModifier extension'
       - 'Update to Playnite 10.1 changes'
+  - Version: 2.41
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2022-10-08
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.41/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_41.pthm
+    Changelog:
+      - 'Added additional platform banners'
+      - 'Details: Changed icon used for Install Directory'
+      - 'Fix options to hide game name from details if logo is displayed not working'
+      - 'GridView: Fix banners from some platforms not being detected and displayed'
