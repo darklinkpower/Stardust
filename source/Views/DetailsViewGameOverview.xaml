@@ -195,13 +195,11 @@
                                                     <DropShadowEffect BlurRadius="15" ShadowDepth="0" Color="#0d0d0d" Opacity="0.20"/>
                                                 </Image.Effect>
                                             </Image>
-                                            <TextBlock FontFamily="{DynamicResource FontFamily}" Name="PART_TextDisplayName"
-                                                       DockPanel.Dock="Left" FontSize="{DynamicResource FontSizeLargest}" Margin="0,0,10,0" 
-                                                       FontWeight="SemiBold"
-                                                       Tag="{DynamicResource DetailsViewDisplayGameNameIfLogoVisible}"
-                                                       TextWrapping="Wrap" VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
-                                                <TextBlock.Style>
-                                                    <Style TargetType="TextBlock">
+
+                                            <Border DockPanel.Dock="Left"
+                                                    Tag="{DynamicResource DetailsViewDisplayGameNameIfLogoVisible}">
+                                                <Border.Style>
+                                                    <Style TargetType="Border">
                                                         <Setter Property="Visibility" Value="Visible" />
                                                         <Style.Triggers>
                                                             <MultiDataTrigger>
@@ -214,11 +212,16 @@
                                                             </MultiDataTrigger>
                                                         </Style.Triggers>
                                                     </Style>
-                                                </TextBlock.Style>
-                                                <TextBlock.Effect>
-                                                    <DropShadowEffect ShadowDepth="1" RenderingBias="Quality" Color="#80808080" />
-                                                </TextBlock.Effect>
-                                            </TextBlock>
+                                                </Border.Style>
+                                                <TextBlock FontFamily="{DynamicResource FontFamily}" Name="PART_TextDisplayName"
+                                                           FontSize="{DynamicResource FontSizeLargest}" Margin="0,0,10,0"
+                                                           FontWeight="SemiBold"
+                                                           TextWrapping="Wrap" VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
+                                                    <TextBlock.Effect>
+                                                        <DropShadowEffect ShadowDepth="1" RenderingBias="Quality" Color="#80808080" />
+                                                    </TextBlock.Effect>
+                                                </TextBlock>
+                                            </Border>
 
                                         </DockPanel>
                                         <DockPanel Margin="0,15,0,0" LastChildFill="False">
