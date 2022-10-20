@@ -184,6 +184,7 @@
                                             <VisualBrush Visual="{Binding ElementName=Mask}" />
                                         </Grid.OpacityMask>
                                     </Grid>
+                                    <!--GridConverterGridPanelCloseButton-->
                                     <!--#regionend-->
                                 </Grid>
                                 <DockPanel Margin="0,20,0,15" MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}" Grid.Row="2" Background="Transparent">
