@@ -370,3 +370,10 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.42/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_42.pthm
     Changelog:
       - 'Fix theme failing to load for some Playnite installs'
+  - Version: 2.43
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2022-10-20
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.43/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_43.pthm
+    Changelog:
+      - 'DetailsView: Add support to display LibraryManagement extension Features icons'
+      - 'Fix button to close Grid View details Panel not being available when using the Details To Grid View Converter extension'
