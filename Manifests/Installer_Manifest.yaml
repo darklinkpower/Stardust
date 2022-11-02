@@ -377,3 +377,12 @@ Packages:
     Changelog:
       - 'DetailsView: Add support to display LibraryManagement extension Features icons'
       - 'Fix button to close Grid View details Panel not being available when using the Details To Grid View Converter extension'
+  - Version: 2.44
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2022-11-01
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.44/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_44.pthm
+    Changelog:
+      - 'DetailsView: Added option with ThemeModifier extension to configure how much should the background image be darkened'
+      - 'GridView: Added support to change the order of sections in details with ThemeModifier extension'
+      - 'GridView: Added support to collapse the details view sections'
+      - 'SearchBar: Fix view scrollbar aligning to the right when text of element in search is too long'
