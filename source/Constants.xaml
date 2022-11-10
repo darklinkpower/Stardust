@@ -211,7 +211,7 @@
 
     <SolidColorBrush x:Key="WarningBrush" Color="#c85429" />
 
-    <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="{DynamicResource ControlsBackgroundColor}" />
+    <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="#0a0a0a" />
     <SolidColorBrush x:Key="SidebarMarginBrush" Color="Transparent" />
 
     <LinearGradientBrush x:Key="ExpanderBackgroundBrush" StartPoint="-0.1,0.5" EndPoint="1.2,1" >
@@ -252,10 +252,7 @@
         <GradientStop Color="#00414244" Offset="0.95" />
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="SidebarItemForegroundBrush" StartPoint="0.5,1.0" EndPoint="0.5,0.0">
-        <GradientStop Color="#9a00c4" Offset="0.3" />
-        <GradientStop Color="#cb16db" Offset="0.95" />
-    </LinearGradientBrush>
+    <SolidColorBrush x:Key="SidebarItemForegroundBrush" Color="#3c3c3c" />
 
     <LinearGradientBrush x:Key="DetailsIconsBackgroundBrush" StartPoint="0.5,1.0" EndPoint="0.5,0.0">
         <GradientStop Color="#9a00c4" Offset="0.3" />

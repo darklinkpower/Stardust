@@ -10,9 +10,9 @@
                 <ControlTemplate TargetType="{x:Type Sidebar}">
                     <Border Background="{DynamicResource SidebarBackgroundBrush}" BorderThickness="0,0,0,0" BorderBrush="{DynamicResource SidebarMarginBrush}"
                             x:Name="BorderContentHolder" Margin="{TemplateBinding Padding}">
-                        <DockPanel x:Name="DockContentHolder" MinWidth="52">
+                        <DockPanel x:Name="DockContentHolder" MinWidth="44">
                             <Border x:Name="PART_ElemMainMenu" Background="Transparent"
-                                    Width="40" Height="40" Margin="2,10,2,40"
+                                    Width="36" Height="36" Margin="2,10,2,40"
                                     DockPanel.Dock="Top" Padding="5" Cursor="Hand"
                                     WindowChrome.IsHitTestVisibleInChrome="True">
                                 <Image Source="{ThemeFile 'Images/applogo.png'}"

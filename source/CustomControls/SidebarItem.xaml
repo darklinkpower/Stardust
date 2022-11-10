@@ -9,10 +9,9 @@
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="BorderThickness" Value="0,0,0,0" />
-        <Setter Property="Margin" Value="0,10,0,0" />
-        <Setter Property="Opacity" Value="0.4" />
-        <Setter Property="Width" Value="44" />
-	  	<Setter Property="Height" Value="44" />
+        <Setter Property="Margin" Value="0,5,0,0" />
+        <Setter Property="Width" Value="36" />
+	  	<Setter Property="Height" Value="36" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <Setter.Value>
@@ -34,28 +33,25 @@
             </Setter.Value>
         </Setter>
         <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="False">
-                <Setter Property="Opacity" Value="0.50" />
-            </Trigger>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Opacity" Value="1" />
+                <Setter Property="Opacity" Value="0.75" />
             </Trigger>
             <DataTrigger Binding="{Binding Selected}" Value="True">
                 <Setter Property="BorderBrush" Value="{DynamicResource SidebarMarginBrush}" />
-                <Setter Property="Opacity" Value="1" />
+                <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
             </DataTrigger>
             <DataTrigger Binding="{Settings SidebarPosition}" Value="Right">
                 <Setter Property="BorderThickness" Value="0,0,0,0" />
-                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="Margin" Value="0,5,0,0" />
             </DataTrigger>
             <DataTrigger Binding="{Settings SidebarPosition}" Value="Top">
                 <Setter Property="BorderThickness" Value="0,0,0,0" />
                 <Setter Property="VerticalAlignment" Value="Stretch" />
-                <Setter Property="Margin" Value="10,0,0,0" />
+                <Setter Property="Margin" Value="5,0,0,0" />
             </DataTrigger>
             <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
                 <Setter Property="BorderThickness" Value="0,0,0,0" />
-                <Setter Property="Margin" Value="10,0,0,0" />
+                <Setter Property="Margin" Value="5,0,0,0" />
             </DataTrigger>
         </Style.Triggers>
     </Style>
