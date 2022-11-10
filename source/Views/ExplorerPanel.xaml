@@ -26,12 +26,6 @@
                             </Style>
                         </Border.Style>
                         <Grid>
-                            <Border Opacity="0.075"
-                                Background="{StaticResource WhiteNoiseBrush}"
-                                IsHitTestVisible="False" />
-                            <Border Opacity="0.30"
-                                Background="{StaticResource DarkNoiseBrush}"
-                                IsHitTestVisible="False" />
                             <DockPanel>
                                 <DockPanel.Style>
                                     <Style TargetType="DockPanel">
