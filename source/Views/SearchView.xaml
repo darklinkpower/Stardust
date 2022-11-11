@@ -202,6 +202,7 @@
     </Style>
 
     <Style x:Key="SearchWindowList" TargetType="ListBox" BasedOn="{StaticResource {x:Type ListBox}}">
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
         <Setter Property="BorderThickness" Value="0,1,0,0" />
         <Setter Property="BorderBrush" Value="#444246" />
         <Setter Property="MaxHeight" Value="520" />
