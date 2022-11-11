@@ -386,3 +386,11 @@ Packages:
       - 'GridView: Added support to change the order of sections in details with ThemeModifier extension'
       - 'GridView: Added support to collapse the details view sections'
       - 'SearchBar: Fix view scrollbar aligning to the right when text of element in search is too long'
+  - Version: 2.45
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2022-11-10
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.45/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_45.pthm
+    Changelog:
+      - 'ExplorerPanel: Adjustments to panel background'
+      - 'Sidebar: General adjustments to panel and items'
+      - 'Update to Playnite 10.4 changes (API 2.4.0)'
