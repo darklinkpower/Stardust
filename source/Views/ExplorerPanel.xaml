@@ -10,6 +10,7 @@
                 <ControlTemplate TargetType="{x:Type ExplorerPanel}">
                     <Border BorderBrush="{DynamicResource PanelSeparatorBrush}"
                             Background="{DynamicResource ExplorerPanelBackgroundBrush}"
+                            Padding="{DynamicResource PanelTopPanelSeparator}"
                             d:DesignWidth="200"
                             d:DesignHeight="400">
                         <Border.Style>
@@ -27,18 +28,9 @@
                         </Border.Style>
                         <Grid>
                             <DockPanel>
-                                <DockPanel.Style>
-                                    <Style TargetType="DockPanel">
-                                        <Setter Property="Margin" Value="{DynamicResource PanelTopPanelSeparator}" />
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Settings ExplorerPanelPosition}" Value="Left">
-                                                <Setter Property="Margin" Value="0,15,0,0" />
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </DockPanel.Style>
                                 <ComboBox Name="PART_SelectFields"
-                                      DockPanel.Dock="Top" Margin="5,5,5,8" />
+                                          Background="Transparent"
+                                          DockPanel.Dock="Top" Margin="5,0,5,8" />
                                 <ListBox Name="PART_SelectItems"
                                      ItemContainerStyle="{DynamicResource ExplorerPanelItemStyle}"
                                      DockPanel.Dock="Top" Margin="0,0,5,8"                                      
