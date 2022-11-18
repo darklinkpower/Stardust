@@ -119,9 +119,11 @@
                                              Width="{Settings FilterPanelWitdh}"
                                              DockPanel.Dock="{Settings FilterPanelPosition}"
                                              Visibility="{Settings FilterPanelVisible}" />
-                                <LibraryDetailsView x:Name="PART_ViewDetails" DockPanel.Dock="Left" />
-                                <LibraryGridView x:Name="PART_ViewGrid" DockPanel.Dock="Left" Margin="{DynamicResource PanelTopPanelSeparator}" />
-                                <LibraryListView x:Name="PART_ViewList" DockPanel.Dock="Left" Margin="{DynamicResource PanelTopPanelSeparator}" />
+                                <Grid DockPanel.Dock="Left">
+                                    <LibraryDetailsView x:Name="PART_ViewDetails" />
+                                    <LibraryGridView x:Name="PART_ViewGrid" Margin="{DynamicResource PanelTopPanelSeparator}" />
+                                    <LibraryListView x:Name="PART_ViewList" Margin="{DynamicResource PanelTopPanelSeparator}" />
+                                </Grid>
                             </DockPanel>
                             <TopPanel VerticalAlignment="Top" />
                         </Grid>
