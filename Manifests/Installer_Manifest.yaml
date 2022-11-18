@@ -394,3 +394,10 @@ Packages:
       - 'ExplorerPanel: Adjustments to panel background'
       - 'Sidebar: General adjustments to panel and items'
       - 'Update to Playnite 10.4 changes (API 2.4.0)'
+  - Version: 2.46
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2022-11-17
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.46/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_46.pthm
+    Changelog:
+      - 'Library: Adjustments to game Background Image opacity'
+      - 'TopPanel: Keep buttons position the same when opening panels'
