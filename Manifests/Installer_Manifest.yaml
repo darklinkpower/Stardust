@@ -401,3 +401,9 @@ Packages:
     Changelog:
       - 'Library: Adjustments to game Background Image opacity'
       - 'TopPanel: Keep buttons position the same when opening panels'
+  - Version: 2.47
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2022-11-17
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.47/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_47.pthm
+    Changelog:
+      - 'GridView: Fix details panel position being incorrect when there are not games in view'
