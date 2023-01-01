@@ -28,6 +28,7 @@ Constants:
     - GridViewSectionOrderReviewViewer(0,12): 'ReviewViewer extension'
     - GridViewSectionOrderNewsViewer(0,12): 'NewsViewer extension'
     - "Grid View Covers"
+    - GridViewCoverZoomOnHover: 'Zoom when hovered'
     - GridViewCoverSubtitleVisibility: 'Visibility of time played under game covers'
     - GridViewLibraryGameShowFavorite: 'Show favorites icon'
     - GridViewEnableCoverShineAnimation: 'Enable cover highlight animation on hover'

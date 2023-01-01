@@ -35,6 +35,7 @@
     <sys:Int32 x:Key="GridViewSectionOrderGameActivity">7</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderReviewViewer">8</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderNewsViewer">9</sys:Int32>
+    <sys:Boolean x:Key="GridViewCoverZoomOnHover">True</sys:Boolean>
     <!--region end-->
 
     <sys:Double x:Key="PanelTopPanelSeparatorHeight">65</sys:Double>
@@ -105,7 +106,7 @@
     <Color x:Key="NormalBorderControlsColor">#6f6d70</Color>
     <Color x:Key="NormalBorderControlsHoverColor">#acabad</Color>
     <Color x:Key="NormalBorderControlsHoverTransparencyColor">#4c919191</Color>
-    <Color x:Key="DetailsViewGrouCountBackgroundColor">#CC595959</Color>
+    <Color x:Key="DetailsViewGrouCountBackgroundColor">#535353</Color>
 
     <Color x:Key="PurpleButtonBrushColor">#b75ecf</Color>
     <Color x:Key="PurpleButtonBrushHighlightColor">#c077d6</Color>
@@ -174,7 +175,7 @@
 
     <SolidColorBrush x:Key="DetailsViewGameListBackground" Color="Transparent" />
     <SolidColorBrush x:Key="DetailsViewGrouCountBackgroundBrush" Color="{DynamicResource DetailsViewGrouCountBackgroundColor}" />
-    <SolidColorBrush x:Key="DetailsViewGroupCountTextBrush" Color="#CC000000" />
+    <SolidColorBrush x:Key="DetailsViewGroupCountTextBrush" Color="#E6000000" />
     
     <SolidColorBrush x:Key="PurpleButtonBrush" Color="{DynamicResource PurpleButtonBrushColor}" />
     <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="{DynamicResource PurpleButtonBrushHighlightColor}" />
