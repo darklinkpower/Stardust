@@ -153,7 +153,8 @@
                                         </Style>
                                     </Border.Style>
                                     <TextBlock x:Name="ShowGameName" Text="{Binding DisplayName}"
-                                               Style="{StaticResource BaseTextBlockStyle}"                                                   
+                                               Style="{StaticResource BaseTextBlockStyle}"    
+                                               Foreground="White"
                                                TextAlignment="Left" TextTrimming="CharacterEllipsis"
                                                FontWeight="SemiBold"
                                                VerticalAlignment="Center"

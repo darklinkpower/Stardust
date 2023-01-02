@@ -103,12 +103,9 @@
                                             </Style>
                                         </Border.Style>
                                         <TextBlock Name="PART_TextDisplayName" FontSize="{DynamicResource FontSizeLarger}"
+                                                   FontFamily="{DynamicResource FontFamily}" FontWeight="SemiBold"
                                                    TextWrapping="Wrap" 
-                                                   VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
-                                            <TextBlock.Effect>
-                                                <DropShadowEffect ShadowDepth="3"/>
-                                            </TextBlock.Effect>
-                                        </TextBlock>
+                                                   VerticalAlignment="Center" Foreground="White" />
                                     </Border>
                                     
                                 </DockPanel>
@@ -209,6 +206,7 @@
                                                         <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
                                                         <Style x:Key="Icon" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
                                                             <Setter Property="Width" Value="24"/>
+                                                            <Setter Property="FontWeight" Value="Normal"/>
                                                         </Style>
                                                         <Style TargetType="Label">
                                                             <Setter Property="FontWeight" Value="Normal" />

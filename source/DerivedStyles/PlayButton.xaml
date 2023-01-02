@@ -38,7 +38,7 @@
 
     <Style x:Key="PlayButtonViews" TargetType="{x:Type Button}">
         <Setter Property="Background" Value="#b75ecf" />
-        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="Foreground" Value="White" />
         <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Padding" Value="0,5,0,5" />
@@ -92,7 +92,7 @@
 
     <Style x:Key="ContextButtonViews" TargetType="{x:Type Button}">
         <Setter Property="Background" Value="#2e2c2f" />
-        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="Foreground" Value="White" />
         <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Padding" Value="10,5,10,5" />
@@ -140,7 +140,7 @@
 
     <Style x:Key="MoreActionButtonViews" TargetType="{x:Type Button}">
         <Setter Property="Background" Value="#2e2c2f" />
-        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="Foreground" Value="White" />
         <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Padding" Value="10,5,10,5" />

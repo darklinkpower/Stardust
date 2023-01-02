@@ -85,8 +85,7 @@
 
     <Color x:Key="BlackColor">#FF000000</Color>
     <Color x:Key="WhiteColor">#FFFFFFFF</Color>
-    <Color x:Key="TextColor">#f2f2f2</Color>
-    <Color x:Key="MenuItemTextColor">#dcdcdc</Color>
+    <Color x:Key="TextColor">#dcdcdc</Color>
     <Color x:Key="TextColorDarker">#c2c2c2</Color>
     <Color x:Key="TextColorDark">#2f3543</Color>
     <Color x:Key="MainColor">#262c38</Color>
@@ -147,7 +146,6 @@
     <SolidColorBrush x:Key="GridViewItemMaskBackgroundBrush" Color="#2e2c2e" />
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="{DynamicResource ControlsBackgroundColor}" />
     <SolidColorBrush x:Key="ProgressBarBackgroundBrush" Color="#2e2c2f" />
-    <SolidColorBrush x:Key="MenuItemTextBrush" Color="{DynamicResource MenuItemTextColor}" />
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
     <SolidColorBrush x:Key="TextBrushDarker" Color="{DynamicResource TextColorDarker}" />
     <SolidColorBrush x:Key="TextBrushDark" Color="{DynamicResource TextColorDark}" />

@@ -247,7 +247,7 @@
                                                 <TextBlock FontFamily="{DynamicResource FontFamily}" Name="PART_TextDisplayName"
                                                            FontSize="{DynamicResource FontSizeLargest}" Margin="0,0,10,0"
                                                            FontWeight="SemiBold"
-                                                           TextWrapping="Wrap" VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
+                                                           TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White">
                                                     <TextBlock.Effect>
                                                         <DropShadowEffect ShadowDepth="1" RenderingBias="Quality" Color="#80808080" />
                                                     </TextBlock.Effect>
@@ -342,7 +342,8 @@
                                     </DockPanel.Resources>
                                     <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemLastPlayed, Mode=OneWay}" Margin="0,0,0,0">
                                         <Viewbox Stretch="Uniform" Height="35">
-                                            <TextBlock Text="&#xEC45;" FontFamily="{StaticResource FontIcoFont}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" />
+                                            <TextBlock Text="&#xEC45;" FontFamily="{StaticResource FontIcoFont}"
+                                                       FontWeight="Normal" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" />
                                         </Viewbox>
                                         <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
                                             <Label Name="PART_ElemLastPlayed" Content="{DynamicResource LOCLastPlayed}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"/>
@@ -465,6 +466,7 @@
                                                 <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
                                                 <Style x:Key="Icon" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
                                                     <Setter Property="Width" Value="24"/>
+                                                    <Setter Property="FontWeight" Value="Normal"/>
                                                 </Style>
                                                 <Style TargetType="Label">
                                                     <Setter Property="FontWeight" Value="Normal" />
