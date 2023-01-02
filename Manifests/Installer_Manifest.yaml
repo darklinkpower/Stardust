@@ -407,3 +407,10 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.47/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_47.pthm
     Changelog:
       - 'GridView: Fix details panel position being incorrect when there are not games in view'
+  - Version: 2.48
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2023-01-02
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.48/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_48.pthm
+    Changelog:
+      - 'Adjustments to text color and boldness'
+      - 'Grid View: Added ThemeModifier extension option to disable zoom on hover for covers'
