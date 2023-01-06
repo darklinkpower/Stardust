@@ -253,12 +253,21 @@
                                                     </TextBlock.Effect>
                                                 </TextBlock>
                                             </Border>
+                                            
+                                            <ContentControl x:Name="CheckLocalizations_PluginFlags" Height="30" Margin="0,0,0,0"
+                                                            Visibility="{PluginSettings Plugin=CheckLocalizations, Path=EnableIntegrationFlags, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                            HorizontalAlignment="Left" VerticalAlignment="Center"
+                                                            Opacity="0.85" />
+                                            
                                             <ContentControl x:Name="NewsViewer_PlayersInGameViewerControl"
-                                                    DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                                            Margin="0,0,10,0"
+                                                            DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Center">
                                                 <ContentControl.Resources>
                                                     <Style TargetType="Button" BasedOn="{StaticResource PlayersCountButtonStyle}" />
                                                 </ContentControl.Resources>
                                             </ContentControl>
+
+
                                         </DockPanel>
                                         <DockPanel Margin="0,15,0,0" LastChildFill="False">
                                             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="300">
