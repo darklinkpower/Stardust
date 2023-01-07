@@ -414,3 +414,12 @@ Packages:
     Changelog:
       - 'Adjustments to text color and boldness'
       - 'Grid View: Added ThemeModifier extension option to disable zoom on hover for covers'
+  - Version: 2.49
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2023-01-06
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.49/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_49.pthm
+    Changelog:
+      - 'Adjustments to popup menus'
+      - 'Details View and Grid View: Added support for custom UI elements of CheckDLC extension'
+      - 'DetailsView: Support to display game supported languages via CheckLocalization extension support'
+      - 'Grid View: Changes to animation in game cover when game is running'
