@@ -12,7 +12,7 @@
                             x:Name="BorderContentHolder" Margin="{TemplateBinding Padding}">
                         <DockPanel x:Name="DockContentHolder" MinWidth="44">
                             <Border x:Name="PART_ElemMainMenu" Background="Transparent"
-                                    Width="36" Height="36" Margin="2,10,2,40"
+                                    Width="36" Height="36" Margin="2,10,2,25"
                                     DockPanel.Dock="Top" Padding="5" Cursor="Hand"
                                     WindowChrome.IsHitTestVisibleInChrome="True">
                                 <Image Source="{ThemeFile 'Images/applogo.png'}"
@@ -28,17 +28,17 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Right">
-                            <Setter Property="Margin" Value="8,45,2,40" TargetName="PART_ElemMainMenu" />
+                            <Setter Property="Margin" Value="8,25,2,40" TargetName="PART_ElemMainMenu" />
                         </DataTrigger>
                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Top">
-                            <Setter Property="Margin" Value="8,0,40,0" TargetName="PART_ElemMainMenu" />
+                            <Setter Property="Margin" Value="8,0,25,0" TargetName="PART_ElemMainMenu" />
                             <Setter Property="DockPanel.Dock" Value="Left" TargetName="PART_ElemMainMenu" />
                             <Setter Property="DockPanel.Dock" Value="Left" TargetName="ScrollSidebarItems" />
                             <Setter Property="Margin" Value="0,0,100,0" TargetName="ScrollSidebarItems" />
                             <Setter Property="Orientation" Value="Horizontal" TargetName="PART_PanelSideBarItems" />
                         </DataTrigger>
                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
-                            <Setter Property="Margin" Value="8,0,40,0" TargetName="PART_ElemMainMenu" />
+                            <Setter Property="Margin" Value="8,0,25,0" TargetName="PART_ElemMainMenu" />
                             <Setter Property="DockPanel.Dock" Value="Left" TargetName="PART_ElemMainMenu" />
                             <Setter Property="DockPanel.Dock" Value="Left" TargetName="ScrollSidebarItems" />
                             <Setter Property="Orientation" Value="Horizontal" TargetName="PART_PanelSideBarItems" />
