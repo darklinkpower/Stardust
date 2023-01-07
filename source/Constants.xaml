@@ -53,7 +53,8 @@
     <sys:Double x:Key="FontSizeLargest">29</sys:Double>
     <FontFamily x:Key="FontFamily">Trebuchet MS</FontFamily>
     <FontFamily x:Key="MonospaceFontFamily">Consolas</FontFamily>
-    <Thickness x:Key="PopupBorderThickness">1</Thickness>
+    <Thickness x:Key="PopupMenuPadding">6</Thickness>
+    <Thickness x:Key="PopupBorderThickness">0.5</Thickness>
     <Thickness x:Key="ControlBorderThickness">1</Thickness>
     <sys:Double x:Key="EllipseBorderThickness">1</sys:Double>
     <sys:Double x:Key="ControlCornerRadiusValue">5</sys:Double>
@@ -76,6 +77,7 @@
     <CornerRadius x:Key="MainMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="GeneralMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TrayMenuCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="PopupCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TooltipCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="GridViewCoverCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="GridViewCoverGridBackgroundDisabledCornerRadius">5,5,0,0</CornerRadius>
@@ -97,8 +99,8 @@
     <Color x:Key="DataChangeNotifColor">#ffa500</Color>
     <!---->
     <Color x:Key="HighlightGlyphColor">#373538</Color>
-    <Color x:Key="PopupBackgroundColor">#302e32</Color>
-    <Color x:Key="PopupBorderColor">#373538</Color>
+    <Color x:Key="PopupBackgroundColor">#302f31</Color>
+    <Color x:Key="PopupBorderColor">#80000000</Color>
     <Color x:Key="BackgroundToneColor">#262c38</Color>
     <Color x:Key="GridItemBackgroundColor">Transparent</Color>
     <Color x:Key="PanelSeparatorColor">#373538</Color>
