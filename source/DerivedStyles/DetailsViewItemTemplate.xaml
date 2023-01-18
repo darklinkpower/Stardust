@@ -12,7 +12,7 @@
                     <Border Name="PART_PanelHost" Padding="10,3,0,3" Background="Transparent"
                             d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameIntance}">
                         <DockPanel>
-                            <TextBlock Text="&#xF000;" Foreground="{DynamicResource DetailsIconsBackgroundBrush}"
+                            <TextBlock Text="&#xF000;" Foreground="{DynamicResource GlyphBrush}"
                                        Margin="3,0,6,0"
                                        VerticalAlignment="Center"
                                        DockPanel.Dock="Right"
