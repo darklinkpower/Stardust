@@ -35,7 +35,7 @@
         <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
         <Setter Property="Padding" Value="0,2,30,2" />
         <Setter Property="Margin" Value="0,3,0,0" />
-        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TreeViewItem}">
@@ -54,18 +54,15 @@
                                                         <Grid>
                                                             <Viewbox x:Name="IsExpandedPath" Visibility="Visible" >
                                                                 <TextBlock Text=">" FontFamily="MS Gothic" Foreground="{DynamicResource TextBrush}"
-                                                                           HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,10,0" FontWeight="Bold" />
+                                                                           HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,10,0" />
                                                             </Viewbox>
                                                             <Viewbox x:Name="ExpandPath" Visibility="Collapsed" >
                                                                 <TextBlock Text=">" FontFamily="MS Gothic" Foreground="{DynamicResource TextBrush}"
                                                                            HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,10,0"
-                                                                           RenderTransformOrigin="0.5,0.5" >
+                                                                           RenderTransformOrigin="0.5,0.5">
                                                                     <TextBlock.RenderTransform>
                                                                         <TransformGroup>
-                                                                            <ScaleTransform/>
-                                                                            <SkewTransform/>
                                                                             <RotateTransform Angle="90"/>
-                                                                            <TranslateTransform/>
                                                                         </TransformGroup>
                                                                     </TextBlock.RenderTransform>
                                                                 </TextBlock>
@@ -98,7 +95,7 @@
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter Property="Foreground" Value="White" />
-                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="TextBlock.FontWeight" Value="Bold" TargetName="PART_Header" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True" SourceName="SelectionBorder">
                             <Setter Property="Foreground" Value="White" />
