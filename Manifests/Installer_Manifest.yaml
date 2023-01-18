@@ -423,3 +423,12 @@ Packages:
       - 'Details View and Grid View: Added support for custom UI elements of CheckDLC extension'
       - 'DetailsView: Support to display game supported languages via CheckLocalization extension support'
       - 'Grid View: Changes to animation in game cover when game is running'
+  - Version: 2.50
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2023-01-17
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.50/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_50.pthm
+    Changelog:
+      - 'Details View: Adjustments to colors in game list'
+      - 'GridView: Made notes background transparent'
+      - 'Library: Small adjustments to game background blur'
+      - 'TreeView: Fixed all subitems font changing to bold when selecting top level item header'
