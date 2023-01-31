@@ -432,3 +432,9 @@ Packages:
       - 'GridView: Made notes background transparent'
       - 'Library: Small adjustments to game background blur'
       - 'TreeView: Fixed all subitems font changing to bold when selecting top level item header'
+  - Version: 2.51
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2023-01-30
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.51/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_51.pthm
+    Changelog:
+      - 'Grid View: Support to display game Completion Status. Can be enabled with ThemeModifier extension (Disabled by default)'
