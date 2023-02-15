@@ -438,3 +438,12 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.51/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_51.pthm
     Changelog:
       - 'Grid View: Support to display game Completion Status. Can be enabled with ThemeModifier extension (Disabled by default)'
+  - Version: 2.52
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2023-02-15
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.52/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_52.pthm
+    Changelog:
+      - 'Details View: Added option for ThemeModifier extension to configure if background image should fade to transparency'
+      - 'Grid View: Adjustments to darkening layer of uninstalled games'
+      - 'Grid View: Fix completion status cover icon displaying when the game does not have a Completion Status set'
+      - 'Update extension links'
