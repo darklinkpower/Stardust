@@ -18,7 +18,7 @@
                                   x:Name="PART_ScrollViewHost">
                         <Grid Margin="0,0,0,20">
                             <!-- Background Image -->
-                            <WrapPanel>
+                            <WrapPanel Tag="{DynamicResource DetailsViewBackgroundImageUseOpacityMask}">
                                 <WrapPanel.Style>
                                     <Style TargetType="{x:Type WrapPanel}">
                                         <Setter Property="Visibility" Value="Visible" />
@@ -32,6 +32,18 @@
                                             </MultiDataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=AlternativeVideoPlayer, Path=Visibility}" Value="Visible">
                                                 <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                <Setter Property="OpacityMask">
+                                                    <Setter.Value>
+                                                        <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
+                                                            <RadialGradientBrush.GradientStops>
+                                                                <GradientStop Color="Black" Offset="0.3" />
+                                                                <GradientStop Color="Transparent" Offset="1" />
+                                                            </RadialGradientBrush.GradientStops>
+                                                        </RadialGradientBrush>
+                                                    </Setter.Value>
+                                                </Setter>
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
@@ -50,24 +62,28 @@
                                         </Border.OpacityMask>
                                     </Border>
                                 </Grid>
-                                <WrapPanel.OpacityMask>
-                                    <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
-                                        <RadialGradientBrush.GradientStops>
-                                            <GradientStop Color="Black" Offset="0.3" />
-                                            <GradientStop Color="Transparent" Offset="1" />
-                                        </RadialGradientBrush.GradientStops>
-                                    </RadialGradientBrush>
-                                </WrapPanel.OpacityMask>
                             </WrapPanel>
 
                             <!-- BackgroundChanger plugin background -->
-                            <WrapPanel>
+                            <WrapPanel Tag="{DynamicResource DetailsViewBackgroundImageUseOpacityMask}">
                                 <WrapPanel.Style>
                                     <Style TargetType="{x:Type WrapPanel}">
                                         <Setter Property="Visibility" Value="Visible" />
                                         <Style.Triggers>
                                             <DataTrigger Binding="{Binding ElementName=AlternativeVideoPlayer, Path=Visibility}" Value="Visible">
                                                 <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                <Setter Property="OpacityMask">
+                                                    <Setter.Value>
+                                                        <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
+                                                            <RadialGradientBrush.GradientStops>
+                                                                <GradientStop Color="Black" Offset="0.3" />
+                                                                <GradientStop Color="Transparent" Offset="1" />
+                                                            </RadialGradientBrush.GradientStops>
+                                                        </RadialGradientBrush>
+                                                    </Setter.Value>
+                                                </Setter>
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
@@ -87,18 +103,11 @@
                                         </Border.OpacityMask>
                                     </Border>
                                 </Grid>
-                                <WrapPanel.OpacityMask>
-                                    <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
-                                        <RadialGradientBrush.GradientStops>
-                                            <GradientStop Color="Black" Offset="0.3" />
-                                            <GradientStop Color="Transparent" Offset="1" />
-                                        </RadialGradientBrush.GradientStops>
-                                    </RadialGradientBrush>
-                                </WrapPanel.OpacityMask>
                             </WrapPanel>
 
                             <!-- ExtraMetadataLoader alternative video player -->
-                            <WrapPanel x:Name="AlternativeVideoPlayer" Margin="{DynamicResource PanelTopPanelSeparator}">
+                            <WrapPanel x:Name="AlternativeVideoPlayer" Margin="{DynamicResource PanelTopPanelSeparator}"
+                                       Tag="{DynamicResource DetailsViewBackgroundImageUseOpacityMask}">
                                 <WrapPanel.Style>
                                     <Style TargetType="{x:Type WrapPanel}">
                                         <Setter Property="Visibility" Value="Collapsed" />
@@ -111,17 +120,21 @@
                                                 </MultiDataTrigger.Conditions>
                                                 <Setter Property="Visibility" Value="Visible" />
                                             </MultiDataTrigger>
+                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                <Setter Property="OpacityMask">
+                                                    <Setter.Value>
+                                                        <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
+                                                            <RadialGradientBrush.GradientStops>
+                                                                <GradientStop Color="Black" Offset="0.3" />
+                                                                <GradientStop Color="Transparent" Offset="1" />
+                                                            </RadialGradientBrush.GradientStops>
+                                                        </RadialGradientBrush>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </WrapPanel.Style>
-                                <WrapPanel.OpacityMask>
-                                    <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
-                                        <RadialGradientBrush.GradientStops>
-                                            <GradientStop Color="Black" Offset="0.3" />
-                                            <GradientStop Color="Transparent" Offset="1" />
-                                        </RadialGradientBrush.GradientStops>
-                                    </RadialGradientBrush>
-                                </WrapPanel.OpacityMask>
                                 <Grid>
                                     <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControlAlternative" />
                                     <Border Background="{StaticResource DarkNoiseBrush}" IsHitTestVisible="False"
