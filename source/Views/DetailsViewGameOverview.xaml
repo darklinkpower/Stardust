@@ -471,6 +471,15 @@
                                                 </StackPanel>
                                             </Label>
                                             <TextBlock Name="PART_TextRecentActivity" VerticalAlignment="Center" />
+                                            <Label Name="PART_ElemAdded" >
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="&#xEC45;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons2BackgroundBrush}"
+                                                               FontFamily="{StaticResource FontIcoFont}" 
+                                                               Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                    <TextBlock Text="{DynamicResource LOCDateAddedLabel}" />
+                                                </StackPanel>
+                                            </Label>
+                                            <TextBlock Name="PART_TextAdded" VerticalAlignment="Center" />
                                             <Label Name="PART_ElemInstallDirectory" >
                                                 <StackPanel Orientation="Horizontal">
                                                     <TextBlock Text="&#xEC5B;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons2BackgroundBrush}"
@@ -489,6 +498,15 @@
                                                 </StackPanel>
                                             </Label>
                                             <TextBlock Name="PART_TextInstallSize" VerticalAlignment="Center" />
+                                            <Label Name="PART_ElemReleaseDate" >
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="&#xEC45;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons2BackgroundBrush}"
+                                                               FontFamily="{StaticResource FontIcoFont}" 
+                                                               Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                    <TextBlock Text="{DynamicResource LOCGameReleaseDateTitle}" />
+                                                </StackPanel>
+                                            </Label>
+                                            <Button Name="PART_ButtonReleaseDate" VerticalAlignment="Center" />
                                             <Label Name="PART_ElemLibrary" >
                                                 <StackPanel Orientation="Horizontal">
                                                     <TextBlock Text="&#xEF65;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons2BackgroundBrush}"
@@ -534,15 +552,6 @@
                                                 </StackPanel>
                                             </Label>
                                             <ItemsControl Name="PART_ItemsGenres" />
-                                            <Label Name="PART_ElemReleaseDate" >
-                                                <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons3BackgroundBrush}"
-                                                               FontFamily="{StaticResource FontIcoFont}" 
-                                                               Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
-                                                    <TextBlock Text="{DynamicResource LOCGameReleaseDateTitle}" />
-                                                </StackPanel>
-                                            </Label>
-                                            <Button Name="PART_ButtonReleaseDate" VerticalAlignment="Center" />
                                             <Label Name="PART_ElemDevelopers" >
                                                 <StackPanel Orientation="Horizontal">
                                                     <TextBlock Text="&#xEEF3;" Style="{StaticResource Icon}" Foreground="{DynamicResource DetailsIcons3BackgroundBrush}"
