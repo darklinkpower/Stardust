@@ -51,17 +51,17 @@ Option C: Download from the Addons browser in Playnite.
 <summary>Settings used in screenshots (Click to expand)</summary>
 
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/screenshots/settings_01.jpg)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/Screenshots/settings_01.jpg)
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/screenshots/settings_02.jpg)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/Screenshots/settings_02.jpg)
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/screenshots/settings_03.jpg)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/Screenshots/settings_03.jpg)
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/screenshots/settings_04.jpg)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/Screenshots/settings_04.jpg)
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/screenshots/settings_05.jpg)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/Screenshots/settings_05.jpg)
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/screenshots/settings_06.jpg)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/Screenshots/settings_06.jpg)
 </details>
 
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/Screenshots/screenshot_01.webp)
