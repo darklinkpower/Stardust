@@ -460,3 +460,11 @@ Packages:
     Changelog:
       - 'Grid View: Fix Cover controls not displaying on hover on certain circumstances'
       - 'Grid View: Replaced Origin banner with EA App library banner'
+  - Version: 2.55
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2023-08-07
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.55/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_55.pthm
+    Changelog:
+      - 'Grid View: Add DuplicateHider extension selector to game details'
+      - 'Grid View: Library view items layout changes to improve performance. Duplicate Hider extension selector on covers removed for performance reasons.'
+      - 'SearchView: Fix some items images not properly scaling'
