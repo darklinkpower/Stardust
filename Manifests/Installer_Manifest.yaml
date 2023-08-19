@@ -477,3 +477,9 @@ Packages:
       - 'Grid View: Improved visibility of favorite icon on game covers'
       - 'Grid View: Improved performance when covers dropshadows are enabled'
       - 'Grid View: Fix covers rounded corners not applying when dropshadow effect is also enabled'
+  - Version: 2.57
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-08-18
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.57/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_57.pthm
+    Changelog:
+      - 'TopPanel: Adjustment to items padding'
