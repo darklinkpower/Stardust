@@ -110,6 +110,22 @@
                         </Border>
 
                         <Grid Grid.RowSpan="2">
+                            <Grid.Style>
+                                <Style TargetType="Grid">
+                                    <Setter Property="Margin" Value="44,0,0,0" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Settings SidebarPosition}" Value="Right">
+                                            <Setter Property="Margin" Value="0,0,46,0" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Settings SidebarPosition}" Value="Top">
+                                            <Setter Property="Margin" Value="0,36,0,0" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
+                                            <Setter Property="Margin" Value="0,0,0,36" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Grid.Style>
                             <DockPanel>
                                 <ExplorerPanel Visibility="{Settings ExplorerPanelVisible}"
                                                DockPanel.Dock="{Settings ExplorerPanelPosition}"
