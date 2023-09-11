@@ -335,7 +335,8 @@
                                             <Setter Property="HorizontalContentAlignment" Value="Left"/>
                                         </Style>
                                     </DockPanel.Resources>
-                                    <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemLastPlayed, Mode=OneWay}" Margin="0,0,0,0">
+                                    <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemLastPlayed, Mode=OneWay}" Margin="0,0,0,0"
+                                               Effect="{StaticResource AccentBlackDropShadowEffect}">
                                         <Viewbox Stretch="Uniform" Height="35">
                                             <TextBlock Text="&#xEC45;" FontFamily="{StaticResource FontIcoFont}"
                                                        FontWeight="Normal" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" />
@@ -345,7 +346,8 @@
                                             <TextBlock Name="PART_TextLastActivity" MinWidth="85"/>
                                         </StackPanel>
                                     </DockPanel>
-                                    <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemPlayTime, Mode=OneWay}" Margin="15,0,0,0">
+                                    <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemPlayTime, Mode=OneWay}" Margin="15,0,0,0"
+                                               Effect="{StaticResource AccentBlackDropShadowEffect}">
                                         <Viewbox Stretch="Uniform" Height="35">
                                             <TextBlock Text="&#xEEDC;" FontFamily="{StaticResource FontIcoFont}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" />
                                         </Viewbox>
@@ -354,7 +356,8 @@
                                             <TextBlock Name="PART_TextPlayTime"/>
                                         </StackPanel>
                                     </DockPanel>
-                                    <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemCompletionStatus, Mode=OneWay}" Margin="15,0,0,0">
+                                    <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemCompletionStatus, Mode=OneWay}" Margin="15,0,0,0"
+                                               Effect="{StaticResource AccentBlackDropShadowEffect}">
                                         <Viewbox Stretch="Uniform" Height="40">
                                             <TextBlock Text="&#xEED6;" FontFamily="{StaticResource FontIcoFont}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" />
                                         </Viewbox>
@@ -363,7 +366,8 @@
                                             <Button Name="PART_ButtonCompletionStatus" Style="{StaticResource PropertyItemButton}" Margin="0" />
                                         </StackPanel>
                                     </DockPanel>
-                                    <DockPanel Margin="15,0,0,0">
+                                    <DockPanel Margin="15,0,0,0"
+                                               Effect="{StaticResource AccentBlackDropShadowEffect}">
                                         <DockPanel.Style>
                                             <Style TargetType="{x:Type DockPanel}">
                                                 <Setter Property="Visibility" Value="Collapsed" />
@@ -418,7 +422,7 @@
                                         </StackPanel>
                                     </DockPanel>
 
-                                    <DockPanel Margin="15,0,0,0">
+                                    <DockPanel Margin="15,0,0,0" Effect="{StaticResource AccentBlackDropShadowEffect}">
                                         <DockPanel.Style>
                                             <Style TargetType="{x:Type DockPanel}">
                                                 <Setter Property="Visibility" Value="Collapsed" />
@@ -670,13 +674,15 @@
                                         </GridEx>
                                         <!--#regionend-->
                                     </StackPanel>
-                                    <TabControl Margin="10,-4,0,0" Style="{StaticResource TabControlDetailsView}">
+                                    <TabControl Margin="10,-4,0,0" Style="{StaticResource TabControlDetailsView}"
+                                                Focusable="False">
                                         <TabItem Name="PART_ElemDescription">
                                             <TabItem.Header>
                                                 <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                             </TabItem.Header>
                                             <StackPanel Margin="0,16,0,0" Background="{DynamicResource DetailsViewWrapBackgroundsBrush}">
                                                 <HtmlTextView Name="PART_HtmlDescription"
+                                                              Focusable="False"
                                                         Margin="0,5,0,5"
                                                         HtmlFontSize="{DynamicResource FontSize}"
                                                         HtmlFontFamily="{DynamicResource FontFamily}"
