@@ -73,7 +73,7 @@
                                                        TextTrimming="CharacterEllipsis" TextAlignment="Center"
                                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                     </Border>
-                                    <Border Background="#000000" x:Name="BorderMouseOver" Visibility="Collapsed" Opacity="0.70" IsHitTestVisible="False" />
+                                    <Border Background="#000000" x:Name="BorderMouseOver" Visibility="Collapsed" Opacity="0.80" IsHitTestVisible="False" />
                                     <Border x:Name="GlowPlayingBorder" Visibility="Collapsed" Tag="False" IsHitTestVisible="False"
                                             Style="{DynamicResource CoverIsPlayingAnimatedBackground}" />
                                     <TextBlock Name="EnablePlayingGlowBorder" Visibility="Collapsed" IsHitTestVisible="False"
@@ -239,7 +239,7 @@
                                     <Storyboard>
                                         <DoubleAnimation
                                             Storyboard.TargetProperty="Opacity"
-                                            To="0.70" Storyboard.TargetName="BorderMouseOver"
+                                            To="0.80" Storyboard.TargetName="BorderMouseOver"
                                             Duration="0:0:0.30">
                                             <DoubleAnimation.EasingFunction>
                                                 <CubicEase EasingMode="EaseOut"/>
