@@ -45,10 +45,15 @@
                             <Popup x:Name="PART_Popup" IsOpen="{TemplateBinding IsDropDownOpen}"
                                    Placement="Bottom" Focusable="False" AllowsTransparency="True">
                                 <Grid MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{TemplateBinding ActualWidth}"
-                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                                    <Border BorderBrush="{DynamicResource PopupBorderBrush}"
-                                            BorderThickness="2"
-                                            Background="{DynamicResource PopupBackgroundBrush}">
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Border Grid.Row="0" x:Name="PopupAnimationBorder" />
+                                    <Border Grid.Row="1" x:Name="PopupBorder" BorderBrush="{DynamicResource PopupBorderBrush}"
+                                                BorderThickness="{DynamicResource PopupBorderThickness}"
+                                                Background="{DynamicResource PopupBackgroundBrush}">
                                         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                                             <ItemsPresenter Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Contained"
                                                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
@@ -64,6 +69,18 @@
                         </Trigger>
                         <Trigger Property="IsDropDownOpen" Value="True">
                             <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" TargetName="Border" />
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="PopupBorder" Storyboard.TargetProperty="Opacity"
+                                             FillBehavior="HoldEnd"
+                                             From="0" To="1" Duration="0:0:0.16"/>
+                                        <DoubleAnimation Storyboard.TargetName="PopupAnimationBorder" Storyboard.TargetProperty="Height"
+                                             FillBehavior="HoldEnd"
+                                             From="7" To="0" Duration="0:0:0.08"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
                         </Trigger>
                         <Trigger Property="IsEditable" Value="True">
                             <Setter Property="IsTabStop" Value="False" />
