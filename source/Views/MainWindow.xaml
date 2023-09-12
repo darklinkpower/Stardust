@@ -39,6 +39,10 @@
                             <Grid.Background>
                                 <ImageBrush ImageSource="{ThemeFile 'Images/BackgroundGradient.png'}" Stretch="UniformToFill" popt:Freeze="True"/>
                             </Grid.Background>
+
+                            <Border x:Name="ImageBackgroundNoise"
+                                   Background="{DynamicResource NoiseBrush}"
+                                   Opacity="0.010"/>
                             <Grid>
                                 <Border Tag="{Binding ElementName=PART_ContentView, Path=DataContext.ActiveView.Tag}">
                                     <Border.Style>

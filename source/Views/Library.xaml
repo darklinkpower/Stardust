@@ -110,10 +110,10 @@
                             </Border.Style>
                         </Border>
 
-                        <Border Grid.RowSpan="2"
-                                x:Name="ImageBackgroundNoise"
-                                Background="{DynamicResource NoiseBrush}"
-                                Opacity="0.010"/>
+                        <Border x:Name="ImageBackgroundNoise" Grid.RowSpan="2"
+                                    Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
+                                    Background="{DynamicResource NoiseBrush}"
+                                    Opacity="0.010"/>
                         
                         <Grid Grid.RowSpan="2">
                             <Grid.Style>
