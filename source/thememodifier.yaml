@@ -2,9 +2,7 @@ Constants:
     - "Sidebar"
     - SidebarUseTransparentBackground: 'Use transparent background'
     - "Library"
-    - LibraryGameBackgroundBlendWithBackground: 'Blend Game image background with blur background'
-    - LibraryGameBackgroundBlendValue(0.0,1.0): 'Background blend with blur background amount'
-    - LibraryGameBackgroundAnimateTransition: 'Animate blur background transition'
+    - LibraryUseLowPerformanceBlurBackground: 'Use low performance blurred game background image'
     - "Details View"
     - DetailsViewBackgroundImageUseOpacityMask: 'Fade background image to transparency'
     - DetailsViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'

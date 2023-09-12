@@ -23,7 +23,7 @@
                         <Viewbox Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Stretch="UniformToFill">
                             <FadeImage Name="BlurGameBackground" ImageDarkeningBrush="#990E0E0E"
                                        HighQualityBlur="False" SourceUpdateDelay="150"
-                                       IsBlurEnabled="True" AnimationEnabled="{DynamicResource LibraryGameBackgroundAnimateTransition}"
+                                       IsBlurEnabled="True" AnimationEnabled="{Settings BackgroundImageAnimation}"
                                        Height="96" RenderOptions.BitmapScalingMode="LowQuality" BlurAmount="10"
                                        HorizontalAlignment="Center" VerticalAlignment="Top">
                                 <FadeImage.Style>
@@ -31,10 +31,7 @@
                                         <Setter Property="Source" Value="{Binding ElementName=PART_ImageBackground, Path=Source}" />
                                         <Setter Property="Visibility" Value="Visible" />
                                         <Style.Triggers>
-                                            <!--<DataTrigger Binding="{Binding ElementName=PART_ImageBackground, Path=ActualHeight}" Value="0">
-                                                <Setter Property="Source" Value="{x:Null}" />
-                                            </DataTrigger>-->
-                                            <DataTrigger Binding="{Binding ElementName=LibraryGameBackgroundBlendWithBackground, Path=Tag}" Value="False">
+                                            <DataTrigger Binding="{Binding ElementName=LibraryUseLowPerformanceBlurBackground, Path=Tag}" Value="False">
                                                 <Setter Property="Source" Value="{x:Null}" />
                                                 <Setter Property="Visibility" Value="Collapsed" />
                                             </DataTrigger>
@@ -44,37 +41,19 @@
                             </FadeImage>
                         </Viewbox>
 
-                        <TextBlock x:Name="LibraryGameBackgroundBlendValue"
-                                   Tag="{DynamicResource LibraryGameBackgroundBlendValue}"
-                                   Visibility="Collapsed" />
-
-                        <TextBlock x:Name="LibraryGameBackgroundBlendWithBackground"
-                                   Tag="{DynamicResource LibraryGameBackgroundBlendWithBackground}"
+                        <TextBlock x:Name="LibraryUseLowPerformanceBlurBackground"
+                                   Tag="{DynamicResource LibraryUseLowPerformanceBlurBackground}"
                                    Visibility="Collapsed" />
 
                         <FadeImage x:Name="PART_ImageBackground"
+                                   ImageDarkeningBrush="#990E0E0E"
                                    Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Top">
                             <FadeImage.Style>
                                 <Style TargetType="FadeImage">
-                                    <Setter Property="Opacity" Value="{Binding ElementName=LibraryGameBackgroundBlendValue, Path=Tag}" />
                                     <Setter Property="Visibility" Value="Visible" />
-                                    <Setter Property="OpacityMask">
-                                        <Setter.Value>
-                                            <RadialGradientBrush GradientOrigin="0.8,0.2" Center="0.8,0.2" RadiusX="1.1" RadiusY="0.90">
-                                                <RadialGradientBrush.GradientStops>
-                                                    <GradientStop Color="Black" Offset="0.3" />
-                                                    <GradientStop Color="Transparent" Offset="0.83" />
-                                                </RadialGradientBrush.GradientStops>
-                                            </RadialGradientBrush>
-                                        </Setter.Value>
-                                    </Setter>
                                     <Style.Triggers>
-                                        <DataTrigger Binding="{Binding ElementName=LibraryGameBackgroundBlendWithBackground, Path=Tag}" Value="False">
-                                            <Setter Property="Opacity" Value="1.0" />
-                                            <Setter Property="OpacityMask" Value="Black" />
-                                        </DataTrigger>
-                                        <DataTrigger Binding="{Binding ElementName=LibraryGameBackgroundBlendValue, Path=Tag}" Value="0">
+                                        <DataTrigger Binding="{Binding ElementName=LibraryUseLowPerformanceBlurBackground, Path=Tag}" Value="True">
                                             <Setter Property="Visibility" Value="Collapsed" />
                                         </DataTrigger>
                                     </Style.Triggers>
