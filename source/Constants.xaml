@@ -289,6 +289,8 @@
                     Opacity="1" popt:Freeze="True"/>
     <ImageBrush x:Key="WhiteNoiseBrush" ImageSource="{ThemeFile 'Images/white_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
                     Opacity="1.0" popt:Freeze="True"/>
+    <ImageBrush x:Key="NoiseBrush" ImageSource="{ThemeFile 'Images/noise.png'}" TileMode="Tile" Viewport="0,0,512,512" ViewportUnits="Absolute"
+                    Opacity="1.0" popt:Freeze="True"/>
     <BitmapImage x:Key="InnerGlowBitmap" UriSource="{ThemeFile 'Images/innerglow.png'}" popt:Freeze="True" CacheOption="OnLoad" />
 
     <SolidColorBrush x:Key="ExplorerPanelBackgroundBrush" Color="#4D010101" />
