@@ -18,7 +18,7 @@
                     </Grid>
                     <ControlTemplate.Triggers>
                         <DataTrigger Binding="{Binding IsInstalled}" Value="False">
-                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />
+                            <Setter Property="Foreground" Value="#adadad" />
                         </DataTrigger>
                         <DataTrigger Binding="{Binding IsLaunching}" Value="True">
                             <Setter Property="Foreground" Value="{DynamicResource LibraryDetailsViewIsLaunchingForegroundBrush}" />
