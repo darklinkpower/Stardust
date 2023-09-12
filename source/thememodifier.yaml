@@ -1,4 +1,6 @@
 Constants:
+    - "Sidebar"
+    - SidebarUseTransparentBackground: 'Use transparent background'
     - "Library"
     - LibraryGameBackgroundBlendWithBackground: 'Blend Game image background with blur background'
     - LibraryGameBackgroundBlendValue(0.0,1.0): 'Background blend with blur background amount'

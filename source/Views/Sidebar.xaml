@@ -5,11 +5,12 @@
                     mc:Ignorable="d">
     
     <Style TargetType="{x:Type Sidebar}">
-        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Background" Value="{DynamicResource ExplorerPanelBackgroundBrush}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Sidebar}">
                     <Border Background="{TemplateBinding Background}" BorderThickness="0,0,0,0" BorderBrush="{DynamicResource SidebarMarginBrush}"
+                            Tag="{DynamicResource SidebarUseTransparentBackground}"
                             x:Name="BorderContentHolder" Margin="{TemplateBinding Padding}">
                         <DockPanel x:Name="DockContentHolder" MinWidth="44">
                             <Border x:Name="PART_ElemMainMenu" Background="Transparent"
@@ -28,6 +29,9 @@
                         </DockPanel>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=BorderContentHolder, Path=Tag}" Value="True">
+                            <Setter Property="Background" Value="Transparent" />
+                        </DataTrigger>
                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Left">
                             <Setter Property="HorizontalAlignment" Value="Left" />
                         </DataTrigger>
