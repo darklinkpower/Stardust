@@ -40,8 +40,30 @@
                                 <ImageBrush ImageSource="{ThemeFile 'Images/BackgroundGradient.png'}" Stretch="UniformToFill" popt:Freeze="True"/>
                             </Grid.Background>
                             <Grid>
-                                <ContentControl Name="PART_ContentView"
-                                                DockPanel.Dock="Top" />
+                                <Border Tag="{Binding ElementName=PART_ContentView, Path=DataContext.ActiveView.Tag}">
+                                    <Border.Style>
+                                        <Style TargetType="Border">
+                                            <Setter Property="Margin" Value="44,0,0,0" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Settings SidebarPosition}" Value="Right">
+                                                    <Setter Property="Margin" Value="0,0,46,0" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Settings SidebarPosition}" Value="Top">
+                                                    <Setter Property="Margin" Value="0,36,0,0" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
+                                                    <Setter Property="Margin" Value="0,0,0,36" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding ElementName=PART_ContentView, Path=DataContext.ActiveView.Tag, TargetNullValue='', FallbackValue=''}" Value="Library">
+                                                    <Setter Property="Margin" Value="0" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+
+                                    <ContentControl Name="PART_ContentView" />
+                                </Border>
+                                
                                 <DockPanel>
                                     <Sidebar x:Name="PART_Sidebar" Panel.ZIndex="999"
                                          DockPanel.Dock="{Settings SidebarPosition}" />
