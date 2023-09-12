@@ -483,3 +483,19 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.57/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_57.pthm
     Changelog:
       - 'TopPanel: Adjustment to items padding'
+  - Version: 2.58
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-09-11
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.58/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_58.pthm
+    Changelog:
+      - 'Added opacity and offset animations to popups when opened in menus or controls'
+      - 'Details View: Change text color of uninstalled games'
+      - 'Details View: Improved visibility of elements in foreground'
+      - 'Details View: Prevent scrolling when switching tabs in details or pressing a button in the Extrametadata Loader extension video player'
+      - 'Grid View: Made uninstalled games cover darker'
+      - 'Library: Add noise layer to improve visibility of foreground elements'
+      - 'Library: Added option in ThemeModifier extension to use low performance blurred game background image'
+      - 'Sidebar: Added option in ThemeModifier extension to make background transparent'
+      - 'Sidebar: Main window background will now be visible behind the sidebar'
+      - 'Sidebar: Adjustment to items colors'
+      - 'Minor changes and fixes'
