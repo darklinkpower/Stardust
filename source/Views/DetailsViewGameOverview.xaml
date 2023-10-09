@@ -698,7 +698,7 @@
                                                 <TextBlock Text="{DynamicResource LOCNotesLabel}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                             </TabItem.Header>
                                             <StackPanel Margin="0,16,0,0">
-                                                <TextBlock x:Name="NotesVisibilityProxy">
+                                                <TextBlock x:Name="NotesVisibilityProxy" Visibility="Collapsed">
                                                     <TextBlock.Style>
                                                         <Style TargetType="TextBlock">
                                                             <Setter Property="Tag" Value="Collapsed" />
