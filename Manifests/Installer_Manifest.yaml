@@ -499,3 +499,11 @@ Packages:
       - 'Sidebar: Main window background will now be visible behind the sidebar'
       - 'Sidebar: Adjustment to items colors'
       - 'Minor changes and fixes'
+  - Version: 2.59
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-10-10
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.59/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_59.pthm
+    Changelog:
+      - 'Add support for Play Notes extension'
+      - 'Details View: Remove Description text justify'
+      - 'ListBox and Explorer Panel: Trim text if it does not fit in available width'
