@@ -260,11 +260,7 @@
                                                 <TextBlock FontFamily="{DynamicResource FontFamily}" Name="PART_TextDisplayName"
                                                            FontSize="{DynamicResource FontSizeLargest}" Margin="0,0,10,0"
                                                            FontWeight="SemiBold"
-                                                           TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White">
-                                                    <TextBlock.Effect>
-                                                        <DropShadowEffect ShadowDepth="1" RenderingBias="Quality" Color="#80808080" />
-                                                    </TextBlock.Effect>
-                                                </TextBlock>
+                                                           TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" />
                                             </Border>
 
                                             <ContentControl x:Name="DuplicateHider_SourceSelector" 
@@ -273,12 +269,12 @@
                                                             Margin="0,0,10,0"  
                                                             Height="24"
                                                             RenderOptions.BitmapScalingMode="Fant" />
-                                            
+
                                             <ContentControl x:Name="CheckLocalizations_PluginFlags" Height="30" Margin="0,0,10,0"
                                                             Visibility="{PluginSettings Plugin=CheckLocalizations, Path=EnableIntegrationFlags, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
                                                             HorizontalAlignment="Left" VerticalAlignment="Center"
                                                             Opacity="0.85" />
-                                            
+
                                             <ContentControl x:Name="NewsViewer_PlayersInGameViewerControl"
                                                             Margin="0,0,10,0"
                                                             DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Center">
@@ -324,50 +320,47 @@
                                         </DockPanel>
                                     </StackPanel>
                                 </DockPanel>
-                                <DockPanel MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}" Grid.Row="3" MinHeight="90">
-                                    <DockPanel.Resources>
+                                <WrapPanel MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}" Grid.Row="3" MinHeight="90">
+                                    <WrapPanel.Resources>
                                         <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
                                         <Style TargetType="Label">
-                                            <Setter Property="FontWeight" Value="Bold" />
+                                            <Setter Property="FontWeight" Value="Medium" />
                                             <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
                                             <Setter Property="Margin" Value="-5,0,0,0" />
                                             <Setter Property="HorizontalAlignment" Value="Left"/>
                                             <Setter Property="HorizontalContentAlignment" Value="Left"/>
                                         </Style>
-                                    </DockPanel.Resources>
-                                    <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemLastPlayed, Mode=OneWay}" Margin="0,0,0,0"
-                                               Effect="{StaticResource AccentBlackDropShadowEffect}">
+                                    </WrapPanel.Resources>
+                                    <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemLastPlayed, Mode=OneWay}" Margin="0,0,15,0">
                                         <Viewbox Stretch="Uniform" Height="35">
                                             <TextBlock Text="&#xEC45;" FontFamily="{StaticResource FontIcoFont}"
                                                        FontWeight="Normal" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" />
                                         </Viewbox>
                                         <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
-                                            <Label Name="PART_ElemLastPlayed" Content="{DynamicResource LOCLastPlayed}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"/>
+                                            <Label Name="PART_ElemLastPlayed" Content="{DynamicResource LOCLastPlayed}" />
                                             <TextBlock Name="PART_TextLastActivity" MinWidth="85"/>
                                         </StackPanel>
                                     </DockPanel>
-                                    <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemPlayTime, Mode=OneWay}" Margin="15,0,0,0"
-                                               Effect="{StaticResource AccentBlackDropShadowEffect}">
+                                    <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemPlayTime, Mode=OneWay}" Margin="0,0,15,0">
                                         <Viewbox Stretch="Uniform" Height="35">
                                             <TextBlock Text="&#xEEDC;" FontFamily="{StaticResource FontIcoFont}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" />
                                         </Viewbox>
                                         <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
-                                            <Label Name="PART_ElemPlayTime" Content="{DynamicResource LOCTimePlayed}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}" />
+                                            <Label Name="PART_ElemPlayTime" Content="{DynamicResource LOCTimePlayed}" />
                                             <TextBlock Name="PART_TextPlayTime"/>
                                         </StackPanel>
                                     </DockPanel>
-                                    <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemCompletionStatus, Mode=OneWay}" Margin="15,0,0,0"
-                                               Effect="{StaticResource AccentBlackDropShadowEffect}">
+                                    <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemCompletionStatus, Mode=OneWay}"
+                                               Margin="0,0,15,0">
                                         <Viewbox Stretch="Uniform" Height="40">
                                             <TextBlock Text="&#xEED6;" FontFamily="{StaticResource FontIcoFont}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" />
                                         </Viewbox>
                                         <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
-                                            <Label Name="PART_ElemCompletionStatus" Content="{DynamicResource LOCCompletionStatus}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}" />
+                                            <Label Name="PART_ElemCompletionStatus" Content="{DynamicResource LOCCompletionStatus}" />
                                             <Button Name="PART_ButtonCompletionStatus" Style="{StaticResource PropertyItemButton}" Margin="0" />
                                         </StackPanel>
                                     </DockPanel>
-                                    <DockPanel Margin="15,0,0,0"
-                                               Effect="{StaticResource AccentBlackDropShadowEffect}">
+                                    <DockPanel Margin="0,0,15,0">
                                         <DockPanel.Style>
                                             <Style TargetType="{x:Type DockPanel}">
                                                 <Setter Property="Visibility" Value="Collapsed" />
@@ -383,7 +376,7 @@
                                         </Viewbox>
 
                                         <StackPanel Margin="15,0,0,0" VerticalAlignment="Center">
-                                            <Label Content="{DynamicResource LOCSuccessStoryAchievements}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}" />
+                                            <Label Content="{DynamicResource LOCSuccessStoryAchievements}" />
                                             <DockPanel>
                                                 <DockPanel MinWidth="40">
                                                     <TextBlock Text="{PluginSettings Plugin=SuccessStory, Path=Unlocked, FallbackValue='-'}"/>
@@ -422,7 +415,7 @@
                                         </StackPanel>
                                     </DockPanel>
 
-                                    <DockPanel Margin="15,0,0,0" Effect="{StaticResource AccentBlackDropShadowEffect}">
+                                    <DockPanel Margin="0,0,15,0">
                                         <DockPanel.Style>
                                             <Style TargetType="{x:Type DockPanel}">
                                                 <Setter Property="Visibility" Value="Collapsed" />
@@ -439,11 +432,11 @@
                                                     h -97.14286 -97.14285 v -81.42857 -81.42857 h -40 -40 v 81.42857 81.42857 H 254.9444 157.80154 Z"/>
                                         </Viewbox>
                                         <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
-                                            <Label Content="HowLongToBeat" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}" />
+                                            <Label Content="HowLongToBeat" />
                                             <ContentControl x:Name="HowLongToBeat_PluginProgressBar" Margin="0,0,0,0" VerticalAlignment="Center" Width="310" HorizontalAlignment="Left"/>
                                         </StackPanel>
                                     </DockPanel>
-                                </DockPanel>
+                                </WrapPanel>
                                 <DockPanel MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}" Grid.Row="4">
                                     <StackPanel DockPanel.Dock="Left" Width="300" Margin="2,0,0,0">
                                         <StackPanel.Resources>
