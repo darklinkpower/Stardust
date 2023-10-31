@@ -21,7 +21,7 @@
 
 
                         <Viewbox Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Stretch="UniformToFill">
-                            <FadeImage Name="BlurGameBackground" ImageDarkeningBrush="#990E0E0E"
+                            <FadeImage Name="BlurGameBackground" ImageDarkeningBrush="{Binding ElementName=PART_ImageBackground, Path=ImageDarkeningBrush}"
                                        HighQualityBlur="False" SourceUpdateDelay="150"
                                        IsBlurEnabled="True" AnimationEnabled="{Settings BackgroundImageAnimation}"
                                        Height="96" RenderOptions.BitmapScalingMode="LowQuality" BlurAmount="10"
@@ -46,7 +46,6 @@
                                    Visibility="Collapsed" />
 
                         <FadeImage x:Name="PART_ImageBackground"
-                                   ImageDarkeningBrush="#990E0E0E"
                                    Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Top">
                             <FadeImage.Style>
@@ -60,40 +59,23 @@
                                 </Style>
                             </FadeImage.Style>
                         </FadeImage>
-                        
-                        <Border x:Name="NoiseBorder" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                                Background="{StaticResource DarkNoiseBrush}" IsHitTestVisible="False">
-                            <Border.Style>
-                                <Style TargetType="Border">
-                                    <Setter Property="Visibility" Value="Visible" />
-                                    <Setter Property="OpacityMask">
-                                        <Setter.Value>
-                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1.0">
-                                                <LinearGradientBrush.GradientStops>
-                                                    <GradientStop Color="#66000000" Offset="0.2"/>
-                                                    <GradientStop Color="#66000000" Offset="0.8"/>
-                                                </LinearGradientBrush.GradientStops>
-                                            </LinearGradientBrush>
-                                        </Setter.Value>
-                                    </Setter>
-                                    <Style.Triggers>
-                                        <MultiDataTrigger>
-                                            <MultiDataTrigger.Conditions>
-                                                <Condition Binding="{Binding ElementName=PART_ImageBackground, Path=ActualHeight}" Value="0" />
-                                                <Condition Binding="{Binding ElementName=BlurGameBackground, Path=ActualHeight}" Value="0" />
-                                            </MultiDataTrigger.Conditions>
-                                            <Setter Property="OpacityMask" Value="#33FFFFFF" />
-                                        </MultiDataTrigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Border.Style>
-                        </Border>
 
-                        <Border x:Name="ImageBackgroundNoise" Grid.RowSpan="2"
-                                    Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                    Background="{DynamicResource NoiseBrush}"
-                                    Opacity="0.010"/>
-                        
+                        <Border Grid.RowSpan="2"
+                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
+                                Background="{DynamicResource DarkNoiseBrush}"
+                                Opacity="0.35"/>
+
+                        <Border Grid.RowSpan="2"
+                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
+                                Background="#000000"
+                                Opacity="0.45"/>
+
+                        <Border Grid.RowSpan="2"
+                                x:Name="ImageBackgroundNoise"
+                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
+                                Background="{DynamicResource NoiseBrush}"
+                                Opacity="0.020"/>
+
                         <Grid Grid.RowSpan="2">
                             <Grid.Style>
                                 <Style TargetType="Grid">
@@ -107,6 +89,9 @@
                                         </DataTrigger>
                                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
                                             <Setter Property="Margin" Value="0,0,0,36" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Settings ShowSidebar}" Value="False">
+                                            <Setter Property="Margin" Value="0,0,0,0" />
                                         </DataTrigger>
                                     </Style.Triggers>
                                 </Style>
