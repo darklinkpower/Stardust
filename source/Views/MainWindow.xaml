@@ -58,6 +58,9 @@
                                                 <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
                                                     <Setter Property="Margin" Value="0,0,0,36" />
                                                 </DataTrigger>
+                                                <DataTrigger Binding="{Settings ShowSidebar}" Value="False">
+                                                    <Setter Property="Margin" Value="0,0,0,0" />
+                                                </DataTrigger>
                                                 <DataTrigger Binding="{Binding ElementName=PART_ContentView, Path=DataContext.ActiveView.Tag, TargetNullValue='', FallbackValue=''}" Value="Library">
                                                     <Setter Property="Margin" Value="0" />
                                                 </DataTrigger>
