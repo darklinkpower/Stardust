@@ -513,3 +513,16 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.60/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_60.pthm
     Changelog:
       - 'Details View: Increase maximum value for Details View width option in ThemeModifier extension'
+  - Version: 2.61
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-10-30
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.61/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_61.pthm
+    Changelog:
+      - 'Added: Legendary library plugin banner'
+      - 'Changed: Adjustments to opacity masks and layers of background images'
+      - 'Changed: Remove drop shadow effect from game name and horizontal elements section in Details View'
+      - 'Changed: Make unfavorite icon in game menu yellow'
+      - 'Changed: Reduce font weight in Play and Context buttons'
+      - 'Improved: Tray icon rendering quality'
+      - 'Improved: performance when rounded corners are enabled'      
+      - 'Fixed: sidebar margin being applied when it has been disabled'
