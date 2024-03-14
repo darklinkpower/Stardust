@@ -532,3 +532,12 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.62/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_62.pthm
     Changelog:
       - 'Added: Support for Game Relations extension'
+  - Version: 2.63
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-03-14
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.63/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_63.pthm
+    Changelog:
+      - 'Added: Button to toggle favorite status in game details when using the ThemeExtras extension.'
+      - 'Added: Dropdown menu in game details to change the completion status when using the ThemeExtras extension.'
+      - 'Added: Display website icons next to links on game details when using the ThemeExtras extension.'
+      - 'Added: Navigation buttons in TopPanel when using the ThemeExtras extension. Can be disabled with ThemeModifier extension.'
