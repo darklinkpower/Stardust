@@ -291,6 +291,11 @@
                                                 <Button Grid.Column="1" Name="PART_ButtonMoreActions" Content="&#xEAC8;" FontFamily="{DynamicResource FontIcoFont}" Width="40" Margin="10,0,0,0" Style="{DynamicResource MoreActionButtonViews}" Padding="0" />
                                                 <Button Grid.Column="2" x:Name="PART_ButtonEditGame" Content="&#xEDED;" Margin="10,0,0,0" Height="40" Width="40" Focusable="False" FontFamily="{DynamicResource FontIcoFont}" Style="{DynamicResource MoreActionButtonViews}" />
                                             </Grid>
+                                            <ToggleButton Name="GameFavoriteToggleButton" Margin="10,0,0,0" Focusable="False"
+                                                              Style="{DynamicResource PanelFavoriteToggleButton}"
+                                                              Height="40"
+                                                              Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin}"
+                                                              IsChecked="{PluginSettings Plugin=ThemeExtras, Path=Game.Favorite, Mode=TwoWay, FallbackValue={StaticResource False}}"/>
                                             <ContentControl x:Name="PlayState_GameStateSwitchControl" Margin="10,0,0,0"
                                                             Visibility="{PluginSettings Plugin=PlayState, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
                                             <ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Margin="10,0,0,0"
