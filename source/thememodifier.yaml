@@ -1,4 +1,6 @@
 Constants:
+    - "Top Panel"
+    - ShowNavigationButtons: 'Show navigation buttons'
     - "Sidebar"
     - SidebarUseTransparentBackground: 'Use transparent background'
     - "Library"
