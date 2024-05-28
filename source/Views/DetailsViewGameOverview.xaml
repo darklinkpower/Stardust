@@ -763,7 +763,15 @@
                                             </StackPanel>
                                         </TabItem>
 
-                                        <TabItem>
+                                        <TabItem Visibility="{PluginSettings Plugin=VNDBNexus, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                            <TabItem.Header>
+                                                <TextBlock Text="VNDB"
+                                                           Style="{DynamicResource DetailsViewTabHeaderStyle}" />
+                                            </TabItem.Header>
+                                            <ContentControl x:Name="VNDBNexus_VndbVisualNovelViewControl" Margin="0,16,0,0" FontWeight="Normal"/>
+                                        </TabItem>
+
+                                        <TabItem Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
                                             <TabItem.Header>
                                                 <TextBlock Text="{DynamicResource LOCExtra_Metadata_Loader_VideoLabel}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                             </TabItem.Header>
