@@ -555,3 +555,10 @@ Packages:
     Changelog:
       - 'Added: support for panel of VNDB Nexus extension. Note: if there is overlap of extension sections, reset the order with the ThemeModifier extension options.'
       - 'Changed: Made progress bar of items in the sidebar smaller'
+  - Version: 2.66
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-05-31
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.66/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_66.pthm
+    Changelog:
+      - 'Added: Support for Steam Screenshots extension'
+      - 'Fixed: Video tab in Details View when SuccessStory extension is installed and does not have available achievements'
