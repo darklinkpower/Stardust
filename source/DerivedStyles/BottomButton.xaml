@@ -7,7 +7,7 @@
         <Setter Property="MinWidth" Value="100" />
         <Setter Property="MinHeight" Value="35" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontWeight" Value="Medium" />
         <Setter Property="FontSize" Value="{DynamicResource FontSizeLarge}" />
         <Setter Property="Background" Value="{DynamicResource PurpleButtonBrush}" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />

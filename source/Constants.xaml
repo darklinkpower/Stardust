@@ -93,51 +93,51 @@
 
     <Color x:Key="BlackColor">#FF000000</Color>
     <Color x:Key="WhiteColor">#FFFFFFFF</Color>
-    <Color x:Key="TextColor">#dcdcdc</Color>
+    <Color x:Key="TextColor">#f2f2f2</Color>
     <Color x:Key="TextColorDarker">#c2c2c2</Color>
     <Color x:Key="TextColorDark">#2f3543</Color>
     <Color x:Key="MainColor">#262c38</Color>
     <Color x:Key="MainColorDark">#2f3543</Color>
-    <Color x:Key="HoverColor">#373538</Color>
-    <Color x:Key="GlyphColor">#b75ecf</Color>
+    <Color x:Key="HoverColor">#333235</Color>
+    <Color x:Key="GlyphColor">#a17fd0</Color>
     <Color x:Key="GlyphColorSecondary">#2f3543</Color>
     <Color x:Key="DataChangeNotifColor">#ffa500</Color>
     <!---->
-    <Color x:Key="HighlightGlyphColor">#373538</Color>
+    <Color x:Key="HighlightGlyphColor">#333235</Color>
     <Color x:Key="PopupBackgroundColor">#302f31</Color>
     <Color x:Key="PopupBorderColor">#80000000</Color>
     <Color x:Key="BackgroundToneColor">#262c38</Color>
     <Color x:Key="GridItemBackgroundColor">Transparent</Color>
-    <Color x:Key="PanelSeparatorColor">#373538</Color>
+    <Color x:Key="PanelSeparatorColor">#333235</Color>
     <Color x:Key="WindowPanelSeparatorColor">Transparent</Color>
 
-    <Color x:Key="NormalBorderControlsColor">#6f6d70</Color>
-    <Color x:Key="NormalBorderControlsHoverColor">#acabad</Color>
+    <Color x:Key="NormalBorderControlsColor">#5c5c5e</Color>
+    <Color x:Key="NormalBorderControlsHoverColor">#8e8d8f</Color>
     <Color x:Key="NormalBorderControlsHoverTransparencyColor">#4c919191</Color>
     <Color x:Key="DetailsViewGrouCountBackgroundColor">#535353</Color>
 
-    <Color x:Key="PurpleButtonBrushColor">#b75ecf</Color>
-    <Color x:Key="PurpleButtonBrushHighlightColor">#c077d6</Color>
+    <Color x:Key="PurpleButtonBrushColor">#a17fd0</Color>
+    <Color x:Key="PurpleButtonBrushHighlightColor">#ae91d7</Color>
     <Color x:Key="PurpleButtonBrushSelectedColor">#cc90dd</Color>
 
     <Color x:Key="ToggleButtonNotCheckedColor">#2e2c2f</Color>
-    <Color x:Key="ToggleButtonNotCheckedBorderColor">#6f6d70</Color>
-    <Color x:Key="ToggleButtonNotCheckedHighlightBorderColor">#acabad</Color>
+    <Color x:Key="ToggleButtonNotCheckedBorderColor">#5c5c5e</Color>
+    <Color x:Key="ToggleButtonNotCheckedHighlightBorderColor">#8e8d8f</Color>
 
-    <Color x:Key="ThumbFillColor">#6f7275</Color>
-    <Color x:Key="ThumbFillHoverColor">#8f9495</Color>
+    <Color x:Key="ThumbFillColor">#998f8f8f</Color>
+    <Color x:Key="ThumbFillHoverColor">#80f1f1f1</Color>
 
-    <Color x:Key="TextBoxBorderColor">#6f6d70</Color>
-    <Color x:Key="TextBoxBorderHoverColor">#acabad</Color>
+    <Color x:Key="TextBoxBorderColor">#5c5c5e</Color>
+    <Color x:Key="TextBoxBorderHoverColor">#8e8d8f</Color>
 
     <Color x:Key="TitleButtonsBorderBackgroundColor">#2e2c2f</Color>
 
-    <Color x:Key="StandardWindowTitleBackgroundColor">#373538</Color>
-    <Color x:Key="StandardWindowBackgroundColor">#302e32</Color>
+    <Color x:Key="StandardWindowTitleBackgroundColor">#333235</Color>
+    <Color x:Key="StandardWindowBackgroundColor">#2c2b2e</Color>
 
     <Color x:Key="TitleWindowStateHoverColor">#424242</Color>
     <Color x:Key="TitleWindowCloseHoverColor">#d22e00</Color>
-    <Color x:Key="ControlsBackgroundColor">#cc2e2c2e</Color>
+    <Color x:Key="ControlsBackgroundColor">#8028272a</Color>
 
     <Color x:Key="TopPanelItemBackgroundColor">#d9000000</Color>
     <Color x:Key="TopPanelItemHoverBackgroundColor">#d9000000</Color>
@@ -148,7 +148,7 @@
     <SolidColorBrush x:Key="TopPanelItemHoverBackgroundBrush" Color="{DynamicResource TopPanelItemHoverBackgroundColor}" />
     <SolidColorBrush x:Key="TopPanelSearchBoxBackgroundBrush" Color="{DynamicResource TopPanelSearchBoxBackgroundColor}" />
     <SolidColorBrush x:Key="TopPanelFilterToggleBackgroundBrush" Color="{DynamicResource TopPanelFilterToggleBackgroundColor}" />
-    <SolidColorBrush x:Key="TopPanelItemMouseOverForegroundBrush" Color="#e996fe" />
+    <SolidColorBrush x:Key="TopPanelItemMouseOverForegroundBrush" Color="#d6b3ff" />
     <SolidColorBrush x:Key="DataChangeNotifBrush" Color="{DynamicResource DataChangeNotifColor}" />
 
     <SolidColorBrush x:Key="GridViewItemMaskBackgroundBrush" Color="#1e1e1e" />
@@ -233,7 +233,7 @@
         <GradientStop Color="#002C3A67" Offset="0.7"/>
     </LinearGradientBrush>
 
-    <SolidColorBrush x:Key="WindowBackgourndBrush" Color="#302e32" />
+    <SolidColorBrush x:Key="WindowBackgourndBrush" Color="#2c2b2e" />
     
     <LinearGradientBrush x:Key="DetailsViewFadeBorder" StartPoint="0.5,0.5" EndPoint="0.5,1">
         <GradientStop Color="#0DA8A8A8" Offset="0.0" />
@@ -281,8 +281,8 @@
     <SolidColorBrush x:Key="GridViewSeparatorBrush" Color="#4Dc2c2c2" />
 
     <SolidColorBrush x:Key="DetailsViewInstalledTextForegroundBrush" Color="#e6e6e6" />
-    <SolidColorBrush x:Key="DetailsViewLibraryHoverBackgroundBrush" Color="#45b75ecf" />
-    <SolidColorBrush x:Key="DetailsViewLibrarySelectedBackgroundBrush" Color="#45b75ecf" />
+    <SolidColorBrush x:Key="DetailsViewLibraryHoverBackgroundBrush" Color="#45a17fd0" />
+    <SolidColorBrush x:Key="DetailsViewLibrarySelectedBackgroundBrush" Color="#45a17fd0" />
     
     <SolidColorBrush x:Key="SearchWindowBackgroundBrush" Color="#3c3a3d" />
     <SolidColorBrush x:Key="SearchWindowSearchTextForegroundBrush" Color="#cac9cb" />

@@ -155,7 +155,7 @@
                                                 Style="{StaticResource BaseTextBlockStyle}"    
                                                 Foreground="White"
                                                 TextAlignment="Left" TextTrimming="CharacterEllipsis"
-                                                FontWeight="SemiBold"
+                                                FontWeight="Medium"
                                                 VerticalAlignment="Center"
                                                 Width="{Settings GridItemWidth}"
                                                 Padding="2,8,2,3"
