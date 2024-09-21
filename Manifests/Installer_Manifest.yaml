@@ -573,3 +573,10 @@ Packages:
       - 'Fixed: HLTB rows showing even if they have no data after its latest update'
       - 'General color changes and polishing across the theme'
       - 'Reorder ThemeModifier extension sections'
+  - Version: 2.68
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-09-21
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.68/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_68.pthm
+    Changelog:
+      - 'Details View: Fix buttons not correctly aligning when wrapping in multiple rows'
+      - 'Details View: Fix completion status not being displayed'
