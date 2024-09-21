@@ -11,7 +11,7 @@
     <sys:Boolean x:Key="GridViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
     <Visibility x:Key="DetailsViewDetailsIconsVisibility">Visible</Visibility>
     <Visibility x:Key="GridViewDetailsIconsVisibility">Visible</Visibility>
-    <Visibility x:Key="GridViewCoverSubtitleVisibility">Visible</Visibility>
+    <Visibility x:Key="GridViewCoverSubtitleVisibility">Collapsed</Visibility>
     <Visibility x:Key="GridViewCoverCompStatusSubtitleVisibility">Collapsed</Visibility>
     <sys:Boolean x:Key="DetailsViewAllowUseOfLogos">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewAllowUseOfLogos">true</sys:Boolean>
@@ -39,7 +39,7 @@
     <sys:Int32 x:Key="GridViewSectionOrderCheckDlc">11</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderGameRelations">12</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderSteamScreenshots">13</sys:Int32>
-    <sys:Boolean x:Key="GridViewCoverZoomOnHover">True</sys:Boolean>
+    <sys:Boolean x:Key="GridViewCoverZoomOnHover">False</sys:Boolean>
     <sys:Boolean x:Key="SidebarUseTransparentBackground">False</sys:Boolean>
     <sys:Boolean x:Key="ShowNavigationButtons">True</sys:Boolean>
     <!--region end-->
