@@ -279,35 +279,35 @@
                                                     <ColumnDefinition Width="Auto" />
                                                     <ColumnDefinition Width="Auto" />
                                                 </Grid.ColumnDefinitions>
-                                                <Button Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonPlayAction" Height="40" Style="{DynamicResource PlayButtonViews}" />
-                                                <Button Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonContextAction" Height="40" Style="{DynamicResource ContextButtonViews}" />
-                                                <Button Grid.Column="1" Name="PART_ButtonMoreActions" Content="&#xEAC8;" FontFamily="{DynamicResource FontIcoFont}" Width="40" Margin="10,0,0,0" Style="{DynamicResource MoreActionButtonViews}" Padding="0" />
-                                                <Button Grid.Column="2" x:Name="PART_ButtonEditGame" Content="&#xEDED;" Margin="10,0,0,0" Height="40" Width="40" Focusable="False" FontFamily="{DynamicResource FontIcoFont}" Style="{DynamicResource MoreActionButtonViews}" />
+                                                <Button Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonPlayAction" Margin="0,0,10,10" Height="40" Style="{DynamicResource PlayButtonViews}" />
+                                                <Button Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonContextAction" Margin="0,0,10,10" Height="40" Style="{DynamicResource ContextButtonViews}" />
+                                                <Button Grid.Column="1" Name="PART_ButtonMoreActions" Content="&#xEAC8;" FontFamily="{DynamicResource FontIcoFont}" Width="40" Margin="0,0,10,10" Style="{DynamicResource MoreActionButtonViews}" Padding="0" />
+                                                <Button Grid.Column="2" x:Name="PART_ButtonEditGame" Content="&#xEDED;" Margin="0,0,10,10" Height="40" Width="40" Focusable="False" FontFamily="{DynamicResource FontIcoFont}" Style="{DynamicResource MoreActionButtonViews}" />
                                             </Grid>
-                                            <ToggleButton Name="GameFavoriteToggleButton" Margin="10,0,0,0" Focusable="False"
+                                            <ToggleButton Name="GameFavoriteToggleButton" Margin="0,0,10,10" Focusable="False"
                                                               Style="{DynamicResource PanelFavoriteToggleButton}"
                                                               Height="40"
                                                               Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin}"
                                                               IsChecked="{PluginSettings Plugin=ThemeExtras, Path=Game.Favorite, Mode=TwoWay, FallbackValue={StaticResource False}}"/>
-                                            <ContentControl x:Name="PlayState_GameStateSwitchControl" Margin="10,0,0,0"
+                                            <ContentControl x:Name="PlayState_GameStateSwitchControl" Margin="0,0,10,10"
                                                             Visibility="{PluginSettings Plugin=PlayState, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Margin="10,0,0,0"
+                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Margin="0,0,10,10"
                                                             Height="40" MaxWidth="150" DockPanel.Dock="Left"
                                                             Visibility="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                            <ContentControl x:Name="HowLongToBeat_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"
+                                            <ContentControl x:Name="HowLongToBeat_PluginButton" Height="40" VerticalAlignment="Center" Margin="0,0,10,10" DockPanel.Dock="Left"
                                                             Visibility="{PluginSettings Plugin=HowLongToBeat, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                            <ContentControl x:Name="CheckDlc_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"
+                                            <ContentControl x:Name="CheckDlc_PluginButton" Height="40" VerticalAlignment="Center" Margin="0,0,10,10" DockPanel.Dock="Left"
                                                             Visibility="{PluginSettings Plugin=CheckDlc, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                            <ContentControl x:Name="SuccessStory_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"
+                                            <ContentControl x:Name="SuccessStory_PluginButton" Height="40" VerticalAlignment="Center" Margin="0,0,10,10" DockPanel.Dock="Left"
                                                             Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                            <ContentControl x:Name="GameActivity_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"
+                                            <ContentControl x:Name="GameActivity_PluginButton" Height="40" VerticalAlignment="Center" Margin="0,0,10,10" DockPanel.Dock="Left"
                                                             Visibility="{PluginSettings Plugin=GameActivity, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                            <ContentControl x:Name="SystemChecker_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"
+                                            <ContentControl x:Name="SystemChecker_PluginButton" Height="40" VerticalAlignment="Center" Margin="0,0,10,10" DockPanel.Dock="Left"
                                                             Visibility="{PluginSettings Plugin=SystemChecker, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                            <ContentControl x:Name="CheckLocalizations_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"
+                                            <ContentControl x:Name="CheckLocalizations_PluginButton" Height="40" VerticalAlignment="Center" Margin="0,0,10,10" DockPanel.Dock="Left"
                                                             Visibility="{PluginSettings Plugin=CheckLocalizations, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
                                         </WrapPanel>
-                                        <Border Background="{DynamicResource DetailsViewSectionBackgroundBrush}" CornerRadius="{DynamicResource DetailsViewCoverCornerRadius}" Margin="0,15,0,0">
+                                        <Border Background="{DynamicResource DetailsViewSectionBackgroundBrush}" CornerRadius="{DynamicResource DetailsViewCoverCornerRadius}" Margin="0,5,0,0">
                                             <DockPanel>
                                                 <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
                                                     <Border Name="Mask" Background="White" CornerRadius="{DynamicResource DetailsViewCoverCornerRadius}" />
@@ -415,10 +415,10 @@
                                                                                    Foreground="{DynamicResource DetailsMainIconsBackgroundBrush}" />
                                                                     </Viewbox>
 
-                                                                    <!--<Border Tag="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}"
+                                                                    <Border Tag="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}"
                                                                             Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Tag, Converter={StaticResource InvertedBooleanToVisibilityConverter}}">
                                                                         <Button Name="PART_ButtonCompletionStatus" Style="{StaticResource PropertyItemButton}" Margin="0" />
-                                                                    </Border>-->
+                                                                    </Border>
 
                                                                     <ContentControl Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}"
                                                             x:Name="ThemeExtras_SettableCompletionStatus">
