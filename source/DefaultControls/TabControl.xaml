@@ -221,7 +221,7 @@
                             <Setter Property="Visibility" Value="Visible" TargetName="SelectedBorder" />
                         </Trigger>
                         <Trigger Property="IsSelected" Value="False">
-                            <Setter Property="Opacity" Value="0.48" TargetName="TextContent"/>
+                            <Setter Property="Opacity" Value="0.50" TargetName="TextContent"/>
                         </Trigger>
                         <Trigger Property="IsFocused" Value="True">
                             <Setter Property="Visibility" Value="Visible" TargetName="SelectedBorder" />

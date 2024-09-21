@@ -5,7 +5,7 @@
 
     <!--Theme settings region start-->
     <sys:Boolean x:Key="LibraryUseLowPerformanceBlurBackground">False</sys:Boolean>
-    <sys:Double x:Key="DetailsViewDetailsMaxWidth">1024</sys:Double>
+    <sys:Double x:Key="DetailsViewDetailsMaxWidth">1250</sys:Double>
     <sys:Boolean x:Key="DetailsViewBackgroundImageUseOpacityMask">True</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
@@ -93,6 +93,7 @@
 
     <Color x:Key="BlackColor">#FF000000</Color>
     <Color x:Key="WhiteColor">#FFFFFFFF</Color>
+    <Color x:Key="DetailsViewDetailsTextColor">#bababa</Color>
     <Color x:Key="TextColor">#f2f2f2</Color>
     <Color x:Key="TextColorDarker">#c2c2c2</Color>
     <Color x:Key="TextColorDark">#2f3543</Color>
@@ -104,7 +105,7 @@
     <Color x:Key="DataChangeNotifColor">#ffa500</Color>
     <!---->
     <Color x:Key="HighlightGlyphColor">#333235</Color>
-    <Color x:Key="PopupBackgroundColor">#302f31</Color>
+    <Color x:Key="PopupBackgroundColor">#2c2b2e</Color>
     <Color x:Key="PopupBorderColor">#80000000</Color>
     <Color x:Key="BackgroundToneColor">#262c38</Color>
     <Color x:Key="GridItemBackgroundColor">Transparent</Color>
@@ -258,6 +259,10 @@
 
     <SolidColorBrush x:Key="SidebarItemForegroundBrush" Color="#3c3c3c" />
 
+    <SolidColorBrush x:Key="DetailsViewSectionBackgroundBrush" Color="#0Fcfcfcf" />
+    <SolidColorBrush x:Key="DetailsViewSectionTitleTextBrush" Color="#80c7c7c7" />
+    <SolidColorBrush x:Key="DetailsViewFieldLabelTextBrush" Color="{DynamicResource DetailsViewDetailsTextColor}" />
+    <SolidColorBrush x:Key="DetailsMainIconsBackgroundBrush" Color="#8b8b8b" />
     <LinearGradientBrush x:Key="DetailsIconsBackgroundBrush" StartPoint="0.5,1.0" EndPoint="0.5,0.0">
         <GradientStop Color="#9a00c4" Offset="0.3" />
         <GradientStop Color="#cb16db" Offset="0.95" />

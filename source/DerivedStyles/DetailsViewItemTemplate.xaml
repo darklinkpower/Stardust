@@ -98,15 +98,6 @@
         x:Key="DuplicateHider_IconContentControlStyle"
         BasedOn="{StaticResource {x:Type ContentControl}}"
         TargetType="ContentControl">
-        <Style.Resources>
-            <DropShadowEffect
-                x:Key="glowEffect"
-                BlurRadius="8"
-                Opacity="1"
-                RenderingBias="Quality"
-                ShadowDepth="0"
-                Color="{DynamicResource GlyphColor}" />
-        </Style.Resources>
         <Setter Property="BorderBrush" Value="{x:Null}" />
         <Setter Property="Foreground" Value="{x:Null}" />
         <Setter Property="Background" Value="{x:Null}" />
@@ -139,7 +130,6 @@
                             <Setter Property="Border.Visibility" Value="Visible" TargetName="IconBackground"/>
                             <Setter Property="Border.Background" Value="{DynamicResource OpaqueHighlightBrushBright}" TargetName="IconBackground"/>
                             <Setter Property="Border.Opacity" Value="1" TargetName="IconBackground"/>
-                            <Setter Property="Effect" Value="{StaticResource glowEffect}" />
                             <Trigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
