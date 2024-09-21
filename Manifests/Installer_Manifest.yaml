@@ -562,3 +562,14 @@ Packages:
     Changelog:
       - 'Added: Support for Steam Screenshots extension'
       - 'Fixed: Video tab in Details View when SuccessStory extension is installed and does not have available achievements'
+  - Version: 2.67
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-09-21
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.67/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_67.pthm
+    Changelog:
+      - 'Details View redesign (Hopefully it is well received, or at least there are not too many complains)'
+      - 'Changed: Default value in some theme options'
+      - 'Changed: Main Window background image'
+      - 'Fixed: HLTB rows showing even if they have no data after its latest update'
+      - 'General color changes and polishing across the theme'
+      - 'Reorder ThemeModifier extension sections'
