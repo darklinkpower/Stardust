@@ -1,0 +1,9 @@
+AddonId: Stardust_LegacyLayout
+Packages:
+  - Version: 2.66
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-09-23
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.66/Stardust_LegacyLayout.pthm
+    Changelog:
+      - 'Added: Support for Steam Screenshots extension'
+      - 'Fixed: Video tab in Details View when SuccessStory extension is installed and does not have available achievements'
