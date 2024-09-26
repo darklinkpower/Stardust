@@ -5,32 +5,50 @@
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-        <Setter Property="Margin" Value="5,0,5,0" />
-        <Setter Property="Padding" Value="3" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="15,11,15,11" />
         <Setter Property="Focusable" Value="False" />
+        <Setter Property="Cursor" Value="Hand" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Background" Value="{DynamicResource TitleWindowStateHover}" />
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />    
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <TextBlock FontFamily="Marlett"
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}">
+                        <TextBlock FontFamily="Segoe MDL2 Assets"
                                Foreground="{TemplateBinding Foreground}"
-                               FontSize="16"
-                               Padding="{TemplateBinding Padding}"
+                               FontSize="12"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
                                Text="{TemplateBinding Content}" />
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
         <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Background" Value="Transparent" />
             </Trigger>
             <Trigger Property="IsFocused" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                <Setter Property="Background" Value="{DynamicResource GlyphBrush}" />
             </Trigger>
         </Style.Triggers>
     </Style>
 
+    <Style x:Key="WindowBarCloseButton" TargetType="Button" BasedOn="{StaticResource WindowBarButton}">
+        <Setter Property="Background" Value="{DynamicResource TitleWindowCloseHover}" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Background" Value="{DynamicResource GlyphBrush}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
     <Style x:Key="WindowBarButtonMainWindowMinimize" TargetType="Button">
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="BorderThickness" Value="0" />

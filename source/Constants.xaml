@@ -136,8 +136,8 @@
     <Color x:Key="StandardWindowTitleBackgroundColor">#333235</Color>
     <Color x:Key="StandardWindowBackgroundColor">#2c2b2e</Color>
 
-    <Color x:Key="TitleWindowStateHoverColor">#424242</Color>
-    <Color x:Key="TitleWindowCloseHoverColor">#d22e00</Color>
+    <Color x:Key="TitleWindowStateHoverColor">#404040</Color>
+    <Color x:Key="TitleWindowCloseHoverColor">#c13d29</Color>
     <Color x:Key="ControlsBackgroundColor">#8028272a</Color>
 
     <Color x:Key="TopPanelItemBackgroundColor">#d9000000</Color>
