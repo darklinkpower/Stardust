@@ -16,7 +16,8 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type GridViewColumnHeader}">
                     <Grid Margin="1">
-                        <Border Padding="5,3,5,3" Style="{DynamicResource HighlightBorder}" BorderThickness="1" Background="{DynamicResource ControlBackgroundBrush}" CornerRadius="0">
+                        <Border Padding="5,3,5,3" Style="{DynamicResource HighlightBorder}" BorderThickness="1"
+                                Background="{DynamicResource ToggleButtonNotCheckedBorderBrush}" CornerRadius="0">
                             <TextBlock Style="{DynamicResource BaseTextBlockStyle}">
                                 <ContentPresenter VerticalAlignment="Center" />
                             </TextBlock>

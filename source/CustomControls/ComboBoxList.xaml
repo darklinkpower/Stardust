@@ -104,7 +104,7 @@
                 CornerRadius="{DynamicResource ControlCornerRadius}"
                 Style="{DynamicResource HighlightBorder}"
                 BorderBrush="{DynamicResource TextBoxBorderBrush}"
-                Background="{TemplateBinding Background}"
+                Background="{DynamicResource ControlBackgroundBrush}"
                 Cursor="Hand"
                 x:Name="Root">
             <Grid>

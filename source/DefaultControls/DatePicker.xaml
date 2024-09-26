@@ -197,7 +197,7 @@
                     <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="{DynamicResource ControlCornerRadius}"
-                            Padding="{TemplateBinding Padding}" Background="{DynamicResource ButtonBackgroundBrush}">
+                            Padding="{TemplateBinding Padding}" Background="{DynamicResource ControlBackgroundBrush}">
                         <DockPanel>
                             <Popup x:Name="PART_Popup" StaysOpen="False"
                                    AllowsTransparency="True" Placement="Bottom"
