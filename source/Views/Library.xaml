@@ -11,16 +11,8 @@
                 <ControlTemplate TargetType="{x:Type Library}">
                     <Grid d:DesignWidth="1500" d:DesignHeight="960"
                           d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
 
-
-                        <Viewbox Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Stretch="UniformToFill">
+                        <Viewbox HorizontalAlignment="Center" Stretch="UniformToFill" RenderOptions.BitmapScalingMode="LowQuality">
                             <FadeImage Name="BlurGameBackground" ImageDarkeningBrush="{Binding ElementName=PART_ImageBackground, Path=ImageDarkeningBrush}"
                                        HighQualityBlur="False" SourceUpdateDelay="150"
                                        IsBlurEnabled="True" AnimationEnabled="{Settings BackgroundImageAnimation}"
@@ -60,23 +52,23 @@
                             </FadeImage.Style>
                         </FadeImage>
 
-                        <Border Grid.RowSpan="2"
-                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                Background="{DynamicResource DarkNoiseBrush}"
-                                Opacity="0.35"/>
+                        <Grid Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}">
+                            <Grid.CacheMode>
+                                <BitmapCache EnableClearType="False"
+                                             RenderAtScale="0.85"
+                                             SnapsToDevicePixels="False" />
+                            </Grid.CacheMode>
+                            <Border Background="{StaticResource DarkNoiseBrush}" RenderOptions.BitmapScalingMode="LowQuality"
+                                    Opacity="0.35"/>
 
-                        <Border Grid.RowSpan="2"
-                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                Background="#000000"
-                                Opacity="0.45"/>
+                            <Border Background="#000000" RenderOptions.BitmapScalingMode="LowQuality"
+                                    Opacity="0.45"/>
 
-                        <Border Grid.RowSpan="2"
-                                x:Name="ImageBackgroundNoise"
-                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                Background="{DynamicResource NoiseBrush}"
-                                Opacity="0.020"/>
+                            <Border Background="{StaticResource NoiseBrush}" RenderOptions.BitmapScalingMode="LowQuality"
+                                    Opacity="0.020"/>
+                        </Grid>
 
-                        <Grid Grid.RowSpan="2">
+                        <Grid>
                             <Grid.Style>
                                 <Style TargetType="Grid">
                                     <Setter Property="Margin" Value="44,0,0,0" />
