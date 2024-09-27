@@ -310,49 +310,78 @@
                                         <Border Background="{DynamicResource DetailsViewSectionBackgroundBrush}" CornerRadius="{DynamicResource DetailsViewCoverCornerRadius}" Margin="0,5,0,0">
                                             <DockPanel>
                                                 <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
-                                                    <Border Name="Mask" Background="White" CornerRadius="{DynamicResource DetailsViewCoverCornerRadius}" />
-
-                                                    <Border>
-                                                        <Border.Style>
-                                                            <Style TargetType="Border">
-                                                                <Setter Property="Visibility" Value="Visible" />
+                                                    <Border Background="Transparent"
+                                                        Visibility="{Binding ElementName=CoverGridContainer, Path=Visibility}"
+                                                        HorizontalAlignment="Left" VerticalAlignment="Top"
+                                                        Width="{Binding ElementName=CoverGridContainer, Path=ActualWidth}"
+                                                        Height="{Binding ElementName=CoverGridContainer, Path=ActualHeight}"
+                                                        Padding="0.5">
+                                                        <Border Background="Transparent"
+                                                        CornerRadius="{DynamicResource DetailsViewCoverCornerRadius}"
+                                                        BorderThickness="8" BorderBrush="#0d0d0d">
+                                                            <Border.Effect>
+                                                                <DropShadowEffect BlurRadius="15" RenderingBias="Performance"
+                                                                          ShadowDepth="0" Color="#0d0d0d" Opacity="0.3" />
+                                                            </Border.Effect>
+                                                        </Border>
+                                                    </Border>
+                                                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top"
+                                                          Name="CoverGridContainer">
+                                                        <Grid.Style>
+                                                            <Style TargetType="Grid">
+                                                                <Setter Property="Visibility" Value="Collapsed" />
                                                                 <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ImageCover, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
                                                                     <DataTrigger Binding="{Binding ElementName=BackgroundChanger_PluginCoverImage, Path=Visibility}" Value="Visible">
-                                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                                        <Setter Property="Visibility" Value="Visible" />
                                                                     </DataTrigger>
                                                                 </Style.Triggers>
                                                             </Style>
-                                                        </Border.Style>
-                                                        <Image Name="PART_ImageCover" Height="{Settings GameDetailsCoverHeight}" 
+                                                        </Grid.Style>
+                                                        <Border Name="Mask" Background="White" CornerRadius="{DynamicResource DetailsViewCoverCornerRadius}" />
+
+                                                        <Border>
+                                                            <Border.Style>
+                                                                <Style TargetType="Border">
+                                                                    <Setter Property="Visibility" Value="Visible" />
+                                                                    <Style.Triggers>
+                                                                        <DataTrigger Binding="{Binding ElementName=BackgroundChanger_PluginCoverImage, Path=Visibility}" Value="Visible">
+                                                                            <Setter Property="Visibility" Value="Collapsed" />
+                                                                        </DataTrigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </Border.Style>
+                                                            <Image Name="PART_ImageCover" Height="{Settings GameDetailsCoverHeight}" 
                                                StretchDirection="Both" Stretch="Uniform" 
                                                RenderOptions.BitmapScalingMode="Fant" />
-                                                    </Border>
+                                                        </Border>
 
-                                                    <ContentControl x:Name="BackgroundChanger_PluginCoverImage"
+                                                        <ContentControl x:Name="BackgroundChanger_PluginCoverImage"
                                                         Height="{Settings GameDetailsCoverHeight}">
-                                                        <ContentControl.Style>
-                                                            <Style TargetType="ContentControl">
-                                                                <Setter Property="Visibility" Value="Collapsed" />
-                                                                <Style.Triggers>
-                                                                    <MultiDataTrigger>
-                                                                        <MultiDataTrigger.Conditions>
-                                                                            <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=HasDataCover, FallbackValue=False}" Value="True" />
-                                                                            <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=EnableCoverImage, FallbackValue=False}" Value="True" />
-                                                                        </MultiDataTrigger.Conditions>
-                                                                        <Setter Property="Visibility" Value="Visible" />
-                                                                    </MultiDataTrigger>
-                                                                </Style.Triggers>
-                                                            </Style>
-                                                        </ContentControl.Style>
-                                                    </ContentControl>
+                                                            <ContentControl.Style>
+                                                                <Style TargetType="ContentControl">
+                                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                                    <Style.Triggers>
+                                                                        <MultiDataTrigger>
+                                                                            <MultiDataTrigger.Conditions>
+                                                                                <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=HasDataCover, FallbackValue=False}" Value="True" />
+                                                                                <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=EnableCoverImage, FallbackValue=False}" Value="True" />
+                                                                            </MultiDataTrigger.Conditions>
+                                                                            <Setter Property="Visibility" Value="Visible" />
+                                                                        </MultiDataTrigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </ContentControl.Style>
+                                                        </ContentControl>
 
-                                                    <Grid.Effect>
-                                                        <DropShadowEffect BlurRadius="4" ShadowDepth="0" Color="#0d0d0d" Opacity="0.20" />
-                                                    </Grid.Effect>
-                                                    <Grid.OpacityMask>
-                                                        <VisualBrush Visual="{Binding ElementName=Mask}" />
-                                                    </Grid.OpacityMask>
+                                                        <Grid.OpacityMask>
+                                                            <VisualBrush Visual="{Binding ElementName=Mask}" />
+                                                        </Grid.OpacityMask>
+                                                    </Grid>
                                                 </Grid>
+                                                
 
                                                 <StackPanel Margin="20,10,10,10" VerticalAlignment="Center">
                                                     <WrapPanel Margin="0,0,0,0" HorizontalAlignment="Left">
