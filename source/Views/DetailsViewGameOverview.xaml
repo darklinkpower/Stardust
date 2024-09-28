@@ -416,8 +416,6 @@
                                                                 <TextBlock Name="PART_TextPlayTime" />
                                                             </DockPanel>
                                                         </StackPanel>
-                                                        
-                                                
 
                                                         <DockPanel Margin="0,0,0,10">
                                                             <DockPanel.Style>
@@ -461,7 +459,11 @@
                                                         </DockPanel>
                                                     </WrapPanel>
 
-                                                    <StackPanel Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                    <StackPanel Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                                Margin="0,0,0,10">
+                                                        <StackPanel.Resources>
+                                                            <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
+                                                        </StackPanel.Resources>
                                                         <Border Style="{DynamicResource BorderVerticalSeparator}" />
                                                         <DockPanel Margin="0,0,0,0">
                                                             <Viewbox Stretch="Uniform" Width="12">
