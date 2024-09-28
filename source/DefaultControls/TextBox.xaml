@@ -28,10 +28,10 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrushHover}" TargetName="Border"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrushControlsHover}" TargetName="Border"/>
                         </Trigger>
                         <Trigger Property="IsFocused" Value="True">
-                            <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrushSelected}" TargetName="Border" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" TargetName="Border" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
