@@ -384,40 +384,44 @@
                                                 
 
                                                 <StackPanel Margin="20,10,10,10" VerticalAlignment="Center">
+                                                    <StackPanel.Resources>
+                                                        <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
+                                                    </StackPanel.Resources>
                                                     <WrapPanel Margin="0,0,0,0" HorizontalAlignment="Left">
                                                         <WrapPanel.Resources>
                                                             <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
                                                             <Style TargetType="Label">
                                                                 <Setter Property="FontWeight" Value="Medium" />
                                                                 <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-                                                                <Setter Property="Margin" Value="-5,0,0,0" />
+                                                                <Setter Property="Padding" Value="0,0,0,5" />
+                                                                <Setter Property="VerticalAlignment" Value="Center" />
                                                                 <Setter Property="HorizontalAlignment" Value="Left"/>
                                                                 <Setter Property="HorizontalContentAlignment" Value="Left"/>
                                                             </Style>
                                                         </WrapPanel.Resources>
-                                                        <StackPanel Visibility="{Binding Visibility, ElementName=PART_ElemLastPlayed, Mode=OneWay}" Margin="0,0,15,10" VerticalAlignment="Center">
+                                                        <StackPanel Visibility="{Binding Visibility, ElementName=PART_ElemLastPlayed, Mode=OneWay}" Margin="0,0,15,10" VerticalAlignment="Top">
                                                             <Label Name="PART_ElemLastPlayed" Content="{DynamicResource LOCLastPlayed}" />
                                                             <DockPanel>
-                                                                <Viewbox Stretch="Uniform" Width="16" Margin="0,0,5,0">
-                                                                    <TextBlock Text="&#xE787;" FontFamily="Segoe Fluent Icons"
+                                                                <Viewbox Stretch="Uniform" Width="16" Margin="0,0,5,0" VerticalAlignment="Center">
+                                                                    <TextBlock Text="&#xE787;" FontFamily="Segoe MDL2 Assets"
                                                                                FontWeight="Normal" Foreground="{DynamicResource DetailsMainIconsBackgroundBrush}" />
                                                                 </Viewbox>
-                                                                <TextBlock Name="PART_TextLastActivity" />
+                                                                <TextBlock Name="PART_TextLastActivity" VerticalAlignment="Center"/>
                                                             </DockPanel>
                                                         </StackPanel>
 
-                                                        <StackPanel Visibility="{Binding Visibility, ElementName=PART_ElemPlayTime, Mode=OneWay}" Margin="0,0,15,10" VerticalAlignment="Center">
+                                                        <StackPanel Visibility="{Binding Visibility, ElementName=PART_ElemPlayTime, Mode=OneWay}" Margin="0,0,15,10" VerticalAlignment="Top">
                                                             <Label Name="PART_ElemPlayTime" Content="{DynamicResource LOCTimePlayed}" />
                                                             <DockPanel>
-                                                                <Viewbox Stretch="Uniform" Width="16" Margin="0,0,5,0">
-                                                                    <TextBlock Text="&#xE121;" FontFamily="Segoe Fluent Icons"
+                                                                <Viewbox Stretch="Uniform" Width="16" Margin="0,0,5,0" VerticalAlignment="Center">
+                                                                    <TextBlock Text="&#xE121;" FontFamily="Segoe MDL2 Assets"
                                                                                FontWeight="Normal" Foreground="{DynamicResource DetailsMainIconsBackgroundBrush}" />
                                                                 </Viewbox>
-                                                                <TextBlock Name="PART_TextPlayTime" />
+                                                                <TextBlock Name="PART_TextPlayTime" VerticalAlignment="Center"/>
                                                             </DockPanel>
                                                         </StackPanel>
 
-                                                        <DockPanel Margin="0,0,0,10">
+                                                        <DockPanel Margin="0,0,0,10" VerticalAlignment="Top">
                                                             <DockPanel.Style>
                                                                 <Style TargetType="DockPanel">
                                                                     <Setter Property="Visibility" Value="Collapsed" />
@@ -434,20 +438,23 @@
                                                                     </Style.Triggers>
                                                                 </Style>
                                                             </DockPanel.Style>
+                                                            
                                                             <StackPanel>
                                                                 <Label Name="PART_ElemCompletionStatus" Content="{DynamicResource LOCCompletionStatus}" />
                                                                 <DockPanel>
-                                                                    <Viewbox Stretch="Uniform" Width="16" Margin="0,0,5,0">
-                                                                        <TextBlock Text="&#xE73A;" FontFamily="Segoe Fluent Icons"
+                                                                    <Viewbox Stretch="Uniform" Width="16" Margin="0,0,5,0" VerticalAlignment="Center">
+                                                                        <TextBlock Text="&#xE73A;" FontFamily="Segoe MDL2 Assets"
                                                                                    Foreground="{DynamicResource DetailsMainIconsBackgroundBrush}" />
                                                                     </Viewbox>
 
                                                                     <Border Tag="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}"
+                                                                            VerticalAlignment="Center"
                                                                             Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Tag, Converter={StaticResource InvertedBooleanToVisibilityConverter}}">
                                                                         <Button Name="PART_ButtonCompletionStatus" Style="{StaticResource PropertyItemButton}" Margin="0" />
                                                                     </Border>
 
                                                                     <ContentControl Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}"
+                                                                                    VerticalAlignment="Center"
                                                             x:Name="ThemeExtras_SettableCompletionStatus">
                                                                         <ContentControl.Resources>
                                                                             <Style TargetType="UserControl" BasedOn="{StaticResource ThemeExtrasUserControlCompStatusStyle}" />
@@ -461,12 +468,9 @@
 
                                                     <StackPanel Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
                                                                 Margin="0,0,0,10">
-                                                        <StackPanel.Resources>
-                                                            <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
-                                                        </StackPanel.Resources>
                                                         <Border Style="{DynamicResource BorderVerticalSeparator}" />
                                                         <DockPanel Margin="0,0,0,0">
-                                                            <Viewbox Stretch="Uniform" Width="12">
+                                                            <Viewbox Stretch="Uniform" Width="12" VerticalAlignment="Center">
                                                                 <TextBlock Text="&#xEDD7;" FontFamily="{StaticResource FontIcoFont}" Foreground="{DynamicResource DetailsMainIconsBackgroundBrush}" />
                                                             </Viewbox>
 
