@@ -580,3 +580,15 @@ Packages:
     Changelog:
       - 'Details View: Fix buttons not correctly aligning when wrapping in multiple rows'
       - 'Details View: Fix completion status not being displayed'
+  - Version: 2.69
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-09-28
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.69/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_69.pthm
+    Changelog:
+      - 'Details View: Changed font used for panel icons to fix not being displayed on non-Windows 11 systems that do not have the font previously used installed.'
+      - 'Details View: Fix SuccessStory extension text not being styled'
+      - 'Details view: Fix cover images being blury in some cases, caused by the dropshadow effect applied in the image.'
+      - 'Improved how controls are styled to provide better support when changing colors using the ThemeModifier extension. Now changing the main color should better apply to the theme visuals.'
+      - 'Improved performance when global window background image is enabled.'
+      - 'Visual changes to windows top bar and buttons'
+      - 'Minor fixes and improvements'
