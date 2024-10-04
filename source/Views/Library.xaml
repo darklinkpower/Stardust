@@ -99,7 +99,7 @@
                                              Visibility="{Settings FilterPanelVisible}" />
                                 <Grid DockPanel.Dock="Left">
                                     <LibraryDetailsView x:Name="PART_ViewDetails" />
-                                    <LibraryGridView x:Name="PART_ViewGrid" Margin="{DynamicResource PanelTopPanelSeparator}" />
+                                    <LibraryGridView x:Name="PART_ViewGrid" />
                                     <LibraryListView x:Name="PART_ViewList" Margin="{DynamicResource PanelTopPanelSeparator}" />
                                 </Grid>
                             </DockPanel>
