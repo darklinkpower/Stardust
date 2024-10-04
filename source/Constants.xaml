@@ -152,7 +152,7 @@
     <SolidColorBrush x:Key="TopPanelItemMouseOverForegroundBrush" Color="#d6b3ff" />
     <SolidColorBrush x:Key="DataChangeNotifBrush" Color="{DynamicResource DataChangeNotifColor}" />
 
-    <SolidColorBrush x:Key="GridViewItemMaskBackgroundBrush" Color="#1e1e1e" />
+    <SolidColorBrush x:Key="GridViewItemMaskBackgroundBrush" Color="#1f242f" />
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="{DynamicResource ControlsBackgroundColor}" />
     <SolidColorBrush x:Key="ProgressBarBackgroundBrush" Color="#2e2c2f" />
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
