@@ -592,3 +592,9 @@ Packages:
       - 'Improved performance when global window background image is enabled.'
       - 'Visual changes to windows top bar and buttons'
       - 'Minor fixes and improvements'
+  - Version: 2.70
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-10-14
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.70/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_70.pthm
+    Changelog:
+      - 'Changed: How margin is applied to layout on Grid View to make the background image use all the window height when using Details View Converter extension'
