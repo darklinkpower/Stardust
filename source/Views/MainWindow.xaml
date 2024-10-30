@@ -15,72 +15,33 @@
                             d:DesignWidth="1280" d:DesignHeight="960">
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition />
+                                <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Grid.Resources>      
-                                <Storyboard x:Key="VisibilityOn">
-                                    <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="Margin"
-                                                 Storyboard.TargetName="PART_Notifications">
-                                        <SplineThicknessKeyFrame KeyTime="00:00:00" Value="-260,0,0,0" />
-                                        <SplineThicknessKeyFrame KeyTime="0:0:0.10" Value="0,0,0,0" />
-                                    </ThicknessAnimationUsingKeyFrames>
-                                </Storyboard>
-                                <Storyboard x:Key="VisibilityOff">
-                                    <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="Margin"
-                                                 Storyboard.TargetName="PART_Notifications">
-                                        <SplineThicknessKeyFrame KeyTime="00:00:00" Value="0,0,0,0" />
-                                        <SplineThicknessKeyFrame KeyTime="0:0:0.10" Value="-260,0,0,0" />
-                                    </ThicknessAnimationUsingKeyFrames>
-                                </Storyboard>
-                            </Grid.Resources>
                             <Grid.Background>
                                 <ImageBrush ImageSource="{ThemeFile 'Images/BackgroundGradient.png'}" Stretch="UniformToFill" popt:Freeze="True"/>
                             </Grid.Background>
 
                             <Border x:Name="ImageBackgroundNoise"
                                    Background="{DynamicResource NoiseBrush}"
-                                   Opacity="0.010"/>
-                            <Grid>
-                                <Border Tag="{Binding ElementName=PART_ContentView, Path=DataContext.ActiveView.Tag}">
-                                    <Border.Style>
-                                        <Style TargetType="Border">
-                                            <Setter Property="Margin" Value="44,0,0,0" />
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Settings SidebarPosition}" Value="Right">
-                                                    <Setter Property="Margin" Value="0,0,46,0" />
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Settings SidebarPosition}" Value="Top">
-                                                    <Setter Property="Margin" Value="0,36,0,0" />
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
-                                                    <Setter Property="Margin" Value="0,0,0,36" />
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Settings ShowSidebar}" Value="False">
-                                                    <Setter Property="Margin" Value="0,0,0,0" />
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding ElementName=PART_ContentView, Path=DataContext.ActiveView.Tag, TargetNullValue='', FallbackValue=''}" Value="Library">
-                                                    <Setter Property="Margin" Value="0" />
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </Border.Style>
+                                   Opacity="0.010"
+                                   Grid.ColumnSpan="2"/>
+                            
+                            <Sidebar x:Name="PART_Sidebar" Panel.ZIndex="999"
+                                     Grid.Column="0"
+                                     DockPanel.Dock="{Settings SidebarPosition}"/>
 
-                                    <ContentControl Name="PART_ContentView" />
-                                </Border>
-                                
-                                <DockPanel>
-                                    <Sidebar x:Name="PART_Sidebar" Panel.ZIndex="999"
-                                         DockPanel.Dock="{Settings SidebarPosition}" />
-
-                                </DockPanel>
-                            </Grid>                         
+                            <Grid Grid.Column="1">
+                                <ContentControl Name="PART_ContentView" />
+                            </Grid>
+                            
                             <NotificationPanel x:Name="PART_Notifications"  
                                                WindowChrome.IsHitTestVisibleInChrome="True"
                                                Width="260"
-                                               Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
+                                               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                                                HorizontalAlignment="Left" VerticalAlignment="Stretch"
                                                AnimatedVisibility.Visibility="{Settings NotificationPanelVisible}"
                                                AnimatedVisibility.Visible="{StaticResource VisibilityOn}"
