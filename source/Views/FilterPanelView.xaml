@@ -1,10 +1,13 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-                    mc:Ignorable="d">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
 
-    <Style x:Key="FilterPanelCheckBox" TargetType="CheckBox" BasedOn="{StaticResource {x:Type CheckBox}}">
+    <Style x:Key="FilterPanelCheckBox"
+        BasedOn="{StaticResource {x:Type CheckBox}}"
+        TargetType="CheckBox">
         <Setter Property="Margin" Value="8,2,6,8" />
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="{StaticResource False}">
@@ -12,35 +15,47 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-    
-    <Style x:Key="FilterPanelLabel" TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+
+    <Style x:Key="FilterPanelLabel"
+        BasedOn="{StaticResource {x:Type Label}}"
+        TargetType="Label">
         <Setter Property="Margin" Value="8,10,6,4" />
         <Style.Triggers>
             <Trigger Property="Tag" Value="{StaticResource False}">
-                <Setter Property="Opacity" Value="0.6"/>
+                <Setter Property="Opacity" Value="0.6" />
             </Trigger>
         </Style.Triggers>
     </Style>
-    
-    <Style x:Key="FilterPanelFilterSearchBox" TargetType="SearchBox" BasedOn="{StaticResource {x:Type SearchBox}}">
+
+    <Style x:Key="FilterPanelFilterSearchBox"
+        BasedOn="{StaticResource {x:Type SearchBox}}"
+        TargetType="SearchBox">
         <Setter Property="Margin" Value="8,0,6,0" />
         <Setter Property="ShowImage" Value="False" />
         <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
     </Style>
-    
-    <Style x:Key="FilterPanelFilterSelectionBox" TargetType="FilterSelectionBox" BasedOn="{StaticResource {x:Type FilterSelectionBox}}">
-        <Setter Property="Margin" Value="8,0,6,0" />
-    </Style>
-    
-    <Style x:Key="FilterPanelFilterEnumSelectionBox" TargetType="FilterEnumSelectionBox" BasedOn="{StaticResource {x:Type FilterEnumSelectionBox}}">
-        <Setter Property="Margin" Value="8,0,6,0" />
-    </Style>
-    
-    <Style x:Key="FilterPanelFilterStringSelectionBox" TargetType="FilterStringSelectionBox" BasedOn="{StaticResource {x:Type FilterStringSelectionBox}}">
+
+    <Style x:Key="FilterPanelFilterSelectionBox"
+        BasedOn="{StaticResource {x:Type FilterSelectionBox}}"
+        TargetType="FilterSelectionBox">
         <Setter Property="Margin" Value="8,0,6,0" />
     </Style>
 
-    <Style x:Key="FilterPresetButtonAction" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+    <Style x:Key="FilterPanelFilterEnumSelectionBox"
+        BasedOn="{StaticResource {x:Type FilterEnumSelectionBox}}"
+        TargetType="FilterEnumSelectionBox">
+        <Setter Property="Margin" Value="8,0,6,0" />
+    </Style>
+
+    <Style x:Key="FilterPanelFilterStringSelectionBox"
+        BasedOn="{StaticResource {x:Type FilterStringSelectionBox}}"
+        TargetType="FilterStringSelectionBox">
+        <Setter Property="Margin" Value="8,0,6,0" />
+    </Style>
+
+    <Style x:Key="FilterPresetButtonAction"
+        BasedOn="{StaticResource {x:Type Button}}"
+        TargetType="Button">
         <Setter Property="FontFamily" Value="{StaticResource FontIcoFont}" />
         <Setter Property="Padding" Value="5" />
         <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
@@ -49,16 +64,15 @@
         <Setter Property="DockPanel.Dock" Value="Right" />
     </Style>
 
-    <Style TargetType="{x:Type FilterPanel}">  
+    <Style TargetType="{x:Type FilterPanel}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type FilterPanel}">
-                    <Border BorderBrush="{DynamicResource PanelSeparatorBrush}"
-                            d:DesignWidth="200">
+                    <Border d:DesignWidth="200" BorderBrush="{DynamicResource PanelSeparatorBrush}">
                         <Border.Style>
                             <Style TargetType="Border">
                                 <Setter Property="BorderThickness" Value="1,0,0,0" />
-                                <Style.Triggers>                                    
+                                <Style.Triggers>
                                     <DataTrigger Binding="{Settings FilterPanelPosition}" Value="Left">
                                         <Setter Property="BorderThickness" Value="0,0,1,0" />
                                     </DataTrigger>
@@ -70,31 +84,42 @@
                         </Border.Style>
                         <DockPanel Background="{TemplateBinding Background}">
                             <DockPanel Margin="10,8,5,5" DockPanel.Dock="Top">
-                                <Button Content="r" FontFamily="Marlett"
-                                        Style="{StaticResource SimpleButton}"
-                                        DockPanel.Dock="Right" Margin="0,0,5,0"
-                                        Name="PART_ButtonClose"/>
-                                <Button DockPanel.Dock="Left" Content="{StaticResource LOCClearFilters}"                                        
-                                        HorizontalAlignment="Left"
-                                        Style="{StaticResource SimpleButton}"
-                                        Name="PART_ButtonClear"/>
+                                <Button Name="PART_ButtonClose"
+                                    Margin="0,0,5,0"
+                                    Content="r"
+                                    DockPanel.Dock="Right"
+                                    FontFamily="Marlett"
+                                    Style="{StaticResource SimpleButton}" />
+                                <Button Name="PART_ButtonClear"
+                                    HorizontalAlignment="Left"
+                                    Content="{StaticResource LOCClearFilters}"
+                                    DockPanel.Dock="Left"
+                                    Style="{StaticResource SimpleButton}" />
                             </DockPanel>
-                            <DockPanel DockPanel.Dock="Top" Margin="8,0,6,5">
+                            <DockPanel Margin="8,0,6,5" DockPanel.Dock="Top">
                                 <Button x:Name="PART_ButtonDeleteFilter"
-                                        Content="&#xec53;" Style="{DynamicResource FilterPresetButtonAction}" />
+                                    Content="&#xec53;"
+                                    Style="{DynamicResource FilterPresetButtonAction}" />
                                 <Button x:Name="PART_ButtonRenameFilter"
-                                        Content="&#xec55;" Style="{DynamicResource FilterPresetButtonAction}"/>
+                                    Content="&#xec55;"
+                                    Style="{DynamicResource FilterPresetButtonAction}" />
                                 <Button x:Name="PART_ButtonSaveFilter"
-                                        Content="&#xee00;" Style="{DynamicResource FilterPresetButtonAction}" />
+                                    Content="&#xee00;"
+                                    Style="{DynamicResource FilterPresetButtonAction}" />
                                 <ComboBox x:Name="PART_ComboFilterPresets"
-                                          DockPanel.Dock="Left" VerticalAlignment="Center" />
-                            </DockPanel>                            
-                            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
-                                      DockPanel.Dock="Top" Padding="0,0,0,15">
+                                    VerticalAlignment="Center"
+                                    DockPanel.Dock="Left" />
+                            </DockPanel>
+                            <ScrollViewer
+                                Margin="0,15,0,15"
+                                Padding="0,0,0,0"
+                                DockPanel.Dock="Top"
+                                HorizontalScrollBarVisibility="Disabled"
+                                VerticalScrollBarVisibility="Auto">
                                 <StackPanel x:Name="PART_PanelItemsHost" />
                             </ScrollViewer>
                         </DockPanel>
-                    </Border>                                                       
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
