@@ -68,7 +68,10 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type FilterPanel}">
-                    <Border d:DesignWidth="200" BorderBrush="{DynamicResource PanelSeparatorBrush}">
+                    <Border
+                        Padding="{DynamicResource PanelTopPanelSeparator}"
+                        d:DesignWidth="200"
+                        BorderBrush="{DynamicResource PanelSeparatorBrush}">
                         <Border.Style>
                             <Style TargetType="Border">
                                 <Setter Property="BorderThickness" Value="1,0,0,0" />
@@ -107,6 +110,7 @@
                                     Content="&#xee00;"
                                     Style="{DynamicResource FilterPresetButtonAction}" />
                                 <ComboBox x:Name="PART_ComboFilterPresets"
+                                    Margin="0,0,10,0"
                                     VerticalAlignment="Center"
                                     DockPanel.Dock="Left" />
                             </DockPanel>

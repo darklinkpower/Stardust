@@ -1,44 +1,62 @@
-<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <Style x:Key="PlayButton" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseStyle}">
+    <Style x:Key="PlayButton"
+        BasedOn="{StaticResource BaseStyle}"
+        TargetType="{x:Type Button}">
         <Setter Property="Background" Value="{DynamicResource GlyphBrush}" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
         <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Padding" Value="10,5,10,5" />
-        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid x:Name="Grid">
-                        <Border x:Name="DefaultBorder" BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"  Background="{TemplateBinding Background}"
-                                Opacity="1" CornerRadius="{DynamicResource ControlCornerRadius}" />
-                        <Border x:Name="HighlightBorder" Background="#d5c7ec"
-                                Opacity="0" CornerRadius="{DynamicResource ControlCornerRadius}" />
-                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True" />
+                        <Border x:Name="DefaultBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{DynamicResource ControlCornerRadius}"
+                            Opacity="1" />
+                        <Border x:Name="HighlightBorder"
+                            Background="#d5c7ec"
+                            CornerRadius="{DynamicResource ControlCornerRadius}"
+                            Opacity="0" />
+                        <ContentPresenter
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            RecognizesAccessKey="True" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Trigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetName="HighlightBorder" Storyboard.TargetProperty="Opacity" To="0.25" Duration="0:0:0.15" />
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="HighlightBorder"
+                                            Storyboard.TargetProperty="Opacity"
+                                            To="0.25"
+                                            Duration="0:0:0.15" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.EnterActions>
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetName="HighlightBorder" Storyboard.TargetProperty="Opacity" To="0.0" Duration="0:0:0.15" />
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="HighlightBorder"
+                                            Storyboard.TargetProperty="Opacity"
+                                            To="0.0"
+                                            Duration="0:0:0.15" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="DefaultBorder" />
-                            <Setter Property="Opacity" TargetName="Grid" Value="0.5" />
+                            <Setter TargetName="DefaultBorder" Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" />
+                            <Setter TargetName="Grid" Property="Opacity" Value="0.5" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -54,23 +72,38 @@
         <Setter Property="Padding" Value="0,5,0,5" />
         <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="FontSize" Value="{DynamicResource FontSizeLarge}" />
-        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid x:Name="Grid">
-                        <Border x:Name="DefaultBorder" BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"  Background="{TemplateBinding Background}"
-                                Opacity="1" CornerRadius="{DynamicResource ControlCornerRadiusViewPlayButtons}" />
-                        <Border x:Name="HighlightBorder" Background="#d5c7ec"
-                                Opacity="0" CornerRadius="{DynamicResource ControlCornerRadiusViewPlayButtons}" />
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <Viewbox Margin="0,0,5,0" Height="18">
-                                <Path Stroke="{TemplateBinding Foreground}" StrokeThickness="1"
-                                          VerticalAlignment="Center" HorizontalAlignment="Center"
-                                          Data="F1 M 2.38 10.44 C 2.38 9.96 2.366666 9.233334 2.34 8.259999 C 2.326666 7.153333 2.32 6.326666 2.32 5.78 C 2.32 4.860001 2.353333 4.04 2.42 3.32 C 2.486666 2.466667 2.71 1.806667 3.09 1.34 C 3.47 0.873333 3.963333 0.639999 4.57 0.639999 C 5.176666 0.639999 5.84 0.886665 6.56 1.379999 C 9.173332 3.153334 12.446666 5.540001 16.379999 8.54 C 17.246666 9.193333 17.676666 9.889999 17.67 10.629999 C 17.663334 11.37 17.219999 12.066666 16.34 12.719999 C 14.286666 14.266666 12.619999 15.506666 11.34 16.439999 C 9.5 17.786667 7.806666 18.993332 6.26 20.059999 C 5.659999 20.473331 5.079999 20.666666 4.52 20.639999 C 3.96 20.613333 3.496666 20.383333 3.13 19.949999 C 2.763333 19.516666 2.546667 18.916666 2.48 18.15 C 2.413333 17.383333 2.38 16.506666 2.38 15.52 C 2.366666 14.92 2.373333 14.026667 2.4 12.84 C 2.426667 11.773334 2.44 10.973333 2.44 10.44 Z" />
+                        <Border x:Name="DefaultBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{DynamicResource ControlCornerRadiusViewPlayButtons}"
+                            Opacity="1" />
+                        <Border x:Name="HighlightBorder"
+                            Background="#d5c7ec"
+                            CornerRadius="{DynamicResource ControlCornerRadiusViewPlayButtons}"
+                            Opacity="0" />
+                        <StackPanel
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Orientation="Horizontal">
+                            <Viewbox Height="18" Margin="0,0,5,0">
+                                <Path
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Data="F1 M 2.38 10.44 C 2.38 9.96 2.366666 9.233334 2.34 8.259999 C 2.326666 7.153333 2.32 6.326666 2.32 5.78 C 2.32 4.860001 2.353333 4.04 2.42 3.32 C 2.486666 2.466667 2.71 1.806667 3.09 1.34 C 3.47 0.873333 3.963333 0.639999 4.57 0.639999 C 5.176666 0.639999 5.84 0.886665 6.56 1.379999 C 9.173332 3.153334 12.446666 5.540001 16.379999 8.54 C 17.246666 9.193333 17.676666 9.889999 17.67 10.629999 C 17.663334 11.37 17.219999 12.066666 16.34 12.719999 C 14.286666 14.266666 12.619999 15.506666 11.34 16.439999 C 9.5 17.786667 7.806666 18.993332 6.26 20.059999 C 5.659999 20.473331 5.079999 20.666666 4.52 20.639999 C 3.96 20.613333 3.496666 20.383333 3.13 19.949999 C 2.763333 19.516666 2.546667 18.916666 2.48 18.15 C 2.413333 17.383333 2.38 16.506666 2.38 15.52 C 2.366666 14.92 2.373333 14.026667 2.4 12.84 C 2.426667 11.773334 2.44 10.973333 2.44 10.44 Z"
+                                    Stroke="{TemplateBinding Foreground}"
+                                    StrokeThickness="1" />
                             </Viewbox>
-                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True" />
+                            <ContentPresenter
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                RecognizesAccessKey="True" />
                         </StackPanel>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -78,20 +111,28 @@
                             <Trigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetName="HighlightBorder" Storyboard.TargetProperty="Opacity" To="0.25" Duration="0:0:0.15" />
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="HighlightBorder"
+                                            Storyboard.TargetProperty="Opacity"
+                                            To="0.25"
+                                            Duration="0:0:0.15" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.EnterActions>
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetName="HighlightBorder" Storyboard.TargetProperty="Opacity" To="0.0" Duration="0:0:0.15" />
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="HighlightBorder"
+                                            Storyboard.TargetProperty="Opacity"
+                                            To="0.0"
+                                            Duration="0:0:0.15" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Opacity" TargetName="Grid" Value="0.5" />
+                            <Setter TargetName="Grid" Property="Opacity" Value="0.5" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -107,21 +148,28 @@
         <Setter Property="Padding" Value="10,5,10,5" />
         <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="FontSize" Value="{DynamicResource FontSizeLarge}" />
-        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid x:Name="Grid">
-                        <Border x:Name="DefaultBorder" BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"  Background="{TemplateBinding Background}"
-                                Opacity="1" CornerRadius="{DynamicResource ControlCornerRadiusViewPlayButtons}"/>
-                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True" />
+                        <Border x:Name="DefaultBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{DynamicResource ControlCornerRadiusViewPlayButtons}"
+                            Opacity="1" />
+                        <ContentPresenter
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            RecognizesAccessKey="True" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsEnabled" Value="True" />
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="DefaultBorder" />
-                            <Setter Property="Opacity" TargetName="Grid" Value="0.5" />
+                            <Setter TargetName="DefaultBorder" Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" />
+                            <Setter TargetName="Grid" Property="Opacity" Value="0.5" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -132,14 +180,20 @@
                 <Trigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard TargetProperty="(Background).(SolidColorBrush.Color)">
-                            <ColorAnimation To="#FF3F3D40" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
+                            <ColorAnimation
+                                FillBehavior="HoldEnd"
+                                To="#FF3F3D40"
+                                Duration="0:0:0.2" />
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.EnterActions>
                 <Trigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard TargetProperty="(Background).(SolidColorBrush.Color)">
-                            <ColorAnimation To="#2e2c2f" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
+                            <ColorAnimation
+                                FillBehavior="HoldEnd"
+                                To="#2e2c2f"
+                                Duration="0:0:0.2" />
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.ExitActions>
@@ -155,21 +209,28 @@
         <Setter Property="Padding" Value="10,5,10,5" />
         <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="FontSize" Value="{DynamicResource FontSizeLarge}" />
-        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid x:Name="Grid">
-                        <Border x:Name="DefaultBorder" BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"  Background="{TemplateBinding Background}"
-                                Opacity="1" CornerRadius="{DynamicResource ControlCornerRadiusViewPlayButtons}"/>
-                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True" />
+                        <Border x:Name="DefaultBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{DynamicResource ControlCornerRadiusViewPlayButtons}"
+                            Opacity="1" />
+                        <ContentPresenter
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            RecognizesAccessKey="True" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsEnabled" Value="True" />
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="DefaultBorder" />
-                            <Setter Property="Opacity" TargetName="Grid" Value="0.5" />
+                            <Setter TargetName="DefaultBorder" Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" />
+                            <Setter TargetName="Grid" Property="Opacity" Value="0.5" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -180,14 +241,20 @@
                 <Trigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard TargetProperty="(Background).(SolidColorBrush.Color)">
-                            <ColorAnimation To="#FF3F3D40" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
+                            <ColorAnimation
+                                FillBehavior="HoldEnd"
+                                To="#FF3F3D40"
+                                Duration="0:0:0.2" />
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.EnterActions>
                 <Trigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard TargetProperty="(Background).(SolidColorBrush.Color)">
-                            <ColorAnimation To="#2e2c2f" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
+                            <ColorAnimation
+                                FillBehavior="HoldEnd"
+                                To="#2e2c2f"
+                                Duration="0:0:0.2" />
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.ExitActions>
@@ -195,7 +262,9 @@
         </Style.Triggers>
     </Style>
 
-    <Style x:Key="QuickEditButton" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+    <Style x:Key="QuickEditButton"
+        BasedOn="{StaticResource {x:Type Button}}"
+        TargetType="{x:Type Button}">
         <Setter Property="Background" Value="{DynamicResource GlyphBrush}" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" />
         <Setter Property="Template">
@@ -203,22 +272,24 @@
                 <ControlTemplate TargetType="{x:Type Button}">
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Cursor" Value="Hand"/>
+                            <Setter Property="Cursor" Value="Hand" />
                             <Trigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation 
-                                Storyboard.TargetProperty="(Button.Opacity)" 
-                                To="1" Duration="0:0:2" />
+                                        <DoubleAnimation
+                                            Storyboard.TargetProperty="(Button.Opacity)"
+                                            To="1"
+                                            Duration="0:0:2" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.EnterActions>
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation 
-                                    Storyboard.TargetProperty="(Button.Opacity)" 
-                                    To="0.3" Duration="0:0:2" />
+                                        <DoubleAnimation
+                                            Storyboard.TargetProperty="(Button.Opacity)"
+                                            To="0.3"
+                                            Duration="0:0:2" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.ExitActions>

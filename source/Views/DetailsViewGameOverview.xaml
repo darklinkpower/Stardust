@@ -155,7 +155,7 @@
                                 </Grid>
                             </WrapPanel>
 
-                            <Grid Margin="20,0,20,0" HorizontalAlignment="Stretch">
+                            <Grid Margin="40,0,40,0" HorizontalAlignment="Stretch">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="{Settings CalculatedGameDetailsIndentation}" MinHeight="{DynamicResource PanelTopPanelSeparatorHeight}" />
                                     <RowDefinition Height="Auto" />

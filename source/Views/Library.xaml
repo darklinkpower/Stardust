@@ -1,23 +1,35 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-                    mc:Ignorable="d">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
 
     <Style TargetType="{x:Type Library}">
         <Setter Property="Tag" Value="Library" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Library}">
-                    <Grid d:DesignWidth="1500" d:DesignHeight="960"
-                          d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
+                    <Grid
+                        d:DataContext="{x:Static DesignMainViewModel.DesignIntance}"
+                        d:DesignHeight="960"
+                        d:DesignWidth="1500">
 
-                        <Viewbox HorizontalAlignment="Center" Stretch="UniformToFill" RenderOptions.BitmapScalingMode="LowQuality">
-                            <FadeImage Name="BlurGameBackground" ImageDarkeningBrush="{Binding ElementName=PART_ImageBackground, Path=ImageDarkeningBrush}"
-                                       HighQualityBlur="False" SourceUpdateDelay="150"
-                                       IsBlurEnabled="True" AnimationEnabled="{Settings BackgroundImageAnimation}"
-                                       Height="96" RenderOptions.BitmapScalingMode="LowQuality" BlurAmount="10"
-                                       HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <Viewbox
+                            HorizontalAlignment="Center"
+                            RenderOptions.BitmapScalingMode="LowQuality"
+                            Stretch="UniformToFill">
+                            <FadeImage Name="BlurGameBackground"
+                                Height="96"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                AnimationEnabled="{Settings BackgroundImageAnimation}"
+                                BlurAmount="10"
+                                HighQualityBlur="False"
+                                ImageDarkeningBrush="{Binding ElementName=PART_ImageBackground, Path=ImageDarkeningBrush}"
+                                IsBlurEnabled="True"
+                                RenderOptions.BitmapScalingMode="LowQuality"
+                                SourceUpdateDelay="150">
                                 <FadeImage.Style>
                                     <Style TargetType="FadeImage">
                                         <Setter Property="Source" Value="{Binding ElementName=PART_ImageBackground, Path=Source}" />
@@ -34,12 +46,16 @@
                         </Viewbox>
 
                         <TextBlock x:Name="LibraryUseLowPerformanceBlurBackground"
-                                   Tag="{DynamicResource LibraryUseLowPerformanceBlurBackground}"
-                                   Visibility="Collapsed" />
+                            Tag="{DynamicResource LibraryUseLowPerformanceBlurBackground}"
+                            Visibility="Collapsed" />
 
                         <FadeImage x:Name="PART_ImageBackground"
-                                   Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                                   HorizontalAlignment="Center" VerticalAlignment="Top">
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top">
                             <FadeImage.Style>
                                 <Style TargetType="FadeImage">
                                     <Setter Property="Visibility" Value="Visible" />
@@ -54,18 +70,25 @@
 
                         <Grid Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}">
                             <Grid.CacheMode>
-                                <BitmapCache EnableClearType="False"
-                                             RenderAtScale="0.85"
-                                             SnapsToDevicePixels="False" />
+                                <BitmapCache
+                                    EnableClearType="False"
+                                    RenderAtScale="0.85"
+                                    SnapsToDevicePixels="False" />
                             </Grid.CacheMode>
-                            <Border Background="{StaticResource DarkNoiseBrush}" RenderOptions.BitmapScalingMode="LowQuality"
-                                    Opacity="0.35"/>
+                            <Border
+                                Background="{StaticResource DarkNoiseBrush}"
+                                Opacity="0.35"
+                                RenderOptions.BitmapScalingMode="LowQuality" />
 
-                            <Border Background="#000000" RenderOptions.BitmapScalingMode="LowQuality"
-                                    Opacity="0.45"/>
+                            <Border
+                                Background="#000000"
+                                Opacity="0.45"
+                                RenderOptions.BitmapScalingMode="LowQuality" />
 
-                            <Border Background="{StaticResource NoiseBrush}" RenderOptions.BitmapScalingMode="LowQuality"
-                                    Opacity="0.020"/>
+                            <Border
+                                Background="{StaticResource NoiseBrush}"
+                                Opacity="0.020"
+                                RenderOptions.BitmapScalingMode="LowQuality" />
                         </Grid>
 
                         <Grid>
@@ -89,14 +112,14 @@
                                 </Style>
                             </Grid.Style>
                             <DockPanel>
-                                <ExplorerPanel Visibility="{Settings ExplorerPanelVisible}"
-                                               DockPanel.Dock="{Settings ExplorerPanelPosition}"
-                                               Width="{Settings ExplorerPanelWitdh}"/>
+                                <ExplorerPanel
+                                    Width="{Settings ExplorerPanelWitdh}"
+                                    DockPanel.Dock="{Settings ExplorerPanelPosition}"
+                                    Visibility="{Settings ExplorerPanelVisible}" />
                                 <FilterPanel x:Name="PART_FilterPanel"
-                                             Margin="{DynamicResource PanelTopPanelSeparator}"
-                                             Width="{Settings FilterPanelWitdh}"
-                                             DockPanel.Dock="{Settings FilterPanelPosition}"
-                                             Visibility="{Settings FilterPanelVisible}" />
+                                    Width="{Settings FilterPanelWitdh}"
+                                    DockPanel.Dock="{Settings FilterPanelPosition}"
+                                    Visibility="{Settings FilterPanelVisible}" />
                                 <Grid DockPanel.Dock="Left">
                                     <LibraryDetailsView x:Name="PART_ViewDetails" />
                                     <LibraryGridView x:Name="PART_ViewGrid" />

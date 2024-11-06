@@ -4,7 +4,7 @@
     xmlns:popt="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <!--  Theme settings region start  -->
+    <!--Theme settings region start-->
     <sys:Boolean x:Key="LibraryUseLowPerformanceBlurBackground">False</sys:Boolean>
     <sys:Double x:Key="DetailsViewDetailsMaxWidth">1250</sys:Double>
     <sys:Boolean x:Key="DetailsViewBackgroundImageUseOpacityMask">True</sys:Boolean>
@@ -43,7 +43,7 @@
     <sys:Boolean x:Key="GridViewCoverZoomOnHover">False</sys:Boolean>
     <sys:Boolean x:Key="SidebarUseTransparentBackground">False</sys:Boolean>
     <sys:Boolean x:Key="ShowNavigationButtons">True</sys:Boolean>
-    <!--  region end  -->
+    <!--region end-->
 
     <sys:Double x:Key="PanelTopPanelSeparatorHeight">65</sys:Double>
     <Thickness x:Key="PanelTopPanelSeparator"
@@ -104,7 +104,7 @@
     <Color x:Key="GlyphColor">#a17fd0</Color>
     <Color x:Key="GlyphColorSecondary">#2f3543</Color>
     <Color x:Key="DataChangeNotifColor">#ffa500</Color>
-    <!--    -->
+    <!---->
     <Color x:Key="HighlightGlyphColor">#333235</Color>
     <Color x:Key="PopupBackgroundColor">#2c2b2e</Color>
     <Color x:Key="PopupBorderColor">#80000000</Color>
@@ -139,7 +139,7 @@
 
     <Color x:Key="TitleWindowStateHoverColor">#404040</Color>
     <Color x:Key="TitleWindowCloseHoverColor">#c13d29</Color>
-    <Color x:Key="ControlsBackgroundColor">#8028272a</Color>
+    <Color x:Key="ControlsBackgroundColor">#8028272b</Color>
 
     <Color x:Key="TopPanelItemBackgroundColor">#d9000000</Color>
     <Color x:Key="TopPanelItemHoverBackgroundColor">#d9000000</Color>
@@ -299,7 +299,7 @@
     <SolidColorBrush x:Key="SearchWindowBackgroundBrush" Color="#3c3a3d" />
     <SolidColorBrush x:Key="SearchWindowSearchTextForegroundBrush" Color="#cac9cb" />
     <sys:String x:Key="DefaultLinkIcon">&#xEF71;</sys:String>
-    <!--  Noise Brush obtained from https://github.com/felixkmh/StartPage-for-Playnite/  -->
+    <!--Noise Brush obtained from https://github.com/felixkmh/StartPage-for-Playnite/-->
     <ImageBrush x:Key="DarkNoiseBrush"
         popt:Freeze="True"
         ImageSource="{ThemeFile 'Images/dark_noise.png'}"
