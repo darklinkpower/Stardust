@@ -8,6 +8,7 @@
     <sys:Boolean x:Key="LibraryUseLowPerformanceBlurBackground">False</sys:Boolean>
     <sys:Double x:Key="DetailsViewDetailsMaxWidth">1250</sys:Double>
     <sys:Boolean x:Key="DetailsViewBackgroundImageUseOpacityMask">True</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewReserveLogoSpaceIfMissing">True</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
     <Visibility x:Key="DetailsViewDetailsIconsVisibility">Visible</Visibility>

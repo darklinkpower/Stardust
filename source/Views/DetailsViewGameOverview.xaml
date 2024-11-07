@@ -166,15 +166,15 @@
                                 <Grid Grid.Row="1" MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}">
                                     <!--#region Logo & Cover Image-->
 
-                                    <Border x:Name="ExtraMetadataLoader_LogoLoaderControlGrid"
+                                    <Grid x:Name="ExtraMetadataLoader_LogoLoaderControlGrid"
                                         MinHeight="{PluginSettings Plugin=ExtraMetadataLoader,
                                                                    Path=LogoMaxHeight,
                                                                    FallbackValue=0}"
                                         HorizontalAlignment="Stretch"
                                         VerticalAlignment="Stretch"
                                         Tag="{DynamicResource DetailsViewAllowUseOfLogos}">
-                                        <Border.Style>
-                                            <Style TargetType="Border">
+                                        <Grid.Style>
+                                            <Style TargetType="Grid">
                                                 <Setter Property="Visibility" Value="Visible" />
                                                 <Style.Triggers>
                                                     <DataTrigger Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=EnableLogos, FallbackValue=False}" Value="false">
@@ -183,11 +183,20 @@
                                                     <DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, FallbackValue=False}" Value="false">
                                                         <Setter Property="Visibility" Value="Collapsed" />
                                                     </DataTrigger>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding ElementName=DetailsViewReserveLogoSpaceIfMissingProxy, Path=Tag, FallbackValue=False}" Value="False" />
+                                                            <Condition Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsLogoAvailable, FallbackValue=False}" Value="False" />
+                                                        </MultiDataTrigger.Conditions>
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </MultiDataTrigger>
                                                 </Style.Triggers>
                                             </Style>
-                                        </Border.Style>
+                                        </Grid.Style>
+                                        <TextBlock x:Name="DetailsViewReserveLogoSpaceIfMissingProxy" Visibility="Collapsed"
+                                                   Tag="{DynamicResource DetailsViewReserveLogoSpaceIfMissing}" />
                                         <ContentControl x:Name="ExtraMetadataLoader_LogoLoaderControl" />
-                                    </Border>
+                                    </Grid>
 
                                     <!--GridConverterGridPanelCloseButton-->
                                     <!--#regionend-->
