@@ -598,3 +598,13 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.70/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_70.pthm
     Changelog:
       - 'Changed: How margin is applied to layout on Grid View to make the background image use all the window height when using Details View Converter extension'
+  - Version: 2.71
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-11-06
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.71/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_71.pthm
+    Changelog:
+      - 'Added: option for ThemeModifier extension to not reserve logo space when not displayed on Details View'
+      - 'Added: Game cover banners for library plugins: ATLauncher Instance Library, Big Fish Games library integration, EmuLibrary, Fanatical library integration, Game Jolt library integration, GameVault Library Integration, GOG OSS library integration, Google Play Games on PC Library, Humble Keys Library, LANCommander library integration, Meta Quest/Oculus Library Plugin, MultiMC Library Importer, Nile (Amazon) library integration, NowPlaying Game Cacher, RAWG library importer, RobotCache library integration, RomM Library Importer, Viveport library importer.'
+      - 'Fixed: Panel separator between Library and Details on Grid View not displaying when using Details to Grid View Converter extension'
+      - 'General polishing'
+      - 'Misc fixes, changes, and improvements'
