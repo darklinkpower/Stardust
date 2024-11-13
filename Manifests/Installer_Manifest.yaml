@@ -608,3 +608,10 @@ Packages:
       - 'Fixed: Panel separator between Library and Details on Grid View not displaying when using Details to Grid View Converter extension'
       - 'General polishing'
       - 'Misc fixes, changes, and improvements'
+  - Version: 2.72
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-11-13
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.72/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_72.pthm
+    Changelog:
+      - 'Added: Game cover banner for Riot Games Library plugin'
+      - 'Added: Support to use web view component from Web Explorer extension'
