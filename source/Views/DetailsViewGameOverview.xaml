@@ -1335,8 +1335,21 @@
                                             </TabItem>
                                             <!--#endregion-->
 
-
-
+                                            <!--#region WebExplorer-->
+                                            <TabItem Visibility="{Binding ElementName=WebExplorer_BrowserHostViewControl, Path=Content.IsControlVisible, Converter={StaticResource BooleanToVisibilityConverter}, TargetNullValue=Collapsed, FallbackValue=Collapsed}">
+                                                <TabItem.Header>
+                                                    <TextBlock Style="{DynamicResource DetailsViewTabHeaderStyle}" Text="{DynamicResource LOCWebExplorer_WebLabel}" />
+                                                </TabItem.Header>
+                                                <Grid Margin="0,15,0,15" SnapsToDevicePixels="True" UseLayoutRounding="True">
+                                                    <Border Background="{DynamicResource DetailsViewSectionBackgroundBrush}"
+                                                        CornerRadius="{DynamicResource DetailsViewCoverCornerRadius}" />
+                                                    <ContentControl x:Name="WebExplorer_BrowserHostViewControl"
+                                                                    SnapsToDevicePixels="True" UseLayoutRounding="True"
+                                                                    Height="{DynamicResource WebExplorerControlHeight}"
+                                                                    Margin="0,5,0,5" />
+                                                </Grid>
+                                            </TabItem>
+                                            <!--#endregion-->
 
                                         </TabControl>
 
