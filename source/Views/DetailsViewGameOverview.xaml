@@ -222,6 +222,9 @@
                                                         ShadowDepth="0"
                                                         Color="#0d0d0d" />
                                                 </Image.Effect>
+                                                <Image.Clip>
+                                                    <RectangleGeometry RadiusX="4" RadiusY="4" Rect="0,0,48,48" />
+                                                </Image.Clip>
                                             </Image>
 
                                             <Border DockPanel.Dock="Left" Tag="{DynamicResource DetailsViewDisplayGameNameIfLogoVisible}">

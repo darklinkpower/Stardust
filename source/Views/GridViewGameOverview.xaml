@@ -87,7 +87,11 @@
                                         MaxHeight="32"
                                         Margin="0,0,10,0"
                                         DockPanel.Dock="Left"
-                                        RenderOptions.BitmapScalingMode="Fant" />
+                                        RenderOptions.BitmapScalingMode="Fant">
+                                        <Image.Clip>
+                                            <RectangleGeometry RadiusX="4" RadiusY="4" Rect="0,0,32,32" />
+                                        </Image.Clip>
+                                    </Image>
                                     <ContentControl x:Name="NewsViewer_PlayersInGameViewerControl"
                                         VerticalAlignment="Center"
                                         DockPanel.Dock="Right">
