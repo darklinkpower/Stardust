@@ -289,13 +289,19 @@
 
                                             <ContentControl x:Name="LibraryManagement_PluginFeaturesIconList"
                                                 Height="35"
-                                                Margin="30,0,0,0"
+                                                Margin="15,0,0,0"
+                                                            VerticalAlignment="Center"
                                                 HorizontalAlignment="Center"
                                                 Opacity="0.85"
                                                 Visibility="{PluginSettings Plugin=LibraryManagement,
                                                                             Path=EnableIntegrationFeatures,
                                                                             FallbackValue=Collapsed,
                                                                             Converter={StaticResource BooleanToVisibilityConverter}}" />
+
+                                            <ContentControl x:Name="GogSecondClassWatcher_SecondClassWatcherControl"
+                                                            VerticalAlignment="Center"
+                                                            Visibility="{PluginSettings Plugin=GogSecondClassWatcher, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                            Margin="5,0,0,0"/>
                                         </DockPanel>
 
                                     </StackPanel>
