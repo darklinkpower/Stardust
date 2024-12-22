@@ -628,3 +628,9 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.74/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_74.pthm
     Changelog:
       - 'Added: Support to display GOG Second Class Watcher extension data on Details View and Grid View'
+  - Version: 2.75
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-12-21
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.75/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_75.pthm
+    Changelog:
+      - 'Details View: Moved News Viewer extension news panel to make it more easily noticeable when information is available'
