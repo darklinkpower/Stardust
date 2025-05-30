@@ -634,3 +634,9 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.75/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_75.pthm
     Changelog:
       - 'Details View: Moved News Viewer extension news panel to make it more easily noticeable when information is available'
+  - Version: 2.76
+    RequiredApiVersion: 2.7.0
+    ReleaseDate: 2025-05-30
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.76/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_76.pthm
+    Changelog:
+      - 'Updated ThemeExtras game banners: Added banners for Stove and Hikari Field Importer library plugins, added Microsoft Store source banner, and recreated Steam banner to reduce color banding and blurriness.'
