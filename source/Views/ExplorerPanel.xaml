@@ -27,13 +27,21 @@
                             </Style>
                         </Border.Style>
                         <Grid>
-                            <DockPanel>
-                                <ComboBox Name="PART_SelectFields"
-                                          Background="Transparent"
-                                          DockPanel.Dock="Top" Margin="5,0,5,0" />
+                            <DockPanel Margin="10,0,10,8">
+                                <DockPanel DockPanel.Dock="Top" LastChildFill="True"
+                                           Margin="0,8,0,8">
+                                    <Button Content="r" FontFamily="Marlett" 
+	  		                                Style="{StaticResource SimpleButton}" 
+	  		                                DockPanel.Dock="Right" Margin="0,0,5,0" 
+	  		                                VerticalAlignment="Center" 
+	  		                                Name="PART_ButtonClose"/>
+                                    <ComboBox Name="PART_SelectFields" MaxDropDownHeight="Auto"
+                                              Background="Transparent"
+                                              DockPanel.Dock="Left" Margin="0,0,10,0" />
+                                </DockPanel>
                                 <ListBox Name="PART_SelectItems"
                                      ItemContainerStyle="{DynamicResource ExplorerPanelItemStyle}"
-                                     DockPanel.Dock="Top" Margin="0,20,5,8"                                      
+                                     DockPanel.Dock="Top" Margin="0,20,0,0"                                      
                                      BorderThickness="0" Background="Transparent"
                                      ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                                 </ListBox>
