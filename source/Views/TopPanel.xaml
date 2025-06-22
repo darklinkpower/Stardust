@@ -245,7 +245,7 @@
                                                FontWeight="SemiBold"
                                                WindowChrome.IsHitTestVisibleInChrome="True"
                                                Style="{DynamicResource SearchBoxTopPanel}"
-                                               Width="120" Background="{DynamicResource TopPanelSearchBoxBackgroundBrush}"/>
+                                               Width="{DynamicResource TopPanelSearchBoxWidthStardust}" Background="{DynamicResource TopPanelSearchBoxBackgroundBrush}"/>
 
                                     <CheckBox x:Name="PART_ToggleFilter" ToolTip="{DynamicResource LOCFilters}"
                                               Style="{DynamicResource TopPanelFilterToggle}"

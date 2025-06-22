@@ -46,6 +46,7 @@
     <sys:Boolean x:Key="GridViewCoverZoomOnHover">False</sys:Boolean>
     <sys:Boolean x:Key="SidebarUseTransparentBackground">False</sys:Boolean>
     <sys:Boolean x:Key="ShowNavigationButtons">True</sys:Boolean>
+    <sys:Double x:Key="TopPanelSearchBoxWidthStardust">120</sys:Double>
     <!--region end-->
 
     <sys:Double x:Key="PanelTopPanelSeparatorHeight">65</sys:Double>

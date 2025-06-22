@@ -1,6 +1,7 @@
 Constants:
     - "Top Panel"
     - ShowNavigationButtons: 'Show navigation buttons'
+    - TopPanelSearchBoxWidthStardust(80,600): 'Width of Search box'
     - "Sidebar"
     - SidebarUseTransparentBackground: 'Use transparent background'
     - "Library"
