@@ -76,10 +76,17 @@ The theme provides extensive support for a wide range of available Playnite exte
 
 ...and more...
 
+## Configuring the theme
+
+The theme provides extensive customization options that go beyond what is normally available in Playnite.
+
+- **General settings:** Customize various elements using the [ThemeModifier](https://playnite.link/addons.html#playnite-thememodifier-plugin) extension.
+- **Grid View layout:** Use the Details View layout in Grid View with the [Details to Grid View Converter](https://playnite.link/addons.html#ThemesDetailsViewToGridViewConverter_ef8a7226-eedc-478d-a506-92ee6c088aa3) extension.
+
 ## Screenshots
 
 <details>
-<summary>Settings used in screenshots (Click to expand)</summary>
+<summary>Click to view the appearance settings used in these screenshots</summary>
 
 
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/Screenshots/settings_01.jpg)
@@ -100,5 +107,6 @@ The theme provides extensive support for a wide range of available Playnite exte
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/Screenshots/screenshot_02.webp)
 
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/Screenshots/screenshot_03.webp)
+<sub>Shown using the <a href="#configuring-the-theme">Details to Grid View Converter</a> extension</sub>
 
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Stardust/master/Screenshots/screenshot_04.webp)
