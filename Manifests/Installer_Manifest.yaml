@@ -1,4 +1,4 @@
-AddonId: Stardust 2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002
+﻿AddonId: Stardust 2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002
 Packages:
   - Version: 2.0
     RequiredApiVersion: 2.0.0
@@ -653,3 +653,9 @@ Packages:
     Changelog:
       - 'Top Panel: Added option to configure the width of the search box'
       - 'Note: Added options can be configured using the ThemeModifier extension'
+  - Version: 2.79
+    RequiredApiVersion: 2.8.0
+    ReleaseDate: 2025-09-25
+    PackageUrl: https://github.com/darklinkpower/Stardust/releases/download/2.79/Stardust_2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002_2_79.pthm
+    Changelog:
+      - 'Add banner image for HoYoPlay library plugin games'
